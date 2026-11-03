@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "status": "proposed_not_launch_admission",
+  "observed_unix": 1793738759.411287,
+  "total_user_ceiling_usd": 30,
+  "prior_reserved_usd": 21,
+  "new_envelope_usd": 3.5,
+  "reserved_if_adopted_usd": 24.5,
+  "unallocated_if_adopted_usd": 5.5,
+  "prior_ledger_sha256": "17396d3873ae74984af9fd80b50828a17f82b54610cb11e5739f6440aed91266",
+  "scope": "One new development CPU preflight and one new three-variant GPU comparison on fresh MiniWoB seeds. No verification, existing benchmark rerun, general serving, paid editor API or Eden action.",
+  "primary_rates": {
+    "url": "https://modal.com/pricing",
+    "read_date": "2026-11-03",
+    "A100_80_per_second": 0.000694,
+    "cpu_per_core_second": 1.31e-05,
+    "memory_per_GiB_second": 2.22e-06
+  },
+  "conservative_planning": {
+    "GPU_seconds_including_startup_and_function": 1560,
+    "GPU_cpu_cores": 4,
+    "GPU_memory_GiB": 96,
+    "GPU_resource_cost_usd": 1.4968511999999998,
+    "CPU_preflight_seconds_including_startup": 720,
+    "CPU_cores": 4,
+    "CPU_memory_GiB": 96,
+    "CPU_resource_cost_usd": 0.1911744,
+    "build_storage_recovery_contingency_usd": 1.75
+  },
+  "rules": [
+    "Final exact source timeouts/resources must fit this envelope before any launch.",
+    "Actual source review and successful fresh CPU preflight needed before GPU.",
+    "No provider-enforced cap is claimed; startup replacement/lag remain possible; retain reserves and independently check terminal status.",
+    "Never release prior reservations based on rounded UI credits or partial hour billing.",
+    "Retain originals read-only; no task payload uploads; no paid teacher API."
+  ],
+  "latest_actual_ui": {
+    "observation": "Chrome3 ekpe6000/main apps page",
+    "credits_display_usd": 28.65,
+    "meaning": "Rounded asynchronous balance, not settled experiment spending."
+  }
+}

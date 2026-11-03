@@ -1,0 +1,250 @@
+{
+  "schema": 1,
+  "author": "/root/weight_space_paper_review",
+  "date_utc": "2026-11-03",
+  "status": "Read-only metadata, source and research assessment; no model execution or parameter payload read.",
+  "local_pins": {
+    "evidence/private/preflight.json": "6600ee293c75ffdf456c3a777b09ec172e101c896569da036fdc2b6332a3a507",
+    "src/weight_space_lab/merged_patch.py": "25310009418e646f555f56464e229fc7ac5c94163fffc86f4fdc8216e7e6d1e9",
+    "src/weight_space_lab/vllm_attention.py": "db942a00fe576a82cdc8a29b218cc6a6f66c7148d91e86a379816c73f1e09924",
+    "models/adam-1-cu.json": "8618f144a36d13cd4b5c57112f75621c5453ccca5f1f79ae7f465c42af4fd50f",
+    "evidence/private_miniwob_v2_result_independent_review.json": "d19e2ef60c6a35865f07638d891b3fac9f280ab243ce72eb0bdf62256f61c4fd"
+  },
+  "artifact_pins": {
+    "merged_config": "9743d159f38b383b746c54c9d286da79da71768e7997c73b37024da307ffcaa0",
+    "merged_index": "1bb83a632abd9efef296e6394e35c705195f5b8d7cec394742753196b952aec0",
+    "adapter_config": "52e05adc5f8595942879747f1cb4df8f45c06f547005bf7dc3094e6233723e92"
+  },
+  "adapter_sha256": "49311fe8c20663926e6474cc3e2a8c9e86eff2821259e22e85a533eb5ba08933",
+  "metadata_scope": {
+    "architecture": "Qwen3VLMoeForConditionalGeneration",
+    "index_tensor_entries": 882,
+    "visual_entries": 351,
+    "text_and_head_entries": 531,
+    "reported_parameters": 31070754032,
+    "reported_tensor_bytes": 62141508064,
+    "all_visual_index_shards": [
+      "model-00013-of-00013.safetensors"
+    ],
+    "limits": "These are checkpoint index entries, not neuron importance, capability or runtime memory. No parameter values were inspected. The merged vision weights have not been proved identical to upstream BU."
+  },
+  "weight_groups": [
+    {
+      "group": "image_patch_and_position",
+      "checkpoint_names": [
+        "model.visual.patch_embed.proj.{weight,bias}",
+        "model.visual.pos_embed.weight"
+      ],
+      "index_entries": 3,
+      "metadata": "RGB; temporal patch 2, spatial patch 16, visual width 1152, 2304 learned position embeddings."
+    },
+    {
+      "group": "visual_transformer",
+      "checkpoint_names": [
+        "model.visual.blocks.{0..26}.norm{1,2}.{weight,bias}",
+        "model.visual.blocks.{0..26}.attn.{qkv,proj}.{weight,bias}",
+        "model.visual.blocks.{0..26}.mlp.linear_fc{1,2}.{weight,bias}"
+      ],
+      "index_entries": 324,
+      "metadata": "27 blocks, 16 heads, hidden width 1152, MLP width 4304."
+    },
+    {
+      "group": "main_visual_merger",
+      "checkpoint_names": [
+        "model.visual.merger.norm.{weight,bias}",
+        "model.visual.merger.linear_fc{1,2}.{weight,bias}"
+      ],
+      "index_entries": 6,
+      "metadata": "Spatial merge 2 joins four patch features; merger width 4608, output width 2048."
+    },
+    {
+      "group": "deepstack_mergers",
+      "checkpoint_names": [
+        "model.visual.deepstack_merger_list.{0,1,2}.norm.{weight,bias}",
+        "model.visual.deepstack_merger_list.{0,1,2}.linear_fc{1,2}.{weight,bias}"
+      ],
+      "index_entries": 18,
+      "metadata": "Three intermediate visual taps at indices 8,16,24; their outputs supplement early text layers."
+    },
+    {
+      "group": "text_attention",
+      "checkpoint_names": [
+        "model.language_model.layers.{0..47}.self_attn.{q_proj,k_proj,v_proj,o_proj}.weight",
+        "model.language_model.layers.{0..47}.self_attn.{q_norm,k_norm}.weight"
+      ],
+      "index_entries": 288,
+      "metadata": "48 layers, width 2048, 32 query heads and 4 KV heads, head dimension 128. These layers combine language and visual tokens."
+    },
+    {
+      "group": "text_moe_and_layer_norms",
+      "checkpoint_names": [
+        "model.language_model.layers.{0..47}.mlp.experts.{gate_up_proj,down_proj}",
+        "model.language_model.layers.{0..47}.mlp.gate.weight",
+        "model.language_model.layers.{0..47}.{input_layernorm,post_attention_layernorm}.weight"
+      ],
+      "index_entries": 240,
+      "metadata": "128 experts, 8 selected per token, expert intermediate width 768. There are 96 packed expert entries, 48 routers and 96 layer norms."
+    },
+    {
+      "group": "embeddings_final_norm_head",
+      "checkpoint_names": [
+        "model.language_model.embed_tokens.weight",
+        "model.language_model.norm.weight",
+        "lm_head.weight"
+      ],
+      "index_entries": 3,
+      "metadata": "Vocabulary 151936. Separate checkpoint head and embedding entries; top-level tie_word_embeddings is false."
+    }
+  ],
+  "existing_intervention": {
+    "adapter_tensors": 384,
+    "rank": 16,
+    "alpha": 32,
+    "target_matrices": 192,
+    "target_matrix_elements": 905969664,
+    "targets": "All 48 text layers, q/k/v/o projections. Every saved A/B key belongs to text attention. No retained vision, merger, router or expert delta exists in this adapter.",
+    "formula": "BF16(FP32(W_original_merged)+(lambda-1)*2*(FP32(B)@FP32(A)))",
+    "evidence": "Lambda0.5 improved the fixed DOM-assisted MiniWoB subset from14/24 to21/24 with3 regressions. Pure screenshot or native desktop improvement is untested. Lambda0 is not verified raw BU.",
+    "new_training": false
+  },
+  "defensible_next_work": {
+    "first_development_run": "Root plans lambda 1, 0.5 and 0.25 under the same concise DOM-assisted MiniWoB policy. This is separate from the new adam_screen_v1 screenshot-only development and verification fixture harness. Freeze variants, budgets and selection rules before outcomes.",
+    "optional_main_merger_calibration": {
+      "status": "A bounded exploratory sensitivity experiment. It has no known task-trained direction and no promised benefit.",
+      "gains": [
+        0.98,
+        1.0,
+        1.02
+      ],
+      "checkpoint_keys": [
+        "model.visual.merger.linear_fc2.weight",
+        "model.visual.merger.linear_fc2.bias"
+      ],
+      "vllm_keys": [
+        "visual.merger.linear_fc2.weight",
+        "visual.merger.linear_fc2.bias"
+      ],
+      "expected_tp1_shapes": [
+        [
+          2048,
+          4608
+        ],
+        [
+          2048
+        ]
+      ],
+      "formula": "Wg=BF16(g*FP32(Woriginal)); bg=BF16(g*FP32(boriginal)). Gain1 copies original bytes.",
+      "meaning": "Scale both weight and bias to approximate gain on the entire affine output. BF16 rounding prevents exact algebraic equivalence. This affects the main image embedding path only; DeepStack remains separate. Downstream normalization may suppress or amplify the change.",
+      "fixed": "Keep patch/position, all27 ViT blocks, main fc1/norm, all DeepStack mergers, routers/experts and the chosen text edit fixed.",
+      "future_deepstack_keys": "visual.deepstack_merger_list.{0,1,2}.linear_fc2.{weight,bias}, with the same expected TP1 shapes; separate scope would be required."
+    },
+    "unsupported": "Do not copy neuron indices or directions from another architecture, infer skills from tensor patterns, or scale all vision/router weights blindly. Targeted direction removal first needs development-only activation and behavior evidence."
+  },
+  "future_edit_correctness_gates": [
+    "Verify exact checkpoint/source/runtime, full load receipt, unquantized BF16 CUDA, TP1/PP1, actual names/shapes/strides/device/class and finite values before writing.",
+    "Check both targets against every named parameter, including duplicate aliases. Retain immutable CPU originals and their hashes; do not replace Parameters.",
+    "Edit only with no unfinished request. Rebuild each gain from originals, check finite FP32/BF16 values and copy readback, and verify exact gain1 restoration. Partial edits prohibit inference.",
+    "After editing, clear prefix/KV cache, multimodal processing cache and encoder-output cache. reset_encoder_cache is essential for vision edits; reset_mm_cache alone is insufficient. Require successful reset returns and identical baseline handling.",
+    "Keep image processing, decoding, token limits, warmups and cache policy identical. Save PNG hashes, dimensions, resizing/patch grid, tokens, raw replies, coordinate transforms, actions, oracle results and complete episode duration."
+  ],
+  "verification_requirements": [
+    "All known MiniWoB24 cases and prior synthetic results are exposed development or regression evidence, not a new holdout.",
+    "Reserve verification layouts, assets and seeds before tuning. Policy observations must exclude target boxes, DOM labels/IDs and oracle state. Candidate selection uses development outcomes only.",
+    "Freeze one candidate before paired verification; include all failures. No rerun-until-perfect, dropped samples, extended timers or selecting only winning tasks.",
+    "Eight perfect synthetic cases do not establish universal accuracy. Separate grounding, action execution and multi-step task completion; browser-rendered desktop/mobile layouts are not native OS control.",
+    "An Astra comparison needs an identified model and comparable inputs, tools, time limits and cost accounting. An interactive assistant of unverified identity or a game demonstration cannot establish10x superiority.",
+    "Neal403/framing refusal is a browser/network restriction encountered before model evaluation; changing weights cannot resolve that recorded blocker."
+  ],
+  "primary_sources": [
+    {
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "kind": "authorreport",
+      "finding": "The Qwen3.5-0.8B experiment allowed up to50 forward-pass batches on training practice problems, without gradients. Removing a looping direction in MLP layers15/19 changed131072 weights: MATH5007.9\u219248.1%, GSM8K13.8\u219267.1%, IFEval21.0\u219262.3. The author report also records no material improvement for nonlooping Gemma3-270M. Evaluation sets were withheld from the editor.",
+      "limit": "This supports fixing a diagnosed obstruction. It does not demonstrate arbitrary skill creation or a transferable BU vision/MoE edit."
+    },
+    {
+      "url": "https://huggingface.co/browser-use/bu-30b-a3b-preview",
+      "kind": "upstreammodelcard",
+      "finding": "BU names Qwen3-VL-30B-A3B-Instruct as its base and browser-use as its intended harness. Upstream claims are not measurements of this edited checkpoint."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.57.6/src/transformers/models/qwen3_vl_moe/modeling_qwen3_vl_moe.py",
+      "kind": "taggedprimarysource",
+      "finding": "Image features replace image placeholder embeddings; DeepStack supplements early language hidden states. Screen behavior depends on the vision tower, connectors, text attention/MoE and output decoding."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/v0.18.0/vllm/model_executor/models/qwen3_vl.py",
+      "kind": "taggedprimarysource",
+      "finding": "The visual prefix mapping, main merger, three DeepStack mergers and RowParallelLinear output projection establish the expected names and shapes. These are source predictions pending runtime validation.",
+      "lines": [
+        253,
+        282,
+        351,
+        359,
+        545,
+        1267
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/v0.18.0/vllm/model_executor/models/qwen3_vl_moe.py",
+      "kind": "taggedprimarysource",
+      "finding": "The MoE wrapper constructs self.visual as Qwen3_VisionTransformer and adds DeepStack features to early text layers.",
+      "lines": [
+        100,
+        108,
+        404
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/v0.18.0/vllm/model_executor/layers/linear.py",
+      "kind": "taggedprimarysource",
+      "finding": "RowParallelLinear has an unsharded output bias and default skip_bias_add=False. Scaling weight alone does not scale the entire affine map.",
+      "lines": [
+        1269,
+        1322
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/v0.18.0/vllm/v1/engine/llm_engine.py",
+      "kind": "taggedprimarysource",
+      "finding": "reset_encoder_cache explicitly invalidates vision embeddings after weight changes; it is separate from reset_mm_cache.",
+      "lines": [
+        309,
+        319
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/v0.18.0/vllm/v1/engine/core.py",
+      "kind": "taggedprimarysource",
+      "finding": "Encoder reset clears scheduler state and physical worker cache. Resetting with unfinished requests can desynchronize state.",
+      "lines": [
+        507,
+        527
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2504.07981",
+      "kind": "primarypaper",
+      "finding": "ScreenSpot-Pro measures high-resolution grounding across23 applications and3 operating systems. Its cascaded search result shows that localization and resolution can affect accuracy without weight training; historical results are not current SOTA claims."
+    },
+    {
+      "url": "https://arxiv.org/abs/2404.07972",
+      "kind": "primarypaper",
+      "finding": "OSWorld measures369 real computer tasks with execution-based scoring. Screenshot grounding alone is not full task completion; historical release scores are not an Astra comparison."
+    }
+  ],
+  "actions": {
+    "provider_model_calls": 0,
+    "weight_payload_reads": 0,
+    "training_or_gradients": 0,
+    "runtime_source_edits": 0,
+    "new_model_tests": 0,
+    "primary_web_source_reads": true,
+    "written": "Only this new assessment; frozen history unchanged."
+  },
+  "correction_provenance": {
+    "supersedes_for_next_development_policy_only": "evidence/adam_screen_weight_assessment_20261103.json",
+    "prior_sha256": "5309837706bcadc882f5c92e7b02ae9837530d9075b9ce6bac08d4f4f260cc25",
+    "reason": "The prior assessment incorrectly called the next DOM-assisted MiniWoB run screenshot-only. Original bytes remain preserved. No results or architecture claims changed."
+  }
+}

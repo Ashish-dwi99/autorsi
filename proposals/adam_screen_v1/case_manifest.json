@@ -1,0 +1,238 @@
+{
+  "case_sets": {
+    "development": [
+      {
+        "case_id": "screen-development-01",
+        "family": "contact",
+        "fixture_sha256": "f15340f60f670814dd6e0c529651c771e81f966e1476a5bd99b504f94b3526b1",
+        "goal_sha256": "8032e890b61bf3275f20684b494061b00663ba182cd173fd2f44aeca86111a0c",
+        "layout": "desktop-like",
+        "oracle_sha256": "bb0dcf3039c1397f60c36da87b8cb26bf8c6c9f4de3084c1c9c0a513e2f44b87",
+        "seed": 631047,
+        "split": "development",
+        "viewport": {
+          "height": 768,
+          "width": 1024
+        }
+      },
+      {
+        "case_id": "screen-development-02",
+        "family": "checklist",
+        "fixture_sha256": "3fa2969114136eb4bc1524453e8399d7e5cb4ed5f68fcaa6a79a33a859c4b326",
+        "goal_sha256": "770135870988b83f584e20de070b0316014dc555c3ec71459a8d542c277c0684",
+        "layout": "mobile-like",
+        "oracle_sha256": "c9b9a121f8b439fd184202a866d5f7cde8fb4fb87bf8a1fdf7b0774bc09d7cdc",
+        "seed": 631148,
+        "split": "development",
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      },
+      {
+        "case_id": "screen-development-03",
+        "family": "choice",
+        "fixture_sha256": "fa34cd4326906de274093c29e25a1a1131921fdc288216073cf080f0caf09883",
+        "goal_sha256": "e51a6f9143758df8d809fa3cebf5c2ec42a83537b1e4d10100f151e8e0ac5ba6",
+        "layout": "desktop-like",
+        "oracle_sha256": "83b8cfc1c15bd5c08c893379be14336ff4bfd008a9a50e27f839413742491dd9",
+        "seed": 631249,
+        "split": "development",
+        "viewport": {
+          "height": 768,
+          "width": 1024
+        }
+      },
+      {
+        "case_id": "screen-development-04",
+        "family": "dialog",
+        "fixture_sha256": "316c5e3e55ad4dc466bf056a0bd731422820dc42c8cbc38e6c823f3b539d05d6",
+        "goal_sha256": "fd30ca0cdf681999dee263f2d861af92db4bcde5a1cfc260db98dcaaf7d67fe0",
+        "layout": "mobile-like",
+        "oracle_sha256": "d61bdc12556d73ae86a1ed520a5df807c51d5392930df431e1ec65e869c3b8ae",
+        "seed": 631350,
+        "split": "development",
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      },
+      {
+        "case_id": "screen-development-05",
+        "family": "tabs",
+        "fixture_sha256": "22d567fb1a2a53e2763a2baaa934088ba34d0fe1298dc291606f72b77a8ddf8e",
+        "goal_sha256": "23862b6b74a05179c5c079e397df45a3764a15adb48480e7f5ae55aad9464f54",
+        "layout": "desktop-like",
+        "oracle_sha256": "ff37cdc365a7c89eac2702de7e543e02dbf425caee9d833808a0fd7d765350eb",
+        "seed": 631451,
+        "split": "development",
+        "viewport": {
+          "height": 768,
+          "width": 1024
+        }
+      },
+      {
+        "case_id": "screen-development-06",
+        "family": "counter",
+        "fixture_sha256": "c6d69fd724cc4dc7d29e272034af8e40afac026cfef7942664c3f1a17a758fd9",
+        "goal_sha256": "eac26cdb9505df27467c5201057db04174c668f361142d3b8cd9a021f8c0b4c5",
+        "layout": "mobile-like",
+        "oracle_sha256": "e71ff9768dda684ac2b95e952bc1f0ad19bab9c6632b91d062279a7c34e9cab7",
+        "seed": 631552,
+        "split": "development",
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      },
+      {
+        "case_id": "screen-development-07",
+        "family": "scroll",
+        "fixture_sha256": "e4e39837a4d0ffd36336c822364984676e47c63eb77c5ea0ee1009e4a28a7de7",
+        "goal_sha256": "82d0dfe5e3b214e4ebcad1cc77a0281fa6e24e178bedec081a0730d688e51331",
+        "layout": "desktop-like",
+        "oracle_sha256": "aaaa073b1c11c1b6d44fdabd9396543b066e343caebe224189fefa5e21553daa",
+        "seed": 631653,
+        "split": "development",
+        "viewport": {
+          "height": 768,
+          "width": 1024
+        }
+      },
+      {
+        "case_id": "screen-development-08",
+        "family": "search",
+        "fixture_sha256": "9bbea4ce97b863f8060d3114ff27ccbf36197b0747b80d89add6bc7ceb92109e",
+        "goal_sha256": "fd09211bffe78fd6249cd1b9ffcbae257bd42e1c8e93f03617f59e5fb9578285",
+        "layout": "mobile-like",
+        "oracle_sha256": "e0317b683726bf1ac72b573649ed41596914c8c314e9199e425a5bdf646458a7",
+        "seed": 631754,
+        "split": "development",
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      }
+    ],
+    "verification": [
+      {
+        "case_id": "screen-verification-01",
+        "family": "contact",
+        "fixture_sha256": "f15340f60f670814dd6e0c529651c771e81f966e1476a5bd99b504f94b3526b1",
+        "goal_sha256": "0693679b89aadd9ca9da880a8abb2b8aab6a156b447b9b4e7c7684423d21cda4",
+        "layout": "mobile-like",
+        "oracle_sha256": "6a4e7c0e61e894c7205e26a111bb263892dde7929805025591c51f3c11629aad",
+        "seed": 975263,
+        "split": "verification",
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      },
+      {
+        "case_id": "screen-verification-02",
+        "family": "checklist",
+        "fixture_sha256": "5856ad8de67c248fe097fbe51e78a328e108806af5b9aa16d9e18d3e68919773",
+        "goal_sha256": "b4066b3324ff98e398a9f65a0266b4fda94c8b02c5a75d355f70ef7aadd8fa7a",
+        "layout": "desktop-like",
+        "oracle_sha256": "ec47d2e9ca6878527505e862ae107544ae0bb8e607093525c872b595670071f7",
+        "seed": 975364,
+        "split": "verification",
+        "viewport": {
+          "height": 768,
+          "width": 1024
+        }
+      },
+      {
+        "case_id": "screen-verification-03",
+        "family": "choice",
+        "fixture_sha256": "a8c757412d4d34fd341f72ed982ba358e142161b6df4423fc46de284465b304b",
+        "goal_sha256": "d2a53dbfdc0fd778b3a160639806ce9a11b22e72f4790c1a8e29e1a48c56af3d",
+        "layout": "mobile-like",
+        "oracle_sha256": "0e5c89fe7ba3974a0febbefbda8e8313d1f1a6836578deb62aa6c20c76782d38",
+        "seed": 975465,
+        "split": "verification",
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      },
+      {
+        "case_id": "screen-verification-04",
+        "family": "dialog",
+        "fixture_sha256": "c3ac625a9beae8e62f58497d8fab737f2adffa6014b5cdcb3b3e6013b14ef339",
+        "goal_sha256": "c011ae1035bfdb2403c38fa534756e05c50e857b25e111e205a4662e0155a5ca",
+        "layout": "desktop-like",
+        "oracle_sha256": "66d0be7179d5b38095e806259f08bd9c786087dadd92e401326ec361abc9d978",
+        "seed": 975566,
+        "split": "verification",
+        "viewport": {
+          "height": 768,
+          "width": 1024
+        }
+      },
+      {
+        "case_id": "screen-verification-05",
+        "family": "tabs",
+        "fixture_sha256": "beb0cb88c6bf658a9646d021f42a49a147582e8579b1564ec4ac56afc9d55441",
+        "goal_sha256": "a85cb9a30d4f65ed9da73bb9b3c5fa9703fea9fb3b04eb71a0bfc21552aa128e",
+        "layout": "mobile-like",
+        "oracle_sha256": "f21a8470d99f0e4758ea2faae2e595cfcfce75337280739dcee96e9acd479c65",
+        "seed": 975667,
+        "split": "verification",
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      },
+      {
+        "case_id": "screen-verification-06",
+        "family": "counter",
+        "fixture_sha256": "c6d69fd724cc4dc7d29e272034af8e40afac026cfef7942664c3f1a17a758fd9",
+        "goal_sha256": "390dc73725431a4259e15e05bcfeea9e91ad2229b556e29bc9991c0075485a45",
+        "layout": "desktop-like",
+        "oracle_sha256": "153400c1fdb0cd744c2a653e7bebbbb99f4655cccc384527f838f92610faa126",
+        "seed": 975768,
+        "split": "verification",
+        "viewport": {
+          "height": 768,
+          "width": 1024
+        }
+      },
+      {
+        "case_id": "screen-verification-07",
+        "family": "scroll",
+        "fixture_sha256": "36829774420bdcc9de08a472cd0db5cda90019f2e70a3e59b8481a2182b19f0b",
+        "goal_sha256": "4b61bd47b5cf7638e50c706b2c99f5200a983a8f7efcd5f8dcbd175af0b29589",
+        "layout": "mobile-like",
+        "oracle_sha256": "91d64e0bb19a166942349fa31c73862becaf31ccb553008ab227ed06dbc61801",
+        "seed": 975869,
+        "split": "verification",
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      },
+      {
+        "case_id": "screen-verification-08",
+        "family": "search",
+        "fixture_sha256": "b604cd418b6e36cb2aa277cad6bf04d7477bb03fa0c56c00814a8c272feababb",
+        "goal_sha256": "74ccb841c46773b6e08dc1f17e882fde17c373cbbabb11a105aaa4171c1c06c1",
+        "layout": "desktop-like",
+        "oracle_sha256": "2e3bf7d61ab3680db6c993a2f65a26b6fbef1fec1f2f15262e134652abda577c",
+        "seed": 975970,
+        "split": "verification",
+        "viewport": {
+          "height": 768,
+          "width": 1024
+        }
+      }
+    ]
+  },
+  "demo_case_ids": [
+    "screen-development-01",
+    "screen-development-04"
+  ],
+  "integrity": "Freeze verification before model development; do not select edits/prompts on verification outcomes. Old24 MiniWoB cases remain exposed historical results.",
+  "schema": 1
+}

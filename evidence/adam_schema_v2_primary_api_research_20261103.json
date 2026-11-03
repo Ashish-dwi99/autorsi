@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "created_utc": "2026-11-03T21:24:21.214143+00:00",
+  "reviewer": "/root/weight_space_paper_review",
+  "scope": "Primary source research for a prospective structural constrained-decoding experiment; no provider/model/browser action and no runtime admission.",
+  "installed_version_evidence": {
+    "path": "runs/vllm-imports-v3.log",
+    "sha256": "6e1f23ecbdd013bccb59b5031869ccb55aee5669178d81cd1d240dbc73aec0e5",
+    "lines": [
+      72,
+      465,
+      620
+    ],
+    "observed_xgrammar_version": "0.2.8",
+    "qualification": "Historical saved build log; a fresh CPU phase must verify actual installed version."
+  },
+  "api": {
+    "vllm_version": "0.18.0",
+    "imports": [
+      "vllm.sampling_params.StructuredOutputsParams",
+      "vllm.SamplingParams",
+      "vllm.config.StructuredOutputsConfig"
+    ],
+    "usage": "Explicit engine backend=xgrammar; SamplingParams(structured_outputs=StructuredOutputsParams(json=constant_schema)). Do not use auto-backend selection or obsolete guided_json arguments.",
+    "source": "https://raw.githubusercontent.com/vllm-project/vllm/v0.18.0/vllm/sampling_params.py",
+    "config_source": "https://raw.githubusercontent.com/vllm-project/vllm/v0.18.0/vllm/config/structured_outputs.py"
+  },
+  "backend": {
+    "requirement_source": "https://raw.githubusercontent.com/vllm-project/vllm/v0.18.0/requirements/common.txt",
+    "requirement": "xgrammar>=0.1.32,<1; pin actual reviewed0.2.8 explicitly. Earlier0.1.32 research was the minimum permitted version, not the observed installed version.",
+    "implementation_source": "https://raw.githubusercontent.com/vllm-project/vllm/v0.18.0/vllm/v1/structured_output/backend_xgrammar.py",
+    "manager_source": "https://raw.githubusercontent.com/vllm-project/vllm/v0.18.0/vllm/v1/structured_output/__init__.py",
+    "findings": [
+      "Backend uses the model vocabulary size and HF tokenizer to build a cached GrammarCompiler.",
+      "The engine compiler is distinct from a standalone CPU conformance compiler. Neutral model warmups must use the identical constant schema before any scored native reset.",
+      "CPU schema conversion alone is insufficient; tokenizer-aware actual compile and complete matcher accept/reject checks are required.",
+      "additionalProperties:false belongs in the schema; the engine disable_additional_properties option is guidance-specific."
+    ]
+  },
+  "exact_xgrammar028": {
+    "converter_source": "https://raw.githubusercontent.com/mlc-ai/xgrammar/v0.2.8/cpp/json_schema_converter.cc",
+    "compiler_source": "https://raw.githubusercontent.com/mlc-ai/xgrammar/v0.2.8/python/xgrammar/compiler.py",
+    "matcher_source": "https://raw.githubusercontent.com/mlc-ai/xgrammar/v0.2.8/python/xgrammar/matcher.py",
+    "findings": [
+      "GenerateString prioritizes patterns over separate length constraints; its length-only branch excludes JSON escape alternatives. Therefore do not claim maxLength/pattern grammar is universally equivalent to the parser language.",
+      "The0.2.8 pattern path differs from0.1.32 by JSON-string filtering; oneOf also has disjointness handling with a fallback. Older-version caveats are not automatically current-version results.",
+      "GrammarMatcher.is_completed() distinguishes complete strings from merely accepted prefixes; use it in truncated-output tests."
+    ]
+  },
+  "agreed_prospective_design": {
+    "schema_scope": "Static structure, required fields, types, closed objects, and1..8 action cardinality; plain strings in grammar.",
+    "parser_scope": "Unchanged parser independently enforces4096response chars, inputASCII/256chars, current visible refs, remaining quota, done-final and native tool semantics. No repair/wrapping/rescore.",
+    "bounded_decode": "Same96completion-token cap, native10s/password15s timers and fixed schema on all variants. Grammar does not promise semantic correctness or complete output before token/time limits.",
+    "cpu_cases": [
+      "Escaped quote/backslash positive strings",
+      "Complete JSON vs accepted truncated prefix",
+      "Missing required and extra keys",
+      "Wrong field types",
+      "Empty and more-than8 action arrays",
+      "Oversized/non-ASCII input explicitly allowed by structural grammar but refused by unchanged parser"
+    ],
+    "fairness": "New cases, same schema/prompt/timers/cache treatment for1,.5,.25; all original failed results remain immutable. No hidden oracle or target enumeration added."
+  },
+  "local_packages_inspected": {
+    "xgrammar": "not installed",
+    "vllm": "not installed",
+    "jsonschema": "4.23.0",
+    "no_installation_performed": true
+  },
+  "pending": "Final author source, pure tests, exact source/budget review and fresh actual CPU grammar admission. This record supplies no experiment result."
+}

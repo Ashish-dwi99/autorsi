@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "reviewer": "weight_space_paper_review",
+  "scope": "Independent source, lifecycle, candidate-fairness and budget-proposal review. Local pure tests and actual installed SDK shallow import only. No provider, model, browser, checkpoint payload or old benchmark execution.",
+  "source_record": {
+    "path": "proposals/adam_dev_v1/SOURCE_RECORD_V2.json",
+    "sha256": "38144d69107a49ac12cc1bc0a348273ab8b7bb2a56a1ee5999fec093fd5c6b39"
+  },
+  "source_manifest_sha256": "048c1884833769e523a3c4daf44c803ced445f263496cabad342c56dc227dcdf",
+  "source_manifest": {
+    "proposals/adam_dev_v1/dev_contract.py": "4323ac20f54b41f3c1ca94066f551217608e2724c67c6ee54dafdf1f5dd1d997",
+    "proposals/adam_dev_v1/dev_patch.py": "0441734f5e89c2903bf4c73955ef49b513fc0815f3c313bd5a28bd7d8cd62e9c",
+    "proposals/adam_dev_v1/dev_native.py": "de2e53818cfb37eabd3ec442549e771fa828f07d8dc814f312face0ae22b09a5",
+    "proposals/adam_dev_v1/dev_benchmark.py": "ed71dd3872c20cb5e634ec22807b56402acea523bf0171372bab188366be4034",
+    "proposals/adam_dev_v1/dev_entry.py": "4d1ddf0072bbd230ff3de76bd2d690ea81028fe72c7a091d3ef4bfe8d3d6b044",
+    "proposals/adam_dev_v1/modal_dev.py": "b98b10ca20f9382777eff0615a7880e915b0038369615062f083e989a1e2a8b3",
+    "proposals/adam_dev_v1/dev_host.py": "20f222a03d6f54569499e84975d082350ae169efd306c829abd0eafedd4575e7",
+    "proposals/adam_dev_v1/build_miniwob_runtime.py": "44f655fce0f07898908315abf3e0698ca1981bdb1f430fb976e0404ec99c724b",
+    "proposals/adam_dev_v1/SCOPE.json": "037942fbeb455e7314aeaa244642a2973e5b0589ba3d58806dd01518d9ca7285",
+    "src/weight_space_lab/__init__.py": "0011bfd335ca645347f878f6d5ab2e7863958d572388233bb13530070a0f9201",
+    "src/weight_space_lab/benchmarks/__init__.py": "48fddf5bdf1d87f13ee19919253c21867a1509383523779b6b4d39e9cc454cea",
+    "src/weight_space_lab/benchmarks/miniwob.py": "c85987b1a84bf9a75c8a000fdb1cbc37f254adf31939e03e4359d132bffaca1a",
+    "src/weight_space_lab/diagnostic.py": "4ff894989dcccf57d2ad17cc86740114dafca8a57f62eb2297bb27d219c3dc33",
+    "src/weight_space_lab/eval/__init__.py": "2fecfeab2b6eacf945accac88c69620bc937d06f3c6efb23f95eb68e8cbcd4b5",
+    "src/weight_space_lab/eval/bu_policy.py": "57f228cdbdfbe72925d0aa311b76001d74a9e03ae9d439c0be63145fd11b02dd",
+    "src/weight_space_lab/eval/bu_protocol.py": "5987375c472918692f3a2c275c04048aa90b80652feae2faeaa01d20b89f3ebd",
+    "src/weight_space_lab/eval/fixtures.py": "2c994fd6d5c465a2a729082b789661494d711c6b7cec4bcc4d299c76e05ec57a",
+    "src/weight_space_lab/eval/runner.py": "1e22b7a8635c15214aeefd3e5956a8c5102934e1ce0cc261d359f2a1624085d5",
+    "src/weight_space_lab/merged_patch.py": "25310009418e646f555f56464e229fc7ac5c94163fffc86f4fdc8216e7e6d1e9",
+    "src/weight_space_lab/patch.py": "b2bf10e9402104d495c08ab7ade727300c2b2481c965552da48ea1ecb58b3aca",
+    "src/weight_space_lab/policy_io.py": "2c2ccdce8e0762f9e35529114337d0adfb01dd9706f95562d43ae51e9106f9a6",
+    "src/weight_space_lab/process_entry.py": "56fcbf8223f83573d0312b63230a2f7b4f487e7e2b395ffb38b948d7298eea88",
+    "src/weight_space_lab/process_entry_v4.py": "fb19d5b1ac02dde7877a40ca969155f77a79aec5c2aec5df5cc403f7ee17bf06",
+    "src/weight_space_lab/vllm018_compat.py": "be28b81d5d1e89f1fd08ade8bb59488738dda0253568e101acd6cac09dcb667c",
+    "src/weight_space_lab/vllm_attention.py": "db942a00fe576a82cdc8a29b218cc6a6f66c7148d91e86a379816c73f1e09924",
+    "src/weight_space_lab/vllm_pilot.py": "f6e777bb396b1b8eb5a56ed079b7aa11e4b32ce58f1229e6d43f69b310548aa6",
+    "src/weight_space_lab/vllm_pilot_v4.py": "9d2bad07d040cf3b6d5150fc89664ee41c72a93cf9863257fb8ac1c56cc148ac"
+  },
+  "test_sources": {
+    "test_dev.py": "e236ca22c9e7725c12cedbf4169986eaf7ccd3002d663c6649d07880e2f3db92",
+    "test_dev_native.py": "d44449e4b43ec4042810ce72ff770faa5e826551391a648ef0a8255e11c00e56"
+  },
+  "conclusion": "No additional concrete source defect found after the documented corrections. Source is ready for root allocation/deployment and the new CPU admission; GPU still requires successful exact fresh CPU evidence and observed deployment/no-overlap joins. This review itself neither allocates funds nor establishes runtime success.",
+  "resolved_findings": [
+    {
+      "issue": "Stale per-variant denominator24 despite12 development cases.",
+      "resolution": "Current summarize uses12 for planned/missing/coverage/fraction; regression test covers partial and complete rows."
+    },
+    {
+      "issue": "Initial CPU budget duration720 differed from actual600+240.",
+      "resolution": "Additive budget v2 uses840s and actual16GiB maximum; prior proposal preserved."
+    },
+    {
+      "issue": "Possible held native requests or failed prefix reset ignored at edit boundary.",
+      "resolution": "Actual engine idle check is required before each edit; prefix reset must return True before any following inference."
+    },
+    {
+      "issue": "Cross-variant task-image encoder caching could change native-timer conditions.",
+      "resolution": "Every actual variant switch resets prefix, MM processor and encoder caches; Latin schedule has no adjacent equal scales, including last warmup to first scored episode. CPU checks the pinned vLLM0.18 static interfaces. Initial27-file record and four changed payloads preserved and hash-verified."
+    }
+  ],
+  "candidate_and_metrics": [
+    "Fresh development seed2026110389 across12 official families;36 planned episodes at scales1,.5,.25 with fixed cyclic order. Same96token action-only protocol; three64token neutral warmups precede any scored reset.",
+    "Original task timers remain10000ms except enter-password15000ms. Fresh CPU performs24 paired resets/NONE steps and publishes complete incremental timer/initial/close evidence. GPU each initial observation must match the exact CPU fingerprint.",
+    "Global288 request ceiling includes3 warmups, leaving285 scored requests; complete36-episode coverage is required to select. Hitting the cap can leave coverage incomplete and must not become a smaller success denominator.",
+    "Selection is fixed: native successes descending, invalid actions ascending, measured output tokens ascending, scale descending. No verification action or model request is executable from this launcher; reserved seed2026110397 remains unconsumed.",
+    "Actual192 original attention/2BA numeric inspection precedes nonbaseline edits. Statistics do not choose or invent candidates or establish capability. Each edit rebuilds from retained originals; failed edits block further nonbaseline mutations.",
+    "No visual, MoE/router or embedding edit is in this run. It is DOM-assisted MiniWoB development, separate from the screenshot-only harness and optional visual calibration. Prior21/24 official subset result remains historical and unchanged."
+  ],
+  "lifecycle_and_provenance": [
+    "Private SDK functions, one container, zero source retries, fixed expiry, persistent once keys, original model volumes read-only and existing writable results volume only. New parent and executing modules hash-join explicit packaged copies before once admission.",
+    "CPU decorator4cores/16GiB max,600function+240startup; CPU child450s. GPU4cores/96GiB max,A10080GB,1260function+240startup; child1200s,new work1140s,generation45s. Host1800s with bounded20s cancellation handling.",
+    "Spawned child alone owns model/CUDA and local browser. Unknown inference retains generation stage for independent parent termination/reap; direct child reap and close returns do not prove all descendants or billing stopped. Actual provider terminal observation remains necessary.",
+    "Host validates installedSDK1.4.3 source pins, source-bound allocation and actual deployment IDs, fresh <=300s no-overlap observation; from_name/hydrate exact function ID precedes one spawn. Returned handle remains cancellation-covered after receipt/download-floor failure; unknown spawn without handle is not retried.",
+    "Fresh400MiB host preservation floor precedes local once marker;200MiB+16MiB precedes result retrieval. Bounded8MiB progress,16MiB host JSON and288\u00d7128KiB pre-action PNG artifacts are explicit, not physical native allocation guarantees. Artifact retrieval beyond the returned report requires its separately bounded path.",
+    "Fresh metadata/header/size checks and read-only mounts join historical full-shard hashes; this is not a new full checkpoint payload hash audit. Actual same-image CPU success must still be read before GPU."
+  ],
+  "budget_proposal": {
+    "path": "evidence/adam_dev_v1_budget_proposal_v2_20261103.json",
+    "sha256": "a91ef530e46fa69504c5193f5727172535f19cb7455279ff89292ce36942a041",
+    "GPU_planning_seconds": 1560,
+    "GPU_resource_cost_usd": 1.4968512,
+    "CPU_planning_seconds": 840,
+    "CPU_resource_cost_usd": 0.0738528,
+    "build_storage_recovery_contingency_usd": 1.75,
+    "calculated_total_usd": 3.320704,
+    "new_envelope_usd": 3.5,
+    "prior_reservations_usd": 21,
+    "reserved_if_root_adopts_usd": 24.5,
+    "unallocated_if_root_adopts_usd": 5.5,
+    "total_user_ceiling_usd": 30,
+    "limitation": "Arithmetic matches current exact decorator bounds with conservative GPU1560s. This is planning, not a provider-enforced dollar cap, settled bill or release of earlier reservations."
+  },
+  "validation": {
+    "command": "/Users/samuelekpe/Convert/.venv/bin/python -m unittest discover -s proposals/adam_dev_v1 -p test_dev*.py -q",
+    "passed": 33,
+    "skipped": 0,
+    "elapsed_seconds": 0.523,
+    "exact_runtime_files_readback_verified": 27,
+    "preserved_prior_payloads_verified": 4,
+    "new_model_provider_browser_calls": 0
+  },
+  "limits": [
+    "No actual CPU/GPU development result is certified here. No verification, promotion, checkpoint publication, Astra comparison or superiority follows this source review.",
+    "Synthetic fake numerical tests do not establish actual CUDA/BF16/runtime behavior; CPU import/header admission does not measure model quality or complete resource peaks.",
+    "Pinned shared vLLM/tokenizer warnings remain runtime limitations and cannot be assumed causal if failures occur."
+  ]
+}

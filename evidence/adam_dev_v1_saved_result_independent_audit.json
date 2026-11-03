@@ -1,0 +1,162 @@
+{
+  "actual_call": {
+    "app_id_from_host_receipt": "ap-f4k63JSQcDim0xyJzUU3rv",
+    "app_name": "adam-1-dev-miniwob-20261103-v1",
+    "browser_close_returned": true,
+    "child_elapsed_s": 275.72395949099996,
+    "child_exitcode": 0,
+    "child_reaped": true,
+    "function_call_id": "fc-01M6HKXYP05TGDJBRAP6AMT7FR",
+    "function_id_from_host_receipt": "fu-EgRj1K9cPXpaWgp9ljsbOb",
+    "parent_elapsed_s": 296.274596979,
+    "provider_terminal_or_billing_verified_by_this_audit": false,
+    "status": "completed"
+  },
+  "created_utc": "2026-11-03T21:18:38.555287+00:00",
+  "diagnosis": {
+    "all_failed_before_UI_steps": true,
+    "all_requests_finished_with_stop": true,
+    "earlier_message_count_correction": "Preliminary22/9 split was mistaken; exact23missing-envelope JSON objects and8malformed JSON fragments are authoritative.",
+    "exact_saved_error_counts": {
+      "concise protocol requires exactly the action key": 23,
+      "one complete native JSON object required": 8
+    },
+    "examples": {
+      "baseline_actual": "{\"click\": [{\"index\": 7}]}",
+      "edited_actual_malformed": "{\"click\":{\"index\":8}}]}",
+      "expected": "{\"action\":[{\"click\":{\"index\":7}}]}"
+    },
+    "failed_episodes": 31,
+    "max_returned_output_tokens": 47,
+    "meaning": "This experiment measures poor compliance with the new concise interface. It cannot establish broad capability loss or reliable superiority of mathematical winner0.25.",
+    "not_proven": "No tokenizer/template/weight causal attribution, no successful hypothetical replay, no transformed-response rescore.",
+    "scored_cap": 96,
+    "source_contract": "dev_native.py SYSTEM_PROMPT explicitly requires exactly action; parse_batch enforces that same envelope; no contradiction between their documented schemas found. Some missing-envelope objects also contain list-valued tool parameters or nested forms, so wrapping is not a justified universal repair."
+  },
+  "exact_source_manifest_sha256": "048c1884833769e523a3c4daf44c803ced445f263496cabad342c56dc227dcdf",
+  "inputs": [
+    {
+      "bytes": 617861,
+      "path": "runs/adam-dev-miniwob-20261103-v1.remote-report.json",
+      "sha256": "82507cc42f74d39962a1e098140d0c89f1d36d545c5077b5cb92946614c9f6cb"
+    },
+    {
+      "bytes": 178741,
+      "path": "runs/adam-dev-imports-20261103-v1.remote-report.json",
+      "sha256": "809f3a89c5769116335e0312cd34be380886559b8dc250210c8c51d560bdb186"
+    },
+    {
+      "bytes": 9284,
+      "path": "runs/adam-dev-miniwob-20261103-v1.call.json",
+      "sha256": "56fb2a6c37f329e2a73eaec589ea687639a3b63fe82234b37d64a23c3169eb1c"
+    },
+    {
+      "bytes": 9152,
+      "path": "runs/adam-dev-miniwob-20261103-v1.started.json",
+      "sha256": "334a072de7a2623d3c73acb9ee9dc904139b1b109304f6d48ea6e1c7caa45436"
+    },
+    {
+      "bytes": 10333,
+      "path": "proposals/adam_dev_v1/SOURCE_RECORD_V2.json",
+      "sha256": "38144d69107a49ac12cc1bc0a348273ab8b7bb2a56a1ee5999fec093fd5c6b39"
+    },
+    {
+      "bytes": 14061,
+      "path": "tools/summarize_adam_development.py",
+      "sha256": "5fe7f4a3a6c5eda9b55df7fc45e6ac4c28bb33de5e203b73e6981a65ee6616e0"
+    },
+    {
+      "bytes": 13132,
+      "path": "runs/adam-dev-v1.progress-log-20261103.txt",
+      "sha256": "9b6c953065f9c0d1ad9d14fe6c206c5c402a5a25bb658e1385e58b769d23906f"
+    },
+    {
+      "bytes": 380418,
+      "path": "evidence/private/preflight.json",
+      "sha256": "6600ee293c75ffdf456c3a777b09ec172e101c896569da036fdc2b6332a3a507"
+    },
+    {
+      "bytes": 12746,
+      "path": "runs/fixtures-v1.json",
+      "sha256": "3f979fc23eb0456d2574fedbf12608c4ab7e5198ac36b880726af360e737173d"
+    },
+    {
+      "bytes": 1842,
+      "path": "evidence/miniwob_shared_runtime_warnings_20261103.json",
+      "sha256": "8914e77c535af0ff822dd812f1315e44b7b3fe20c9a9815b56263c05852b1d51"
+    }
+  ],
+  "metrics": {
+    "0.25": {
+      "environment_steps": 8,
+      "invalid_actions": 9,
+      "model_calls": 12,
+      "planned": 12,
+      "successes": 3,
+      "sum_episode_seconds": 26.44833902500008
+    },
+    "0.5": {
+      "environment_steps": 6,
+      "invalid_actions": 10,
+      "model_calls": 12,
+      "planned": 12,
+      "successes": 2,
+      "sum_episode_seconds": 24.88903364500007
+    },
+    "1.0": {
+      "environment_steps": 0,
+      "invalid_actions": 12,
+      "model_calls": 12,
+      "planned": 12,
+      "successes": 0,
+      "sum_episode_seconds": 24.40320136400001
+    }
+  },
+  "new_model_browser_provider_calls": 0,
+  "promotion": "NONE;0.25 is the frozen rule arithmetic development selection only; verification remains unconsumed; prior21/24 unchanged",
+  "receipt_reconciliation": {
+    "cache_reset_receipts": 39,
+    "case_initials_join_paired_cpu_preflight": true,
+    "environment_steps": 14,
+    "hardened_summary_passed_once": true,
+    "image_payloads_independently_read_or_decoded": false,
+    "metadata_only_not_native_replay": true,
+    "observation_receipts": 45,
+    "parent_preserved_image_bytes": 240484,
+    "planned_and_completed_episodes": 36,
+    "scored_requests": 36,
+    "total_model_requests": 39,
+    "warmup_requests": 3
+  },
+  "recommended_next_scope": "Design and validate response-format compatibility on new development work before any screen-model evaluation. Preserve current raw results; do not silently normalize or rescore them.",
+  "reviewer": "bu_eval_harness; independent of development runtime author; authored hardened saved-only summarizer",
+  "runtime_sources_changed": false,
+  "schema": 1,
+  "status": "ACTUAL_COMPLETE_DEVELOPMENT_RUN_PROTOCOL_FAILURE_NO_PROMOTION",
+  "tokenizer_warning": {
+    "actual_log_lines": [
+      35,
+      36,
+      79
+    ],
+    "base_config_sha256": "2bbeecdec921e53bdc7e71ddf9310952fae5b61a4e1089fa7d1cd21002cd7e3c",
+    "base_config_transformers_version": "4.57.3",
+    "base_model_type": "qwen3_vl_moe",
+    "base_revision": "28f795cd9ec73aedf2970a8914bbbf0d18accd82",
+    "interpretation": "Overbroad applicability heuristic, not a demonstrated concrete tokenization mismatch. Existing prior saved warning analysis independently corroborated. No justification to apply the Mistral regex patch or attribute this protocol failure to tokenizer warning.",
+    "limits": "Official tagged source inspected; deployed full tokenizer-source bytes were not recovered in this audit. Cached processor artifacts are hash-bound by existing runtime receipt, but actual tokenizer/pretokenizer correctness and rendered token sequence were not newly executed or inspected. Public HF tokenizer/template URLs were unavailable to web tool; no alternate transport used.",
+    "primary_sources": [
+      {
+        "finding": "Vocabulary>100000 and an available backend pretokenizer admit a local config check. The non-Mistral model-type exclusion is nested under config producer<=4.57.2; config4.57.3 falls through. Warning branch setsFalse without replacing regex; explicitTrue chooses replacement.",
+        "section": "PreTrainedTokenizerBase._from_pretrained and _patch_mistral_regex",
+        "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.57.6/src/transformers/tokenization_utils_base.py"
+      },
+      {
+        "finding": "Upstream issue reproduces warning for localQwen with4.57.6; maintainers report newer main does not reproduce.",
+        "url": "https://github.com/huggingface/transformers/issues/44031"
+      }
+    ],
+    "processor_manifest_source": "runs/fixtures-v1.json, rechecked by frozen dev_benchmark.py before model load",
+    "runtime_transformers": "4.57.6"
+  }
+}

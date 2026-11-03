@@ -1,0 +1,62 @@
+{
+  "actions": {
+    "max_per_batch": 4,
+    "max_per_case": 12,
+    "select_all": "Logical platform shortcut via Playwright ControlOrMeta+A; focused editable field required",
+    "tools": [
+      "click(x,y)",
+      "type(text)",
+      "key(name)",
+      "scroll(x,y,dy)",
+      "done()"
+    ]
+  },
+  "artifact_limits": {
+    "limits_checked_after_returns_not_encoder_allocation_guarantees": true,
+    "per_case_fresh_disk_bytes": 230686720,
+    "png_bytes": 1048576,
+    "video_bytes": 67108864
+  },
+  "development_preflight": "Eight scripted normal UI references; test validation only, not model results",
+  "device_scale_factor": 1,
+  "failure": "Unknown inference/native timeout latches session permanently and requires external worker disposition; no retry/overlapping call",
+  "manual_demo": {
+    "actor_identity": "Declared label requires external actual runtime provenance; tool-assisted timing differs from API-only inference",
+    "cases": [
+      "screen-development-01",
+      "screen-development-04"
+    ],
+    "channel": "Local immutable observation/command files with session/case/sequence/hash; no public endpoint",
+    "verification_used": 0
+  },
+  "observations": "Task goal plus unchanged PNG, viewport, stepbudget and prior issued-action feedback only; no DOM/refs/boxes/oracle/source",
+  "output_tokens_per_call": 128,
+  "paid_actions": 0,
+  "schema": 1,
+  "scope": "Eight development and eight fresh verification browser-rendered desktop-like/mobile-like cases; not realdesktop/mobile/fullcomputer-use benchmark",
+  "source_ownership": "This harness excludes independently authored vision_edit.py and its tests; root must compose and review full runtime closure separately.",
+  "status": "source-only screenshot fixture harness; no model evaluation or provider deployment",
+  "time": {
+    "case_seconds": 90,
+    "close_finalization_seconds": 10,
+    "limits_are_not_physical_native_return_guarantees": true,
+    "manual_reply_seconds": 60,
+    "model_call_seconds": 30
+  },
+  "verification": {
+    "cases": 8,
+    "disjoint_word_labels": true,
+    "fixed_seeds_and_opposite_layouts": true,
+    "local_preflight": "Rendered only; zero verification actions/policy/model calls or scored results"
+  },
+  "viewports": {
+    "desktop-like": [
+      1024,
+      768
+    ],
+    "mobile-like": [
+      390,
+      844
+    ]
+  }
+}

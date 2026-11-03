@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "scope": "Prospective prompt/documentary precision only; executor and task behavior unchanged",
+  "fresh_preservation_free_bytes": 2388946944,
+  "changes": {
+    "screen_protocol.py": {
+      "before_sha256": "6db6ad73d144ec539d5f62700553fb13e22d9a18ba44746a59f68b653fb36389",
+      "after_sha256": "c8b8dbae1a2ed2f2b2514282ff17467b2392b70d0e789c032ae1103449270aab",
+      "history_path": "proposals/adam_screen_runtime_v1/history/prior-caret-wording/screen_protocol.py",
+      "unified_diff": "--- prior/screen_protocol.py\n+++ current/screen_protocol.py\n@@ -8,7 +8,7 @@\n Use 1..4 actions per reply and at most the remaining total action budget.\n Available actions:\n click: {\"x\":120,\"y\":80} left-clicks a visible position.\n-type: {\"text\":\"hello\"} types into the currently focused editable field; it appends.\n+type: {\"text\":\"hello\"} inserts at the caret or replaces selected text in the focused editable field.\n key: {\"name\":\"SELECT_ALL\"} presses one of TAB, ENTER, ESCAPE, BACKSPACE, DELETE,\n ARROWUP, ARROWDOWN, ARROWLEFT, ARROWRIGHT, HOME, END, SELECT_ALL, SPACE.\n SELECT_ALL uses the platform's select-all shortcut in a focused text field.\n"
+    },
+    "INTEGRATION.md": {
+      "before_sha256": "bd4c34142182c7002110abb98771e90dd121d4781b780fec15fcd02a47f34a43",
+      "after_sha256": "b5921c50af8bae61cf94327c917413ca17b0b8e37372f6ef404398e4d346fb4e",
+      "history_path": "proposals/adam_screen_runtime_v1/history/prior-caret-wording/INTEGRATION.md",
+      "unified_diff": "--- prior/INTEGRATION.md\n+++ current/INTEGRATION.md\n@@ -27,8 +27,7 @@\n The JSON envelope is `{\"actions\":[...]}` with one to four actions. Tools are\n `click:{x,y}`, `type:{text}`, `key:{name}`, `scroll:{x,y,dy}`, and `done:{}`. Every\n coordinate uses viewport CSS pixels at device scale1. `SELECT_ALL` is the logical\n-platform select-all shortcut (`ControlOrMeta+A`) in a focused text field. Type\n-appends. No selectors, JavaScript, external navigation, filesystem tools or model\n+platform select-all shortcut (`ControlOrMeta+A`) in a focused text field. Type inserts at the current caret or replaces selected text. No selectors, JavaScript, external navigation, filesystem tools or model\n success claims are admitted. The whole batch is syntax-checked before dispatch.\n Coordinate bounds do not prove semantic element identity. Use a one-action batch\n when changed UI needs inspection; every subsequent batch gets a fresh screenshot.\n"
+    }
+  }
+}

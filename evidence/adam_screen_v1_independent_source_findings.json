@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "reviewer": "weight_space_paper_review",
+  "status": "CONCRETE_SOURCE_FINDINGS_BEFORE_ADMISSION",
+  "source_record": {
+    "path": "evidence/adam_screen_v1_source_and_local_validation.json",
+    "sha256": "172b99b9329befca56d8ad964f0d99dd860e390460eb2b03c7b5dd97e46527a8"
+  },
+  "source_manifest_sha256": "e043b7ec606b55db4f8d97524e50adfff71cb8e0e8b31a12c0a148bee7bb9c8c",
+  "all_nine_current_file_hashes_verified": true,
+  "findings": [
+    {
+      "id": "SCREEN-1",
+      "file": "proposals/adam_screen_v1/screen_harness.py",
+      "function": "ScreenSession._infer",
+      "finding": "Policy task is created before remaining original case time is required to be positive. Work between the prior screenshot await and inference admission can exhaust90s; negative/zero asyncio.wait timeout still schedules a policy task.",
+      "required_correction": "Refuse before create_task on nonpositive/nonfinite remaining, preserve original deadline, and prove no policy invocation in a pure test."
+    },
+    {
+      "id": "SCREEN-2",
+      "file": "proposals/adam_screen_v1/screen_harness.py",
+      "function": "ScreenSession.run_case exception routing",
+      "finding": "Installed Playwright1.60 TimeoutError inherits Playwright Error(Exception), not built-in TimeoutError. The native-timeout except tuple misses it, and generic Exception permits another case contrary to declared unknown-native session latch.",
+      "required_correction": "Route actual Playwright timeout class to permanent session abort, preserve outcome, and prove no following case/policy operation with a pure fake test.",
+      "local_primary_source": "/Users/samuelekpe/Convert/.venv/lib/python3.11/site-packages/playwright/_impl/_errors.py",
+      "local_primary_sha256": "9b8431a8e40848a18ace1ea38557d87bf51e09af9023eadd8b256b4f97ea0773"
+    },
+    {
+      "id": "SCREEN-3",
+      "file": "proposals/adam_screen_v1/screen_harness.py",
+      "function": "run_case finalization",
+      "finding": "Context close and subsequent video.path each receive a fresh10s timeout although docs describe one separate10s finalization allowance.",
+      "required_correction": "One original finalization deadline shared by both awaits, or explicitly review a changed bound before execution; retain no physical native-stop claim."
+    }
+  ],
+  "other_source_observations": [
+    "Policy messages contain goal, unchanged PNG, viewport/remaining budget/sequence and prior action feedback; no receipt oracle, DOM identifiers, page source or reference boxes are provided.",
+    "Coordinate action batches are syntax-validated fully before dispatch. Native editable-focus query only validates type/select-all and is not fed to policy or used to choose target.",
+    "Ordinary fixture event handlers record supplied UI choices; the target equality oracle is held in Python and does not come from a model success claim.",
+    "Manual observations/commands join session/case/sequence/content hashes, with exclusive complete-file hardlink publication. Labels remain caller declarations, not verified Astra identity.",
+    "Verification pages were only rendered in author tests according to saved record; author reference development UI checks and done-only video bridge are test doubles, not model results. I did not repeat browser tests."
+  ],
+  "reviewer_actions": {
+    "read_source": true,
+    "local_browser_tests": false,
+    "model_calls": 0,
+    "provider_calls": 0,
+    "checkpoint_payload_reads": 0
+  },
+  "admission": "Initial e043b7ec harness is not admitted while these findings remain. Preserve this finding history and bind a separate correction review to final bytes."
+}

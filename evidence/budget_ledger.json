@@ -65,9 +65,17 @@
       "v1_terminal_record": "evidence/neal_v1_terminal_observation.json",
       "navigation_diagnostic_scope": "One original level1 navigation per two fresh frames, <=30s observation; no model/input mounts, no GPU function, no game action, no bypass/reload. Existing results volume only.",
       "navigation_redirect_scope": "Two deliberate initial URLs; normal anonymous browser redirects observed after possible network contact. Stop on observed unlisted origin/document/loop/refusal. No all-hop preventive egress guarantee, custom transport, fallback, reload or security changes."
+    },
+    {
+      "id": "adam-dev-miniwob-20261103-v1",
+      "usd": 3.5,
+      "status": "CPU and36-episodeGPU development completed once; child reaped0 and actual provider0live/0running; output protocol failed31episodes; full3.50 reservation retained pending billing reconciliation.",
+      "source_manifest_sha256": "048c1884833769e523a3c4daf44c803ced445f263496cabad342c56dc227dcdf",
+      "allocation_file": "evidence/adam_dev_v1_allocation_20261103.json",
+      "outcome": "evidence/adam_dev_v1_outcome_20261103.json"
     }
   ],
-  "unreserved_usd": 9,
+  "unreserved_usd": 5.5,
   "billing_observation": {
     "date_utc": "2026-11-03",
     "completed_hour_cli": [
@@ -104,8 +112,9 @@
     "live_ui": "Nov3 after private deployment and failed pre-spawn host launch: credits29.03. Rounded asynchronous display, not a settled project total.",
     "new_completed_hours_receipt": "evidence/billing_completed_hours_15_to_19_20261103.json",
     "new_reported_gross_usd": "0.96944222",
-    "latest_completed_hour_record": "evidence/billing_completed_hour_19_to_20_20261103.json",
-    "latest_combined_reported_gross_usd": "1.35300055"
+    "latest_completed_hour_record": "evidence/billing_completed_hours_15_to_21_20261103.json",
+    "latest_combined_reported_gross_usd": "1.35392553",
+    "latest_limit": "Complete hourly intervals before21:00UTC only;21-hour Adam GPU cost not included; no reservation release or settled invoice inference."
   },
   "rules": [
     "No new reservation if total reservations plus settled charges exceed USD30; do not double-count settled charges and their released reservations.",
@@ -134,7 +143,7 @@
     "displayed_credits_usd": 29.04,
     "source": "Root Chrome Modal app DOM observation on Nov3 after completion; rounded credits are not settled billing."
   },
-  "previous_ledger_sha256": "16863ee1706966733eace111eb988a85a4c3406ffb8538463f529715b252e84b",
+  "previous_ledger_sha256": "e493a415516da9fc809cf89f136d23dba87d7fc6956782fa65798940648aed2e",
   "superseded_reservations": [
     {
       "id": "metadata-preflight-v1",

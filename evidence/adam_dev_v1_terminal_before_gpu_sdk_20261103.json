@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "observed_unix": 1793740161.388033,
+  "source": "Actual public SDK1.4.3 Function.get_current_stats for every fixed function in both apps; exact hydrated IDs",
+  "applications": [
+    {
+      "app_id": "ap-x4CZ2F40Nzk5OFvcypDCHP",
+      "live_containers": 0,
+      "running_calls": 0,
+      "functions": [
+        {
+          "name": "diagnose_navigation",
+          "function_id": "fu-mVLCGSfCAXmsKdGBJfcw85",
+          "backlog": 0,
+          "num_total_runners": 0,
+          "num_running_inputs": 0,
+          "input_headroom": 0
+        }
+      ]
+    },
+    {
+      "app_id": "ap-f4k63JSQcDim0xyJzUU3rv",
+      "live_containers": 0,
+      "running_calls": 0,
+      "functions": [
+        {
+          "name": "verify_runtime_imports",
+          "function_id": "fu-uhpvuWmPTU3iQWm1LEMGjk",
+          "backlog": 0,
+          "num_total_runners": 0,
+          "num_running_inputs": 0,
+          "input_headroom": 0
+        },
+        {
+          "name": "development",
+          "function_id": "fu-EgRj1K9cPXpaWgp9ljsbOb",
+          "backlog": 0,
+          "num_total_runners": 0,
+          "num_running_inputs": 0,
+          "input_headroom": 0
+        }
+      ]
+    }
+  ]
+}

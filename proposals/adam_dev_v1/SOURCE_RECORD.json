@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "status": "SOURCE_ONLY_FROZEN_FOR_DISTINCT_REVIEW_NOT_LAUNCHED",
+  "source_manifest": {
+    "proposals/adam_dev_v1/dev_contract.py": "ff1fe6b14798ac5a2cd0d11dab9cd22d803c1fe319a7e3d9e2592f03f46863b1",
+    "proposals/adam_dev_v1/dev_patch.py": "0441734f5e89c2903bf4c73955ef49b513fc0815f3c313bd5a28bd7d8cd62e9c",
+    "proposals/adam_dev_v1/dev_native.py": "de2e53818cfb37eabd3ec442549e771fa828f07d8dc814f312face0ae22b09a5",
+    "proposals/adam_dev_v1/dev_benchmark.py": "36b4c138f65347270b2fbe7bee663ed953593f5396d07e782bf20c44f2e872cd",
+    "proposals/adam_dev_v1/dev_entry.py": "b7d34c91c5443e1174c9f5111f27fc0c824354aac662af2d23f25d7a46b04448",
+    "proposals/adam_dev_v1/modal_dev.py": "b98b10ca20f9382777eff0615a7880e915b0038369615062f083e989a1e2a8b3",
+    "proposals/adam_dev_v1/dev_host.py": "20f222a03d6f54569499e84975d082350ae169efd306c829abd0eafedd4575e7",
+    "proposals/adam_dev_v1/build_miniwob_runtime.py": "44f655fce0f07898908315abf3e0698ca1981bdb1f430fb976e0404ec99c724b",
+    "proposals/adam_dev_v1/SCOPE.json": "037942fbeb455e7314aeaa244642a2973e5b0589ba3d58806dd01518d9ca7285",
+    "src/weight_space_lab/__init__.py": "0011bfd335ca645347f878f6d5ab2e7863958d572388233bb13530070a0f9201",
+    "src/weight_space_lab/benchmarks/__init__.py": "48fddf5bdf1d87f13ee19919253c21867a1509383523779b6b4d39e9cc454cea",
+    "src/weight_space_lab/benchmarks/miniwob.py": "c85987b1a84bf9a75c8a000fdb1cbc37f254adf31939e03e4359d132bffaca1a",
+    "src/weight_space_lab/diagnostic.py": "4ff894989dcccf57d2ad17cc86740114dafca8a57f62eb2297bb27d219c3dc33",
+    "src/weight_space_lab/eval/__init__.py": "2fecfeab2b6eacf945accac88c69620bc937d06f3c6efb23f95eb68e8cbcd4b5",
+    "src/weight_space_lab/eval/bu_policy.py": "57f228cdbdfbe72925d0aa311b76001d74a9e03ae9d439c0be63145fd11b02dd",
+    "src/weight_space_lab/eval/bu_protocol.py": "5987375c472918692f3a2c275c04048aa90b80652feae2faeaa01d20b89f3ebd",
+    "src/weight_space_lab/eval/fixtures.py": "2c994fd6d5c465a2a729082b789661494d711c6b7cec4bcc4d299c76e05ec57a",
+    "src/weight_space_lab/eval/runner.py": "1e22b7a8635c15214aeefd3e5956a8c5102934e1ce0cc261d359f2a1624085d5",
+    "src/weight_space_lab/merged_patch.py": "25310009418e646f555f56464e229fc7ac5c94163fffc86f4fdc8216e7e6d1e9",
+    "src/weight_space_lab/patch.py": "b2bf10e9402104d495c08ab7ade727300c2b2481c965552da48ea1ecb58b3aca",
+    "src/weight_space_lab/policy_io.py": "2c2ccdce8e0762f9e35529114337d0adfb01dd9706f95562d43ae51e9106f9a6",
+    "src/weight_space_lab/process_entry.py": "56fcbf8223f83573d0312b63230a2f7b4f487e7e2b395ffb38b948d7298eea88",
+    "src/weight_space_lab/process_entry_v4.py": "fb19d5b1ac02dde7877a40ca969155f77a79aec5c2aec5df5cc403f7ee17bf06",
+    "src/weight_space_lab/vllm018_compat.py": "be28b81d5d1e89f1fd08ade8bb59488738dda0253568e101acd6cac09dcb667c",
+    "src/weight_space_lab/vllm_attention.py": "db942a00fe576a82cdc8a29b218cc6a6f66c7148d91e86a379816c73f1e09924",
+    "src/weight_space_lab/vllm_pilot.py": "f6e777bb396b1b8eb5a56ed079b7aa11e4b32ce58f1229e6d43f69b310548aa6",
+    "src/weight_space_lab/vllm_pilot_v4.py": "9d2bad07d040cf3b6d5150fc89664ee41c72a93cf9863257fb8ac1c56cc148ac"
+  },
+  "source_manifest_sha256": "da7b85a1fa27aade23336ac73b853488f96658a0af6c28a32531ca21cf159e9d",
+  "source_files": 27,
+  "local_tests": {
+    "command": "PYTHONPATH=src:proposals/adam_dev_v1 /Users/samuelekpe/Convert/.venv/bin/python -m unittest discover -s proposals/adam_dev_v1 -p test_dev*.py -q",
+    "passed": 32,
+    "skipped": 0,
+    "runtime_scope": "Pure fake tensor/native/host tests; actual installed SDK shallow parent import only; no browser,model,GPU,provider call"
+  },
+  "local_test_sources": {
+    "test_dev.py": "db7164bca0eacd3399d4c034e474e84fa023321dd3386da936470dc746af06dc",
+    "test_dev_native.py": "d44449e4b43ec4042810ce72ff770faa5e826551391a648ef0a8255e11c00e56"
+  },
+  "original_source_payloads_unchanged": true,
+  "changes": [
+    "New .25 direct retained-originals weight recipe alongside .5 and1.0 controls",
+    "Once actual original/2BA numeric diagnostics before nonbaseline edit; no capability or adaptive selection claim",
+    "Fresh12 development cases and24pairedCPUresets; strict action-only96token JSON; immutable native timers",
+    "Three fixed Latin-order variants;288total requests includes3warmups; full36episodes required for selection",
+    "Separate reserved verification seed cannot execute via this driver",
+    "1200s child/1260s remote/240s startup and45s generation watchdog; actual executing-source hash joins",
+    "Private from_name/hydrate/exact-ID host dispatch withknown-handle cancellation andfreshdiskfloors",
+    "Bounded actual pre-action PNGs/timestamps, no continuous-video or weight export"
+  ],
+  "budget": {
+    "allocated_here": 0,
+    "root_review_required": true,
+    "proposed_envelope_usd": 3.5,
+    "total_user_ceiling_usd": 30
+  },
+  "historical_official_result": "21/24 remains unchanged",
+  "fresh_free_bytes_at_record": 3263778816
+}

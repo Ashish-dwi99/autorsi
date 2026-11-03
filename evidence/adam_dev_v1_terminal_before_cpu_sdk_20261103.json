@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "observed_unix": 1793739985.3524868,
+  "source": "Modal SDK1.4.3 public Function.get_current_stats actual provider response; browser3 unavailable; exact retained namedfunction/objectID join",
+  "applications": [
+    {
+      "app_id": "ap-x4CZ2F40Nzk5OFvcypDCHP",
+      "function_id": "fu-mVLCGSfCAXmsKdGBJfcw85",
+      "live_containers": 0,
+      "running_calls": 0,
+      "stats": {
+        "backlog": 0,
+        "num_total_runners": 0,
+        "num_running_inputs": 0,
+        "input_headroom": 0
+      }
+    }
+  ]
+}
