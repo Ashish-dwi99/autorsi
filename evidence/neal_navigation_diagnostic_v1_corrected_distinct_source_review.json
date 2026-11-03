@@ -1,0 +1,92 @@
+{
+  "created_utc": "2026-11-03T20:20:31.438397+00:00",
+  "exact_delta": {
+    "all_python_ast_and_json_parsed": true,
+    "all_six_files_hash_verified": true,
+    "all_six_prior_payload_copies_hash_and_size_verified": true,
+    "changed": [
+      "SCOPE.json",
+      "nav_worker.py",
+      "test_navigation.py"
+    ],
+    "unchanged": [
+      "modal_navigation.py",
+      "nav_common.py",
+      "nav_control.py"
+    ]
+  },
+  "records": {
+    "author_correction": {
+      "path": "evidence/neal_navigation_diagnostic_v1_redirect_corrected_source_record.json",
+      "sha256": "b7c77469dac64164bb53f7a4ad57beaf67a4f5c4e6488d926377bd8fc5da2b5d"
+    },
+    "corrected_budget_allocation_observed_not_issued": {
+      "path": "evidence/neal_navigation_diagnostic_v1_corrected_budget_allocation.json",
+      "sha256": "c7bc4cf934b9171e4dfc623bf8845ba4a43092b36eb566fb9ef77801731de488"
+    },
+    "old_source_preservation": {
+      "path": "evidence/neal_navigation_62e820_source_preservation_record.json",
+      "sha256": "6f09eae39a595cb78f2ae4ee25056f2c76e332fa89a80c45ad3ded83bc29ef0b"
+    },
+    "prior_blocking_finding": {
+      "path": "evidence/neal_navigation_diagnostic_v1_redirect_review_finding.json",
+      "sha256": "8da12af8fd8e85de507d7207c4c657adc3f3650748bcd535393c62f54cc4d163"
+    },
+    "prospective_root_amendment": {
+      "path": "evidence/neal_navigation_diagnostic_v1_redirect_scope_amendment.json",
+      "sha256": "dee5a5b3b988ee348b47af718d94e0082477d8e1f10fbad61834aad1f64499bc"
+    }
+  },
+  "remaining_limits": [
+    "A new diagnostic can explain its own observed navigation only; it cannot recover the rejected URL or HTTP cause absent from consumed v2 evidence.",
+    "No actual network, server response, populated game, video decode, model quality, physical stop or billing result is established by these source tests.",
+    "Default browser transport/security is preserved. No custom HTTP transport, CDP interception, UA/proxy/cookie/SSL/CSP/XFO bypass, challenge interaction, alternate-origin fallback, model or GPU was introduced.",
+    "Fresh deployment/actual function identity, prior-terminal freshness and concrete existing-budget admission remain root-owned launch gates. This review does not issue them."
+  ],
+  "resolved_finding": {
+    "id": "redirects_skip_route_handler",
+    "important_limit": "Redirect network contact may already have occurred before any observer callback or close. Route does not cover every hop, and bounded event traces may be incomplete after stop. The correction resolves the false guarantee by changing scope and accurately implementing observation, not by claiming preventive network isolation.",
+    "resolution": "The source no longer claims preventive all-hop URL/origin enforcement. DocumentAdmission gates initial routed requests only. Separate RedirectObservation consumes actual request events, including asset redirects, and retains exact predecessor object identity/URL ancestry. An observed unlisted origin/document, loop, unavailable predecessor or bounded observation overflow latches first stop. Root explicitly authorized natural anonymous redirects before deployment.",
+    "test_fix": "Fake redirects are delivered to the event observer without invoking route. Tests include same-origin canonical chain, reload/loop/foreign-frame rejection, and unexpected asset redirect with possible-prior-contact evidence."
+  },
+  "reviewed_behavior": [
+    "Trusted wrapper has exactly two deliberate initial level1 iframe src assignments and no alternative URLs, retry, reload or game action. Reported navigation_assignments=2 is published only after that fixed creation evaluate returns; it is not a count of raw requests or successful loads.",
+    "Distinct retained Frame slots avoid relying on precommit frame names; actual names remain observed metadata. Initial root route accepts only the two owned direct-child roots. A later unexpected root is refused where routing is available.",
+    "First observed stop is sticky. No further explicit evaluate, screenshot or navigation is admitted after the latch is observed. Already-entered operations and automatic native network activity remain distinct; final frame metadata reads are cached local properties.",
+    "Structured document HTTP status, selected security-header previews plus raw value lengths/hashes, request failures, frame URLs, redirect predecessor metadata and actual browser/package version are retained within bounded traces. Cookie/auth response headers and response bodies are not requested.",
+    "The original30-second observation bounds the whole creation/observation/screenshot coroutine, independently supervised by parent phase watchdog. Async cancellation does not prove physical request stop. A watchdog/finalization race may yield partial evidence without extra observation.",
+    "Close/finalization occurs after recording stops and has separate watchdog/reap handling. Parent report names remain diagnostic-only; child error/status and browser-close/reap receipts govern retained artifacts, not model success.",
+    "CPU-only decorator/no model mount/no model construction or game action remain unchanged. Image may contain cached model dependencies, but this diagnostic worker imports no model runtime.",
+    "Actual shallow remount/source-binding checks remain in ten pure tests; copied source bytes are joined before once admission. Host lifecycle/budget integration is separately reviewed by another agent."
+  ],
+  "reviewer": "/root/bu_eval_harness",
+  "reviewer_actions": {
+    "browser_or_site_calls": 0,
+    "game_actions": 0,
+    "model_calls": 0,
+    "provider_calls": 0,
+    "review_record_written": true,
+    "source_files_modified": false
+  },
+  "reviewer_validation": {
+    "command": "PYTHONPATH=proposals/neal_navigation_diagnostic_v1 /Users/samuelekpe/Convert/.venv/bin/python -m unittest discover -s proposals/neal_navigation_diagnostic_v1 -p 'test_*.py' -q",
+    "elapsed_s": 0.27,
+    "exit_code": 0,
+    "initial_command_shell_glob_refusal": "An unquoted test_*.py was rejected by zsh before Python ran; corrected quoted command above completed. No provider/browser run occurred.",
+    "local_only": true,
+    "passed": 10,
+    "skipped": 0
+  },
+  "schema": 1,
+  "scope": "Distinct exact-source correction review of worker/navigation and its integration with unchanged CPU-only parent/common/control; not resource approval, runtime evidence, populated-puzzle preflight, game evaluation, or GPU admission",
+  "source_manifest": {
+    "proposals/neal_navigation_diagnostic_v1/SCOPE.json": "6373186b5f4f2feab474f76b05a00f7465e0fadeca14bc126fd53574c46969f0",
+    "proposals/neal_navigation_diagnostic_v1/modal_navigation.py": "3839ff110031e56ad4c6840efbc6d7153fa18ace4774232a0b6b40749f0319fc",
+    "proposals/neal_navigation_diagnostic_v1/nav_common.py": "b433a2b8909d26277c38d5e8ca908cf9b74eeead06c4f8c709ab12fef2a45acc",
+    "proposals/neal_navigation_diagnostic_v1/nav_control.py": "3bcee33d93c697a9b83b1bc7319c67efb5c06db4aea32d9f715067e21738ccd5",
+    "proposals/neal_navigation_diagnostic_v1/nav_worker.py": "d7747f4c59cd2d66f9eb87ef0a2dbb7eca755a411beddb7366071aa07c3639e1",
+    "proposals/neal_navigation_diagnostic_v1/test_navigation.py": "abd82665c7f9e0a13468a56bd880b9c55d2fe6357c6ecfbe9012f1215d41b46a"
+  },
+  "source_manifest_sha256": "8a43fd20d7010d85b7c1c6e547686863dc4452df8b5c574748ab8c427c58ad38",
+  "status": "No additional concrete source defect found under the explicitly amended navigation-observation scope"
+}

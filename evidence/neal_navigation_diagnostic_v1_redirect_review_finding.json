@@ -1,0 +1,55 @@
+{
+  "author_final_record_sha256": "ba34ff45f6882208a26e9c49b257ef55afbd0946e542c56249f9e8ddb2f14eb0",
+  "blocking_finding": {
+    "code": "nav_worker.DocumentAdmission.accept is only called from context.route route_request, so exact document/origin and acyclic predecessor checks are not applied to server-redirected requests that Chromium continues without creating RouteImpl.",
+    "consequence": "Do not claim the frozen62e820 source prevents automatic redirect targets outside exact DOCUMENTS/origin set or enforces its acyclic chain bound.",
+    "id": "redirects_skip_route_handler",
+    "primary_evidence": [
+      {
+        "fact": "Page.route documents that handler is only called for the first URL when response is a redirect.",
+        "line": 10269,
+        "path": "/Users/samuelekpe/Convert/.venv/lib/python3.11/site-packages/playwright/async_api/_generated.py",
+        "sha256": "06a2bd226a25557c6d031866346d78b2fdfa939b8ab4932307ca04624d9aede3"
+      },
+      {
+        "fact": "Shared Chromium network manager explicitly continues redirectedFrom requests with Fetch.continueRequest; RouteImpl is created only in the else branch. This applies to context routing too.",
+        "line": 35000,
+        "path": "/Users/samuelekpe/Convert/.venv/lib/python3.11/site-packages/playwright/driver/package/lib/coreBundle.js",
+        "sha256": "f74353fcb8e406756a70a6af0dfc4a5069acd577e35ec9d923ccf36ac009c2f5"
+      }
+    ],
+    "required_resolution": "Source mechanism with actual before-request redirect coverage, or root-authorized scope/claim change before any deployment. Post-response observation alone is not prior network admission.",
+    "runtime_reproduction": "None; installed primary source establishes mismatch without site/browser/provider calls.",
+    "severity": "blocking_scope_enforcement",
+    "test_gap": "Fake redirect-chain test manually calls accept for each redirect, unlike actual Chromium routing. It proves predicate behavior only."
+  },
+  "created_utc": "2026-11-03T20:15:03.433787+00:00",
+  "other_limits": [
+    "Whole-observation cancellation does not prove physical request stop; independent parent watchdog and close/reap receipts remain distinct.",
+    "Thirty-second phase watchdog may terminate before child finalization; partial evidence is an honest accepted outcome.",
+    "Diagnostic records a new navigation and cannot retroactively establish the unrecorded v2 failure cause.",
+    "Diagnostic results never issue GPU or game-evaluation admission.",
+    "No frozen source file or consumed receipt was modified."
+  ],
+  "reviewer": "/root/bu_eval_harness",
+  "reviewer_local_tests": {
+    "command": "PYTHONPATH=proposals/neal_navigation_diagnostic_v1 /Users/samuelekpe/Convert/.venv/bin/python -m unittest discover -s proposals/neal_navigation_diagnostic_v1 -p test_navigation.py -q",
+    "elapsed_s": 0.272,
+    "exit_code": 0,
+    "limits": "Pure fake navigation and local SDK/remount tests; no real browser/provider; passing fakes do not establish redirect routing behavior",
+    "passed": 9,
+    "skipped": 0
+  },
+  "schema": 1,
+  "scope": "Distinct source review of CPU-only navigation diagnostic; no provider/browser/site/model actions",
+  "source_manifest": {
+    "proposals/neal_navigation_diagnostic_v1/SCOPE.json": "628fae58350714d2b9153202747faa0aa7374f32dd36d37d59ae50206aa6643a",
+    "proposals/neal_navigation_diagnostic_v1/modal_navigation.py": "3839ff110031e56ad4c6840efbc6d7153fa18ace4774232a0b6b40749f0319fc",
+    "proposals/neal_navigation_diagnostic_v1/nav_common.py": "b433a2b8909d26277c38d5e8ca908cf9b74eeead06c4f8c709ab12fef2a45acc",
+    "proposals/neal_navigation_diagnostic_v1/nav_control.py": "3bcee33d93c697a9b83b1bc7319c67efb5c06db4aea32d9f715067e21738ccd5",
+    "proposals/neal_navigation_diagnostic_v1/nav_worker.py": "4276830682025f7223a2acc6eccb938ff01b48757230ca13a9881646bad222f3",
+    "proposals/neal_navigation_diagnostic_v1/test_navigation.py": "99fc43a2b811358a82419d86bcc457d3f4698c142e4a1b874d6768cb5c13b128"
+  },
+  "source_manifest_sha256": "62e820ce2fdf1f0be8d2b6c4b27181d838929f4a49e0e8d66033a0f99b054809",
+  "status": "blocked_before_deployment"
+}

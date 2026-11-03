@@ -1,0 +1,10 @@
+{
+  "observation_type": "actual_provider_terminal_observation",
+  "observed_unix": 1793734992.565461,
+  "app_id": "ap-ah4kX7k6SeDM0GDOqHb8fM",
+  "active_gpu_calls": 0,
+  "active_gpu_containers": 0,
+  "source": "Root fresh actual Chrome3 Modal MiniWoB overview; both functions0live/0running",
+  "credits_display": 28.65,
+  "not_settled_billing": true
+}

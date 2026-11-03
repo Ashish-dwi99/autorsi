@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "observed_unix": 1793735765.7366111,
+  "remote_report_sha256": "6358a455c0dd02c5b367caca772183579dc7e96a8a044c27e481459c77864df6",
+  "function_call_id": "fc-01M6HFH3JAB174A68MHSKPWP07",
+  "status": "CPU browser admission failed; no GPU demonstration admitted",
+  "actual_source_bindings": {
+    "proposals/neal_demo_v2/modal_neal.py": {
+      "actual_file_path": "/root/modal_neal.py",
+      "sha256": "e018e4ccd52b6a0db88405d960cc9ef5a8e712b36dec740c4e8bfce660841bfa",
+      "scope": "Imported source-file bytes joined; not a compiler/runtime/native attestation"
+    },
+    "proposals/neal_demo_v2/neal_limits.py": {
+      "actual_file_path": "/opt/weight-space/neal/neal_limits.py",
+      "sha256": "730c8b476e7f250869a5752881d3e9a18e0635e1c2b04b9062b8246789949837",
+      "scope": "Imported source-file bytes joined; not a compiler/runtime/native attestation"
+    },
+    "proposals/neal_demo_v2/neal_lifecycle.py": {
+      "actual_file_path": "/opt/weight-space/neal/neal_lifecycle.py",
+      "sha256": "20c82b785b1a0b61fdd4a3be6e27eb82e8f3aecdf393a57a58a8bf38758df32c",
+      "scope": "Imported source-file bytes joined; not a compiler/runtime/native attestation"
+    },
+    "proposals/neal_demo_v2/neal_worker.py": {
+      "actual_file_path": "/opt/weight-space/neal/neal_worker.py",
+      "sha256": "b01f5945a36ca91e3c413ec9604d72fa9cf4154afaaa9723e10ff55d59431b82",
+      "scope": "Imported source-file bytes joined; not a compiler/runtime/native attestation"
+    },
+    "src/weight_space_lab/diagnostic.py": {
+      "actual_file_path": "/opt/weight-space/src/weight_space_lab/diagnostic.py",
+      "sha256": "4ff894989dcccf57d2ad17cc86740114dafca8a57f62eb2297bb27d219c3dc33",
+      "scope": "Imported source-file bytes joined; not a compiler/runtime/native attestation"
+    }
+  },
+  "counts": {
+    "model_calls": 0,
+    "game_actions": 0,
+    "level_rows": 0
+  },
+  "failure": {
+    "type": "DemoAbort",
+    "message": "iframe did not retain its official frozen URL"
+  },
+  "direct_child": {
+    "exitcode": 0,
+    "reaped": true,
+    "browser_close_returned": true
+  },
+  "actual_local_media_decode": {
+    "codec": "vp8",
+    "width": 970,
+    "height": 650,
+    "frames": 27,
+    "duration_s": 1.08,
+    "ffprobe_returncode": 0,
+    "video_sha256": "c9f90b11785a3d5f9576e018c4e14e2d196cf067c9da377096b8a57bc1833220",
+    "video_bytes": 9804
+  },
+  "root_visual_observations": {
+    "frames": [
+      15,
+      26
+    ],
+    "content": "Dark wrapper header labels and two blank white panes; no populated game puzzle is visible",
+    "diagnostic_limit": "No rejected frame URL, response status, requestfailure or console error was captured. Blank video does not identify exact network/framing/load-event cause."
+  },
+  "recovery_completed_once": true,
+  "no_video_success_or_model_failure_score": true,
+  "frame_artifacts": {
+    "preflight-failure-frame.png": "2c25125e60a21b5c9da04bde042220ca0851c47686690e7ec59b26bc73114e88",
+    "preflight-last-frame.png": "2a15fb98c4a650ac0687bf8ab5fee354bb205acf24fee245431692e7dca854e2"
+  }
+}

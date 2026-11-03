@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "observed_unix": 1793736129.428174,
+  "source_file": "runs/billing-complete-hour-19-to-20-20261103.json",
+  "source_sha256": "4a81ec00509e463b5bd1bc210b14007467369f20a0d679af06244812bf814b32",
+  "query": {
+    "start": "2026-11-03T19:00:00Z",
+    "end": "2026-11-03T20:00:00Z",
+    "resolution": "h"
+  },
+  "rows": [
+    {
+      "Object ID": "ap-1qgHoLFsIavzrIdLnD905u",
+      "Description": "adam-1-cu-neal-private-v2",
+      "Environment": "main",
+      "Interval Start": "2026-11-03T19:00:00",
+      "Cost": "0.00103411"
+    },
+    {
+      "Object ID": "ap-ah4kX7k6SeDM0GDOqHb8fM",
+      "Description": "adam-1-cu-private-miniwob-v2",
+      "Environment": "main",
+      "Interval Start": "2026-11-03T19:00:00",
+      "Cost": "0.37434205"
+    },
+    {
+      "Object ID": "ap-dudOpVTEB7Yq9vYuBos4EE",
+      "Description": "adam-1-cu-neal-private-v1",
+      "Environment": "main",
+      "Interval Start": "2026-11-03T19:00:00",
+      "Cost": "0.00818217"
+    }
+  ],
+  "reported_gross_usd": "0.38355833",
+  "prior_completed_hours_reported_gross_usd": "0.96944222",
+  "combined_reported_gross_usd": "1.35300055",
+  "exact_app_joins": {
+    "ap-1qgHoLFsIavzrIdLnD905u": "Nealv2CPUfailure",
+    "ap-ah4kX7k6SeDM0GDOqHb8fM": "privateMiniWoBcomparison",
+    "ap-dudOpVTEB7Yq9vYuBos4EE": "Nealv1startupfailure"
+  },
+  "limits": "Reported completed-hour gross usage with possible reporting lag; not settled invoice or complete per-model cost. Full21USD envelopes retained; no reserve release or new spending authority."
+}

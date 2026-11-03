@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "created_unix": 1793734631.648611,
+  "scope": "Root allocation within user-authorized30USD Modal scope; no purchase or paid editor API",
+  "allocated_usd": 3,
+  "total_committed_usd": 21,
+  "remaining_unreserved_usd": 9,
+  "source_manifest_sha256": "99d3ac791b37c298722f6df87b6aff262a765c415fbb55ec6e4b69cf03078464",
+  "ledger_sha256": "a38fad9fb86b46e04cf75994bc40522b4f51929609d7094ea6de5a6375b5fab1",
+  "fresh_disk_bytes": 1172033536,
+  "proposal_preserved_unchanged": true,
+  "not_provider_enforced_cap": true
+}

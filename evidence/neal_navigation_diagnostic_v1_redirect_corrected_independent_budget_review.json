@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "reviewer": "/root/weight_space_paper_review",
+  "status": "Revised exact-source/scope/budget integration reviewed; no additional concrete defect found in this narrow review",
+  "scope": "Corrected CPU-only observational navigation diagnosis. No provider,site,network,browser,model,GPU or package download calls performed by reviewer.",
+  "inputs": {
+    "evidence/neal_navigation_diagnostic_v1_redirect_corrected_source_record.json": "b7c77469dac64164bb53f7a4ad57beaf67a4f5c4e6488d926377bd8fc5da2b5d",
+    "evidence/neal_navigation_diagnostic_v1_corrected_budget_allocation.json": "c7bc4cf934b9171e4dfc623bf8845ba4a43092b36eb566fb9ef77801731de488",
+    "evidence/budget_ledger.json": "17396d3873ae74984af9fd80b50828a17f82b54610cb11e5739f6440aed91266",
+    "evidence/neal_navigation_diagnostic_v1_redirect_scope_amendment.json": "dee5a5b3b988ee348b47af718d94e0082477d8e1f10fbad61834aad1f64499bc",
+    "evidence/neal_navigation_diagnostic_v1_review_redirect_erratum.json": "748684fc733655fea079d2b93786b3384ee5e67b1d08e4db72cd5b41a25a051d",
+    "evidence/neal_navigation_diagnostic_v1_independent_budget_source_review.json": "2131552c8be620fede3ac07dae263a479d427515144f115784e3c8d6fc8ab517",
+    "evidence/neal_navigation_62e820_source_preservation_record.json": "6f09eae39a595cb78f2ae4ee25056f2c76e332fa89a80c45ad3ded83bc29ef0b",
+    "evidence/billing_completed_hour_19_to_20_independent_review.json": "f2bf3c637ca6e43fc4cb3ebd722382171b5fb326334f58c31b44ae2c06fa2b7b"
+  },
+  "source_manifest": {
+    "proposals/neal_navigation_diagnostic_v1/SCOPE.json": "6373186b5f4f2feab474f76b05a00f7465e0fadeca14bc126fd53574c46969f0",
+    "proposals/neal_navigation_diagnostic_v1/modal_navigation.py": "3839ff110031e56ad4c6840efbc6d7153fa18ace4774232a0b6b40749f0319fc",
+    "proposals/neal_navigation_diagnostic_v1/nav_common.py": "b433a2b8909d26277c38d5e8ca908cf9b74eeead06c4f8c709ab12fef2a45acc",
+    "proposals/neal_navigation_diagnostic_v1/nav_control.py": "3bcee33d93c697a9b83b1bc7319c67efb5c06db4aea32d9f715067e21738ccd5",
+    "proposals/neal_navigation_diagnostic_v1/nav_worker.py": "d7747f4c59cd2d66f9eb87ef0a2dbb7eca755a411beddb7366071aa07c3639e1",
+    "proposals/neal_navigation_diagnostic_v1/test_navigation.py": "abd82665c7f9e0a13468a56bd880b9c55d2fe6357c6ecfbe9012f1215d41b46a"
+  },
+  "source_manifest_sha256": "8a43fd20d7010d85b7c1c6e547686863dc4452df8b5c574748ab8c427c58ad38",
+  "history": {
+    "preserved_prior_manifest_sha256": "62e820ce2fdf1f0be8d2b6c4b27181d838929f4a49e0e8d66033a0f99b054809",
+    "preserved_files_verified": 6,
+    "preserved_payload_bytes_verified": 52344,
+    "changed_files": [
+      "proposals/neal_navigation_diagnostic_v1/SCOPE.json",
+      "proposals/neal_navigation_diagnostic_v1/nav_worker.py",
+      "proposals/neal_navigation_diagnostic_v1/test_navigation.py"
+    ],
+    "old_review": "2131552c remains unchanged. Its all-hop preventive redirect wording is explicitly superseded by erratum748684fc; it does not supply redirect admission for the revised source.",
+    "primary_cause": "Playwright1.60 routes only initial redirect-chain URL; shared Chromium network manager directly continues redirect hops."
+  },
+  "correction_verified": {
+    "authorized_scope": "Root amendmentdee5a5b3 explicitly admits ordinary anonymous browser redirects caused by exactly two deliberate original level1 navigations, observed after possible network contact. No chosen alternateURL,reload,fallback,customtransport or weakened security.",
+    "initial_route_gate": "DocumentAdmission admits one initial root request per two retained directchildframes; exposed second root navigation rejects. It no longer purports to admit every redirect hop.",
+    "actual_observer": "Independent request events retain request/predecessor identity and URL/origin/resource/frame observations, including asset redirects. Unexpected origin/document/loop/missing predecessor or observation cap latches stop. This is after-contact evidence, not prevention or a complete request inventory.",
+    "refusal": "Documentstatus>=400, actualdocumentrequestfailure, and observed framing refusal latch firststop; loop skips newexplicit evaluate/screenshot after observedstop and proceeds to boundedclose. Previously entered operations and automatic network traffic may already be in flight.",
+    "bounds_unchanged": "30s observation coroutine plus parentwatchdog;120s child,180s function,240s startup,45s finalization,20s terminalexit; host480s get/500s overall/20s cancellation. CPU4,max16GiB,one single-use container,min0/max1,0functionretries. No GPU or model calls.",
+    "source_and_mounts": "Parent,common,control are byte-identical to previously reviewed versions. Executing parent/helpers bind exact source before once-key. Existing writable results volume is explicitly authorized; no model/input mounts.",
+    "outputs": "Bounded128event trace,structured response/header evidence, boundedvideo/PNG and exactonce recovery remain. No retroactive cause inference from unrecorded oldv2 failure, no populated-puzzle orGPUadmission."
+  },
+  "budget": {
+    "ledger_sha256": "17396d3873ae74984af9fd80b50828a17f82b54610cb11e5739f6440aed91266",
+    "allocation_sha256": "c7bc4cf934b9171e4dfc623bf8845ba4a43092b36eb566fb9ef77801731de488",
+    "authorized_usd": 30,
+    "retained_total_usd": 21,
+    "unallocated_usd": 9,
+    "neal_original_shared_usd": 3,
+    "new_reservation_usd": 0,
+    "prior_failures_and_costs_retained": true,
+    "reported_usage_not_settled": "Independent reported sums remain1.35300055USD across15\u201320hour buckets and.00921628USD reported Nealv1+v2 hour; no reserve release or precise unspentNeal balance inferred.",
+    "cap_limit": "Local allocation is not a provider-enforced hard spending cap; cache/startup/billing must be observed."
+  },
+  "validation": {
+    "pure_tests": 10,
+    "skipped": 0,
+    "exit_code": 0,
+    "test_limits": "Pure fakes now observe redirected requests without manually routing each hop; they validate source logic and not actual networking, timing, cache hit,site availability or physicalstop.",
+    "exact_checks": "Current6filemanifest/canonicaldigest,allocation,ledger,amendment,erratum,and all6preserved62e820payloads independently joined. Onlyworker/test/SCOPE changed.",
+    "pending_actual_requirements": [
+      "Observed exact private deployment/functionID.",
+      "Fresh<=300s exactpriorv2app zero-live/calls receipt.",
+      "Provider terminal status after the once diagnostic; cancellationACK alone insufficient."
+    ]
+  },
+  "review_limits": [
+    "This is the source/scope/budget integration review; distinct worker review is separate.",
+    "No training improvement, game score,assistant comparison or superiority evidence results from this diagnostic review."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "reviewer": "weight_space_paper_review",
+  "scope": "Saved-only independent allocation/ledger/frozen-source integration review; no provider, model, billing query, deployment or source mutation.",
+  "conclusion": "The adopted3USD Neal allocation joins the exact31-file source and current ledger. Active reservations are4+8+6+3=21USD, leaving9USD within the existing30USD ceiling. No arithmetic, duplicate-allocation or source-hash mismatch found.",
+  "source_manifest_sha256": "99d3ac791b37c298722f6df87b6aff262a765c415fbb55ec6e4b69cf03078464",
+  "source_files_verified": 31,
+  "allocation_usd": 3,
+  "total_reserved_usd": 21,
+  "unreserved_usd": 9,
+  "components_usd": {
+    "image_cpu": 0.55,
+    "gpu_startup_and_demo": 1.45,
+    "storage_recovery_control": 0.25,
+    "pending_contingency": 0.75
+  },
+  "integration": [
+    "The full14USD newer reservations remain retained. The adopted4USD early-app provisional envelope remains separate, including its late-usage contingency.",
+    "The new3USD allocation uses3 of the12USD provisional planning headroom;9 remains unallocated, exceeding the retained2USD minimum.",
+    "Recorded posted gross costs belong within existing reservation envelopes and were not added a second time as new allocations. Pending or rounded credit balances are not treated as settled bills.",
+    "The unchanged source proposal still says allocated0 as historical design; the external adopted allocation and current ledger supply concrete planning state without modifying the frozen package.",
+    "The recorded1,172,033,536-byte disk observation is historical. Future observation/artifact writes retain their own fresh guards."
+  ],
+  "limits": [
+    "This is a conservative local planning allocation, not a provider-enforced spending cap, final invoice, or independently refreshed pricing estimate.",
+    "No new purchase, paid editor API or additional-credit assumption is introduced.",
+    "Actual deployment identity, fresh provider terminal observation and same-image CPU/browser/video preflight are separate gates. This record does not substitute for them.",
+    "Stop new allocations if late reported charges threaten the existing provisional envelopes; preserve all terminal and billing uncertainty."
+  ],
+  "inputs": {
+    "evidence/neal_budget_allocation_v1.json": "2ece2768c252ec34f9d1aabb41cafbacbda05d73ae4347aed581b224d7d19b59",
+    "evidence/budget_ledger.json": "a38fad9fb86b46e04cf75994bc40522b4f51929609d7094ea6de5a6375b5fab1",
+    "evidence/neal_wrapper_source_local_validation_v1.json": "d5e90fcd9fdde70b1eec93061e28dcadba34d79000faf94085832857da26d689",
+    "evidence/neal_harness_v1_independent_source_review.json": "8d4c957c5ac663f840893b2cbbef9a5c96680801520da0e5e46d38842bc9a072",
+    "evidence/neal_wrapper_v1_supplemental_independent_review.json": "5c898e162736524de56b4388e6f698c2c4d3e6c62b1f206964df3318a03ae688",
+    "evidence/neal_wrapper_v1_distinct_source_review.json": "a3960747865678e518df6e8384e6826bc474b9a024c76fc5290bb901548fdebc",
+    "evidence/budget_provisional_reconciliation_adoption_20261103.json": "b9c18f528c540c2d9735cf3e277494601aedc0d30e5f47658e648151c2ba0fdb"
+  }
+}

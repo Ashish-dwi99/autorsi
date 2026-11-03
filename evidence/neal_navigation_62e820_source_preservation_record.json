@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "fresh_available_bytes": 1124737024,
+  "required_bytes": 419430400,
+  "source_manifest_sha256": "62e820ce2fdf1f0be8d2b6c4b27181d838929f4a49e0e8d66033a0f99b054809",
+  "copied_exact_files": [
+    {
+      "source": "proposals/neal_navigation_diagnostic_v1/SCOPE.json",
+      "preserved": "proposals/preserved-neal-navigation-62e820-before-redirect-correction/SCOPE.json",
+      "sha256": "628fae58350714d2b9153202747faa0aa7374f32dd36d37d59ae50206aa6643a",
+      "bytes": 3406
+    },
+    {
+      "source": "proposals/neal_navigation_diagnostic_v1/modal_navigation.py",
+      "preserved": "proposals/preserved-neal-navigation-62e820-before-redirect-correction/modal_navigation.py",
+      "sha256": "3839ff110031e56ad4c6840efbc6d7153fa18ace4774232a0b6b40749f0319fc",
+      "bytes": 7776
+    },
+    {
+      "source": "proposals/neal_navigation_diagnostic_v1/nav_common.py",
+      "preserved": "proposals/preserved-neal-navigation-62e820-before-redirect-correction/nav_common.py",
+      "sha256": "b433a2b8909d26277c38d5e8ca908cf9b74eeead06c4f8c709ab12fef2a45acc",
+      "bytes": 4051
+    },
+    {
+      "source": "proposals/neal_navigation_diagnostic_v1/nav_control.py",
+      "preserved": "proposals/preserved-neal-navigation-62e820-before-redirect-correction/nav_control.py",
+      "sha256": "3bcee33d93c697a9b83b1bc7319c67efb5c06db4aea32d9f715067e21738ccd5",
+      "bytes": 9897
+    },
+    {
+      "source": "proposals/neal_navigation_diagnostic_v1/nav_worker.py",
+      "preserved": "proposals/preserved-neal-navigation-62e820-before-redirect-correction/nav_worker.py",
+      "sha256": "4276830682025f7223a2acc6eccb938ff01b48757230ca13a9881646bad222f3",
+      "bytes": 13965
+    },
+    {
+      "source": "proposals/neal_navigation_diagnostic_v1/test_navigation.py",
+      "preserved": "proposals/preserved-neal-navigation-62e820-before-redirect-correction/test_navigation.py",
+      "sha256": "99fc43a2b811358a82419d86bcc457d3f4698c142e4a1b874d6768cb5c13b128",
+      "bytes": 13249
+    }
+  ],
+  "cleanup": false,
+  "provider_calls": 0,
+  "purpose": "Preserve unexecuted initial diagnostic source before correcting unsupported preventive redirect guarantee. Source/allocation/reviews remain historical; same originalshared3USD.",
+  "unix": 1793736993.573108
+}

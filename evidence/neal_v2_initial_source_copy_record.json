@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "fresh_floor_available_bytes": 1152290816,
+  "required_bytes": 419430400,
+  "copied_exactly_before_edit": [
+    {
+      "source": "proposals/neal_demo_v1/BUDGET_AND_RECOVERY_PROPOSAL.json",
+      "copy": "proposals/neal_demo_v2/BUDGET_AND_RECOVERY_PROPOSAL.json",
+      "bytes": 5412,
+      "original_sha256": "6238ca7a1bc97aa00d7397058e380f71eb94ecc7b5ceabc95b4bb9b77f92e9a9"
+    },
+    {
+      "source": "proposals/neal_demo_v1/INTEGRATION.json",
+      "copy": "proposals/neal_demo_v2/INTEGRATION.json",
+      "bytes": 7749,
+      "original_sha256": "d275b3b17f8d6025abeb66027ccdc441b9baccd762bbf650eb35942d758beec5"
+    },
+    {
+      "source": "proposals/neal_demo_v1/modal_neal.py",
+      "copy": "proposals/neal_demo_v2/modal_neal.py",
+      "bytes": 11671,
+      "original_sha256": "575a3285b9c9c49b051e8530d5dee20e81fe05c9670f6c9b3dec732d05193ee8"
+    },
+    {
+      "source": "proposals/neal_demo_v1/neal_bridge.py",
+      "copy": "proposals/neal_demo_v2/neal_bridge.py",
+      "bytes": 8936,
+      "original_sha256": "d737352d8df0e3ea00b7341f34f5369580a76cdde903142f84861c2da83528b1"
+    },
+    {
+      "source": "proposals/neal_demo_v1/neal_browser.py",
+      "copy": "proposals/neal_demo_v2/neal_browser.py",
+      "bytes": 15427,
+      "original_sha256": "b5f5824506614797075931842d009be46921e4cef93c0348c163856b84b9329e"
+    },
+    {
+      "source": "proposals/neal_demo_v1/neal_control.py",
+      "copy": "proposals/neal_demo_v2/neal_control.py",
+      "bytes": 21719,
+      "original_sha256": "5757d7322f56d7ee3b5bf5cff316ef820326e91712caa9310e5a4aec92b270bc"
+    },
+    {
+      "source": "proposals/neal_demo_v1/neal_harness.py",
+      "copy": "proposals/neal_demo_v2/neal_harness.py",
+      "bytes": 15667,
+      "original_sha256": "23bec3338673b6b2dc44629fb6bb5b8ed3bcdc4e292cfd32cee2b0a9173e06c4"
+    },
+    {
+      "source": "proposals/neal_demo_v1/neal_lifecycle.py",
+      "copy": "proposals/neal_demo_v2/neal_lifecycle.py",
+      "bytes": 5684,
+      "original_sha256": "0ff6b25b413482cd693a0fab6b9079058553f5d0ac9005048618622cae123d75"
+    },
+    {
+      "source": "proposals/neal_demo_v1/neal_limits.py",
+      "copy": "proposals/neal_demo_v2/neal_limits.py",
+      "bytes": 1096,
+      "original_sha256": "4bd6e682bf3e561ca5de5ba64d3c1118669a895ec32c9cb00e78a5f922a981e2"
+    },
+    {
+      "source": "proposals/neal_demo_v1/neal_protocol.py",
+      "copy": "proposals/neal_demo_v2/neal_protocol.py",
+      "bytes": 10725,
+      "original_sha256": "e6e4b2c6fb31d1d241007d92af4507e07b3834e00161b4af14f86556534e99f7"
+    },
+    {
+      "source": "proposals/neal_demo_v1/neal_worker.py",
+      "copy": "proposals/neal_demo_v2/neal_worker.py",
+      "bytes": 17298,
+      "original_sha256": "b01f5945a36ca91e3c413ec9604d72fa9cf4154afaaa9723e10ff55d59431b82"
+    },
+    {
+      "source": "proposals/neal_demo_v1/test_neal.py",
+      "copy": "proposals/neal_demo_v2/test_neal.py",
+      "bytes": 14689,
+      "original_sha256": "0ecbdab453f7178d341a6559158d4ebf67b4b9d2ea201ea01b4eb78bdda379bb"
+    },
+    {
+      "source": "proposals/neal_demo_v1/test_wrapper.py",
+      "copy": "proposals/neal_demo_v2/test_wrapper.py",
+      "bytes": 13090,
+      "original_sha256": "e01ca1c15333c7966efa4f9105ff47960ee8d46bcac7ecf73c12654deb2c84b7"
+    }
+  ],
+  "source_v1_unchanged": true,
+  "cleanup": false,
+  "provider_calls": 0,
+  "copied_unix": 1793735238.485419,
+  "meaning": "Separate preserved v2 preparation; original Neal3USD envelope retained, no new resource allocation, no v1 replay."
+}

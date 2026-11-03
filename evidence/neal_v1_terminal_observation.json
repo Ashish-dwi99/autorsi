@@ -1,0 +1,24 @@
+{
+  "observation_type": "actual_provider_terminal_observation",
+  "observed_unix": 1793735252.294661,
+  "app_id": "ap-dudOpVTEB7Yq9vYuBos4EE",
+  "state": "Stopped",
+  "active_gpu_calls": 0,
+  "active_gpu_containers": 0,
+  "active_cpu_calls": 0,
+  "active_cpu_containers": 0,
+  "live_sandboxes": 0,
+  "cpu_summary": "1 call (1 error)",
+  "gpu_summary": "No activity",
+  "credits_display": 28.65,
+  "source": "Root actual Chrome3 Modal overview after appstop; Stop app disabled; all counts0",
+  "stop_history": {
+    "first_cli": "Aborted before confirmation because noninteractive terminal; no stop action",
+    "second_cli": "--yes exact app; exit0",
+    "records": {
+      "stop-app.log": "4cd7a8f6afd1d05cf743c52c8b5fa754640a45d82a288f98d1a736e3026d3709",
+      "stop-app-confirmed.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "not_settled_billing": true
+}

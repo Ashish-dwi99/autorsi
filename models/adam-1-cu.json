@@ -74,5 +74,17 @@
     "strict_zero_regression_gate": "failed",
     "production_promotion": false,
     "interpretation": "Higher subset success with fewer requests, but three regressions and slower median request. Scores describe the whole model/adapter/runtime combination; no Astra comparison or inference-kernel speedup."
+  },
+  "demonstration_status": {
+    "site": "https://neal.fun/not-a-robot/",
+    "status": "cloud_recording_blocked_before_model_evaluation",
+    "outcome": "../evidence/neal_navigation_diagnostic_v1_outcome.json",
+    "diagnostic_receipt_sha256": "41a955ac5c55c7374e234609ed808b4f1e5d2350cf8d7eaf76e4880279cd9509",
+    "actual_observation": "Both initial embedded game requests returned HTTP403 served through Cloudflare with X-Frame-Options SAMEORIGIN; Chromium reported framing refusal. Finalized video shows blank panes.",
+    "model_calls": 0,
+    "game_actions": 0,
+    "model_score": null,
+    "astra_comparison": false,
+    "security_bypass_attempted": false
   }
 }

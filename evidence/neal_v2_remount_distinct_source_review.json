@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "reviewed_utc": "2026-11-03T19:51:32.326454+00:00",
+  "reviewer": "/root/bu_eval_harness",
+  "scope": "Distinct final v2 remount, executed-source binding and ID/source-prefix delta review; no remote action",
+  "result": "Observed v1 shallow-path import defect is corrected by conditional evaluation. No additional concrete source defect found in final v2 delta. Actual remote startup and CPU visible-puzzle/video readiness remain unproved.",
+  "author_records": [
+    {
+      "path": "evidence/neal_v2_remount_correction_source_record.json",
+      "sha256": "a4411a15d651bf9c46d52ee0c3ce6d13d52a3253b60d22fdfd37356f7d6a7926"
+    },
+    {
+      "path": "evidence/neal_v2_remount_correction_final_source_record.json",
+      "sha256": "a3f76885dc7509c34e3798ac64cf8f6f953bc46c364d1d4f2a00acc50ada26ac"
+    }
+  ],
+  "v1_review_erratum": {
+    "path": "evidence/neal_wrapper_v1_review_remount_erratum.json",
+    "sha256": "933668c97b29ad04be69eabe39781b4e02969f900d8a08d1a456ca1d885ef0e4"
+  },
+  "final_source_manifest": {
+    "src/weight_space_lab/__init__.py": "0011bfd335ca645347f878f6d5ab2e7863958d572388233bb13530070a0f9201",
+    "src/weight_space_lab/benchmarks/__init__.py": "48fddf5bdf1d87f13ee19919253c21867a1509383523779b6b4d39e9cc454cea",
+    "src/weight_space_lab/benchmarks/miniwob.py": "c85987b1a84bf9a75c8a000fdb1cbc37f254adf31939e03e4359d132bffaca1a",
+    "src/weight_space_lab/diagnostic.py": "4ff894989dcccf57d2ad17cc86740114dafca8a57f62eb2297bb27d219c3dc33",
+    "src/weight_space_lab/eval/__init__.py": "2fecfeab2b6eacf945accac88c69620bc937d06f3c6efb23f95eb68e8cbcd4b5",
+    "src/weight_space_lab/eval/bu_policy.py": "57f228cdbdfbe72925d0aa311b76001d74a9e03ae9d439c0be63145fd11b02dd",
+    "src/weight_space_lab/eval/bu_protocol.py": "5987375c472918692f3a2c275c04048aa90b80652feae2faeaa01d20b89f3ebd",
+    "src/weight_space_lab/eval/fixtures.py": "2c994fd6d5c465a2a729082b789661494d711c6b7cec4bcc4d299c76e05ec57a",
+    "src/weight_space_lab/eval/runner.py": "1e22b7a8635c15214aeefd3e5956a8c5102934e1ce0cc261d359f2a1624085d5",
+    "src/weight_space_lab/merged_patch.py": "25310009418e646f555f56464e229fc7ac5c94163fffc86f4fdc8216e7e6d1e9",
+    "src/weight_space_lab/patch.py": "b2bf10e9402104d495c08ab7ade727300c2b2481c965552da48ea1ecb58b3aca",
+    "src/weight_space_lab/policy_io.py": "2c2ccdce8e0762f9e35529114337d0adfb01dd9706f95562d43ae51e9106f9a6",
+    "src/weight_space_lab/process_entry.py": "56fcbf8223f83573d0312b63230a2f7b4f487e7e2b395ffb38b948d7298eea88",
+    "src/weight_space_lab/process_entry_v4.py": "fb19d5b1ac02dde7877a40ca969155f77a79aec5c2aec5df5cc403f7ee17bf06",
+    "src/weight_space_lab/vllm018_compat.py": "be28b81d5d1e89f1fd08ade8bb59488738dda0253568e101acd6cac09dcb667c",
+    "src/weight_space_lab/vllm_attention.py": "db942a00fe576a82cdc8a29b218cc6a6f66c7148d91e86a379816c73f1e09924",
+    "src/weight_space_lab/vllm_pilot.py": "f6e777bb396b1b8eb5a56ed079b7aa11e4b32ce58f1229e6d43f69b310548aa6",
+    "src/weight_space_lab/vllm_pilot_v4.py": "9d2bad07d040cf3b6d5150fc89664ee41c72a93cf9863257fb8ac1c56cc148ac",
+    "proposals/neal_demo_v2/BUDGET_AND_RECOVERY_PROPOSAL.json": "6238ca7a1bc97aa00d7397058e380f71eb94ecc7b5ceabc95b4bb9b77f92e9a9",
+    "proposals/neal_demo_v2/INTEGRATION.json": "1a6b45f4db514d3a0b5b74191bb32645273316b2ed0f8053123b32e3e8653844",
+    "proposals/neal_demo_v2/modal_neal.py": "e018e4ccd52b6a0db88405d960cc9ef5a8e712b36dec740c4e8bfce660841bfa",
+    "proposals/neal_demo_v2/neal_bridge.py": "d737352d8df0e3ea00b7341f34f5369580a76cdde903142f84861c2da83528b1",
+    "proposals/neal_demo_v2/neal_browser.py": "b5f5824506614797075931842d009be46921e4cef93c0348c163856b84b9329e",
+    "proposals/neal_demo_v2/neal_control.py": "8ea1fab0744f1f0c781853eb24acaee54a2a923fa7db375d860a2b54de454878",
+    "proposals/neal_demo_v2/neal_harness.py": "3ee2e5b069935d4a2e1c6c9bc920b497543753e4e70d25a86acf035cbc5c395c",
+    "proposals/neal_demo_v2/neal_lifecycle.py": "20c82b785b1a0b61fdd4a3be6e27eb82e8f3aecdf393a57a58a8bf38758df32c",
+    "proposals/neal_demo_v2/neal_limits.py": "730c8b476e7f250869a5752881d3e9a18e0635e1c2b04b9062b8246789949837",
+    "proposals/neal_demo_v2/neal_protocol.py": "e6e4b2c6fb31d1d241007d92af4507e07b3834e00161b4af14f86556534e99f7",
+    "proposals/neal_demo_v2/neal_worker.py": "b01f5945a36ca91e3c413ec9604d72fa9cf4154afaaa9723e10ff55d59431b82",
+    "proposals/neal_demo_v2/test_neal.py": "0ecbdab453f7178d341a6559158d4ebf67b4b9d2ea201ea01b4eb78bdda379bb",
+    "proposals/neal_demo_v2/test_remount.py": "ff70175f9a74915e8510d232daab4ad4ee6609e4e71a3019898e3a1c4e910566",
+    "proposals/neal_demo_v2/test_wrapper.py": "e01ca1c15333c7966efa4f9105ff47960ee8d46bcac7ecf73c12654deb2c84b7"
+  },
+  "final_source_manifest_sha256": "8fbfae7c35670e7c3dbf3b8b1dcbd0ee573960048eff32da9bf09c135c458f5a",
+  "final_file_count": 32,
+  "v1_files_verified_unchanged": 31,
+  "verified_deltas": [
+    "Only parent and local control evaluate ROOT conditionally: packaged marker selects explicit /opt/weight-space before any shallow ancestor expression. Local branch still uses actual repository ancestry.",
+    "New v2 app,bridge,once,session,CPU/GPU run IDs,local run directory andmanifest prefix isolate the correction. Old consumed v1 source/records are unchanged.",
+    "The supervisor hashes fixed explicit image roots and then compares the actual executing SDK parent file plus actual imported limits,lifecycle,worker anddiagnostic files to their manifest entries before admission/once markers. Actual file paths andhashes are retained in returned report. A differing duplicate cannot silently satisfy the explicit-copy manifest.",
+    "Model recipe,checkpoint/adapter pins,game levels/action/wall limits,resource deadlines,artifact bounds,expiry andoriginal3USD envelope are unchanged. Existing readiness/unknown-native/terminal/recovery logic is unchanged.",
+    "Game/browser/protocol/worker/bridge sources and existing tests are byte-identical copies except harness run-name only. No game-ready wait or hidden state modification was added."
+  ],
+  "local_validation": {
+    "interpreter": "/Users/samuelekpe/Convert/.venv/bin/python",
+    "sdk": "1.4.3",
+    "first_v2_run": "31 pure/local import tests passed with zero skips on first v2 source84a361c4.",
+    "final_changed_tests": "Two remount tests passed on final source8fbfae7c after the only further parent/test change. Other29 test sources and dependencies were unchanged by that addition.",
+    "actual_tests": "Whole parent/control copied to shallow temp files and imported using actual Modal SDK with packagedENV and an entryPath.resolve trap; whole parent executed with __file__=/root/modal_neal.py; exact imported paths/hashes checked; altered expected parent hash rejected; actual multiprocessing spawn child imported the v2 worker target without entering runtime.",
+    "manifest_checks": "All32 final package file hashes and Python ASTs verified; all31 frozen v1 package hashes verified unchanged; cumulative parent delta verified against saved record.",
+    "provider_calls": 0,
+    "model_calls": 0,
+    "browser_or_site_calls": 0,
+    "runtime_candidate_calls": 0
+  },
+  "review_limits": [
+    "Local imports/declarations/spawn checks do not simulate all Modal remount/runtime behavior or prove current provider service availability. Actual CPU entry is the next gate.",
+    "Executed source-file hashes bind bytes/paths, not compiler,loader,native resources orcomplete runtime attestation.",
+    "CPU completed status/decoded frames are insufficient to prove a populated puzzle. Actual recovered CPU video must visibly show allsix actor-level scenes before GPU.",
+    "Source review issues no allocation or action approval. Existing3USD allocation must be rebound to final source without releasing unknown prior spend. No v1 retry is permitted."
+  ],
+  "authorship": "Reviewer did not author the v2 remount/binding/ID correction or test_remount. Reviewer authored the unchanged core harness; its independent core review remains separate."
+}

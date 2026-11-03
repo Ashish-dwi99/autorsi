@@ -1,0 +1,26 @@
+"""Frozen proposal limits; no allocation, provider call, or approval is issued."""
+APP_NAME = "adam-1-cu-neal-private-v2"
+BRIDGE_NAME = "adam-1-cu-neal-private-v2-bridge"
+ONCE_NAME = "adam-1-cu-neal-private-v2-once"
+SESSION_ID = "adam-1-cu-neal-live-v2"
+CPU_RUN_ID = "adam-1-cu-neal-preflight-v2"
+GPU_RUN_ID = "adam-1-cu-neal-live-v2"
+LEVELS = (1, 3, 5)
+NOT_AFTER_UNIX = 1793793600  # 2026-11-04 12:00 UTC; no automatic renewal.
+CHILD_WALL_SECONDS = 900
+CPU_CHILD_WALL_SECONDS = 180
+GENERATION_HARD_SECONDS = 45
+FINALIZE_HARD_SECONDS = 45
+ASSISTANT_READY_SECONDS = 30
+ACTION_RESPONSE_SECONDS = 30
+MAX_ASSISTANT_COMMANDS = 96  # Three levels, at most32 actions each.
+MAX_MODEL_CALLS = 97  # One neutral warmup plus at most3*32 scored requests.
+MAX_MESSAGE_BYTES = 896 * 1024
+MAX_PNG_BYTES = 512 * 1024
+MAX_VISIBLE_DOM_BYTES = 64 * 1024
+MAX_PROGRESS_BYTES = 8 * 1024 * 1024
+MAX_VIDEO_BYTES = 256 * 1024 * 1024
+MAX_ARTIFACT_BYTES = 300 * 1024 * 1024
+MAX_ARTIFACT_FILES = 400  # Up to2*3*32 actor observations plus bounded journals and one video.
+PROPOSED_RESERVATION_USD = 3.00
+ALLOCATED_USD = 0.00

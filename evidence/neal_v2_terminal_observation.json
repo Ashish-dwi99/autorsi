@@ -1,0 +1,14 @@
+{
+  "observation_type": "actual_provider_terminal_observation",
+  "observed_unix": 1793735775.6945028,
+  "app_id": "ap-1qgHoLFsIavzrIdLnD905u",
+  "active_gpu_calls": 0,
+  "active_gpu_containers": 0,
+  "active_cpu_calls": 0,
+  "active_cpu_containers": 0,
+  "cpu_summary": "Inactive CPU function 1 call",
+  "gpu_summary": "Inactive A100-80GB GPU No activity",
+  "source": "Root actualChrome3ModalappIDoverview after failure receipt and host cancellation return",
+  "credits_display": 28.65,
+  "not_settled_billing": true
+}

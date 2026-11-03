@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "created_unix": 1793737006.0212522,
+  "decision": "Correct diagnostic scope and source before any provider action",
+  "basis": "User explicitly requested a recorded Neal.fun game comparison. Ordinary anonymous browser navigation and its natural HTTP redirects are within that task. The earlier claim that Playwright routing preventively constrains every redirect was an implementation mistake, not a user-imposed requirement.",
+  "superseded_source_manifest": "62e820ce2fdf1f0be8d2b6c4b27181d838929f4a49e0e8d66033a0f99b054809",
+  "finding": "evidence/neal_navigation_diagnostic_v1_redirect_review_finding.json",
+  "prospective_scope": [
+    "Exactly two intentional initial level1 iframe navigations, same original URL, normal default browser transport/security.",
+    "Observe actual request and redirect predecessor/URL/origin; unexpected origin/document/loop or refusal latches stop.",
+    "Post-request callbacks and context close cannot prevent an automatic redirected request already sent. This includes asset redirects. No preventive all-hop egress guarantee.",
+    "No chosen alternate origin, retry, reload, challenge interaction, proxy, UA, cookie, certificate/CSP/XFO changes, custom HTTP transport, model or GPU.",
+    "Same bounded30s observation and existing shared3USD envelope; prior failures/costs retained; no new allocation.",
+    "Existing writable results volume only; no model/input mounts.",
+    "A diagnostic return is not populated-puzzle preflight or GPU admission."
+  ],
+  "status": "Prospective source amendment; exact revised source/reviews/budget binding and fresh terminal/deployment identities still required. This record implements user scope; it is not an independent approval issuer.",
+  "diagnostic_provider_calls_to_date": 0
+}

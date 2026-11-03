@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "status": "recording_blocked_before_model_evaluation",
+  "model_family": "Grupa Adam-1",
+  "variant": "Adam-1-CU",
+  "run": "neal-navigation-diagnostic-v1",
+  "app_id": "ap-x4CZ2F40Nzk5OFvcypDCHP",
+  "function_id": "fu-mVLCGSfCAXmsKdGBJfcw85",
+  "function_call_id": "fc-01M6HH7BCPWJ3CT3DXH799G1SK",
+  "source_manifest_sha256": "8a43fd20d7010d85b7c1c6e547686863dc4452df8b5c574748ab8c427c58ad38",
+  "receipt_sha256": "41a955ac5c55c7374e234609ed808b4f1e5d2350cf8d7eaf76e4880279cd9509",
+  "observations": {
+    "initial_game_url": "https://embed.neal.fun/not-a-robot/1",
+    "intentional_initial_frame_navigations": 2,
+    "document_responses": [
+      {
+        "status": 403,
+        "frame_slot": 2,
+        "server": "cloudflare",
+        "x_frame_options": "SAMEORIGIN"
+      },
+      {
+        "status": 403,
+        "frame_slot": 1,
+        "server": "cloudflare",
+        "x_frame_options": "SAMEORIGIN"
+      }
+    ],
+    "request_failures": [
+      "net::ERR_BLOCKED_BY_RESPONSE",
+      "net::ERR_BLOCKED_BY_RESPONSE"
+    ],
+    "console_framing_refusal": true,
+    "final_frame_urls": [
+      "chrome-error://chromewebdata/",
+      "chrome-error://chromewebdata/"
+    ],
+    "own_route_filter_blocked_requests": 0,
+    "recorded_redirects": 0,
+    "first_stop": "actual_document_refusal",
+    "browser": "148.0.7778.96",
+    "playwright": "1.60.0"
+  },
+  "execution": {
+    "parent_elapsed_s": 2.8020451909999995,
+    "child_elapsed_s": 2.3077666349999992,
+    "child_exitcode": 0,
+    "child_reaped": true,
+    "browser_close_returned": true,
+    "model_calls": 0,
+    "game_actions": 0,
+    "gpu_requested": false,
+    "model_mounts": [],
+    "cancellation_attempted": false
+  },
+  "video": {
+    "bytes": 9604,
+    "sha256": "0f6f54227792917486e44e283936bcd233f2e05409d8496aa48d9cf10f808ee4",
+    "recovery_once": true,
+    "decoded_frames": 25,
+    "width": 970,
+    "height": 650,
+    "duration_s": 1.0,
+    "actual_root_visual_observation": "Two blank white panes under diagnostic labels; no populated puzzle"
+  },
+  "model_comparison": {
+    "performed": false,
+    "score": null,
+    "winner": null,
+    "astra_identity_or_superiority_established": false
+  },
+  "disposition": {
+    "fresh_provider_terminal_record": "evidence/neal_navigation_diagnostic_v1_terminal_observation.json",
+    "fresh_provider_terminal_record_sha256": "196d334ca69d2c33238c8aa57da8026d33da47b83f3cf47c323274ed11fad30c",
+    "observed_active_containers": 0,
+    "observed_running_calls": 0,
+    "retry_or_bypass_planned": false,
+    "gpu_demo_admitted": false,
+    "private_checkpoint_unchanged": true
+  },
+  "budget": {
+    "authorized_usd": 30,
+    "shared_neal_envelope_usd": 3,
+    "new_reservation_usd": 0,
+    "all_project_reservations_retained_usd": 21,
+    "unallocated_usd": 9,
+    "recorded_gross_for_completed_15_to20_hours_usd": "1.35300055",
+    "diagnostic_20_hour_billing_not_yet_included": true,
+    "settled_invoice": false,
+    "ledger_sha256": "17396d3873ae74984af9fd80b50828a17f82b54610cb11e5739f6440aed91266"
+  },
+  "limits": [
+    "This trace establishes403 and browser framing refusal in this diagnostic only. Cloudflare served the responses; the exact upstream reason for403 is not established.",
+    "The consumed earlier v2 failure did not record response status or rejected URL; its exact cause remains unproven.",
+    "Normal anonymous automatic redirects were prospectively admitted; event observation and close do not prevent already-sent requests. Bounded trace is not a complete network inventory.",
+    "No challenge interaction, security weakening, retry, alternate-origin/proxy fallback, model score, or valid head-to-head recording occurred.",
+    "Provider zero-live observation is separate from direct-child reap and does not settle billing.",
+    "Adam-1-CU remains an experimental candidate with3MiniWoB regressions; Eden remains separate and deferred."
+  ]
+}

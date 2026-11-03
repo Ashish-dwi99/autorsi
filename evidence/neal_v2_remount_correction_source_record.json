@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "status": "source-only narrow correction ready for distinct review; no deployment or provider call",
+  "source_manifest": {
+    "src/weight_space_lab/__init__.py": "0011bfd335ca645347f878f6d5ab2e7863958d572388233bb13530070a0f9201",
+    "src/weight_space_lab/benchmarks/__init__.py": "48fddf5bdf1d87f13ee19919253c21867a1509383523779b6b4d39e9cc454cea",
+    "src/weight_space_lab/benchmarks/miniwob.py": "c85987b1a84bf9a75c8a000fdb1cbc37f254adf31939e03e4359d132bffaca1a",
+    "src/weight_space_lab/diagnostic.py": "4ff894989dcccf57d2ad17cc86740114dafca8a57f62eb2297bb27d219c3dc33",
+    "src/weight_space_lab/eval/__init__.py": "2fecfeab2b6eacf945accac88c69620bc937d06f3c6efb23f95eb68e8cbcd4b5",
+    "src/weight_space_lab/eval/bu_policy.py": "57f228cdbdfbe72925d0aa311b76001d74a9e03ae9d439c0be63145fd11b02dd",
+    "src/weight_space_lab/eval/bu_protocol.py": "5987375c472918692f3a2c275c04048aa90b80652feae2faeaa01d20b89f3ebd",
+    "src/weight_space_lab/eval/fixtures.py": "2c994fd6d5c465a2a729082b789661494d711c6b7cec4bcc4d299c76e05ec57a",
+    "src/weight_space_lab/eval/runner.py": "1e22b7a8635c15214aeefd3e5956a8c5102934e1ce0cc261d359f2a1624085d5",
+    "src/weight_space_lab/merged_patch.py": "25310009418e646f555f56464e229fc7ac5c94163fffc86f4fdc8216e7e6d1e9",
+    "src/weight_space_lab/patch.py": "b2bf10e9402104d495c08ab7ade727300c2b2481c965552da48ea1ecb58b3aca",
+    "src/weight_space_lab/policy_io.py": "2c2ccdce8e0762f9e35529114337d0adfb01dd9706f95562d43ae51e9106f9a6",
+    "src/weight_space_lab/process_entry.py": "56fcbf8223f83573d0312b63230a2f7b4f487e7e2b395ffb38b948d7298eea88",
+    "src/weight_space_lab/process_entry_v4.py": "fb19d5b1ac02dde7877a40ca969155f77a79aec5c2aec5df5cc403f7ee17bf06",
+    "src/weight_space_lab/vllm018_compat.py": "be28b81d5d1e89f1fd08ade8bb59488738dda0253568e101acd6cac09dcb667c",
+    "src/weight_space_lab/vllm_attention.py": "db942a00fe576a82cdc8a29b218cc6a6f66c7148d91e86a379816c73f1e09924",
+    "src/weight_space_lab/vllm_pilot.py": "f6e777bb396b1b8eb5a56ed079b7aa11e4b32ce58f1229e6d43f69b310548aa6",
+    "src/weight_space_lab/vllm_pilot_v4.py": "9d2bad07d040cf3b6d5150fc89664ee41c72a93cf9863257fb8ac1c56cc148ac",
+    "proposals/neal_demo_v2/BUDGET_AND_RECOVERY_PROPOSAL.json": "6238ca7a1bc97aa00d7397058e380f71eb94ecc7b5ceabc95b4bb9b77f92e9a9",
+    "proposals/neal_demo_v2/INTEGRATION.json": "1a6b45f4db514d3a0b5b74191bb32645273316b2ed0f8053123b32e3e8653844",
+    "proposals/neal_demo_v2/modal_neal.py": "9f718fcc976a09a068c0fc00fe892d54c8f842d51b199d57d6f20bfce5e5c4b2",
+    "proposals/neal_demo_v2/neal_bridge.py": "d737352d8df0e3ea00b7341f34f5369580a76cdde903142f84861c2da83528b1",
+    "proposals/neal_demo_v2/neal_browser.py": "b5f5824506614797075931842d009be46921e4cef93c0348c163856b84b9329e",
+    "proposals/neal_demo_v2/neal_control.py": "8ea1fab0744f1f0c781853eb24acaee54a2a923fa7db375d860a2b54de454878",
+    "proposals/neal_demo_v2/neal_harness.py": "3ee2e5b069935d4a2e1c6c9bc920b497543753e4e70d25a86acf035cbc5c395c",
+    "proposals/neal_demo_v2/neal_lifecycle.py": "20c82b785b1a0b61fdd4a3be6e27eb82e8f3aecdf393a57a58a8bf38758df32c",
+    "proposals/neal_demo_v2/neal_limits.py": "730c8b476e7f250869a5752881d3e9a18e0635e1c2b04b9062b8246789949837",
+    "proposals/neal_demo_v2/neal_protocol.py": "e6e4b2c6fb31d1d241007d92af4507e07b3834e00161b4af14f86556534e99f7",
+    "proposals/neal_demo_v2/neal_worker.py": "b01f5945a36ca91e3c413ec9604d72fa9cf4154afaaa9723e10ff55d59431b82",
+    "proposals/neal_demo_v2/test_neal.py": "0ecbdab453f7178d341a6559158d4ebf67b4b9d2ea201ea01b4eb78bdda379bb",
+    "proposals/neal_demo_v2/test_remount.py": "33bfba0aef4f794bdec9c9d0e24dfb4f92ea3b5ac7409de5d53668855b671adb",
+    "proposals/neal_demo_v2/test_wrapper.py": "e01ca1c15333c7966efa4f9105ff47960ee8d46bcac7ecf73c12654deb2c84b7"
+  },
+  "source_manifest_sha256": "84a361c420a7f739834f750c0dd702057bd367ed26749973fe4745e2a23bfa0e",
+  "v1_sources_verified_unchanged": true,
+  "unchanged_copied_files": [
+    "BUDGET_AND_RECOVERY_PROPOSAL.json",
+    "neal_bridge.py",
+    "neal_browser.py",
+    "neal_protocol.py",
+    "neal_worker.py",
+    "test_neal.py",
+    "test_wrapper.py"
+  ],
+  "exact_deltas": [
+    {
+      "name": "INTEGRATION.json",
+      "v1_sha256": "d275b3b17f8d6025abeb66027ccdc441b9baccd762bbf650eb35942d758beec5",
+      "v2_sha256": "1a6b45f4db514d3a0b5b74191bb32645273316b2ed0f8053123b32e3e8653844",
+      "unified_delta": "--- proposals/neal_demo_v1/INTEGRATION.json\n+++ proposals/neal_demo_v2/INTEGRATION.json\n@@ -7,7 +7,7 @@\n     \"neal_browser.py\",\n     \"neal_harness.py\"\n   ],\n-  \"python_path\": \"The reviewed wrapper must add the exact packaged proposals/neal_demo_v1 directory and existing immutable src package to PYTHONPATH. Do not import a previous consumed Modal app.\",\n+  \"python_path\": \"The reviewed wrapper must add the exact packaged proposals/neal_demo_v2 directory and existing immutable src package to PYTHONPATH. Do not import a previous consumed Modal app.\",\n   \"cpu_api\": \"await neal_harness.preflight(admission,progress_path,artifact_dir,publish=sync_callback) -> report. Opens official public embeds in a new isolated browser, captures each actor's visible observation and one finalized side-by-side video; zero game actions/model callbacks. It is source-prepared only and has not been executed.\",\n   \"live_api\": \"await neal_harness.run_demo(admission,progress_path,artifact_dir,adam_policy=policy,assistant_bridge=bridge,publish=sync_callback) -> report. Parent owns verified Adam-1-CU checkpoint/recipe load, any neutral warmup, actual model counter and resource admission.\",\n   \"admission\": {\n"
+    },
+    {
+      "name": "modal_neal.py",
+      "v1_sha256": "575a3285b9c9c49b051e8530d5dee20e81fe05c9670f6c9b3dec732d05193ee8",
+      "v2_sha256": "9f718fcc976a09a068c0fc00fe892d54c8f842d51b199d57d6f20bfce5e5c4b2",
+      "unified_delta": "--- proposals/neal_demo_v1/modal_neal.py\n+++ proposals/neal_demo_v2/modal_neal.py\n@@ -17,7 +17,11 @@\n from neal_limits import *\n from neal_lifecycle import source_manifest, manifest_sha, validate_admission, artifact_inventory\n \n-ROOT = Path(__file__).resolve().parents[2]\n+PACKAGED_RUNTIME = os.environ.get(\"NEAL_PACKAGED_RUNTIME\") == \"1\"\n+# Modal may auto-mount this module at /root/modal_neal.py. Never derive a\n+# repository ancestor from that shallow runtime path. Explicit image paths\n+# own all packaged imports; local ancestor lookup is evaluated only locally.\n+ROOT = Path(\"/opt/weight-space\") if PACKAGED_RUNTIME else Path(__file__).resolve().parents[2]\n app = modal.App(APP_NAME)\n image = (modal.Image.debian_slim(python_version=\"3.11\")\n     .apt_install(\"ffmpeg\")\n@@ -29,7 +33,7 @@\n         \"HF_HUB_OFFLINE\": \"1\", \"TRANSFORMERS_OFFLINE\": \"1\", \"TOKENIZERS_PARALLELISM\": \"false\",\n         \"VLLM_ENABLE_V1_MULTIPROCESSING\": \"0\", \"VLLM_NO_USAGE_STATS\": \"1\",\n         \"DO_NOT_TRACK\": \"1\", \"HF_HUB_DISABLE_TELEMETRY\": \"1\"}))\n-if os.environ.get(\"NEAL_PACKAGED_RUNTIME\") != \"1\":\n+if not PACKAGED_RUNTIME:\n     image = (image.add_local_dir(ROOT / \"src\", \"/opt/weight-space/src\", copy=True,\n                                 ignore=[\"__pycache__\", \"*.pyc\"])\n                   .add_local_dir(Path(__file__).parent, \"/opt/weight-space/neal\", copy=True,\n"
+    },
+    {
+      "name": "neal_control.py",
+      "v1_sha256": "5757d7322f56d7ee3b5bf5cff316ef820326e91712caa9310e5a4aec92b270bc",
+      "v2_sha256": "8ea1fab0744f1f0c781853eb24acaee54a2a923fa7db375d860a2b54de454878",
+      "unified_delta": "--- proposals/neal_demo_v1/neal_control.py\n+++ proposals/neal_demo_v2/neal_control.py\n@@ -22,8 +22,12 @@\n from neal_bridge import (IDENTITY_FIELDS, bounded_json, validate_observation,\n     validate_action_identity, private_store)\n \n-ROOT = Path(__file__).resolve().parents[2]\n-RUNS = ROOT / \"runs\" / \"neal-demo-v1\"\n+PACKAGED_RUNTIME = os.environ.get(\"NEAL_PACKAGED_RUNTIME\") == \"1\"\n+# Modal may auto-mount this module at /root/modal_neal.py. Never derive a\n+# repository ancestor from that shallow runtime path. Explicit image paths\n+# own all packaged imports; local ancestor lookup is evaluated only locally.\n+ROOT = Path(\"/opt/weight-space\") if PACKAGED_RUNTIME else Path(__file__).resolve().parents[2]\n+RUNS = ROOT / \"runs\" / \"neal-demo-v2\"\n SDK_PINS = {\"_functions.py\": \"aa18b6dcfa00f09807d1719fc592f96fa69d51c492eecf059aecec865702a2bf\",\n     \"_object.py\": \"b49b4c10fdf18e32dc09effa598e65f523f37c0424f48844297534faf72511c9\",\n     \"functions.py\": \"11945c1c57e7a186ef6b05099c01c5e6722fa28f465f60e3cbb99498e0979977\"}\n"
+    },
+    {
+      "name": "neal_harness.py",
+      "v1_sha256": "23bec3338673b6b2dc44629fb6bb5b8ed3bcdc4e292cfd32cee2b0a9173e06c4",
+      "v2_sha256": "3ee2e5b069935d4a2e1c6c9bc920b497543753e4e70d25a86acf035cbc5c395c",
+      "unified_delta": "--- proposals/neal_demo_v1/neal_harness.py\n+++ proposals/neal_demo_v2/neal_harness.py\n@@ -163,7 +163,7 @@\n     if scene_factory is None:\n         from neal_browser import BrowserScene\n         scene_factory=BrowserScene\n-    report={'schema':1,'run':'neal-demo-v1','mode':'cpu_preflight' if preflight_only else 'live_demo',\n+    report={'schema':1,'run':'neal-demo-v2','mode':'cpu_preflight' if preflight_only else 'live_demo',\n         'session_id':session,'phase':'browser_setup','status':'running','levels':[],\n         'planned_levels':list(LEVELS),'planned_actor_episodes':6,\n         'comparison':'UNPAIRED qualitative live entertainment-game demonstration; no verified Astra API benchmark',\n"
+    },
+    {
+      "name": "neal_lifecycle.py",
+      "v1_sha256": "0ff6b25b413482cd693a0fab6b9079058553f5d0ac9005048618622cae123d75",
+      "v2_sha256": "20c82b785b1a0b61fdd4a3be6e27eb82e8f3aecdf393a57a58a8bf38758df32c",
+      "unified_delta": "--- proposals/neal_demo_v1/neal_lifecycle.py\n+++ proposals/neal_demo_v2/neal_lifecycle.py\n@@ -8,7 +8,7 @@\n \n def source_manifest(source_root, demo_root):\n     paths = {}\n-    for prefix, folder in ((\"src/weight_space_lab\", Path(source_root)), (\"proposals/neal_demo_v1\", Path(demo_root))):\n+    for prefix, folder in ((\"src/weight_space_lab\", Path(source_root)), (\"proposals/neal_demo_v2\", Path(demo_root))):\n         for path in sorted(folder.rglob(\"*\")):\n             if \"__pycache__\" in path.parts or path.suffix == \".pyc\":\n                 continue\n"
+    },
+    {
+      "name": "neal_limits.py",
+      "v1_sha256": "4bd6e682bf3e561ca5de5ba64d3c1118669a895ec32c9cb00e78a5f922a981e2",
+      "v2_sha256": "730c8b476e7f250869a5752881d3e9a18e0635e1c2b04b9062b8246789949837",
+      "unified_delta": "--- proposals/neal_demo_v1/neal_limits.py\n+++ proposals/neal_demo_v2/neal_limits.py\n@@ -1,10 +1,10 @@\n \"\"\"Frozen proposal limits; no allocation, provider call, or approval is issued.\"\"\"\n-APP_NAME = \"adam-1-cu-neal-private-v1\"\n-BRIDGE_NAME = \"adam-1-cu-neal-private-v1-bridge\"\n-ONCE_NAME = \"adam-1-cu-neal-private-v1-once\"\n-SESSION_ID = \"adam-1-cu-neal-live-v1\"\n-CPU_RUN_ID = \"adam-1-cu-neal-preflight-v1\"\n-GPU_RUN_ID = \"adam-1-cu-neal-live-v1\"\n+APP_NAME = \"adam-1-cu-neal-private-v2\"\n+BRIDGE_NAME = \"adam-1-cu-neal-private-v2-bridge\"\n+ONCE_NAME = \"adam-1-cu-neal-private-v2-once\"\n+SESSION_ID = \"adam-1-cu-neal-live-v2\"\n+CPU_RUN_ID = \"adam-1-cu-neal-preflight-v2\"\n+GPU_RUN_ID = \"adam-1-cu-neal-live-v2\"\n LEVELS = (1, 3, 5)\n NOT_AFTER_UNIX = 1793793600  # 2026-11-04 12:00 UTC; no automatic renewal.\n CHILD_WALL_SECONDS = 900\n"
+    }
+  ],
+  "new_tests": {
+    "path": "proposals/neal_demo_v2/test_remount.py",
+    "sha256": "33bfba0aef4f794bdec9c9d0e24dfb4f92ea3b5ac7409de5d53668855b671adb"
+  },
+  "validation": {
+    "interpreter": "/Users/samuelekpe/Convert/.venv/bin/python",
+    "sdk": "1.4.3",
+    "command": "PYTHONPATH=proposals/neal_demo_v2:src /Users/samuelekpe/Convert/.venv/bin/python -m unittest discover -s proposals/neal_demo_v2 -p test_*.py -v",
+    "passed": 31,
+    "skipped": 0,
+    "shallow_tmp": "Actual complete parent and control modules imported from copied /tmp files with NEAL_PACKAGED_RUNTIME=1 and Path.resolve trap on entry path; both declare /opt/weight-space root.",
+    "exact_failure_depth": "Complete parent bytes executed with __file__=/root/modal_neal.py under actual Modal1.4.3; local ancestor lookup not evaluated.",
+    "spawn": "Actual multiprocessing spawn child imports neal_worker.worker_entry and harness/bridge from newv2 module path; no runtime function, torch, vLLM, browser or provider invoked.",
+    "limits": "These are local source/import tests; they do not prove actual remote container startup or current service availability."
+  },
+  "import_path_audit": {
+    "eager_ancestor_lookups": [
+      "modal_neal.py ROOT corrected",
+      "neal_control.py ROOT corrected"
+    ],
+    "parent_manifest_root": "Path(neal_worker.__file__).parent resolved from explicit PYTHONPATH /opt/weight-space/neal, never auto-mounted parent __file__",
+    "worker_module": "neal_worker imports pure diagnostic.atomic_json at module load; no __file__.parents dependency and no model imports until called.",
+    "other_file_references": "policy_io and diagnostic use their own package parent only inside explicit functions; same copied src closure. No old Modal app imported."
+  },
+  "scope": {
+    "ids": "New app/once/bridge/session/preflight/live/run-local and source-prefixv2; frozenv1 call remains consumed.",
+    "model_game_time_limits": "Unchanged exact.5 model recipe, levels1/3/5,32actions eachactor eachlevel,90s,97admitted calls,900child/960function/240startup, artifact bounds andexpiry.",
+    "budget": "Original3USD Neal envelope retained; no new allocation, purchase or release. Root must bind reviewedv2 sources within the existing envelope before deployment.",
+    "visible_readiness": "Existing additional actual CPU video review requirement continues: inspect all6 populated frames beforeGPU; completed alone is insufficient."
+  },
+  "actions": {
+    "provider_calls": 0,
+    "model_calls": 0,
+    "site_calls": 0,
+    "candidate_executions": 0
+  }
+}

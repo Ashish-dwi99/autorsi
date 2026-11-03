@@ -1,0 +1,84 @@
+{
+  "authorship": "Reviewer did not author proposed neal_demo_v1 core/browser/bridge/wrapper files and made no edits to them. Final concrete source remains independently reviewable.",
+  "files": [
+    {
+      "bytes": 10048,
+      "path": "proposals/neal_live_recording_plan_v1.json",
+      "sha256": "fb5ad4094c4cca20d7be44220a04c14c847105f33bfaa3de832f42a8d1f15a3d"
+    },
+    {
+      "bytes": 6304,
+      "path": "proposals/miniwob_neal_protocol_v1.json",
+      "sha256": "24951f74d9269a9f3bd5a5d618d8ec5c6ff8264c2e3cbb3091049fa20204cbdf"
+    },
+    {
+      "bytes": 4976,
+      "path": "evidence/benchmark_protocol_v1.json",
+      "sha256": "8c54ba2a40e1d0462cc038f40821338b8da19a03db91617fedc68acd9e3aeeaa"
+    }
+  ],
+  "latest_scope_steering": "Harness author relayed root freezes levels1,3,5 only. Historical plan lists1,3,5,9; final concrete manifest must state new3-level scope before execution, preserving this prior proposal.",
+  "model_calls": 0,
+  "package_downloads": 0,
+  "provider_calls": 0,
+  "required_dispositions": [
+    {
+      "author_response": "Harness author confirms fresh elements/local binding planned.",
+      "id": "completion_binding",
+      "requirement": "Create a fresh iframe element/contentWindow each level, bind immutable local actor/session/level generation to it, listen before loading, accept exact origin/source/type only while that level is active, consume completion once, reject late/old-frame events. Never trust model done or fabricate game messages.",
+      "risk": "A reused iframe WindowProxy can survive navigation, so source+origin checks alone may admit a delayed completion from the prior level. Saved official message evidence does not show a payload session nonce."
+    },
+    {
+      "author_response": "Harness author confirms no synchronized-native-start claim and timestamp retention planned.",
+      "id": "native_start_chronology",
+      "requirement": "Never alter game timers or hidden state. Retain each actor navigation/load/ready/first-observation/first-action/completion times and include inference/render/bridge delays in actor end-to-end wall. Label any common harness start separately from native clock start.",
+      "risk": "No saved documented game pause/start API; loading both iframes and releasing actor loops is not proof of synchronized native game timers."
+    },
+    {
+      "id": "paired_claims",
+      "requirement": "Unpaired qualitative demo with one attempt per frozen level/actor; preserve initial screenshots and all failures/missing episodes. No reroll, best-of selection, replayed solution or SOTA/10x/general capability inference.",
+      "risk": "Same level URL is not identical randomized puzzle. Matching initial screenshot alone would also not prove matching future stochastic evolution."
+    },
+    {
+      "id": "identity_and_cost",
+      "requirement": "Label assistant+tooling honestly and use a trusted runtime model identifier only if available. Unknown assistant tokens/cost remain unknown, never zero. Report measured BU requests/tokens plus whole reserved/billed demo compute; do not invent cost ratios.",
+      "risk": "Interactive assistant model identity, hidden compute/token consumption and price are not supplied by the manual bridge. Common tools do not make reasoning/inference paths identical."
+    },
+    {
+      "id": "geometry_and_focus",
+      "requirement": "Freeze device scale/viewport/frame dimensions and border policy; map iframe-local CSS pixels using actual current rectangle; reject outside-frame coordinates; serialize every physical mouse/keyboard action; verify actor frame/focus before dispatch; forbid shortcuts, navigation and cross-actor observations.",
+      "risk": "Border boxes, scaling, scrolling, transforms and shared keyboard focus can send an action to the wrong pane or coordinate."
+    },
+    {
+      "id": "action_feedback",
+      "requirement": "Revalidate queued visible element handles and focus/geometry immediately; declare coordinate semantics without claiming semantic target identity; discard unused suffix on terminal/error. Unknown command delivery is neither success nor proof of no effect and must not be retried.",
+      "risk": "Atomic structural batch validation does not prove later queued target identity or unchanged visual scene. Coordinates have no intrinsic element identity."
+    },
+    {
+      "id": "latency_and_outcomes",
+      "requirement": "Use explicit per-level success/failure/timeout/missing outcomes and planned denominator. Show successful completion time separately from failed elapsed/censored limits; no average-speed ratio over unequal solved subsets. Preserve native pending barriers even if game already completed.",
+      "risk": "Completed-only times bias a speed chart, and a native completion may arrive while generation or transport remains pending."
+    },
+    {
+      "id": "video_integrity",
+      "requirement": "Record raw continuous1x browser-only video with actor labels outside frames; preserve full original plus event timing. Do not fabricate cursor motion. Any action-marker overlay must be labelled as telemetry. Bound finalization/retrieval within reviewed lifecycle/storage; no extra invocation or reconstructed-video success claim after failure.",
+      "risk": "Playwright browser video may omit OS cursor; context.close finalization and artifact transfer can fail after gameplay."
+    },
+    {
+      "id": "network_and_preflight",
+      "requirement": "Freeze minimal actual required official asset origins, versions and final URLs after bounded CPU preflight; block popup/download/unrelated navigation. Separate interface validation from model outcomes, disclose prior task familiarity, and do not use outcomes to change levels/controls.",
+      "risk": "Missing fonts/assets or redirects can change task appearance or functionality; reference preflight can reveal task solutions."
+    },
+    {
+      "id": "budget",
+      "requirement": "Only execute after root reconciles remaining shared30USD ceiling and reserves complete new lifecycle. This plan/review is not additional budget or provider execution permission.",
+      "risk": "GPU residency during manual actor delays, video finalization, CPU checks and artifact transfer also consumes resources."
+    }
+  ],
+  "reviewer": "weight_space_paper_review",
+  "saved_evidence_limit": "Saved records describe official embed endpoint and captcha-completed message, but do not provide a documented deterministic seed, pause/start handshake, or echoed session/level nonce. No additional live source retrieval in this review.",
+  "schema": 1,
+  "scope": "independent saved-plan and saved primary-source interpretation review only; no new site/provider/model call or package download",
+  "site_calls": 0,
+  "status": "implementation constraints communicated to both authors; final new harness source and actual preflight still required"
+}

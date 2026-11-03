@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "status": "Source only; browser/API correctness and actual media require separate CPU preflight; no live call or budget is authorized by this file",
+  "scope_update": "Root explicitly narrowed the earlier plan to levels1,3,5 and selected an authenticated private Modal Dict bridge instead of Queue. Earlier plan remains historical; no level9 trial is supplied here.",
+  "modules": [
+    "neal_protocol.py",
+    "neal_browser.py",
+    "neal_harness.py"
+  ],
+  "python_path": "The reviewed wrapper must add the exact packaged proposals/neal_demo_v2 directory and existing immutable src package to PYTHONPATH. Do not import a previous consumed Modal app.",
+  "cpu_api": "await neal_harness.preflight(admission,progress_path,artifact_dir,publish=sync_callback) -> report. Opens official public embeds in a new isolated browser, captures each actor's visible observation and one finalized side-by-side video; zero game actions/model callbacks. It is source-prepared only and has not been executed.",
+  "live_api": "await neal_harness.run_demo(admission,progress_path,artifact_dir,adam_policy=policy,assistant_bridge=bridge,publish=sync_callback) -> report. Parent owns verified Adam-1-CU checkpoint/recipe load, any neutral warmup, actual model counter and resource admission.",
+  "admission": {
+    "session_id": "Required8..64 safe alphanumeric/underscore/hyphen identifier; supplied by authenticated wrapper, not model text",
+    "levels": "If present must equal[1,3,5]",
+    "allowed_asset_origins": "Explicit public HTTPS origin list, max8; defaults https://neal.fun and https://embed.neal.fun. CPU preflight fails if any required request is blocked; inspect exact public origins before a distinct live admission, do not allow arbitrary navigation.",
+    "actual_model_identity": "Trusted checkpoint/recipe display metadata; wrapper must actually verify it",
+    "assistant_model_identity": "Optional trusted runtime metadata. Otherwise the report explicitly states that an API model identity was not supplied."
+  },
+  "policy": "async adam_policy(messages,max_tokens)->PolicyReply(text,prompt_tokens,completion_tokens). Harness requests at most192tokens and96 policy attempts across three levels. Wrapper owns a single serialized native model and counts any warmup separately. Native asynchronous cancellation is never treated as physical stop.",
+  "assistant_bridge": {
+    "ready": "Wrapper must complete an explicit authenticated assistant-ready handshake before GPU model load/first game frame; harness does not silently infer readiness from elapsed time.",
+    "call": "await bridge.exchange(observation,timeout_s<=30) -> command envelope",
+    "observation": "session_id,actor='assistant',level,seq,observation_sha256,frame_id,task_phase='active',png_base64,visible_dom,remaining_actions,remaining_wall_s,prior_action_result,viewport",
+    "command": "Exactly the seven matching identity fields session_id/actor/level/seq/observation_sha256/frame_id/task_phase plus native_action_json. Global assistant sequence1..96; no duplicate or overwritten command; actual action return remains distinct from SDK delivery.",
+    "bounds": "PNG<=512KiB, filteredDOM<=64KiB, encoded observation<896KiB; one outstanding observation peractor. Broker transport timeouts latch unknown and abort. The supervisor watchdog must never wait on SDK network RPC.",
+    "root_tools": "A tiny reviewed local SDK bridge may show the actual returned assistant PNG through an existing tool image result and submit the chosen typed action. This controls only the expressly authorized remote demo browser. It does not operate the user's local browser or bypass cua_repl for local surfaces."
+  },
+  "progress": "Pass a synchronous publish(report) callback that saves under outer_report['demo']. Preserve outer native_pending and the original generation start while the Adam request is pending. Concurrent assistant actions must not reset or replace that watchdog timestamp. Harness phases are browser_setup,level_load,browser_step,finalizing,completed/failed.",
+  "result": "Normal source completion returns status='completed', phase='completed', browser_close_returned=True, artifacts, perlevel/peractor records, model policy-attempt counts and six planned actor episodes. This means the demo finished, not that all tasks succeeded. CPU actors have status='observed_only'; no model result is invented. CPU status='failed' is returned for blocked assets and must reject live admission.",
+  "scoring": "Only checked official captcha-completed messages with current exact iframe Window/session/level bind completion. New iframe objects are created perlevel; old WindowProxy messages cannot carry acrosslevels. Timely completion also requires an actual actor action; preexisting/late receipt is retained without ability credit. Done is a claim. Native game timers are not synchronized or altered.",
+  "failure": "Unknown policy/transport raises DemoAbort after retaining partial report and attempting browser close. Parent must retain native-pending disposition and terminate the owning process/container on its original deadline; do not start another request or nextlevel. Remaining planned episodes stay in the denominator. Failed elapsed times are censored and are never used for a completed-only speedup claim.",
+  "media": "One970x650 browser-only recording with two465x600 actor panes. Context close is awaited before path/hash retrieval. A256MiB finalized artifact acceptance gate is not an OS write quota. Artifact relative paths are owned, hashed and returned; actual video metadata/playability must be checked on CPU before live demo. No public endpoint, sharing or publication is implied.",
+  "known_limits": [
+    "No deterministic game seed/reset API is documented: unpaired qualitative demonstration only.",
+    "Coordinate clicks have geometry bounds, not semantic target identity. Indexed actions also receive fresh visible/enabled identity checks under a shared physical-action lock.",
+    "Playwright video may not display an OS pointer; no fake cursor is drawn.",
+    "Hardware/native calls can outlive asynchronous cancellation; separate parent supervision remains mandatory.",
+    "The source tests use fake scenes and cannot prove the real iframe assets, browser APIs, video finalization or provider deployment work."
+  ],
+  "prospective_amendment": {
+    "before_any_game_action_or_model_trial": true,
+    "reason": "Root read-only official inspection found level5 has nine rotating tiles plus Verify. Twelve actions could make some initial puzzles infeasible; a conditional quarter-turn example needs up to27 rotations plus Verify. Exact game mechanics are not inferred as a benchmark theorem.",
+    "old_shared_actions_per_actor_level": 12,
+    "new_shared_actions_per_actor_level": 32,
+    "unchanged_wall_s": 90,
+    "unchanged_max_batch_actions": 8,
+    "global_requests_per_actor": 96,
+    "total_native_model_ceiling_including_one_neutral_warmup": 97,
+    "selection": "Allthree already fixed levels and both actors receive the same prospective limit; no outcomes or game actions preceded this amendment."
+  },
+  "official_url_observation": {
+    "observer": "root authorized read-only Chrome inspection; no game actions",
+    "initial_pattern": "https://embed.neal.fun/not-a-robot/{1,3,5}",
+    "canonical_pattern": "https://embed.neal.fun/not-a-robot/embed/{1,3,5}",
+    "observed_asset_origins": [
+      "https://embed.neal.fun",
+      "https://plausible.neal.fun"
+    ],
+    "restriction": "Only exact current-level documented initial and observed canonical document URLs are admitted. The wrapper must explicitly include observed analytics origin; blocked origins remain evidence, not automatic allowlist additions."
+  }
+}

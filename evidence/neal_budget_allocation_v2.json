@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "created_unix": 1793735337.725452,
+  "allocated_usd": 3,
+  "total_committed_usd": 21,
+  "remaining_unreserved_usd": 9,
+  "source_manifest_sha256": "84a361c420a7f739834f750c0dd702057bd367ed26749973fe4745e2a23bfa0e",
+  "ledger_sha256": "4b144b5164db59da46299bf5ed566142fb1cf1075f67596c27753b23af3081b4",
+  "scope": "Rebind correctedv2 within original3USD shared Neal envelope; includes v1 costs, no release/additional reservation/purchase",
+  "prior_allocation": "evidence/neal_budget_allocation_v1.json",
+  "v1_consumed_and_stopped": true,
+  "fresh_disk_bytes": 1160187904,
+  "not_provider_enforced_cap": true
+}

@@ -48,6 +48,10 @@ python3 -m unittest discover -s framework/tests -v
 
 See `evidence/benchmark_protocol_v1.json` for the planned success, latency, cost, regression and demonstration measurements. Neal's game is a demonstration; established benchmarks provide broader coverage. A comparison with this interactive assistant must identify its tools and access differences, and cannot be labelled a verified Astra model benchmark.
 
+The planned Neal.fun recording is currently blocked. A CPU-only navigation diagnostic observed HTTP 403 responses served through Cloudflare for both initial game frames, with `X-Frame-Options: SAMEORIGIN`; Chromium explicitly refused framing. The recovered video contains blank panes. The diagnostic made zero model calls and zero game actions, so it supplies no comparison score. No challenge interaction or browser-security change was attempted. The earlier startup and frame-loading failures remain preserved; this new trace does not retroactively establish their missing details. See [`evidence/neal_navigation_diagnostic_v1_outcome.json`](evidence/neal_navigation_diagnostic_v1_outcome.json).
+
+The diagnostic also corrected a source-review mistake: Playwright routing does not intercept every automatic redirect. The final diagnostic observes natural redirects and stops on an observed unexpected request or refusal, without claiming that callbacks prevent network contact already made. Ten local tests and distinct source reviews cover that correction; actual HTTP and browser evidence comes from the separate completed CPU run.
+
 ## Running remote work
 
 Modal entrypoints launch billable resources. Historical `modal_preflight.py` and `modal_pilot.py` invocations are consumed and must not be rerun under their old IDs. Check the current source admission, remaining budget and once-only run markers before any new invocation. Source timeouts and spend reservations do not constitute provider-enforced billing caps.

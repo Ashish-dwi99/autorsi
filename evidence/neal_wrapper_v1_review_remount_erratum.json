@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "created_utc": "2026-11-03T19:47:15.205464+00:00",
+  "type": "Additive correction of reviewer-missed v1 startup path defect; original review and consumed source remain unchanged",
+  "reviewer": "/root/bu_eval_harness",
+  "prior_review": {
+    "path": "evidence/neal_wrapper_v1_distinct_source_review.json",
+    "sha256": "a3960747865678e518df6e8384e6826bc474b9a024c76fc5290bb901548fdebc"
+  },
+  "source": {
+    "path": "proposals/neal_demo_v1/modal_neal.py",
+    "sha256": "575a3285b9c9c49b051e8530d5dee20e81fe05c9670f6c9b3dec732d05193ee8",
+    "line": 20
+  },
+  "root_reported_actual_failure": {
+    "mounted_path": "/root/modal_neal.py",
+    "exception": "IndexError",
+    "no_cpu_report": true,
+    "no_gpu_demo": true,
+    "provenance": "Root message describing actual Modal startup and reviewed host cancellation; root is preserving primary receipts separately. This reviewer made no provider call."
+  },
+  "local_source_reproduction": {
+    "type": "IndexError",
+    "message": "2",
+    "actual_parents": [
+      "/root",
+      "/"
+    ]
+  },
+  "finding": "Unconditional Path(__file__).resolve().parents[2] executes before the NEAL_PACKAGED_RUNTIME branch. A shallow SDK mount has only /root and / as parents, so import raises before input entry. The marker guarding add_local_dir cannot protect this earlier expression.",
+  "review_miss": "The earlier statement that the explicit runtime marker avoided host-path resolution was too broad. Source manifest checks and fake lifecycle tests did not exercise the actual shallow remounted module path. No runtime success should have been inferred.",
+  "required_v2_check": "New immutable version/once IDs; select an explicit remote root before any parent-index expression when packaged. Locally exercise the exact full parent module under a shallow SDK-style __file__ and the explicit helper directory, with mocked provider I/O or declarations only; also inspect spawned-child imports and environment before launch.",
+  "actions": {
+    "provider_calls": 0,
+    "model_calls": 0,
+    "browser_or_site_calls": 0,
+    "v1_source_edits": 0,
+    "review_record_rewrites": 0,
+    "tests": "One in-memory exact v1 ROOT assignment evaluated under shallow mounted __file__; reproduced IndexError."
+  }
+}

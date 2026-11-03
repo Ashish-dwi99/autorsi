@@ -1,0 +1,21 @@
+{
+  "conclusion": "No game comparison was performed. This diagnostic establishes actual403 plus browser framing refusal, not the upstream403 policy or the priorv2 cause. No retry/bypass/GPU admission follows.",
+  "created_utc": "2026-11-03T20:25:41.072587+00:00",
+  "independent_saved_result_audit": {
+    "path": "evidence/neal_navigation_diagnostic_v1_saved_result_independent_audit.json",
+    "sha256": "554760e0bb3e5ef418e05db14247bbbd7239ddeecc93a0c91ec1b5d7d9d93fe9"
+  },
+  "independent_terminal_visual_join": {
+    "path": "evidence/neal_navigation_diagnostic_v1_saved_result_terminal_visual_join.json",
+    "sha256": "21bc0be5c1848bbb48e4bcd04f634ead3fea1ca55dd105e679ae3e781822bd78"
+  },
+  "preservation": "Root outcome and both independent audits unchanged; additive linkage only.",
+  "provider_calls": 0,
+  "review_scope": "Outcome navigation/source/call/zero-model/zero-game/result/disposition/media/terminal fields match the independent saved-only audit. Other project billing, checkpoint and MiniWoB history remain separately reviewed evidence, not newly audited here.",
+  "reviewer": "/root/bu_eval_harness",
+  "root_outcome": {
+    "path": "evidence/neal_navigation_diagnostic_v1_outcome.json",
+    "sha256": "6df93fb1912cc44a1ebfa30338f683115818cba639832d7d6650471de921ece9"
+  },
+  "schema": 1
+}
