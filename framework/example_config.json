@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "goal": {
+    "goal_id": "offline_numeric_example",
+    "domain": "computer_use",
+    "capability": "latency_with_accuracy_retention",
+    "metrics": [
+      {"name": "latency", "direction": "minimize", "unit": "simulated_ms", "target": {"value": 0.1, "comparator": "<=", "relative_to": "baseline"}, "regression": null},
+      {"name": "accuracy", "direction": "maximize", "unit": "simulated_fraction", "target": null, "regression": {"reference": "baseline", "tolerance": 0, "mode": "absolute"}}
+    ]
+  },
+  "editor": {"provider": "offline_scripted", "model": "fixed_two_proposals", "endpoint": null, "credential_env": null},
+  "target": {"adapter_id": "numeric_target", "model_id": "not_a_model", "architecture": "scalar_test_double", "revision": "v1", "artifact_pins": {"fixture": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}},
+  "recipe": {"recipe_id": "bounded_scalar", "parameters": {"strength": 1.0}},
+  "evaluator": {"evaluator_id": "numeric_evaluator", "suite_id": "offline_formula", "suite_revision": "v1"},
+  "budget": {"max_candidates": 2, "max_evaluations": 3, "max_editor_cost_usd": 0, "max_target_cost_usd": 0, "max_wall_seconds": 30, "max_model_calls": 0}
+}

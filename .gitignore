@@ -10,3 +10,5 @@ evidence/private/*
 *.pt
 *.png
 *.jpg
+build/
+*.egg-info/

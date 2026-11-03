@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "organization": "Grupa",
+  "family_name": "Adam-1",
+  "display_name": "Grupa Adam-1-CU",
+  "variant_id": "adam-1-cu",
+  "status": "experimental_weight_edit_candidate",
+  "intended_capability": "computer use",
+  "demonstrated_scope": "small synthetic DOM-assisted browser task suite",
+  "architecture": "Qwen3VLMoeForConditionalGeneration",
+  "lineage": [
+    "Qwen/Qwen3-VL-30B-A3B-Instruct",
+    "browser-use/bu-30b-a3b-preview",
+    "owner Browser Use fine-tune, merged checkpoint plus retained rank16 attention LoRA",
+    "Adam-1-CU candidate: reconstructed from the original merge with fine-tune strength0.5"
+  ],
+  "artifact_identity": {
+    "merged_config_sha256": "9743d159f38b383b746c54c9d286da79da71768e7997c73b37024da307ffcaa0",
+    "merged_index_sha256": "1bb83a632abd9efef296e6394e35c705195f5b8d7cec394742753196b952aec0",
+    "adapter_sha256": "49311fe8c20663926e6474cc3e2a8c9e86eff2821259e22e85a533eb5ba08933",
+    "adapter_config_sha256": "52e05adc5f8595942879747f1cb4df8f45c06f547005bf7dc3094e6233723e92",
+    "full_original_shard_hashes": "retained in the private pilot-v1 receipt; metadata hashes alone do not identify all tensor bytes"
+  },
+  "edit": {
+    "recipe": "recovered_attention_lora_strength",
+    "strength": 0.5,
+    "formula": "BF16(FP32(W_original_merged) + (strength-1)*2*(FP32(B)@FP32(A)))",
+    "target_matrices": 192,
+    "rebuilt_from_original_each_time": true,
+    "cumulative_edits": false,
+    "new_training_or_teacher_calls": false,
+    "artifact_status": "reconstruction recipe tested in Modal memory; no standalone edited checkpoint has been exported or published"
+  },
+  "measured_evidence": {
+    "outcome": "../evidence/vllm_v4_outcome.json",
+    "raw_receipt_sha256": "2298d155c13e117ed8837fee509a485c7e8ac4118d5fc57cba0b052b379d90a6",
+    "independent_review_sha256": "050abaa18ae54aa3618caf6a62df08f8e7adc37838c55146d9a56cff758bf790",
+    "acceptance_tasks": 8,
+    "original_successes": 3,
+    "candidate_successes": 8,
+    "original_model_requests": 44,
+    "candidate_model_requests": 16,
+    "original_total_episode_seconds": 100.99456906300009,
+    "candidate_total_episode_seconds": 45.86755147000014,
+    "observed_regressions": 0,
+    "scope_limit": "fresh variants of the same eight synthetic task families; not a general computer-use benchmark"
+  },
+  "not_established": [
+    "desktop capability",
+    "Astra capability transfer or superiority",
+    "tenfold improvement",
+    "faster inference kernels",
+    "performance at scale",
+    "public deployment or downloadable weights"
+  ],
+  "upstream_license_notice": "Retain upstream attribution and applicable license terms before any distribution; this naming record does not grant redistribution rights.",
+  "eden_relation": "separate original-architecture project; not edited by this experiment",
+  "historical_artifacts": "Existing BU-named run IDs and hash-pinned files remain unchanged for reproducibility."
+}

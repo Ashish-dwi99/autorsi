@@ -1,0 +1,285 @@
+{
+  "schema": 1,
+  "source_receipt_sha256": "2298d155c13e117ed8837fee509a485c7e8ac4118d5fc57cba0b052b379d90a6",
+  "scope": "All five rescued acceptance cases, not a selected subset. Saved actual executor actions; not a replay or video.",
+  "examples": [
+    {
+      "task_id": "acceptance-preferences",
+      "fixture_sha256": "671d9e9f9be77e325aa23edf3fe4d3879f67f91e3d41ce858e32eb388775ad06",
+      "original_success": false,
+      "edited_success": true,
+      "original_stop_reason": "step_limit",
+      "edited_stop_reason": "oracle_success",
+      "original_actions": [
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        }
+      ],
+      "edited_actions": [
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e2"
+        },
+        {
+          "action": "click",
+          "id": "e4"
+        }
+      ]
+    },
+    {
+      "task_id": "acceptance-record",
+      "fixture_sha256": "097ca544a9af322bb7fbeb25bd7ff13e5f46e106e56d2f9ff623bd7a4375e76e",
+      "original_success": false,
+      "edited_success": true,
+      "original_stop_reason": "step_limit",
+      "edited_stop_reason": "oracle_success",
+      "original_actions": [
+        {
+          "action": "click",
+          "id": "e5"
+        },
+        {
+          "action": "click",
+          "id": "e5"
+        },
+        {
+          "action": "click",
+          "id": "e5"
+        },
+        {
+          "action": "click",
+          "id": "e5"
+        },
+        {
+          "action": "click",
+          "id": "e5"
+        },
+        {
+          "action": "click",
+          "id": "e5"
+        },
+        {
+          "action": "click",
+          "id": "e5"
+        },
+        {
+          "action": "click",
+          "id": "e5"
+        }
+      ],
+      "edited_actions": [
+        {
+          "action": "click",
+          "id": "e5"
+        },
+        {
+          "action": "click",
+          "id": "e6"
+        }
+      ]
+    },
+    {
+      "task_id": "acceptance-pickup",
+      "fixture_sha256": "04e1a53636e7d840f4daafc19bf3914244d3f24b452388115ba2eb2135d957c2",
+      "original_success": false,
+      "edited_success": true,
+      "original_stop_reason": "step_limit",
+      "edited_stop_reason": "oracle_success",
+      "original_actions": [
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        }
+      ],
+      "edited_actions": [
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "type",
+          "id": "e2",
+          "text": "8370"
+        },
+        {
+          "action": "click",
+          "id": "e3"
+        }
+      ]
+    },
+    {
+      "task_id": "acceptance-shipping",
+      "fixture_sha256": "cdd64990f749cc44542db5961ca2482a9a190ee1a25c4647a36a92ef8f7c00bf",
+      "original_success": false,
+      "edited_success": true,
+      "original_stop_reason": "step_limit",
+      "edited_stop_reason": "oracle_success",
+      "original_actions": [
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "click",
+          "id": "e1"
+        }
+      ],
+      "edited_actions": [
+        {
+          "action": "click",
+          "id": "e1"
+        },
+        {
+          "action": "select",
+          "id": "e3",
+          "value": "Coastal"
+        },
+        {
+          "action": "click",
+          "id": "e4"
+        }
+      ]
+    },
+    {
+      "task_id": "acceptance-appointment",
+      "fixture_sha256": "50f40723b807d555b7859e297b73316995a48320bcd0f743efa0c58d3d42abe1",
+      "original_success": false,
+      "edited_success": true,
+      "original_stop_reason": "step_limit",
+      "edited_stop_reason": "oracle_success",
+      "original_actions": [
+        {
+          "action": "click",
+          "id": "e2"
+        },
+        {
+          "action": "click",
+          "id": "e2"
+        },
+        {
+          "action": "click",
+          "id": "e2"
+        },
+        {
+          "action": "click",
+          "id": "e2"
+        },
+        {
+          "action": "click",
+          "id": "e2"
+        },
+        {
+          "action": "click",
+          "id": "e2"
+        },
+        {
+          "action": "click",
+          "id": "e2"
+        },
+        {
+          "action": "click",
+          "id": "e2"
+        }
+      ],
+      "edited_actions": [
+        {
+          "action": "click",
+          "id": "e2"
+        },
+        {
+          "action": "click",
+          "id": "e4"
+        },
+        {
+          "action": "click",
+          "id": "e5"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,733 @@
+{
+  "schema": 1,
+  "reviewed_utc": "2026-11-03T17:43:22.761494+00:00",
+  "reviewer": "Independent saved-result auditor weight_space_paper_review",
+  "scope": "Saved JSON/source/action/patch arithmetic only; no browser/model/provider execution or experiment rerun. Pure deterministic fixture generation used only to compare hashes and fixed reference actions.",
+  "result_file": {
+    "path": "runs/vllm-pilot-v4.json",
+    "sha256": "2298d155c13e117ed8837fee509a485c7e8ac4118d5fc57cba0b052b379d90a6",
+    "bytes": 642098
+  },
+  "joined_evidence": {
+    "evidence/vllm_v4_integration_final_source_review.json": "55034d6bfb10468927aa1d98a3316a8dd81bf1c73458e1b3d4f644e383740879",
+    "evidence/experiment.json": "bdb74d2e538ea5f341e7e4024ee1a93e50f9074b829c81ee30024835a0949eb0",
+    "evidence/budget_ledger.json": "6dea417e46c282fe02dc2e96790feb2a3d91fdfd042b5f3756f820e0311c4205"
+  },
+  "conclusion": "The saved result supports preregistered synthetic smoke acceptance: lambda0.5 improved acceptance3/8 to8/8, with five rescues and zero observed regressions. Source/fixture identities, all48 task rows,177 generation receipts, action/token counters and patch aggregates reconcile. No new result-integrity defect found.",
+  "checks_passed": 1140,
+  "recomputed_summaries": {
+    "variants": {
+      "1.0": {
+        "tasks": 8,
+        "successes": 3,
+        "invalid_actions": 0,
+        "policy_dispatches": 48,
+        "actual_model_calls": 44,
+        "elapsed_s": 112.31812572099999
+      },
+      "0.5": {
+        "tasks": 8,
+        "successes": 8,
+        "invalid_actions": 0,
+        "policy_dispatches": 22,
+        "actual_model_calls": 16,
+        "elapsed_s": 45.01929089199996
+      },
+      "0.75": {
+        "tasks": 8,
+        "successes": 3,
+        "invalid_actions": 0,
+        "policy_dispatches": 48,
+        "actual_model_calls": 44,
+        "elapsed_s": 110.48830727500001
+      },
+      "0.0": {
+        "tasks": 8,
+        "successes": 8,
+        "invalid_actions": 0,
+        "policy_dispatches": 22,
+        "actual_model_calls": 13,
+        "elapsed_s": 41.425717668000004
+      }
+    },
+    "acceptance": {
+      "1.0": {
+        "tasks": 8,
+        "successes": 3,
+        "invalid_actions": 0,
+        "policy_dispatches": 48,
+        "actual_model_calls": 44,
+        "elapsed_s": 100.99456906300009
+      },
+      "0.5": {
+        "tasks": 8,
+        "successes": 8,
+        "invalid_actions": 0,
+        "policy_dispatches": 22,
+        "actual_model_calls": 16,
+        "elapsed_s": 45.86755147000014
+      }
+    }
+  },
+  "acceptance": {
+    "rescues": [
+      "acceptance-preferences",
+      "acceptance-record",
+      "acceptance-pickup",
+      "acceptance-shipping",
+      "acceptance-appointment"
+    ],
+    "regressions": [],
+    "gain_percentage_points": 62.5,
+    "baseline_episode_elapsed_s": 100.99456906300009,
+    "candidate_episode_elapsed_s": 45.86755147000014,
+    "baseline_over_candidate_episode_elapsed": 2.2018740008185524,
+    "episode_elapsed_reduction_percent": 54.584140617117626,
+    "baseline_requests": 44,
+    "candidate_requests": 16,
+    "request_reduction_percent": 63.63636363636363,
+    "timing_scope": "Sum of eight task episodes including unsuccessful attempts and repeated actions, excluding shared model load, weight application and container startup. Not isolated decoding, production throughput or billed cost."
+  },
+  "behavior": "All five acceptance baseline failures repeat the same first action eight times. Ten development failures also repeat actions; baseline preferences changes its first target then repeats the second seven times. Successfullambda0.5 traces match fixture-owned conditions, including a legal record shortcut through an already-visible target row. Zero schema/execution errors is not zero semantic errors.",
+  "selection": {
+    "candidates": [
+      0.5,
+      0.75
+    ],
+    "controls": [
+      0.0,
+      1.0
+    ],
+    "selected": 0.5,
+    "zero_control_development_successes": 8,
+    "qualification": "Lambda0 was preregistered as a diagnostic control, excluded from selection. It is adapter-subtracted merged weights, not verified raw BU. No acceptance tuning or posthoc lambda0 promotion occurred."
+  },
+  "patches": {
+    "1.0": {
+      "elements": 905969664,
+      "changed_elements": 0,
+      "max_abs_delta": 0.0,
+      "l2_delta": 0.0
+    },
+    "0.5": {
+      "elements": 905969664,
+      "changed_elements": 610967391,
+      "max_abs_delta": 0.00225830078125,
+      "l2_delta": 3.876281969751321
+    },
+    "0.75": {
+      "elements": 905969664,
+      "changed_elements": 444012297,
+      "max_abs_delta": 0.001129150390625,
+      "l2_delta": 1.9445961007697061
+    },
+    "0.0": {
+      "elements": 905969664,
+      "changed_elements": 739832412,
+      "max_abs_delta": 0.0045318603515625,
+      "l2_delta": 7.647164523672029
+    }
+  },
+  "patch_scope": "192 attention matrices rebuilt from immutable originals using FP32 delta and BF16 rounding. No architecture/parameter-count reduction. Latest per-scale patch receipts overwrite earlier same-scale receipts; these are not a chronological per-apply log. Patch-local NOT_EVALUATED is creation-time metadata, joined to task rows here. No checkpoint exported.",
+  "episodes": [
+    {
+      "split": "development",
+      "scale": 1.0,
+      "task_id": "development-visitor",
+      "fixture_sha256": "d63634ca5205ce53ceb18ad9dfe9cc6049a31d6673e09404a7459691c833a4e1",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 1,
+      "policy_dispatches": 4,
+      "elapsed_s": 10.590491094,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 1.0,
+      "task_id": "development-addition",
+      "fixture_sha256": "02ddedc200f798abcae88523fa55b925143e76fc929ab5cb028a04afdd3ec689",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 1,
+      "policy_dispatches": 2,
+      "elapsed_s": 4.109433569000004,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 1.0,
+      "task_id": "development-product",
+      "fixture_sha256": "05a2489908886ee090fba10c0396cec968c3ed9a3a4121c57bb660a9fd8eaf5b",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 2,
+      "elapsed_s": 3.158380570999981,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 1.0,
+      "task_id": "development-preferences",
+      "fixture_sha256": "cc7ea1eb6131d73f4015b2bbac8ff4b0b1f450b08f496201d7e1f0c547626c12",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 21.261292991000005,
+      "successful_trace_compatible_with_oracle": false
+    },
+    {
+      "split": "development",
+      "scale": 1.0,
+      "task_id": "development-record",
+      "fixture_sha256": "69a5f71b98c3949bea356b390348a47c50587ba52236b8a72d22152fec4edc3a",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 19.967710747999973,
+      "successful_trace_compatible_with_oracle": false
+    },
+    {
+      "split": "development",
+      "scale": 1.0,
+      "task_id": "development-pickup",
+      "fixture_sha256": "43adfe1082ac3a2d6ecbdaab34f42009fb8b3417fed87b4b0ba9adfef3cb4d35",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 19.605474119000007,
+      "successful_trace_compatible_with_oracle": false
+    },
+    {
+      "split": "development",
+      "scale": 1.0,
+      "task_id": "development-shipping",
+      "fixture_sha256": "48ab3d71af98c6179894aa961b642e33afc32ee2b701d76d1454e5910a3a08d0",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 17.559270586000025,
+      "successful_trace_compatible_with_oracle": false
+    },
+    {
+      "split": "development",
+      "scale": 1.0,
+      "task_id": "development-appointment",
+      "fixture_sha256": "0f65aa7de620636260954266eab6fe7703fea010ee7c983c39f00a3ae75467cb",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 16.06607204299999,
+      "successful_trace_compatible_with_oracle": false
+    },
+    {
+      "split": "development",
+      "scale": 0.5,
+      "task_id": "development-visitor",
+      "fixture_sha256": "d63634ca5205ce53ceb18ad9dfe9cc6049a31d6673e09404a7459691c833a4e1",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 1,
+      "policy_dispatches": 4,
+      "elapsed_s": 4.579702738999998,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.5,
+      "task_id": "development-addition",
+      "fixture_sha256": "02ddedc200f798abcae88523fa55b925143e76fc929ab5cb028a04afdd3ec689",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 1,
+      "policy_dispatches": 2,
+      "elapsed_s": 4.065222907999981,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.5,
+      "task_id": "development-product",
+      "fixture_sha256": "05a2489908886ee090fba10c0396cec968c3ed9a3a4121c57bb660a9fd8eaf5b",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 2,
+      "elapsed_s": 4.698855909999992,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.5,
+      "task_id": "development-preferences",
+      "fixture_sha256": "cc7ea1eb6131d73f4015b2bbac8ff4b0b1f450b08f496201d7e1f0c547626c12",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 3,
+      "policy_dispatches": 3,
+      "elapsed_s": 7.295986873000004,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.5,
+      "task_id": "development-record",
+      "fixture_sha256": "69a5f71b98c3949bea356b390348a47c50587ba52236b8a72d22152fec4edc3a",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 2,
+      "elapsed_s": 5.428507913999994,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.5,
+      "task_id": "development-pickup",
+      "fixture_sha256": "43adfe1082ac3a2d6ecbdaab34f42009fb8b3417fed87b4b0ba9adfef3cb4d35",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 3,
+      "elapsed_s": 5.6665288130000135,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.5,
+      "task_id": "development-shipping",
+      "fixture_sha256": "48ab3d71af98c6179894aa961b642e33afc32ee2b701d76d1454e5910a3a08d0",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 3,
+      "elapsed_s": 6.950592461999975,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.5,
+      "task_id": "development-appointment",
+      "fixture_sha256": "0f65aa7de620636260954266eab6fe7703fea010ee7c983c39f00a3ae75467cb",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 3,
+      "policy_dispatches": 3,
+      "elapsed_s": 6.333893273000001,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.75,
+      "task_id": "development-visitor",
+      "fixture_sha256": "d63634ca5205ce53ceb18ad9dfe9cc6049a31d6673e09404a7459691c833a4e1",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 1,
+      "policy_dispatches": 4,
+      "elapsed_s": 5.651100007000025,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.75,
+      "task_id": "development-addition",
+      "fixture_sha256": "02ddedc200f798abcae88523fa55b925143e76fc929ab5cb028a04afdd3ec689",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 1,
+      "policy_dispatches": 2,
+      "elapsed_s": 4.561448203999987,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.75,
+      "task_id": "development-product",
+      "fixture_sha256": "05a2489908886ee090fba10c0396cec968c3ed9a3a4121c57bb660a9fd8eaf5b",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 2,
+      "elapsed_s": 5.33596461999997,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.75,
+      "task_id": "development-preferences",
+      "fixture_sha256": "cc7ea1eb6131d73f4015b2bbac8ff4b0b1f450b08f496201d7e1f0c547626c12",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 23.468780116000005,
+      "successful_trace_compatible_with_oracle": false
+    },
+    {
+      "split": "development",
+      "scale": 0.75,
+      "task_id": "development-record",
+      "fixture_sha256": "69a5f71b98c3949bea356b390348a47c50587ba52236b8a72d22152fec4edc3a",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 22.24970830000001,
+      "successful_trace_compatible_with_oracle": false
+    },
+    {
+      "split": "development",
+      "scale": 0.75,
+      "task_id": "development-pickup",
+      "fixture_sha256": "43adfe1082ac3a2d6ecbdaab34f42009fb8b3417fed87b4b0ba9adfef3cb4d35",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 18.64479776500002,
+      "successful_trace_compatible_with_oracle": false
+    },
+    {
+      "split": "development",
+      "scale": 0.75,
+      "task_id": "development-shipping",
+      "fixture_sha256": "48ab3d71af98c6179894aa961b642e33afc32ee2b701d76d1454e5910a3a08d0",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 13.69336982599998,
+      "successful_trace_compatible_with_oracle": false
+    },
+    {
+      "split": "development",
+      "scale": 0.75,
+      "task_id": "development-appointment",
+      "fixture_sha256": "0f65aa7de620636260954266eab6fe7703fea010ee7c983c39f00a3ae75467cb",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 16.883138437000014,
+      "successful_trace_compatible_with_oracle": false
+    },
+    {
+      "split": "development",
+      "scale": 0.0,
+      "task_id": "development-visitor",
+      "fixture_sha256": "d63634ca5205ce53ceb18ad9dfe9cc6049a31d6673e09404a7459691c833a4e1",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 1,
+      "policy_dispatches": 4,
+      "elapsed_s": 4.183177381000007,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.0,
+      "task_id": "development-addition",
+      "fixture_sha256": "02ddedc200f798abcae88523fa55b925143e76fc929ab5cb028a04afdd3ec689",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 1,
+      "policy_dispatches": 2,
+      "elapsed_s": 4.004606490000015,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.0,
+      "task_id": "development-product",
+      "fixture_sha256": "05a2489908886ee090fba10c0396cec968c3ed9a3a4121c57bb660a9fd8eaf5b",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 2,
+      "elapsed_s": 5.0473021760000165,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.0,
+      "task_id": "development-preferences",
+      "fixture_sha256": "cc7ea1eb6131d73f4015b2bbac8ff4b0b1f450b08f496201d7e1f0c547626c12",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 1,
+      "policy_dispatches": 3,
+      "elapsed_s": 3.9910890689999974,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.0,
+      "task_id": "development-record",
+      "fixture_sha256": "69a5f71b98c3949bea356b390348a47c50587ba52236b8a72d22152fec4edc3a",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 2,
+      "elapsed_s": 6.196342517000005,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.0,
+      "task_id": "development-pickup",
+      "fixture_sha256": "43adfe1082ac3a2d6ecbdaab34f42009fb8b3417fed87b4b0ba9adfef3cb4d35",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 3,
+      "elapsed_s": 6.530962663999958,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.0,
+      "task_id": "development-shipping",
+      "fixture_sha256": "48ab3d71af98c6179894aa961b642e33afc32ee2b701d76d1454e5910a3a08d0",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 3,
+      "elapsed_s": 6.688613940000039,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "development",
+      "scale": 0.0,
+      "task_id": "development-appointment",
+      "fixture_sha256": "0f65aa7de620636260954266eab6fe7703fea010ee7c983c39f00a3ae75467cb",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 3,
+      "elapsed_s": 4.783623430999967,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "acceptance",
+      "scale": 1.0,
+      "task_id": "acceptance-visitor",
+      "fixture_sha256": "ca50d37b1cb9dcaa3acdd4cf6dd26694b5ed93bb4c76d629fba861b0d957b3ba",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 1,
+      "policy_dispatches": 4,
+      "elapsed_s": 4.73129183399999,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "acceptance",
+      "scale": 0.5,
+      "task_id": "acceptance-visitor",
+      "fixture_sha256": "ca50d37b1cb9dcaa3acdd4cf6dd26694b5ed93bb4c76d629fba861b0d957b3ba",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 1,
+      "policy_dispatches": 4,
+      "elapsed_s": 4.34332764200002,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "acceptance",
+      "scale": 0.5,
+      "task_id": "acceptance-addition",
+      "fixture_sha256": "b803d3ae5c4ab4b293cc259135570cebf2263c71c07594ad83b3a4aba0a18d8c",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 1,
+      "policy_dispatches": 2,
+      "elapsed_s": 3.9761392890000025,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "acceptance",
+      "scale": 1.0,
+      "task_id": "acceptance-addition",
+      "fixture_sha256": "b803d3ae5c4ab4b293cc259135570cebf2263c71c07594ad83b3a4aba0a18d8c",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 1,
+      "policy_dispatches": 2,
+      "elapsed_s": 4.31232913499997,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "acceptance",
+      "scale": 1.0,
+      "task_id": "acceptance-product",
+      "fixture_sha256": "439aaee41c7ba288fc9cd7a19fa441eba8a3b865d82d421937ead5605d367b3e",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 2,
+      "elapsed_s": 4.4925991300000305,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "acceptance",
+      "scale": 0.5,
+      "task_id": "acceptance-product",
+      "fixture_sha256": "439aaee41c7ba288fc9cd7a19fa441eba8a3b865d82d421937ead5605d367b3e",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 2,
+      "elapsed_s": 4.50834426900002,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "acceptance",
+      "scale": 0.5,
+      "task_id": "acceptance-preferences",
+      "fixture_sha256": "671d9e9f9be77e325aa23edf3fe4d3879f67f91e3d41ce858e32eb388775ad06",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 3,
+      "policy_dispatches": 3,
+      "elapsed_s": 7.725777499000003,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "acceptance",
+      "scale": 1.0,
+      "task_id": "acceptance-preferences",
+      "fixture_sha256": "671d9e9f9be77e325aa23edf3fe4d3879f67f91e3d41ce858e32eb388775ad06",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 20.829633614000045,
+      "successful_trace_compatible_with_oracle": false
+    },
+    {
+      "split": "acceptance",
+      "scale": 1.0,
+      "task_id": "acceptance-record",
+      "fixture_sha256": "097ca544a9af322bb7fbeb25bd7ff13e5f46e106e56d2f9ff623bd7a4375e76e",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 13.989250851000008,
+      "successful_trace_compatible_with_oracle": false
+    },
+    {
+      "split": "acceptance",
+      "scale": 0.5,
+      "task_id": "acceptance-record",
+      "fixture_sha256": "097ca544a9af322bb7fbeb25bd7ff13e5f46e106e56d2f9ff623bd7a4375e76e",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 2,
+      "elapsed_s": 5.415935619000038,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "acceptance",
+      "scale": 0.5,
+      "task_id": "acceptance-pickup",
+      "fixture_sha256": "04e1a53636e7d840f4daafc19bf3914244d3f24b452388115ba2eb2135d957c2",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 3,
+      "elapsed_s": 5.701967774999957,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "acceptance",
+      "scale": 1.0,
+      "task_id": "acceptance-pickup",
+      "fixture_sha256": "04e1a53636e7d840f4daafc19bf3914244d3f24b452388115ba2eb2135d957c2",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 18.870384037999997,
+      "successful_trace_compatible_with_oracle": false
+    },
+    {
+      "split": "acceptance",
+      "scale": 1.0,
+      "task_id": "acceptance-shipping",
+      "fixture_sha256": "cdd64990f749cc44542db5961ca2482a9a190ee1a25c4647a36a92ef8f7c00bf",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 17.77937836700005,
+      "successful_trace_compatible_with_oracle": false
+    },
+    {
+      "split": "acceptance",
+      "scale": 0.5,
+      "task_id": "acceptance-shipping",
+      "fixture_sha256": "cdd64990f749cc44542db5961ca2482a9a190ee1a25c4647a36a92ef8f7c00bf",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 2,
+      "policy_dispatches": 3,
+      "elapsed_s": 7.803821721000077,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "acceptance",
+      "scale": 0.5,
+      "task_id": "acceptance-appointment",
+      "fixture_sha256": "50f40723b807d555b7859e297b73316995a48320bcd0f743efa0c58d3d42abe1",
+      "success": true,
+      "stop_reason": "oracle_success",
+      "model_requests": 3,
+      "policy_dispatches": 3,
+      "elapsed_s": 6.39223765600002,
+      "successful_trace_compatible_with_oracle": true
+    },
+    {
+      "split": "acceptance",
+      "scale": 1.0,
+      "task_id": "acceptance-appointment",
+      "fixture_sha256": "50f40723b807d555b7859e297b73316995a48320bcd0f743efa0c58d3d42abe1",
+      "success": false,
+      "stop_reason": "step_limit",
+      "model_requests": 8,
+      "policy_dispatches": 8,
+      "elapsed_s": 15.989702093999995,
+      "successful_trace_compatible_with_oracle": false
+    }
+  ],
+  "lifecycle": {
+    "status": "completed",
+    "child_exitcode": 0,
+    "child_reaped": true,
+    "direct_cuda_owner_exit_confirmed": true,
+    "descendant_disposition": "No independent descendant inventory; direct child reap does not prove descendant stop",
+    "physical_gpu_release_and_billing_stop": "Requires provider terminal/billing evidence",
+    "elapsed_s": 580.329865583
+  },
+  "child_elapsed_s": 565.11780631,
+  "model_load_s": 92.39638534100001,
+  "browser_close_returned": true,
+  "limits": [
+    "Eight acceptance fixtures reuse development task templates with different fixed seed values. Not unfamiliar websites or broad computer-use generalization.",
+    "One small paired run; no population-level guarantee of improvement or absence of regressions.",
+    "Development order fixed1,.5,.75,0 and no dedicated warmup; first-call startup confounds development speed. Acceptance alternates pair order after development.",
+    "177 counted requests exclude vLLM startup/profile forwards. All returned generations stop normally, with complete token receipts; queued dispatches add no inference charge.",
+    "No matched Astra comparison,10x result,world-leading claim,settled billing or cost-per-success evidence.",
+    "Auditor checked saved oracle receipts against source and action traces without replaying a browser. Per-step pixels/DOM were not saved for independent visual verification.",
+    "Direct child reap and browser close do not independently prove descendant stop or billing cessation."
+  ],
+  "budget": "Retained reservations remainUSD29.60 ofUSD30. Existing ledger not-submitted v4 wording is stale relative to this actual completed receipt. Audit releases no reservation.",
+  "bookkeeping": "Initial in-memory audit assertion overgeneralized all failures as repeating their first action. Saved development-preferences evidence instead has one first click followed by seven repetitions of another target. Assertion and interpretation were narrowed before this first result-review file write; no benchmark/model rerun."
+}

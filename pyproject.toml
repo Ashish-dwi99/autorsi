@@ -5,9 +5,19 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "weight-space-lab"
 version = "0.1.0"
-description = "Bounded reversible weight-edit experiments with objective computer-use evaluation"
+description = "Reversible model-weight experiments with selectable editors, adapters and measured goals"
 requires-python = ">=3.11"
 dependencies = []
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["src", "."]
+include = ["weight_space_lab", "weight_space_lab.*", "framework"]
+exclude = ["framework.tests", "framework.tests.*"]
+namespaces = false
+
+[tool.setuptools.package-dir]
+weight_space_lab = "src/weight_space_lab"
+framework = "framework"
+
+[tool.setuptools.package-data]
+framework = ["example_config.json", "config.schema.json", "README.md"]

@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "date": "2026-11-03",
+  "reviewer": "/root/browser_model_local_provenance",
+  "status": "no_additional_blocking_defect_found_in_reviewed_source_scope",
+  "scope": "Independent source and pure-test review of generic adapter, engine, and structured editor integration: separate editor/target selection, architecture and evaluator admission, reservations, unknown operation disposition, rollback, structured proposal validation, and immutable parameters.",
+  "authorship_limit": "Reviewer authored contracts.py, config.schema.json, and test_contracts.py. Their hashes below identify integration context; this record is not an independent review of those authored files.",
+  "independently_reviewed_sources": {
+    "framework/engine.py": "56d9f3dc84f4dda80d400f67f2da184fc2e58c8eb1ae80c5a6f3aa4756ae46b9",
+    "framework/adapters.py": "e70989183b21cb9d7c53b2bc9b1c3286956c243c5eaec624a3769cdfbb02e3bc",
+    "framework/editors.py": "3c2688bc5d90b5281338c8c6367bc113f3754f16dc2ddfdb03df61bdbc5b591d"
+  },
+  "integration_context": {
+    "framework/contracts.py": "19866c54fffc67934277894b130a750104aaa33a58fe52b366a55a653404733e",
+    "framework/config.schema.json": "8bdbf8db51b2943e5eff288ede012a1e0b64b62efbb044f5c2a8f00428939175"
+  },
+  "test_sources": {
+    "framework/tests/test_engine.py": "f9c6736c7dd371fb49d462daa5723adfa166e517d714b37b4ab9e759e79449d3",
+    "framework/tests/test_editors.py": "cd0966f10f2a364da3d4f3457b8d9391dd94c5255221fa5e76df7c53c6efb858",
+    "framework/tests/test_editor_engine_integration.py": "6886fcf4910ad748326c40883c5361e35abe754b0fa06952e7479ef3ff4e5007",
+    "framework/tests/test_contracts.py": "c5fdab4d29b124606a19956eb3c87a1c9278ebafc1c99f9b94066cb536958f51"
+  },
+  "resolved_finding": {
+    "problem": "Initial Proposal implementation copied JSON but wrapped only the outer dict in MappingProxyType. Nested lists and dictionaries remained mutable after parameter validation and could change before apply or accept.",
+    "initial_source_hash": null,
+    "initial_hash_note": "The initial body was inspected but its complete-file hash was not captured; no historical hash is inferred.",
+    "correction": "Proposal now obtains parameters from RecipeSpec, which recursively copies and freezes mappings and sequences and rejects non-JSON values.",
+    "corrected_adapter_sha256": "e70989183b21cb9d7c53b2bc9b1c3286956c243c5eaec624a3769cdfbb02e3bc",
+    "regression_test": "test_proposal_deep_freeze_survives_nested_source_mutation",
+    "author_also_reported_independent_detection": true
+  },
+  "validation": {
+    "command": "python3 -m unittest discover -s framework/tests -v",
+    "tests_passed": 55,
+    "tests_failed": 0,
+    "tests_skipped": 0,
+    "exit_code": 0,
+    "scope": "Pure tests with fake target/evaluator/editor transports and installed JSON Schema validation. No live provider, model, browser, or GPU invocation.",
+    "earlier_command_correction": "An earlier explicit unittest command named nonexistent framework.test_editors; discovery located framework.tests.test_editors and the corrected tests passed. This import-path mistake was not a product failure."
+  },
+  "limits": [
+    "No live OpenAI or Gemini API request was made. These tests do not establish current account access, model availability, production API compatibility, or measured provider cost.",
+    "Editor and target identities are independent. Naming Astra or any model does not establish public API availability; explicit registered model support is required.",
+    "Architecture/domain labels are configuration. Actual weight provenance, tensor compatibility, model execution, evaluator correctness, and support for arbitrary architectures require concrete reviewed adapters; this framework does not supply universal model adapters.",
+    "The synchronous engine and HTTP socket timeout cannot prove physical cancellation, hard native execution duration, deallocation, or a provider billing ceiling. Execution adapters must enforce their own bounds and report disposition truthfully.",
+    "Unreported resource usage retains the prospective quote. Unknown apply disposition stops without overlapping restore; a failed restore is not retried.",
+    "Goal targets and retention guards use evaluator measurements, not editor rationale. Pure-test success is not model-quality improvement, a benchmark pass, or permission to publish or spend."
+  ],
+  "frozen_v2_sources_unchanged_during_review": {
+    "proposals/modal_private_miniwob_v2.py": "65833e5013fb0d91e54cb42cc196bf62601e39b7976079a60297000dea42525a",
+    "proposals/miniwob_process_entry_v2.py": "f30f5e1f88c8c6ab9180c629803db3722b6ab773d254f7d85dd67b729d2ffb7e"
+  }
+}

@@ -22,10 +22,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("receipt", type=Path)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--split", choices=("development", "acceptance"), default="development")
     args = parser.parse_args()
     outer = json.loads(args.receipt.read_text())
     report = outer.get("child", outer)
-    variants = report["variants"]
+    variants = report["variants" if args.split == "development" else "acceptance"]
     keys = [key for key in ("1.0", "0.5", "0.75", "0.0") if variants.get(key)]
     if not keys:
         raise ValueError("No completed task rows to plot")
@@ -42,7 +43,9 @@ def main():
         errors[0].append((rate-low)*100)
         errors[1].append((high-rate)*100)
         dev_calls = sum(row["native_dispatch_counters"]["actual_model_calls"] for row in rows)
-        calls = [r for r in report["generation_records"] if r["scale"] == float(key)][:dev_calls]
+        offset = 0 if args.split == "development" else sum(
+            row["native_dispatch_counters"]["actual_model_calls"] for row in report["variants"][key])
+        calls = [r for r in report["generation_records"] if r["scale"] == float(key)][offset:offset+dev_calls]
         medians.append(statistics.median(r["elapsed_s"] for r in calls) if calls else 0)
         counts.append(len(calls))
     names = [labels[k] for k in keys]
@@ -60,7 +63,7 @@ def main():
     axes[0].set_ylim(0, 110)
     for i, key in enumerate(keys):
         axes[0].text(i, 104, f"n={len(variants[key])}", ha="center", fontsize=9)
-    fig.suptitle("BU weight-edit pilot · synthetic browser tasks", fontsize=15, fontweight="bold")
+    fig.suptitle(f"BU weight-edit pilot · synthetic {args.split} tasks", fontsize=15, fontweight="bold")
     fig.supxlabel("95% Wilson intervals describe this small fixed task set only. No Astra comparison; no general benchmark or cost claim.", fontsize=9)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     for extension in ("png", "svg", "pdf"):

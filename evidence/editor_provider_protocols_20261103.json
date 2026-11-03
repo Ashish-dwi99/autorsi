@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "status": "implemented_and_fake_transport_tested_no_live_editor_API_calls",
+  "providers": {
+    "openai": {
+      "adapter": "framework.editors.OpenAIResponsesEditor",
+      "api": "Responses",
+      "endpoint": "https://api.openai.com/v1/responses",
+      "sources": [
+        "https://developers.openai.com/api/docs/guides/structured-outputs?api-mode=responses",
+        "https://developers.openai.com/api/reference/resources/responses/methods/create"
+      ]
+    },
+    "gemini": {
+      "adapter": "framework.editors.GeminiInteractionsEditor",
+      "api": "Interactions",
+      "api_revision": "2026-05-20",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
+      "sources": [
+        "https://aistudio.google.com/docs/structured-output",
+        "https://aistudio.google.com/docs/text-generation",
+        "https://aistudio.google.com/api-reference/interactions-api"
+      ]
+    }
+  },
+  "behavior": [
+    "Explicit application-registered model IDs independent from target checkpoint",
+    "Strict structured recipe proposals; trusted recipe validator remains mandatory",
+    "Credentials referenced by environment-variable name; no credentials included in experiment payload or errors",
+    "One synchronous request without automatic retries or redirects",
+    "Completed output is a hypothesis, never an evaluator result",
+    "Unknown monetary usage retains the whole declared quote",
+    "Incomplete/refused/invalid output never becomes an accepted proposal",
+    "Timeout keeps remote disposition unknown; no cancellation or billing-stop claim",
+    "No copied internal assistant weights; no live paid editor API request in this implementation task"
+  ],
+  "verification": "10 pure fake-transport tests passed; independent integration cross-check reported no additional blocking defect",
+  "availability": "Model registration and protocol conformance do not prove account access or live API compatibility."
+}

@@ -1,10 +1,18 @@
 # Weight Space Lab
 
-Reproducible experiments on the owner's fine-tuned BU-30B-A3B browser model. The current experiment tests explicit weight edits against an unchanged checkpoint, with a total Modal testing budget of $30.
+An experimental framework for proposing, applying and measuring reversible model-weight edits. Developers select the **editor model** independently from the **target checkpoint**, then supply an architecture-compatible recipe, evaluator, measurable goal, regression limits and resource budget. See [`framework/`](framework/) for the generic contracts, plugin registry, execution engine and OpenAI/Gemini proposal adapters. Provider integrations are protocol-tested with fake transports; live editor API access is not yet validated.
 
-**No improved model or Astra comparison has been demonstrated yet.** The first GPU pilot loaded the real checkpoint but produced four incomplete or malformed replies, then hit its first task deadline on call five. No browser action executed and no edited candidate ran. A subsequent timing diagnostic failed remote startup because a helper was outside its import path; it was cancelled. Both failure records are preserved.
+The first real target is **Grupa Adam-1**, with **Adam-1-CU** as the current experimental computer-use variant. It derives from the owner's fine-tuned Browser Use model. **Eden** remains the separate original-architecture project. These names do not erase upstream provenance or establish broader capabilities. See [`models/adam-1-cu.json`](models/adam-1-cu.json).
 
-The v3 vLLM run loaded the checkpoint and returned complete four-action form plans, but the evaluator rejected every batch because it required a single action. Zero browser actions and zero candidate edits occurred. The next v4 experiment supports bounded batches, rechecks each action against fresh visible state, and counts model requests separately from queued actions. It applies the same interface to every variant. A fresh CPU import/spawn check gates GPU use; 75 local tests pass. Serving or harness improvements must not be attributed to weight editing.
+The current real-model experiment compares an explicit weight edit against the unchanged checkpoint, within a total Modal testing budget of $30. Generic domains are supported through registered adapters; arbitrary architectures and goals are not automatically executable or guaranteed to improve.
+
+**A narrow weight-edit improvement is now measured; no Astra comparison or broad superiority is established.** With fine-tune strength reduced to 0.5, success improved from 3/8 to 8/8 development tasks, then from 3/8 to 8/8 on eight separate acceptance variants of the same task families. Acceptance requests fell from 44 to 16 and aggregate task time from 100.99 to 45.87 seconds. Five repetitive-action failures were rescued, with zero observed regressions. The independent saved-result audit reconciles all 48 episodes and 177 model requests. See `evidence/vllm_v4_outcome.json` and its independent review.
+
+This is a small synthetic DOM-assisted suite. It supports a broader benchmark, not a world-best or 10× Astra claim. Reduced repetition explains lower total task time; faster token-generation kernels have not been shown. The adapter-subtracted diagnostic control also passed 8/8 development cases, so the result may reflect undoing a harmful fine-tuning effect rather than adding new capability. It is not verified to reconstruct raw BU.
+
+Earlier failures remain preserved: v1 loaded the checkpoint but returned four incomplete/malformed replies and timed out on call five; v2 failed its remote import path; v3 returned complete action batches that the single-action harness rejected. V4 evaluates baseline and all edits under the same corrected batch interface. All 75 local tests passed, actual CPU admission passed, and the GPU child exited normally. No historical failure was rescored as a pass.
+
+![Synthetic acceptance results](evidence/figures/vllm-v4-acceptance.svg)
 
 ## Model provenance
 
@@ -24,7 +32,13 @@ This tests fine-tuning strength. It does not copy another model's hidden knowled
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 ```
 
-The local tests use small numerical examples and evaluator doubles; they do not run a model. Sixteen synthetic reference browser paths have separately passed CPU Chromium validation. The MiniWoB adapter is source-only and still requires runtime validation.
+The local tests use small numerical examples and evaluator doubles; they do not run a model. Sixteen synthetic reference browser paths have separately passed CPU Chromium validation. MiniWoB's first CPU runtime preflight stopped on a native-timer mismatch before any model calls; the frozen v1 failure is preserved. No MiniWoB model score or desktop result is established.
+
+The generic framework has a separate pure test suite:
+
+```sh
+python3 -m unittest discover -s framework/tests -v
+```
 
 See `evidence/benchmark_protocol_v1.json` for the planned success, latency, cost, regression and demonstration measurements. Neal's game is a demonstration; established benchmarks provide broader coverage. A comparison with this interactive assistant must identify its tools and access differences, and cannot be labelled a verified Astra model benchmark.
 
