@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "created_utc": "2026-11-03T21:53:30.345672+00:00",
+  "reviewer": "weight_space_paper_review; independent saved-only review",
+  "status": "ACTUAL_CPU_RECEIPT_JOIN_PASSES; GPU_RESULT_NOT_YET_REVIEWED",
+  "cpu_report_sha256": "f2fe3df9348dac6e0b2eb7c661b4f7d175be01c29bc6faf142e416b05b73ea0d",
+  "cpu_report_bytes": 191346,
+  "source_manifest_sha256": "b44dbbf430face18a694a4a8a3f4f6d8e10f1abf841806a2b9fba5ef401fde85",
+  "function_call_id": "fc-01M6HP3CAM0A3BB4JXNZ6TXFGS",
+  "actual_cpu": {
+    "parent_seconds": 117.762483815,
+    "child_seconds": 115.27372292599999,
+    "direct_child_reaped": true,
+    "exit_code": 0,
+    "termination_required": false,
+    "model_calls": 0,
+    "model_instantiations": 0,
+    "tensor_payloads_loaded": 0,
+    "cuda_initialized": false,
+    "adapter_pairs_from_headers": 192,
+    "merged_tensor_entries_from_headers": 882,
+    "full_shard_hashing_repeated": false,
+    "prior_full_shard_receipt_sha256": "1525f269113797acb31f52ede41ad1792208d243c88a9b92a807a36afba6a9f5"
+  },
+  "actual_grammar": {
+    "status": "passed",
+    "cases": 29,
+    "positive_complete_string_and_token": 12,
+    "negative_incomplete_or_rejected_string_and_token": 17,
+    "versions": {
+      "vllm": "0.18.0",
+      "xgrammar": "0.2.8"
+    },
+    "tokenizer_class": "Qwen2TokenizerFast",
+    "tokenizer_length": 151669,
+    "model_vocab_size": 151936,
+    "grammar_elapsed_seconds": 0.8465876409999993,
+    "schema_sha256": "deb807395349f4fa30691a0eb6537ee5ee4bd9e7c8e514294eb41e6fed2194d7",
+    "scope": "Actual saved CPU compiler+cached tokenizer conformance; seven Python wrapper identities recorded. This is not native binary/ABI certification or the distinct GPU engine compiler pass."
+  },
+  "actual_browser_preflight": {
+    "development_seed": 2026110413,
+    "families": 12,
+    "paired_resets": 24,
+    "NONE_steps": 24,
+    "normal_close_receipts": 24,
+    "initial_hashes_equal_per_pair": true,
+    "timers": "22 actual reset observations at10000ms; both enter-password resets15000ms. No timer modification.",
+    "model_calls": 0,
+    "limitations": "Saved screenshot/visibleDOM fingerprints joined, not a fresh browser replay or task-success evaluation."
+  },
+  "auditor_source_read": {
+    "path": "tools/summarize_adam_schema_v2.py",
+    "sha256": "6c659cadb824d05b46e417e255c2d9f48e2447c5427b1de964c23a7422a802a8",
+    "scope": "Reviewed new saved-only source against frozen schema_v2; not run against an incomplete or invented GPU result.",
+    "checks": "Sourcepins, CPU/GPU schema/runtime joins, native timer/reset/initials, complete36 lifecycle, per-case calls/actions/tokens, artifact metadata, fixed patch/cache order and deterministic selection; raw original JSON classification does not repair actions.",
+    "limitations": [
+      "Per-step visibleDOM is not fully saved, so dynamic target validity cannot be independently replayed. Native action/reward receipts remain evidence.",
+      "Screenshot payloads are not downloaded/decoded by this tool; it reconciles metadata/hashes only.",
+      "Patch totals are checked, while a distinct actual-result review should inspect detailed target/readback receipts and provider/call identity.",
+      "No capability/verification/Astra promotion follows from development arithmetic."
+    ],
+    "additional_concrete_source_defect_found": false
+  },
+  "reviewer_actions": {
+    "provider_calls": 0,
+    "model_calls": 0,
+    "browser_replays": 0,
+    "checkpoint_payload_reads": 0,
+    "image_downloads": 0,
+    "runtime_source_changes": 0
+  },
+  "conclusion": "Saved CPU evidence matches the exact new source and29 real grammar checks plus24 paired native resets. No new runtime action or GPU-result conclusion was made by this review."
+}

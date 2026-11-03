@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "created_utc": "2026-11-03T21:51:02.283346+00:00",
+  "reviewer": "weight_space_paper_review; distinct from source/budget authors",
+  "status": "NO_CONCRETE_SOURCE_BUDGET_JOIN_DEFECT; PROPOSAL_ONLY_NOT_ALLOCATED",
+  "source_manifest_sha256": "b7e28dca20e38eb05679a409cad9c1021fb4c14b6218c6f50beea2e7430f5153",
+  "source_record_sha256": "878554adb31c3f76ae429159be3705988b13ee1b2ee3e0afd1f4661a4a4bfbc0",
+  "independent_source_review_sha256": "e23dd60185d9719fe35d0a2e599000b0a022a3e7ec43ccfb5ffdf562187ed9e4",
+  "budget_proposal_sha256": "c222ac2dc7a290231e7a2af6a28e8dd6997bc6b95a02b28f910e6b38f851109f",
+  "current_ledger_sha256": "18a11cd20c777d0851a1e24821046b56249803394a388f2175b3886e893acecc",
+  "root_rate_observation_sha256": "6459c1038461193117bd52974445ed758b5839e92dbf0bb998b501dbcf92d007",
+  "rate_source": "https://modal.com/pricing",
+  "rates_scope": "Saved fresh root official-page observation; no extra network/provider call by this reviewer. Standard list-rate assumptions are not a provider-enforced cap or final bill.",
+  "arithmetic": {
+    "existing_reservations_usd": "18.0",
+    "new_proposed_usd": "3.5",
+    "proposed_reserved_usd": "21.5",
+    "proposed_unallocated_usd": "8.5",
+    "minimum_unallocated_usd": "2",
+    "GPU_1500_seconds_rate": "0.00095952",
+    "GPU_modeled_usd": "1.43928000",
+    "CPU_840_seconds_rate": "0.00008792",
+    "CPU_modeled_usd": "0.07385280",
+    "compute_total_usd": "1.51313280",
+    "build_storage_media_recovery_restart_contingency_usd": "1.98686720"
+  },
+  "source_resource_join": "Exact parent GPU1260function+240startup seconds with4CPU/96GiBmax/A10080; CPU600function+240startup seconds with4CPU/16GiBmax. One fresh CPU then contingent oneGPU, no verification/public endpoint or paid teacher call. Existing model/input volumes read-only; existing result volume writable for bounded artifacts.",
+  "preservation": "All current six reservations retained, including full2.50 schema-v2 allocation. No release inferred from rounded account credit, cancellation, known direct-child reap or historical posted-cost observations.",
+  "judgment": "Proposed3.50 envelope covers modeled compute1.5131328 with1.9868672 contingency and retains8.50 unallocated, exceeding the standing2.00 minimum. This is conservative local planning, not proof that startup retries/build/storage/egress exposure is bounded by those amounts. Suspend new allocations if later credible exposure threatens30USD.",
+  "outstanding_preconditions": [
+    "Actual completed corrected schema-v2 report plus separately hashed root protocol-quality decision and frozen attention selection; neither exists by this review.",
+    "Root must save a source-bound allocation, exact deployed identity and fresh no-overlap observation.",
+    "Fresh screenshot-specific real backend35-case CPU tokenizer/grammar conformance and16paireddevelopmentrenders/geometry must pass before anyGPU call.",
+    "Actual result/artifact/terminal/billing evidence and video decode review remain required; no performance or Astra comparison follows from source approval."
+  ],
+  "reviewer_actions": {
+    "provider_calls": 0,
+    "model_calls": 0,
+    "source_changes": 0,
+    "ledger_changes": 0,
+    "funds_allocated": 0
+  }
+}

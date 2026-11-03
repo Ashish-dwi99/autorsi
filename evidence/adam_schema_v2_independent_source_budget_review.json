@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "reviewer": "weight_space_paper_review; distinct from schema_v2 author",
+  "created_utc": "2026-11-03T21:44:41.282900+00:00",
+  "status": "NO_ADDITIONAL_CONCRETE_SOURCE_OR_PROPOSED_BUDGET_DEFECT; ACTUAL_CPU_BACKEND_GATE_STILL_REQUIRED",
+  "source_record_sha256": "6c271b9ef5b685502b5060c18d0d6a8274ab980472b7530f8abc44b4400cf2da",
+  "source_manifest_sha256": "b44dbbf430face18a694a4a8a3f4f6d8e10f1abf841806a2b9fba5ef401fde85",
+  "source_manifest_serialization": "json.dumps(source_manifest, sort_keys=True) with Python default separators; not the compact serialization",
+  "source_files_verified": 28,
+  "source_bytes_verified": 316197,
+  "budget_proposal_sha256": "b4078d4c6334ff06499161b88a6ee38618c943348e7cc484f877e9f1b64dbe36",
+  "prior_ledger_sha256": "63b96f7ab959208e9ed5669a9907aec26753fc5f123f08350aa0581979c15632",
+  "scope_sha256": "ebf563114648a81a6c246c743dcd350d8e38e07a2623a2e08aa2768b716da6ed",
+  "review_scope": [
+    "Exact new-source deltas from consumed dev_v1, fixed action schema, CPU conformance and incremental evidence, GPU compiler configuration/warmups, identical per-variant inference conditions, executing-source/CPU/host joins, single-use lifecycle and bounded proposed budget.",
+    "All 27 prior dev_v1 sources verified unchanged in the prior source review; new dev_native parser/prompt, dev_patch recipe and build script remain exact prior bytes. No consumed outcome was rescored."
+  ],
+  "independent_validation": {
+    "offline_tests_passed": 39,
+    "skipped": 0,
+    "elapsed_seconds": 0.344,
+    "command": "PYTHONPATH=src:proposals/adam_schema_v2 /Users/samuelekpe/Convert/.venv/bin/python -m unittest discover -s proposals/adam_schema_v2 -p test*.py -q",
+    "scope": "Pure/fake/jsonschema and installed-SDK source/remount checks only; no actual local vLLM/xgrammar/model/browser/provider execution.",
+    "final_readback": "All 28 exact runtime source pins and manifest bytes joined again immediately before this record."
+  },
+  "schema_findings_resolved": [
+    "Exact xgrammar version is 0.2.8, joined to saved image-install history; no unqualified carryover from preliminary 0.1.32 research.",
+    "Generation schema uses plain strings because exact backend pattern/length handling is narrower than arbitrary JSON escapes. Existing ASCII/length/current-ref/quota/done-order semantic checks remain separate and may reject grammar-valid output; no repair or universal grammar/parser equivalence is asserted.",
+    "CPU journal publishes each actual conformance result before comparison and failure. Accepted prefixes alone never count: both string and tokenizer-token paths require completed and terminated grammar."
+  ],
+  "required_actual_cpu_gate": {
+    "xgrammar": "0.2.8",
+    "vllm": "0.18.0",
+    "cases": 29,
+    "inputs": "Actual existing cached tokenizer, exact static schema and model vocabulary size; local_files_only and no model instantiation/CUDA.",
+    "checks": "Real compile and complete string/token positive, negative, truncated and trailing-input cases; incremental journal; exact wrapper/runtime/schema joins.",
+    "limitations": "Python-wrapper hashes do not attest native binaries/ABI. A source review and offline jsonschema tests do not prove real backend behavior. Actual CPU conformance has not run under this review."
+  },
+  "gpu_fairness": [
+    "Same explicit xgrammar config/schema for every neutral warmup and scored request; three neutral warmups happen before any scored native reset. GPU engine compiler is separate from CPU compiler and is actually exercised by those warmups.",
+    "Fresh 12-family development seed 2026110413, three attention scales 1/.5/.25 and cyclic balanced order. Same strict DOM-assisted prompt/parser,96-token cap,native task timers and cache clearing for all scales.",
+    "Scored model inputs contain no oracle, hidden state or generated dynamic target list. Complete all 36 episodes before deterministic selection; global 288 attempt cap includes three warmups and can make a run incomplete.",
+    "Prior unconstrained output-format failures remain failures. Differences between old and new runs combine changed decoding/seed; only the within-new-run scale comparison holds decoding fixed. Reserved verification seed2026110397 is untouched."
+  ],
+  "budget": {
+    "total_authorized_usd": "30",
+    "existing_reserved_usd": "15.5",
+    "new_proposed_usd": "2.5",
+    "proposed_reserved_usd": "18.0",
+    "proposed_unallocated_usd": "12.0",
+    "minimum_unallocated_usd": "2",
+    "GPU_source_bound_seconds": 1500,
+    "GPU_rate_per_second": ".00095952",
+    "GPU_modeled_usd": "1.43928000",
+    "CPU_source_bound_seconds": 840,
+    "CPU_rate_per_second": ".00008792",
+    "CPU_modeled_usd": "0.07385280",
+    "build_storage_recovery_restart_contingency_usd": "0.98686720",
+    "actual_limits_join": "GPU function1260 + startup240,4CPU/96GiB max,A10080; CPU function600 + startup240,4CPU/16GiB max. Child1200/450 limits sit within function limits.",
+    "qualification": "Prospective conservative source reservation within the standing human30USD authorization, not a provider-enforced hard spending cap or settled-billing statement. Retain all earlier envelopes, suspend new allocations if unexplained exposure threatens ceiling.",
+    "adoption": "This review does not allocate funds; root must save exact source-bound allocation and actual fresh no-overlap/deployment identity before invocation."
+  },
+  "remaining_runtime_conditions": [
+    "Actual fresh CPU grammar and native paired-reset preflight must pass and be joined before the single new GPU call.",
+    "Root source-bound allocation/deployment/once receipts and fresh provider no-overlap observation remain execution prerequisites.",
+    "Existing original model/input volumes remain read-only; only existing results volume is writable. Parent direct child reap is not complete descendant, physical deallocation or final billing proof."
+  ],
+  "actions_by_reviewer": {
+    "provider_calls": 0,
+    "model_calls": 0,
+    "browser_or_site_actions": 0,
+    "checkpoint_payload_reads": 0,
+    "runtime_source_changes": 0,
+    "ledger_changes": 0
+  },
+  "conclusion": "The exact new source and proposed2.50USD accounting have no additional concrete defect in this bounded review. Proceeding to the actual CPU conformance gate is supported after root allocation/identity admission. No training capability, perfect score, screenshot-only performance, Astra comparison or held-out result is established."
+}

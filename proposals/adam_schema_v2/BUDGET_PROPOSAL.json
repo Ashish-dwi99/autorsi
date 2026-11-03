@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "status": "PROPOSAL_PENDING_DISTINCT_BUDGET_REVIEW",
+  "app_name": "adam-1-schema-miniwob-20261104-v2",
+  "allocation_usd": 2.5,
+  "previous_reserved_usd": 15.5,
+  "proposed_total_reserved_usd": 18,
+  "proposed_unallocated_usd": 12,
+  "total_authorized_usd": 30,
+  "minimum_unallocated_usd": 2,
+  "source_manifest_sha256": "b44dbbf430face18a694a4a8a3f4f6d8e10f1abf841806a2b9fba5ef401fde85",
+  "source_record_sha256": "6c271b9ef5b685502b5060c18d0d6a8274ab980472b7530f8abc44b4400cf2da",
+  "scope_sha256": "ebf563114648a81a6c246c743dcd350d8e38e07a2623a2e08aa2768b716da6ed",
+  "prior_ledger_sha256": "63b96f7ab959208e9ed5669a9907aec26753fc5f123f08350aa0581979c15632",
+  "accounting": {
+    "GPU_max_seconds_including_startup": 1500,
+    "GPU_CPU_memory_rate_USD_per_s": 0.00095952,
+    "GPU_ceiling_USD": 1.43928,
+    "CPU_max_seconds_including_startup": 840,
+    "CPU4_16GiB_rate_USD_per_s": 8.792e-05,
+    "CPU_ceiling_USD": 0.0738528,
+    "build_storage_recovery_provider_restart_contingency_USD": 0.9868672,
+    "total_USD": 2.5,
+    "rates_source": "Prior root-reviewed Modal rate proposal; prospective ceiling is not a billing report or automatic approval; retain all previous reservations.",
+    "CPU_memory_max_GiB": 16,
+    "GPU_memory_max_GiB": 96
+  },
+  "scope": "One fresh CPU grammar/runtime admission and one fresh development GPU comparison only, contingent on actual CPU pass. No verification, public endpoint, original overwrite or Eden action.",
+  "human_authorization": "Existing total30USD Modal Adam testing authorization; no new funds/purchase/API fees.",
+  "provider_limit": "Conservative source-based reservation, not a provider-enforced hard spending cap. Keep previous uncertainty reserves and suspend new allocation on unexplained exposure.",
+  "created_unix": 1793741999.8901818,
+  "fresh_free_bytes": 2378375168
+}

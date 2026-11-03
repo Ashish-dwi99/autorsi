@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "observed_unix": 1793742108.754528,
+  "source": "https://modal.com/pricing",
+  "method": "Official page read through web tool",
+  "rates_USD_per_second": {
+    "A10080GB": "0.000694",
+    "physical_CPU_core": "0.0000131",
+    "memory_GiB": "0.00000222"
+  },
+  "computed": {
+    "GPU_plus4cores96GiB": "0.00095952",
+    "CPU4cores16GiB": "0.00008792"
+  },
+  "scope": "Public standard preemptible Function list rates; source does not select a region or non-preemptible surcharge. Cost estimation retains startup/build/storage/egress/restart uncertainty; not a settled invoice or provider spending cap."
+}

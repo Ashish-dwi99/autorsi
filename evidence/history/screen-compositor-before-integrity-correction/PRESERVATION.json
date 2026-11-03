@@ -1,0 +1,7 @@
+{
+  "source": "tools/compose_screen_comparison.py",
+  "sha256": "d614900b3e8e649249a95c52bc602813742cc58a5f2d7441558ea270b08e9df3",
+  "bytes": 6430,
+  "fresh_free_bytes": 1237651456,
+  "scope": "Original offline compositor source only; initial mkdir failed before preservation because parent directory absent; no video/render/model/provider action"
+}

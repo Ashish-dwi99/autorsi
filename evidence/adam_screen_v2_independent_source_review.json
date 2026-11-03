@@ -1,0 +1,135 @@
+{
+  "schema": 1,
+  "created_utc": "2026-11-03T21:50:13.984645+00:00",
+  "reviewer": "weight_space_paper_review; distinct from screenshot_v2 author",
+  "status": "NO_ADDITIONAL_CONCRETE_DEFECT_IN_EXACT_SOURCE_SCOPE; NO_RUNTIME_ADMISSION",
+  "source_record_sha256": "878554adb31c3f76ae429159be3705988b13ee1b2ee3e0afd1f4661a4a4bfbc0",
+  "source_manifest_sha256": "b7e28dca20e38eb05679a409cad9c1021fb4c14b6218c6f50beea2e7430f5153",
+  "manifest_serialization": "json.dumps(manifest,sort_keys=True) default-space separators",
+  "verified_runtime_files": 34,
+  "verified_runtime_bytes": 361282,
+  "source_manifest": {
+    "proposals/adam_schema_v2/action_schema.py": "868301423ea64d96c0136304d5cc39988a5cb410bfd552009650a93d7ec34e1a",
+    "proposals/adam_schema_v2/dev_contract.py": "d3614e2eda8387a19ed3ef876f9fb8311457a7dd1728ecfdbd0e491985536b66",
+    "proposals/adam_schema_v2/dev_patch.py": "0441734f5e89c2903bf4c73955ef49b513fc0815f3c313bd5a28bd7d8cd62e9c",
+    "proposals/adam_screen_v2/SCOPE.json": "d08100ce96b338cb3731f28084754f4e0df23904802a8a3821a2c76af910b4ff",
+    "proposals/adam_screen_v2/modal_screen.py": "a75bb379d97967df068b02ac1e61716a02b5954a06859f38c2a46d8f1169a3eb",
+    "proposals/adam_screen_v2/screen_cases.py": "de5540ecbfabeef02d456d92ed6c7ca34fc07563dbc6160a31d0350747b46364",
+    "proposals/adam_screen_v2/screen_contract.py": "63a90ee0a2321437b37e08cac23104a76070422343ffed3c5bc7195fca1ba51f",
+    "proposals/adam_screen_v2/screen_cpu.py": "a19a2c45909dd114be62b4de2fd96270728e0cc82881daa53272af005e9039de",
+    "proposals/adam_screen_v2/screen_entry.py": "32275c26ff6384f7f4004fe98f36bd0345b7c26489354712d17ab2b208cd641c",
+    "proposals/adam_screen_v2/screen_harness.py": "ec64ed1ecc232049eadbfe9c920e0a2ca0060f79bde1f7d2073fd7ac732654c9",
+    "proposals/adam_screen_v2/screen_host.py": "76d582e991f33f2b7dc1cdeed883b89d2e6eb355ca201b1686fe4a8aaeddc887",
+    "proposals/adam_screen_v2/screen_protocol.py": "255f311a20640ba7bab77252316ede41c381a745c3b89933eece7c42a021895d",
+    "proposals/adam_screen_v2/screen_recover.py": "31cf7e279d93dacb48d8a74e17cac4e45a8c6a066de2a7a935ffe3a6d3eae9fe",
+    "proposals/adam_screen_v2/screen_schema.py": "108c2d3f5009c4062989be250c721b95a8656c314e2d5c0473ce504d13fc519f",
+    "proposals/adam_screen_v2/screen_worker.py": "14bab905e8b6c1512466cba3d56fd926798881e610d8c0160adc5bb530c14b95",
+    "proposals/adam_screen_v2/vision_edit.py": "92acbd5b8610594e7437741a0f6bf06acc7fbe96be8fcef65d37f1c252f3b711",
+    "src/weight_space_lab/__init__.py": "0011bfd335ca645347f878f6d5ab2e7863958d572388233bb13530070a0f9201",
+    "src/weight_space_lab/benchmarks/__init__.py": "48fddf5bdf1d87f13ee19919253c21867a1509383523779b6b4d39e9cc454cea",
+    "src/weight_space_lab/benchmarks/miniwob.py": "c85987b1a84bf9a75c8a000fdb1cbc37f254adf31939e03e4359d132bffaca1a",
+    "src/weight_space_lab/diagnostic.py": "4ff894989dcccf57d2ad17cc86740114dafca8a57f62eb2297bb27d219c3dc33",
+    "src/weight_space_lab/eval/__init__.py": "2fecfeab2b6eacf945accac88c69620bc937d06f3c6efb23f95eb68e8cbcd4b5",
+    "src/weight_space_lab/eval/bu_policy.py": "57f228cdbdfbe72925d0aa311b76001d74a9e03ae9d439c0be63145fd11b02dd",
+    "src/weight_space_lab/eval/bu_protocol.py": "5987375c472918692f3a2c275c04048aa90b80652feae2faeaa01d20b89f3ebd",
+    "src/weight_space_lab/eval/fixtures.py": "2c994fd6d5c465a2a729082b789661494d711c6b7cec4bcc4d299c76e05ec57a",
+    "src/weight_space_lab/eval/runner.py": "1e22b7a8635c15214aeefd3e5956a8c5102934e1ce0cc261d359f2a1624085d5",
+    "src/weight_space_lab/merged_patch.py": "25310009418e646f555f56464e229fc7ac5c94163fffc86f4fdc8216e7e6d1e9",
+    "src/weight_space_lab/patch.py": "b2bf10e9402104d495c08ab7ade727300c2b2481c965552da48ea1ecb58b3aca",
+    "src/weight_space_lab/policy_io.py": "2c2ccdce8e0762f9e35529114337d0adfb01dd9706f95562d43ae51e9106f9a6",
+    "src/weight_space_lab/process_entry.py": "56fcbf8223f83573d0312b63230a2f7b4f487e7e2b395ffb38b948d7298eea88",
+    "src/weight_space_lab/process_entry_v4.py": "fb19d5b1ac02dde7877a40ca969155f77a79aec5c2aec5df5cc403f7ee17bf06",
+    "src/weight_space_lab/vllm018_compat.py": "be28b81d5d1e89f1fd08ade8bb59488738dda0253568e101acd6cac09dcb667c",
+    "src/weight_space_lab/vllm_attention.py": "db942a00fe576a82cdc8a29b218cc6a6f66c7148d91e86a379816c73f1e09924",
+    "src/weight_space_lab/vllm_pilot.py": "f6e777bb396b1b8eb5a56ed079b7aa11e4b32ce58f1229e6d43f69b310548aa6",
+    "src/weight_space_lab/vllm_pilot_v4.py": "9d2bad07d040cf3b6d5150fc89664ee41c72a93cf9863257fb8ac1c56cc148ac"
+  },
+  "independent_validation": {
+    "discovered_tests": 38,
+    "passed": 36,
+    "skipped": 2,
+    "skip_reason": "Opt-in browser tests not enabled; no browser rerun by reviewer.",
+    "elapsed_seconds": 2.026,
+    "command": "PYTHONPATH=src:proposals/adam_screen_v2:proposals/adam_schema_v2 /Users/samuelekpe/Convert/.venv/bin/python -m unittest discover -s proposals/adam_screen_v2 -p test*.py -q",
+    "scope": "Pure/fake/schema/installed-SDK source-import tests. No real xgrammar compiler or model/browser/provider execution."
+  },
+  "review_scope": "New normalization/schema and source/selection/CPU/GPU integration deltas against preserved reviewed v1 sources. Unchanged visual editor and case files checked by exact hash rather than a new tensor/runtime audit.",
+  "correction_history": [
+    {
+      "finding": "GPU constructed structured-output configuration was passed but not read back.",
+      "resolution": "Final screen_schema.verify_engine_config compares every frozen engine field immediately after LLM construction and before edits/warmups. Each generation record also retains schema SHA and token cap. A pure mismatch test refuses a changed reasoner.",
+      "final_schema_sha256": "108c2d3f5009c4062989be250c721b95a8656c314e2d5c0473ce504d13fc519f",
+      "final_worker_sha256": "14bab905e8b6c1512466cba3d56fd926798881e610d8c0160adc5bb530c14b95"
+    }
+  ],
+  "normalization": {
+    "range": "Strict integers0..999; booleans/fractional/out-of-range values rejected for the entire batch before dispatch.",
+    "conversion": "One conversion x=n*width//1000,y=n*height//1000; no clamp, fallback or adaptive coordinate interpretation.",
+    "examples": {
+      "1024x768_999": "CSS1022,767",
+      "390x844_999": "CSS389,843"
+    },
+    "limitation": "1000-bin grid does not address every CSS pixel in viewports wider/taller than1000. This is explicit and identical for all actors/variants; scroll dy remains CSS-pixel displacement.",
+    "evidence": "Raw JSON, normalized actions, converted CSS executor actions, viewport and DPR1 retained separately. CPU six pure geometry cases plus actual decodedPNG dimensions/paired initial hashes join unchanged viewports."
+  },
+  "structural_decoding": {
+    "versions": {
+      "vllm": "0.18.0",
+      "xgrammar": "0.2.8"
+    },
+    "cases": 35,
+    "static_schema": "Closed actions envelope,1..4 bounded branches and normalized geometry, fixed key enum; no task-specific target or oracle data. Same schema for64-token neutral warmups and128-token scored requests.",
+    "semantic_boundary": "Plain JSON strings permit escapes. ASCII/text length, remaining action quota and done ordering remain strict parser checks. Grammar-valid does not imply semantic-valid; no repair or reward from self-reported done.",
+    "required_actual_CPU": "Actual cached tokenizer plus separate string/token complete/terminated matcher checks, positive/negative/truncation/trailing/duplicate cases, incremental journal before failure. Neither local jsonschema tests nor attention grammarCPU receipt substitutes for screenshot-specific grammar admission.",
+    "GPU_join": "Exact backend wrapper identities and schema receipt join fresh CPU; actual constructed config read back; three neutral done-only warmups precede scored context creation. CPU and GPU compilers remain separate."
+  },
+  "attention_prerequisite": {
+    "required_source": "b44dbbf430face18a694a4a8a3f4f6d8e10f1abf841806a2b9fba5ef401fde85",
+    "required_run": "adam-schema-miniwob-20261104-v2",
+    "joins": "Actual complete36-episode report, rederived selection, exact default-space manifest hash, experiment spec, attention grammar receipt, reaped direct child and returned browser close. Separate root selection names/hash-joins separate evidence quality record.",
+    "quality": "Root record must join exact report/source,36episodes, zero malformed/missing-envelope/unknown-operation counters, explicit semantic-invalid assessment and carry-forward decision with promotionNONE. These JSON declarations require the actual saved-result audit; this source review does not fabricate that evidence.",
+    "old_result": "Consumed source048c output-protocol failures cannot satisfy the new gate; no assumed attention scale."
+  },
+  "visual_intervention": {
+    "unchanged_editor_sha256": "92acbd5b8610594e7437741a0f6bf06acc7fbe96be8fcef65d37f1c252f3b711",
+    "targets": [
+      "visual.merger.linear_fc2.weight [2048,4608]",
+      "visual.merger.linear_fc2.bias [2048]"
+    ],
+    "gains": [
+      0.98,
+      1.0,
+      1.02
+    ],
+    "recipe": "BF16(FP32(immutable retained original)*gain); gain1 exact copy restore. Strict identity/alias/disjoint-target/finite/readback checks preserved. Actual tensor norms/hashes/delta ratios are runtime obligations, not results of this review.",
+    "cache": "Require idle before edits; reset prefix withTrue, multimodal processor and encoder caches, then require idle. Same for each gain.",
+    "interpretation": "Exploratory feature-amplitude calibration, not a learned vision delta, skill transfer or guarantee of improvement."
+  },
+  "evaluation_limits": [
+    "Eight unchanged development cases \u00d7three gains;24 complete episodes required for deterministic selection. Cyclic gain order has3/3/2 ordinal counts, explicitly not perfect balance.",
+    "Goal+PNG,viewport/budget and already-issued action feedback only; no DOM/element IDs/oracle into model. This is a Python trust boundary, not a hardened security sandbox.",
+    "Original12-action,128-token,30s-policy,90s-case and10s-total-finalization rules preserved; unknown/late native inference latches session and preserves parent watchdog.",
+    "Eight reserved verification scenarios have no policy outcomes consumed here and cannot execute through this launcher. Historical v1 local rendering of those pages is disclosed.",
+    "Actual WebM and PNG need returned artifacts, bounded recovery and decode/visual review before publication. No fabricated Astra actor, frame-exact synchronization, nativeOS, real-site or superiority claim."
+  ],
+  "lifecycle_scope": [
+    "New private app/run/once identities, exact executing-source and fresh CPU joins; original base/adapter/merged volumes read-only and existing result volume writable.",
+    "GPU1200child/1140new-work/35generation/1260function+240startup; CPU450child/600function+240startup;4CPU,96GiB GPUcontainer max/16GiB CPUcontainer max,A10080,maxcontainers1,retries0.",
+    "300 total model-attempt limit includes3warmups; accepted artifact limits160MiB aggregate/128MiB video/400files; bounded once recovery with fresh200MiB plus remaining aggregate floor.",
+    "Returned close, direct child reap and cancellation acknowledgment do not establish full descendant termination, deallocation or final billing."
+  ],
+  "budget_status": {
+    "allocated_by_this_record_usd": 0,
+    "prospective_source_max_usd": 3.5,
+    "concrete_source_bound_budget_review": "Pending separate root proposal/allocation; this source review does not allocate or authorize a provider call."
+  },
+  "actions_by_reviewer": {
+    "provider_calls": 0,
+    "model_calls": 0,
+    "browser_actions": 0,
+    "checkpoint_tensor_payload_reads": 0,
+    "source_changes": 0,
+    "ledger_changes": 0
+  },
+  "conclusion": "Final exact screenshot_v2 deltas have no additional concrete source defect in this review. Actual schema_v2 attention result/quality selection, concrete budget allocation, fresh screenshot-specific CPU grammar/browser admission and provider lifecycle identities remain mandatory before GPU. No screenshot performance result is established."
+}

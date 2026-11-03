@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-03T21:37:52.295746+00:00",
+  "destination": "proposals/adam_screen_v2",
+  "files": 20,
+  "fresh_free_bytes": 2387947520,
+  "old_sources_unchanged": true,
+  "provider_model_calls": 0,
+  "required_floor_bytes": 419430400,
+  "schema": 1,
+  "source_files": {
+    "proposals/adam_schema_v2/action_schema.py": "868301423ea64d96c0136304d5cc39988a5cb410bfd552009650a93d7ec34e1a",
+    "proposals/adam_screen_runtime_v1/SCOPE.json": "94e4b85b9787fd1d7469691fb716c26d97668750e27962469faa26e959cdf76d",
+    "proposals/adam_screen_runtime_v1/modal_screen.py": "e92d47963213c608e4ae6422895a954fc6444ce597ec9e2ac0d15673fccbc76c",
+    "proposals/adam_screen_runtime_v1/screen_contract.py": "8f54910dbf11f2d4ea8780b36d7e8c9f6625c7ea3ea98dca3e95194a2bf76fbc",
+    "proposals/adam_screen_runtime_v1/screen_cpu.py": "c225e2f56dd0d01c78dab2e543d5385e2fe59816498725ef78f39ca5ceeb5a54",
+    "proposals/adam_screen_runtime_v1/screen_entry.py": "fada5299192e334d7550845679683a3f043db21eb9c0c7128659a7b79d7c7795",
+    "proposals/adam_screen_runtime_v1/screen_host.py": "ee5669da45e262b936290ee1c09db79574e7c79ca73d74846cc043362d6720d1",
+    "proposals/adam_screen_runtime_v1/screen_recover.py": "31cf7e279d93dacb48d8a74e17cac4e45a8c6a066de2a7a935ffe3a6d3eae9fe",
+    "proposals/adam_screen_runtime_v1/screen_worker.py": "f8dbef75083b66728a22aeeda81a9de0d403e29e41bce9f649a9c1763a593700",
+    "proposals/adam_screen_runtime_v1/test_screen_runtime.py": "a75b73e979c692e6b81bdb4e769d3cebb9c01086c6f9687759d4da0a2b23f622",
+    "proposals/adam_screen_v1/INTEGRATION.md": "b5921c50af8bae61cf94327c917413ca17b0b8e37372f6ef404398e4d346fb4e",
+    "proposals/adam_screen_v1/case_manifest.json": "528dabd06c6506bd11abbbf19c7f71e8c890dfdca248ae36df945d54924a5338",
+    "proposals/adam_screen_v1/screen_cases.py": "de5540ecbfabeef02d456d92ed6c7ca34fc07563dbc6160a31d0350747b46364",
+    "proposals/adam_screen_v1/screen_cli.py": "8c608829783bda20da3e262b221189f6bd1a3981dbf1116985d11e769b852367",
+    "proposals/adam_screen_v1/screen_harness.py": "160d88ef0ca1b240e722edfa392ad11111c93de9b71707901df9ba328b33637e",
+    "proposals/adam_screen_v1/screen_manual.py": "b6c4ad440108a38f3c2213b9538acac9fc5d7df60b646d6cc6da33ab2e7b807e",
+    "proposals/adam_screen_v1/screen_protocol.py": "c8b8dbae1a2ed2f2b2514282ff17467b2392b70d0e789c032ae1103449270aab",
+    "proposals/adam_screen_v1/test_screen.py": "75dc481cd0bfd16205a5b4b7b85ed599decef0087620fd49cef91d636977d94a",
+    "proposals/adam_screen_v1/test_vision_edit.py": "9032cf3f6599d6cac2ad0a28ad774aaf4ae334d4abb934cf34ef0769d2ab369c",
+    "proposals/adam_screen_v1/vision_edit.py": "92acbd5b8610594e7437741a0f6bf06acc7fbe96be8fcef65d37f1c252f3b711"
+  },
+  "status": "NEW_UNREVIEWED_V2_COPY_BEFORE_EDITS"
+}

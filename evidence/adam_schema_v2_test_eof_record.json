@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "created_unix": 1793742867.718279,
+  "reason": "Remove trailing empty lines caught by git diff --check from offline test only. Runtime manifest and all deployed source bytes unchanged.",
+  "path": "proposals/adam_schema_v2/test_dev_native.py",
+  "original_sha256": "d44449e4b43ec4042810ce72ff770faa5e826551391a648ef0a8255e11c00e56",
+  "original_preserved": "evidence/history/schema_v2_test_eof_d44449e4.py",
+  "current_sha256": "3466c0644f5788b96872b0c16e35bcacc893a64dc788007444304027f252cd44",
+  "AST_equal": true,
+  "source_record_limit": "Frozen SOURCE_RECORD test hash remains creation-time original. This additive record maps current whitespace-only offline test; no model source or outcome changed."
+}

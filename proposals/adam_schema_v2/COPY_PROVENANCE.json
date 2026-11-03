@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "fresh_free_bytes": 2373373952,
+  "source": "proposals/adam_dev_v1",
+  "source_manifest_sha256": "048c1884833769e523a3c4daf44c803ced445f263496cabad342c56dc227dcdf",
+  "copies": {
+    "dev_contract.py": {
+      "prior_sha256": "4323ac20f54b41f3c1ca94066f551217608e2724c67c6ee54dafdf1f5dd1d997",
+      "initial_new_sha256": "e895627d8694cac3d3755a9e29100e9dd5ffe3b9c7836c555097dd824b42cceb"
+    },
+    "dev_patch.py": {
+      "prior_sha256": "0441734f5e89c2903bf4c73955ef49b513fc0815f3c313bd5a28bd7d8cd62e9c",
+      "initial_new_sha256": "0441734f5e89c2903bf4c73955ef49b513fc0815f3c313bd5a28bd7d8cd62e9c"
+    },
+    "dev_native.py": {
+      "prior_sha256": "de2e53818cfb37eabd3ec442549e771fa828f07d8dc814f312face0ae22b09a5",
+      "initial_new_sha256": "de2e53818cfb37eabd3ec442549e771fa828f07d8dc814f312face0ae22b09a5"
+    },
+    "dev_benchmark.py": {
+      "prior_sha256": "ed71dd3872c20cb5e634ec22807b56402acea523bf0171372bab188366be4034",
+      "initial_new_sha256": "ed71dd3872c20cb5e634ec22807b56402acea523bf0171372bab188366be4034"
+    },
+    "dev_entry.py": {
+      "prior_sha256": "4d1ddf0072bbd230ff3de76bd2d690ea81028fe72c7a091d3ef4bfe8d3d6b044",
+      "initial_new_sha256": "4b6b16354b9259d4d99ae7bf7c74e4fbc32c3fd66b47cbec2bed0be7bcef623e"
+    },
+    "modal_dev.py": {
+      "prior_sha256": "b98b10ca20f9382777eff0615a7880e915b0038369615062f083e989a1e2a8b3",
+      "initial_new_sha256": "465c951e1ecc8e50a140066fab746bc471759c2e1a344e4a33fde573b08f4c53"
+    },
+    "dev_host.py": {
+      "prior_sha256": "20f222a03d6f54569499e84975d082350ae169efd306c829abd0eafedd4575e7",
+      "initial_new_sha256": "42102dce3fad86d0a3e9dddae7514cb339b005642d28bb5325d4fb48a7d0b0ce"
+    },
+    "build_miniwob_runtime.py": {
+      "prior_sha256": "44f655fce0f07898908315abf3e0698ca1981bdb1f430fb976e0404ec99c724b",
+      "initial_new_sha256": "44f655fce0f07898908315abf3e0698ca1981bdb1f430fb976e0404ec99c724b"
+    },
+    "SCOPE.json": {
+      "prior_sha256": "037942fbeb455e7314aeaa244642a2973e5b0589ba3d58806dd01518d9ca7285",
+      "initial_new_sha256": "02b01185441e231deb5a78f6c51fd7612f989df830483312bacac7262b5b5ebc"
+    },
+    "test_dev.py": {
+      "prior_sha256": "e236ca22c9e7725c12cedbf4169986eaf7ccd3002d663c6649d07880e2f3db92",
+      "initial_new_sha256": "a3b5a8559414bc8776cb30994f40ba141d84d4a723f8e2ba88b7a61736048c05"
+    },
+    "test_dev_native.py": {
+      "prior_sha256": "d44449e4b43ec4042810ce72ff770faa5e826551391a648ef0a8255e11c00e56",
+      "initial_new_sha256": "d44449e4b43ec4042810ce72ff770faa5e826551391a648ef0a8255e11c00e56"
+    }
+  }
+}

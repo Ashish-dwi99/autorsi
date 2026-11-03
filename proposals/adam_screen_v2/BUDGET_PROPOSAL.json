@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "status": "PROPOSAL_ONLY_NO_ALLOCATION_SELECTION_NOT_READY",
+  "source_manifest_sha256": "b7e28dca20e38eb05679a409cad9c1021fb4c14b6218c6f50beea2e7430f5153",
+  "source_record_sha256": "878554adb31c3f76ae429159be3705988b13ee1b2ee3e0afd1f4661a4a4bfbc0",
+  "current_ledger_sha256": "18a11cd20c777d0851a1e24821046b56249803394a388f2175b3886e893acecc",
+  "current_reserved_usd": 18,
+  "proposed_allocation_usd": 3.5,
+  "proposed_total_reserved_usd": 21.5,
+  "proposed_unallocated_usd": 8.5,
+  "minimum_unallocated_usd": 2,
+  "total_authorized_usd": 30,
+  "compute_model": {
+    "GPU_startup_plus_function_seconds": 1500,
+    "GPU4cores96GiB_rate_per_second": "0.00095952",
+    "GPU_usd": "1.43928",
+    "CPU_startup_plus_function_seconds": 840,
+    "CPU4cores16GiB_rate_per_second": "0.00008792",
+    "CPU_usd": "0.0738528",
+    "compute_total_usd": "1.5131328",
+    "build_storage_media_recovery_restart_contingency_usd": "1.9868672"
+  },
+  "rate_source": "https://modal.com/pricing",
+  "fresh_rate_record_sha256": "6459c1038461193117bd52974445ed758b5839e92dbf0bb998b501dbcf92d007",
+  "preconditions": [
+    "Successful corrected schema-v2 actual report and separate root quality/attention-selection receipt",
+    "Distinct exact screen-v2 source and budget review",
+    "Fresh source-bound allocation/deployment/prior terminal, then actual CPU backend/browser pass before oneGPU"
+  ],
+  "scope": "24 synthetic screen development episodes, actual reversible visual-merger edits and bounded actual recordings only. No verification, original overwrite, public hosting, paid teacher calls or Eden.",
+  "ceiling_qualification": "Local conservative allocation within existing human authorization, no provider-enforced hard spending cap or settled invoice inference. Prior reserves retained.",
+  "created_unix": 1793742568.644562
+}
