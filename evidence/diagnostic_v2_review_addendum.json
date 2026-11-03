@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "prior_reviewed_helper_sha256": "46a6660f75cf382a3e88fd50d31729b0ac8cfe08a794ed487240f634f55783b9",
+  "launched_manifest_helper_sha256": "4ff894989dcccf57d2ad17cc86740114dafca8a57f62eb2297bb27d219c3dc33",
+  "delta": "Add bounded completion_token_ids to diagnostic JSON after existing generation. No additional inference or action.",
+  "independent_review": "/root/bu_eval_harness inspected additive field and reported no new concern.",
+  "timing": "Author write mtime16:52:02.201386Z, host source-manifest16:52:05.507796Z. Amendment preceded manifest by3.3seconds, but root review file had older helper hash.",
+  "remote_binding": "Remote source guard must verify launched manifest; do not assume success before its receipt."
+}

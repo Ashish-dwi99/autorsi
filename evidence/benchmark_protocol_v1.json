@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "status": "prospective_not_executed",
+  "objective": "Test whether explicit, reproducible weight edits improve the user's fine-tuned BU computer-use model under a USD30 total Modal ceiling.",
+  "claim_policy": {
+    "ten_times": "Report 10x lower billed cost per successful task OR 10x lower wall time per successful task only if the matched comparison supports that specific ratio at a prespecified noninferior success rate. These ratios are separate claims.",
+    "world_best": "Requires broad independently scored benchmark results against identified contemporary baselines; a smoke suite or Neal demonstration cannot establish it.",
+    "astra": "No matched Astra run or separately budgeted API access is available. This assistant's interactive demonstration must be labelled as this assistant/tooling, not a verified model-only Astra baseline.",
+    "transfer": "No access to this assistant's internal weights. Any capability contribution must be an explicit algorithm, demonstration, or diagnosed intervention and then evaluated. Adapter scaling alone does not establish broad capability transfer."
+  },
+  "comparison_controls": [
+    "Same task definitions, scoring, viewport, action vocabulary, per-task deadlines, token budgets, hardware/backend and sampling policy for baseline and edited model.",
+    "Freeze development/acceptance membership before model evaluation; do not tune on acceptance outcomes or reclassify failed cases.",
+    "Fresh browser context per episode; no human rescue, hidden state/answers, model-written success flags or benchmark evaluator modification.",
+    "Alternate baseline/candidate order on paired tasks; record cold start separately. Preserve failed, interrupted and incomplete episodes.",
+    "Attribute serving-backend improvements separately from weight-edit improvements. Original checkpoint is read-only."
+  ],
+  "stages": [
+    {"name": "synthetic_interface_smoke", "purpose": "Validate action protocol, worker lifecycle and candidate-selection mechanics", "status": "CPU reference paths pass; first model baseline aborted; no candidate evaluated"},
+    {"name": "MiniWoB++ pilot", "purpose": "Multi-step browser interaction", "scope": "24 preselected cases: 12 families x 2 fixed seeds; report subset results only", "source": "https://github.com/Farama-Foundation/miniwob-plusplus", "status": "source adapter only; runtime validation and exact task membership pending"},
+    {"name": "ScreenSpot-Pro pilot", "purpose": "Visual grounding without DOM answer shortcuts", "scope": "64 disjoint preselected examples; official target-box criterion and coordinate accounting", "source": "https://huggingface.co/datasets/likaixin/ScreenSpot-Pro", "status": "not downloaded or executed"},
+    {"name": "Neal not-a-robot", "purpose": "Recorded demonstration with visible successes and failures", "source": "https://neal.fun/not-a-robot/embed/", "scope": "Freeze levels and budgets before either participant; fresh state; same observation/action access where possible", "status": "page opened; no actions or recordings"},
+    {"name": "OSWorld / WebArena-Verified", "purpose": "Broader desktop and realistic web workflows", "status": "future stage subject to remaining budget and validated harness; not launched"}
+  ],
+  "metrics": [
+    "Trusted evaluator success with numerator/denominator and paired uncertainty",
+    "Wall-clock episode duration with failures censored explicitly at the deadline",
+    "Total billed experiment cost, and cost per successful task including unsuccessful attempts",
+    "Time to first token, decoding tokens/second, input/output tokens and action count",
+    "Schema errors, incorrect completion claims, timeout/worker failures and regression cases",
+    "Cold start, preprocessing, inference, browser execution and scoring time separately"
+  ],
+  "edge_cases": [
+    "Empty, duplicated, malformed or oversized JSON; unknown/extra action fields; stale or disabled element IDs",
+    "Premature done, hidden elements, duplicate labels, scroll, modal overlays, tabs and delayed DOM updates",
+    "Coordinate scaling, high-DPI screenshots, small targets, OCR ambiguity, visual-only state and cropped content",
+    "Unexpected redirects and page instructions attempting to override the task; no external actions in local smoke",
+    "Native inference timeout, process cleanup, exception transport, server disconnect, partial results and billing lag",
+    "BF16 rounding, transposed/packed MoE tensors, LoRA key mapping, tied/aliased weights, nonfinite updates and cumulative-edit drift",
+    "Fine-tuning regression, benchmark contamination, backend/prompt confounds, selection bias and retained failure evidence"
+  ],
+  "publication": "Release reproducible source and truthful measured results. Do not publish private training data or original weights by default. No superiority chart may contain invented comparator scores.",
+  "eden": "Excluded; BU work precedes any return to Eden."
+}

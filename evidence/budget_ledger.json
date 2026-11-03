@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "total_authorized_usd": 30,
+  "scope": "BU weight-editing and testing only, Modal account ekpe6000/main",
+  "reservations": [
+    {
+      "id": "metadata-preflight-v1",
+      "usd": 0.1,
+      "status": "completed; final billing pending"
+    },
+    {
+      "id": "image-build-and-fixtures-v1",
+      "usd": 0.5,
+      "status": "completed; final billing pending"
+    },
+    {
+      "id": "pilot-v1",
+      "usd": 12,
+      "status": "aborted; provider UI stopped/0 containers/0 calls observed; retain full reservation until settled"
+    },
+    {
+      "id": "diagnostic-v2",
+      "usd": 3,
+      "status": "startup failed; cancelled;0 running calls/containers observed; final billing pending"
+    },
+    {
+      "id": "vllm-imports-and-pilot-v3",
+      "usd": 8,
+      "status": "reserved; CPU packaging and GPU paired pilot share this envelope; not yet submitted"
+    }
+  ],
+  "unreserved_usd": 6.4,
+  "billing_observation": {
+    "date_utc": "2026-11-03",
+    "completed_hour_cli": [],
+    "interpretation": "No completed-hour entries were returned. This is not evidence that the prior runs cost zero.",
+    "live_ui": "30 USD credits and zero reported cycle usage were displayed after pilot stop; reporting may lag."
+  },
+  "rules": [
+    "No new reservation if total reservations plus settled charges exceed USD30; do not double-count settled charges and their released reservations.",
+    "One single-use GPU container per experiment, bounded local and remote deadlines, no automatic user-level retries.",
+    "Preserve aborted run receipts and verify provider terminal status; cancellation acknowledgement alone does not establish stopped billing.",
+    "Reservations are conservative local accounting, not provider-enforced spending caps. Include startup, image build, CPU, memory, storage and egress where applicable.",
+    "No purchases, paid teacher API calls or additional credit assumption."
+  ]
+}

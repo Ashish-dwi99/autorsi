@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+.env
+runs/*
+evidence/private/*
+*.safetensors
+*.bin
+*.pt
+*.png
+*.jpg

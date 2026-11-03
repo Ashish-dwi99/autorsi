@@ -1,0 +1,22 @@
+{
+  "experiment_id": "bu-lora-strength-20261103-v1",
+  "status": "preflight",
+  "human_authorization": "Edit the user's fine-tuned BU model, rehost and test before Eden; total Modal credits ceiling USD30.",
+  "total_modal_ceiling_usd": 30,
+  "initial_compute_reservation_usd": 12,
+  "unallocated_reserve_usd": 5,
+  "target": "browser-use/bu-30b-a3b-preview plus recovered bu-lora/adapter",
+  "historical_merged_checkpoint": "bu-merged/bu-30b-ft",
+  "base_revision": "28f795cd9ec73aedf2970a8914bbbf0d18accd82",
+  "method": "Exact recovered merged baseline W*. Candidate W_lambda = BF16(FP32(W*) + (lambda-1)*(alpha/r)*FP32(B@A)). Rebuild from immutable originals for every variant; lambda1 restores bytes directly. No gradient updates or paid teacher calls.",
+  "control_zero_interpretation": "Adapter-subtracted merged checkpoint; NOT a verified raw BU base.",
+  "adapter_sha256": "49311fe8c20663926e6474cc3e2a8c9e86eff2821259e22e85a533eb5ba08933",
+  "candidate_scales": [0.5, 0.75],
+  "controls": [0.0, 1.0],
+  "selection": "Development task success first, then fewer invalid actions; retain baseline on tied success. Frozen acceptance is evaluated once for the selected candidate versus baseline, without subsequent tuning on acceptance results.",
+  "acceptance": "More successful tasks than baseline and no new safety/schema failures; otherwise report no demonstrated improvement and do not promote.",
+  "limitations": ["Synthetic browser smoke tests do not establish Astra parity or general computer-use leadership.", "Scaling an adapter tests adaptation strength, not transfer of a teacher's internal weights or broad intelligence.", "Model architecture and total parameter count remain unchanged.", "Original merged checkpoint and reconstructed base-plus-adapter are distinct until verified."],
+  "originals": "Existing Modal volumes mount read-only. No overwrite or deletion of checkpoints. Realized patch statistics include BF16 rounding; edited matrices are rebuilt without cumulative changes.",
+  "performance_limitations": "This first smoke test does not measure production throughput or a matched Astra baseline. Report startup separately and do not interpret warm-up/order effects as weight-induced speedups.",
+  "eden": "Deferred; no Eden artifacts, datasets, models, runs, or gates are part of this experiment."
+}
