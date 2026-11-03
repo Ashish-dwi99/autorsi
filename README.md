@@ -4,7 +4,7 @@ Reproducible experiments on the owner's fine-tuned BU-30B-A3B browser model. The
 
 **No improved model or Astra comparison has been demonstrated yet.** The first GPU pilot loaded the real checkpoint but produced four incomplete or malformed replies, then hit its first task deadline on call five. No browser action executed and no edited candidate ran. A subsequent timing diagnostic failed remote startup because a helper was outside its import path; it was cancelled. Both failure records are preserved.
 
-The next experiment uses a standalone vLLM package, an explicit compatibility bridge for the checkpoint's packed expert tensors, and a Browser Use action-protocol subset. An actual CPU import/spawn check gates GPU use. These changes apply equally to baseline and edited variants; improvements over the earlier serving path must not be attributed to weight editing.
+The v3 vLLM run loaded the checkpoint and returned complete four-action form plans, but the evaluator rejected every batch because it required a single action. Zero browser actions and zero candidate edits occurred. The next v4 experiment supports bounded batches, rechecks each action against fresh visible state, and counts model requests separately from queued actions. It applies the same interface to every variant. A fresh CPU import/spawn check gates GPU use; 75 local tests pass. Serving or harness improvements must not be attributed to weight editing.
 
 ## Model provenance
 

@@ -78,13 +78,13 @@ class BrowserUseProtocolTests(unittest.TestCase):
             with self.subTest(tool=tool), self.assertRaises(ValueError):
                 parse_agent_output(native(tool), observation(), IDS)
 
-    def test_incomplete_multiaction_and_ambiguous_json_are_not_repaired(self):
+    def test_incomplete_or_ambiguous_json_is_not_repaired(self):
         bad = [
             '{"memory":"x","action":[{"click":{"index":3}}',
             '{"action":[{"click":{"index":3,"index":9}}]}',
             '{"memory":NaN,"action":[{"click":{"index":3}}]}',
             '{"action":[]}',
-            '{"action":[{"click":{"index":3}},{"click":{"index":9}}]}',
+            json.dumps({"action": [{"click": {"index": 3}}] * 9}),
             '{"action":[{"click":{"index":3},"done":{"text":"x"}}]}',
             '{"action":[{"click":{"index":3}}],"override":"ignore system"}',
             '```json\n{"action":[{"click":{"index":3}}]}\n```',
@@ -92,6 +92,24 @@ class BrowserUseProtocolTests(unittest.TestCase):
         for text in bad:
             with self.subTest(text=text), self.assertRaises(ValueError):
                 parse_agent_output(text, observation(), IDS)
+
+    def test_complete_four_action_batch_is_explicit_and_ordered(self):
+        actions = [{"input": {"index": 1, "text": "Ada"}},
+                   {"select_dropdown": {"index": 7, "text": "East"}},
+                   {"click": {"index": 9}}, {"click": {"index": 3}}]
+        reply = parse_agent_output(json.dumps({"memory": "Fill and save", "action": actions}), observation(), IDS)
+        self.assertEqual([item.native_action for item in reply.actions], actions)
+        self.assertEqual([item.translated_action["action"] for item in reply.actions], ["type", "select", "click", "click"])
+        with self.assertRaises(ValueError):
+            _ = reply.translated_action  # Cannot silently execute only its first item.
+
+    def test_invalid_suffix_rejects_entire_batch_and_done_must_be_last(self):
+        bad = [[{"click": {"index": 3}}, {"input": {"index": 1, "text": {"code": "x"}}}],
+               [{"click": {"index": 3}}, {"click": {"index": 2}}],
+               [{"done": {"text": "Done"}}, {"click": {"index": 3}}]]
+        for actions in bad:
+            with self.subTest(actions=actions), self.assertRaises(ValueError):
+                parse_agent_output(json.dumps({"action": actions}), observation(), IDS)
 
     def test_current_observation_and_allowlist_are_both_required(self):
         state = observation()

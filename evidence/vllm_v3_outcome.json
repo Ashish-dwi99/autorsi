@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "status": "baseline_native_interface_failed",
+  "receipt_sha256": "7d8488996fce29ecb8d85cc9ebd6d94b4f1a1d0ac403fdbcb93c012ca3e0183a",
+  "app_id": "ap-fvBDR5v3y0ox7LuMo346nR",
+  "model_calls": 8,
+  "load_s": 114.836220019,
+  "remote_total_s": 220.208457985,
+  "child_reaped": true,
+  "loaded_source_tensors": 882,
+  "expanded_expert_views": 18432,
+  "normal_complete_replies": 8,
+  "output_tokens_per_reply": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+  ],
+  "first_call_s": 17.261162968999997,
+  "later_call_median_s": 8.234530000000007,
+  "first_task_success": false,
+  "executed_actions": 0,
+  "actual_weight_edits": false,
+  "rejection_reason": "Every native reply proposed4actions; imposed single-action protocol rejected all before execution. Responses were complete, not truncated.",
+  "interpretation": "Harness limitation identified. A plausible plan is not a completed browser task. Preserve failed result; evaluate batched native actions in a newly versioned matched experiment. No weight-induced gain or Astra comparison established.",
+  "warnings": "Generic chunked-prefill warning reviewed for full8192 single-request budget; Transformers4.57.6 Mistral regex warning traced to BU producer4.57.3 false-positive branch. Regex not changed. MoE uses default tuning config, so production speed remains unoptimized."
+}

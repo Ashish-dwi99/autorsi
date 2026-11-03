@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "cpu_receipt_sha256": "06963a0768d3a324b0edd5f09be6cf98d28d910315023f5afb319f2d95b7911b",
+  "cpu_app_id": "ap-1WwaRCjC43Mci4kYinU58P",
+  "status": "completed",
+  "child_status": "imports_passed",
+  "child_reaped": true,
+  "cuda_initialized": false,
+  "model_calls": 0,
+  "merged_tensor_count": 882,
+  "adapter_pairs": 192,
+  "versions": {
+    "vllm": "0.18.0",
+    "torch": "2.10.0",
+    "torchvision": "0.25.0",
+    "torchaudio": "2.10.0",
+    "transformers": "4.57.6",
+    "safetensors": "0.7.0",
+    "pillow": "12.2.0",
+    "playwright": "1.60.0"
+  },
+  "source_manifest": {
+    "modal_vllm_pilot.py": "9f4804ce91761a89ce0e8a173f715ee15946d19548438567ce4ab07e2ff9eac3",
+    "src/weight_space_lab/__init__.py": "0011bfd335ca645347f878f6d5ab2e7863958d572388233bb13530070a0f9201",
+    "src/weight_space_lab/benchmarks/__init__.py": "48fddf5bdf1d87f13ee19919253c21867a1509383523779b6b4d39e9cc454cea",
+    "src/weight_space_lab/benchmarks/miniwob.py": "c85987b1a84bf9a75c8a000fdb1cbc37f254adf31939e03e4359d132bffaca1a",
+    "src/weight_space_lab/diagnostic.py": "4ff894989dcccf57d2ad17cc86740114dafca8a57f62eb2297bb27d219c3dc33",
+    "src/weight_space_lab/eval/__init__.py": "2fecfeab2b6eacf945accac88c69620bc937d06f3c6efb23f95eb68e8cbcd4b5",
+    "src/weight_space_lab/eval/bu_policy.py": "029e8e16123bce17962761bd3a192b9a6c14112705198fe8a1d1dbefa73dc1de",
+    "src/weight_space_lab/eval/bu_protocol.py": "ca3e7e259fbbe48bffc3820f0fffbc1078415505c8c74eae7a46afd610b6ae43",
+    "src/weight_space_lab/eval/fixtures.py": "2c994fd6d5c465a2a729082b789661494d711c6b7cec4bcc4d299c76e05ec57a",
+    "src/weight_space_lab/eval/runner.py": "1e22b7a8635c15214aeefd3e5956a8c5102934e1ce0cc261d359f2a1624085d5",
+    "src/weight_space_lab/merged_patch.py": "25310009418e646f555f56464e229fc7ac5c94163fffc86f4fdc8216e7e6d1e9",
+    "src/weight_space_lab/patch.py": "b2bf10e9402104d495c08ab7ade727300c2b2481c965552da48ea1ecb58b3aca",
+    "src/weight_space_lab/policy_io.py": "2c2ccdce8e0762f9e35529114337d0adfb01dd9706f95562d43ae51e9106f9a6",
+    "src/weight_space_lab/process_entry.py": "56fcbf8223f83573d0312b63230a2f7b4f487e7e2b395ffb38b948d7298eea88",
+    "src/weight_space_lab/vllm018_compat.py": "be28b81d5d1e89f1fd08ade8bb59488738dda0253568e101acd6cac09dcb667c",
+    "src/weight_space_lab/vllm_attention.py": "db942a00fe576a82cdc8a29b218cc6a6f66c7148d91e86a379816c73f1e09924",
+    "src/weight_space_lab/vllm_pilot.py": "f6e777bb396b1b8eb5a56ed079b7aa11e4b32ce58f1229e6d43f69b310548aa6"
+  },
+  "runtime_limits": "CPU import success does not establish GPU kernel, loader or inference success. CPU log correctly reported absent libcuda/Triton driver.",
+  "gpu_reservation": "Uses existing shared8USD envelope; total reservations23.6USD including pending billing; ceiling30USD."
+}
