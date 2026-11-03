@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "reviewed_utc": "2026-11-03T17:26:45.083568+00:00",
+  "reviewer": "Independent nonauthor integration reviewer weight_space_paper_review",
+  "scope": "Final exact source-only v4 integration confirmation; no provider/model/browser execution or test rerun.",
+  "source_manifest": {
+    "modal_vllm_pilot_v4.py": "5f399e9a0517569e502b2c05e6060aa02b50a0096f337596ffbfc04862c1f8a1",
+    "src/weight_space_lab/__init__.py": "0011bfd335ca645347f878f6d5ab2e7863958d572388233bb13530070a0f9201",
+    "src/weight_space_lab/benchmarks/__init__.py": "48fddf5bdf1d87f13ee19919253c21867a1509383523779b6b4d39e9cc454cea",
+    "src/weight_space_lab/benchmarks/miniwob.py": "c85987b1a84bf9a75c8a000fdb1cbc37f254adf31939e03e4359d132bffaca1a",
+    "src/weight_space_lab/diagnostic.py": "4ff894989dcccf57d2ad17cc86740114dafca8a57f62eb2297bb27d219c3dc33",
+    "src/weight_space_lab/eval/__init__.py": "2fecfeab2b6eacf945accac88c69620bc937d06f3c6efb23f95eb68e8cbcd4b5",
+    "src/weight_space_lab/eval/bu_policy.py": "57f228cdbdfbe72925d0aa311b76001d74a9e03ae9d439c0be63145fd11b02dd",
+    "src/weight_space_lab/eval/bu_protocol.py": "5987375c472918692f3a2c275c04048aa90b80652feae2faeaa01d20b89f3ebd",
+    "src/weight_space_lab/eval/fixtures.py": "2c994fd6d5c465a2a729082b789661494d711c6b7cec4bcc4d299c76e05ec57a",
+    "src/weight_space_lab/eval/runner.py": "1e22b7a8635c15214aeefd3e5956a8c5102934e1ce0cc261d359f2a1624085d5",
+    "src/weight_space_lab/merged_patch.py": "25310009418e646f555f56464e229fc7ac5c94163fffc86f4fdc8216e7e6d1e9",
+    "src/weight_space_lab/patch.py": "b2bf10e9402104d495c08ab7ade727300c2b2481c965552da48ea1ecb58b3aca",
+    "src/weight_space_lab/policy_io.py": "2c2ccdce8e0762f9e35529114337d0adfb01dd9706f95562d43ae51e9106f9a6",
+    "src/weight_space_lab/process_entry.py": "56fcbf8223f83573d0312b63230a2f7b4f487e7e2b395ffb38b948d7298eea88",
+    "src/weight_space_lab/process_entry_v4.py": "fb19d5b1ac02dde7877a40ca969155f77a79aec5c2aec5df5cc403f7ee17bf06",
+    "src/weight_space_lab/vllm018_compat.py": "be28b81d5d1e89f1fd08ade8bb59488738dda0253568e101acd6cac09dcb667c",
+    "src/weight_space_lab/vllm_attention.py": "db942a00fe576a82cdc8a29b218cc6a6f66c7148d91e86a379816c73f1e09924",
+    "src/weight_space_lab/vllm_pilot.py": "f6e777bb396b1b8eb5a56ed079b7aa11e4b32ce58f1229e6d43f69b310548aa6",
+    "src/weight_space_lab/vllm_pilot_v4.py": "9d2bad07d040cf3b6d5150fc89664ee41c72a93cf9863257fb8ac1c56cc148ac"
+  },
+  "prior_review": {
+    "path": "evidence/vllm_v4_integration_independent_source_review.json",
+    "sha256": "6d8b134daeda84d21adbaa1e08006a275d8c090caa2a06f2718008984081d5b3",
+    "preserved_unchanged": true,
+    "qualification": "Prior review inspected initial76d9629f child and recorded its counter finding, but its final manifest read concurrently captured the already corrected9d2bad07 child. Its old finding is therefore stale for its recorded child pin. This confirmation explicitly supersedes that finding without rewriting the historical record."
+  },
+  "joined_reviews": {
+    "evidence/vllm_v4_source_admission.json": "baf644c08bceffc8725fac5a6ffdd3e1c37712b10bf0e6938a7a6a4c2405cbac",
+    "evidence/vllm_v4_batch_independent_source_review.json": "1f021266be1e9d88ea3f29be1f4708a5b4f00524c650e71abd0743c4ade0857b",
+    "evidence/budget_ledger.json": "6dea417e46c282fe02dc2e96790feb2a3d91fdfd042b5f3756f820e0311c4205"
+  },
+  "conclusion": "V4-PARTIAL-COUNTER-01 is resolved. No remaining defect found in the reviewed synchronous v4 integration. Exact-source CPU admission may proceed within existing authorization; GPU remains conditional on its actual matching successful CPU receipt and existing budget/lifecycle gates.",
+  "verification": [
+    "Removing exactly the initial per-episode root counter snapshot and three finish-time reconciliation statements from9d2bad07 reproduces prior inspected child76d9629f SHA256.",
+    "finish() remains in episode finally before context.close; it preserves adapter invocation count under native_policy_invocations and records actual_model_calls from report.model_calls delta, explicitly scoped to admitted chat-request attempts.",
+    "A root infer pre-admission refusal therefore cannot falsely increase per-episode admitted chat attempts. Native entry/completion are still separate receipts.",
+    "Successful rows and partial PolicyDispositionUnknown rows retain both counters; outer setdefault preserves these added partial fields.",
+    "Summaries aggregate policy dispatches and admitted chat attempts separately. Raw adapter event actual_model_calls retains its adapter-invocation meaning; interpret it with reconciled row counters.",
+    "Parent5f399e9a and helperfb19d5b1 remain unchanged. All19 actual packaged hashes match current root source admission.",
+    "Previously reviewed atomic batch validation, queue revalidation/discard, strict fixture oracle, paired variant fairness, once-only/source/CPU-before-GPU/lifecycle guards remain unchanged."
+  ],
+  "test_evidence": "Root reported75 pure local tests before the narrow four-line reconciliation; reviewer did not rerun tests. This confirmation verifies exact source and the correction directly.",
+  "budget_observation": {
+    "authorized_usd": 30,
+    "retained_reservations_usd": 29.6,
+    "v4_shared_reservation_usd": 6,
+    "unreserved_usd": 0.4,
+    "provider_enforced_cap": false,
+    "settled_bill_verified": false
+  },
+  "limitations": [
+    "No model improvement, broad computer-use benchmark, Astra comparison, provider physical release or billing completion is established by source review.",
+    "v3 failed result remains unchanged; no model export or production deployment follows from smoke evaluation."
+  ],
+  "bookkeeping": "An initial in-memory confirmation assertion expected the historical review manifest to predate the concurrent correction; it failed before writing any confirmation file. This record preserves the observed concurrent-manifest qualification."
+}
