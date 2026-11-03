@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "status": "Prospective source-only protocol; no MiniWoB or Neal browser/model runtime executed by this author",
+  "miniwob": {
+    "package": "Farama MiniWoB1.1.0",
+    "wheel_sha256": "297006e84219d56ad037e843527ed773a4a82509dc43b6031ec4a3ad3e3e61d9",
+    "scope": "12 fixed task families x2 fixed seeds x baseline and preselected edited checkpoint =48 episodes, a limited DOM-assisted subset rather than full MiniWoB",
+    "seeds": [2026110317, 2026110353],
+    "families": ["click-button", "click-button-sequence", "click-checkboxes", "click-color", "click-link", "click-option", "click-tab", "enter-text", "enter-password", "login-user", "simple-arithmetic", "focus-text"],
+    "candidate_rule": "Frozen before benchmark results: .5/.75 development successes descending, action errors ascending, .75 tie. MiniWoB never selects the candidate. Failed smoke promotion remains failed and is labeled exploratory.",
+    "pairing": "CPU preflight performs two fresh resets per seed and requires identical initial screenshot bytes and filtered visible DOM. Each scored initial observation must match that CPU fingerprint. No retry or case removal on mismatch. Alternate baseline/candidate order by case.",
+    "clock": "Original core.EPISODE_MAX_TIME must equal10000 and is queried without modification. Native termination timer runs during model inference and Selenium operations. Binary reward does not remove the timer. Native timeout/failure is retained.",
+    "observation": "Original screenshot plus documented visible DOM values, text, geometry, colors and focus. Exclude info, fields, target/tampered flags, ids, classes, page source and answer state.",
+    "actions": "Atomic1..8 native BU actions, click/index, input/index/text/clear, done/text/success. Validate the whole batch before dispatch; revalidate positive visible real ref, tag and text before each queued action. Native clear=true only allowed on currently empty input; clear=false appends. No JavaScript, coordinates, navigation or unsupported tools.",
+    "reward": "Official MiniWoB binary reward; success requires actual terminal positive binary reward. Model done is only a claim and maps to official NONE to inspect native terminal state.",
+    "warmup": "Exactly one neutral blank-page request per checkpoint, before any scored reset. Max64tokens each; unscored, reported and included in model-call/token/cost accounting. No task previews or discarded scored retries.",
+    "caps": "8 action dispatches and at most8 actual requests per episode, max192tokens/request,384 scored requests plus2 warmups=386. Native inference asyncio wait40s and parent hard45s; unknown pending inference aborts the entire run, no next call. Child wall1500s and refuse new work at1440s; remote1560s plus startup240s.",
+    "budget": "Shared hosting+benchmark suballocation$2.80 within existingv4$6, with all prior reservations retained. At A10080+4CPU+96GiB public rates, nominal1800seconds peak compute is$1.727136. Imagebuild/CPU/actual retry/startup/billing evidence remain separately required; this is a planning bound, not a bill or proof of deallocation.",
+    "reporting": "Always retain48 planned episodes and24 per checkpoint. An aborted run reports missing coverage. No completed-only denominator, no automatic promotion, no Astra speed/quality claim, no original raw-BU equivalence from subtracting adapter delta.",
+    "primary_sources": [
+      "https://miniwob.farama.org/content/action_space/",
+      "https://miniwob.farama.org/content/observation_space/",
+      "https://miniwob.farama.org/content/reward/",
+      "https://miniwob.farama.org/content/javascript_api/",
+      "https://raw.githubusercontent.com/Farama-Foundation/MiniWoB-plusplus/main/miniwob/html/core/core.js",
+      "https://raw.githubusercontent.com/Farama-Foundation/MiniWoB-plusplus/main/miniwob/selenium_instance.py",
+      "https://raw.githubusercontent.com/Farama-Foundation/MiniWoB-plusplus/main/miniwob/selenium_actions.py",
+      "https://pypi.org/project/miniwob/",
+      "https://modal.com/pricing"
+    ],
+    "browsergym_distinction": "BrowserGym's MiniWoB adapter defaults to a1000000ms episode clock and modified viewport/display. It is not silently substituted for this native10-second protocol. core.clearTimer alone clears the visual countdown, not the separate native termination timer."
+  },
+  "neal": {
+    "status": "Qualitative demonstration proposal only; no live browser control performed",
+    "official_page": "https://neal.fun/not-a-robot/",
+    "official_embed_documentation": "https://neal.fun/not-a-robot/embed/",
+    "iframe_template": "https://embed.neal.fun/not-a-robot/LEVEL",
+    "security_scope": "Official entertainment game explicitly described as0%security. Do not generalize to real authentication CAPTCHAs.",
+    "score": "A harness may accept documented captcha-completed only if event.origin is exactly https://embed.neal.fun, event.source is the exact current iframe.contentWindow, message.type matches, and level/session association is retained. Never fabricate/inject completion messages or modify game state.",
+    "pairing_limit": "The inspected embed documentation does not supply a deterministic seed/reset API. Same level URL alone does not establish identical randomized puzzles. Require matching actual initial images for a paired claim; otherwise label unpaired qualitative demonstrations. Do not override Math.random or hidden state to manufacture parity.",
+    "fair_comparison": "Freeze levels, observation/tool interface, viewport, time/action limits and model identities beforehand. Same screenshot/visible-DOM permissions for both models. A CUA walkthrough with different controls or timing is qualitative and does not support a10x head-to-head claim.",
+    "recording": "Retain authorized browser-only ordered screenshots, action timestamps, visible outcomes and trusted completion receipt. An actual video recording needs an available documented capture tool or a separately authorized recorder scoped to the game. Do not capture unrelated apps/account data or promise unsupported video tooling.",
+    "publication": "Public sharing and superiority claims require actual evidence and a separately concrete publication action; this proposal creates no website or public endpoint."
+  }
+}

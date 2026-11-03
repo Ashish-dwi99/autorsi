@@ -6,7 +6,7 @@
   "variant_id": "adam-1-cu",
   "status": "experimental_weight_edit_candidate",
   "intended_capability": "computer use",
-  "demonstrated_scope": "small synthetic DOM-assisted browser task suite",
+  "demonstrated_scope": "Small synthetic browser suite plus fixed12-family/two-seed DOM-assisted MiniWoB subset; desktop and full benchmark performance untested",
   "architecture": "Qwen3VLMoeForConditionalGeneration",
   "lineage": [
     "Qwen/Qwen3-VL-30B-A3B-Instruct",
@@ -55,5 +55,24 @@
   ],
   "upstream_license_notice": "Retain upstream attribution and applicable license terms before any distribution; this naming record does not grant redistribution rights.",
   "eden_relation": "separate original-architecture project; not edited by this experiment",
-  "historical_artifacts": "Existing BU-named run IDs and hash-pinned files remain unchanged for reproducibility."
+  "historical_artifacts": "Existing BU-named run IDs and hash-pinned files remain unchanged for reproducibility.",
+  "benchmark_evidence": {
+    "outcome": "../evidence/private_miniwob_v2_outcome.json",
+    "receipt_sha256": "61845e4744a6235038bd8ea4926f6a1dd5abd2eb6e6656c943d7f28aa58ba173",
+    "independent_review_sha256": "d19e2ef60c6a35865f07638d891b3fac9f280ab243ce72eb0bdf62256f61c4fd",
+    "suite": "Farama MiniWoB1.1.0 fixed12families x2seeds, native10s/15s timers",
+    "planned_cases_per_variant": 24,
+    "completed_cases_per_variant": 24,
+    "original_successes": 14,
+    "candidate_successes": 21,
+    "paired_gains": 10,
+    "paired_regressions": 3,
+    "original_scored_requests": 66,
+    "candidate_scored_requests": 29,
+    "original_median_request_seconds": 2.277991019500007,
+    "candidate_median_request_seconds": 3.6112092650000136,
+    "strict_zero_regression_gate": "failed",
+    "production_promotion": false,
+    "interpretation": "Higher subset success with fewer requests, but three regressions and slower median request. Scores describe the whole model/adapter/runtime combination; no Astra comparison or inference-kernel speedup."
+  }
 }

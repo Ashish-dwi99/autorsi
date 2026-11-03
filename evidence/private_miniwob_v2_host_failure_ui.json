@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "utc": "2026-11-03T19:02:59.373336+00:00",
+  "observation_source": "Root Chrome3 Modal app DOM after explicit refresh/navigation",
+  "deployed_target": {
+    "app_id": "ap-ah4kX7k6SeDM0GDOqHb8fM",
+    "app_name": "adam-1-cu-private-miniwob-v2",
+    "function_id": "fu-QNmCQAocBpghFWF9KgMhqN",
+    "state": "Deployed",
+    "live_containers": 0,
+    "running_calls": 0,
+    "benchmark_activity": "No activity"
+  },
+  "failed_host_launcher": {
+    "app_id": "ap-hWajqHDakCS34yRjUgiAX9",
+    "state": "Finished",
+    "live_containers": 0,
+    "running_calls": 0,
+    "benchmark_activity": "No activity"
+  },
+  "cpu_preflight": {
+    "app_id": "ap-xNKoefIBLy2esEYd9pPJyd",
+    "state": "Finished",
+    "live_containers": 0,
+    "running_calls": 0,
+    "cpu_calls": 1
+  },
+  "rounded_credit_display_usd": 29.03,
+  "billing_limit": "Not a settled bill or proof no late setup charges remain; all existing reservations retained.",
+  "raw_failed_host_receipt_sha256": "46c1ac59d6fbaed645322c9dd664fc16c2d70f3147e6f48ab83fa87389c92183"
+}

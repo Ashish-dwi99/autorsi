@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "recorded_utc": "2026-11-03T19:22:14.510512+00:00",
+  "app_id": "ap-ah4kX7k6SeDM0GDOqHb8fM",
+  "function_id": "fu-QNmCQAocBpghFWF9KgMhqN",
+  "function_call_id": "fc-01M6HD69EP6B34GKBR40XKYH83",
+  "receipt_sha256": "61845e4744a6235038bd8ea4926f6a1dd5abd2eb6e6656c943d7f28aa58ba173",
+  "host_process_exit_code": 0,
+  "outer_status": "completed",
+  "child_status": "completed_frozen_subset",
+  "child_exitcode": 0,
+  "child_reaped": true,
+  "container_termination_required": false,
+  "ui_observation": {
+    "source": "Root Chrome Modal benchmark function page after reload, November3 2026",
+    "benchmark_live_containers": 0,
+    "benchmark_running_calls": 0,
+    "cpu_live_containers": 0,
+    "cpu_running_calls": 0,
+    "displayed_credits_usd": 28.71,
+    "call_table": "No matching function calls found in the current UI interval; not used as evidence of no prior call."
+  },
+  "cancellation_performed": false,
+  "billing": "Rounded asynchronous credit display is not a settled project bill; reservations remain."
+}

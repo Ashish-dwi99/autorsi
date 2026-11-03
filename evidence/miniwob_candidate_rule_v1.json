@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "utc": "2026-11-03T17:36:13.821770+00:00",
+  "status": "prospective_before_MiniWoB_execution",
+  "scope": "Exploratory paired benchmark of original and one fixed edited candidate; no automatic promotion",
+  "selection": "Among strength0.5 and0.75, sort development successes descending, action_errors ascending, then choose0.75 on ties. Do not choose using MiniWoB results. This rule was sent to harness author before v4 outcome receipt existed.",
+  "smoke_gates": "Preserve v4 acceptance result and any regression. Failing v4 improvement means unpromoted experimental edit, not an improved model. The requested exploratory benchmark may measure that negative result without reopening acceptance or declaring promotion.",
+  "budget": {
+    "v4_shared_envelope_usd": 6,
+    "v4_cpu_gpu_suballocation_usd": 3.2,
+    "combined_private_host_benchmark_suballocation_usd": 2.8,
+    "total_retained_reservations_usd": 29.6
+  },
+  "benchmark": "Native Farama MiniWoB1.1.0, frozen12families x2seeds x2variants=48 episodes; unchanged native10s timers; actual runtime admission still required",
+  "model_identity": "This is BU original versus BU edited, not Astra",
+  "publication": "No model superiority claim follows from this prospective rule"
+}

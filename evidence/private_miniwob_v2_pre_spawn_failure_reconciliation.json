@@ -1,0 +1,79 @@
+{
+  "constraints": [
+    "No modification of CPU-validated deployed v2 runtime or existing consumed host marker.",
+    "Separate host-only correction must pin its source and installed SDK, join exact CPU/deployment/source receipts and target function ID, and retain shared existing budget.",
+    "New correction must distinguish lookup/hydration failures from entered-unknown spawn, maintain once-only dispatch and returned-handle cancellation coverage.",
+    "This reconciliation is evidence, not provider execution or budget authority."
+  ],
+  "evidence": [
+    {
+      "bytes": 372,
+      "path": "runs/private-miniwob-benchmark-v2.failure.json",
+      "sha256": "46c1ac59d6fbaed645322c9dd664fc16c2d70f3147e6f48ab83fa87389c92183"
+    },
+    {
+      "bytes": 2436,
+      "path": "runs/private-miniwob-benchmark-v2.log",
+      "sha256": "fead854bd61ee55ce37c6b4dcb0d2d76503703b84bc29924e05057b538b510d3"
+    },
+    {
+      "bytes": 25899,
+      "path": "proposals/modal_private_miniwob_v2.py",
+      "sha256": "65833e5013fb0d91e54cb42cc196bf62601e39b7976079a60297000dea42525a"
+    },
+    {
+      "bytes": 3023,
+      "path": "runs/private-miniwob-benchmark-v2.started.json",
+      "sha256": "c654fcc58a0ed5aefaa47a3383da346127ecbe89d65e7296a9fd9e007879e4b4"
+    },
+    {
+      "bytes": 3335,
+      "path": "runs/private-miniwob-deployment-v2.json",
+      "sha256": "f75f81c1c976743fae527cd88723f656087c5533c8fb651488c3b963e006473b"
+    }
+  ],
+  "exact_disposition": {
+    "call_handle_receipt_absent": true,
+    "caller_app": "ap-hWajqHDakCS34yRjUgiAX9",
+    "deployed_target_app": "ap-ah4kX7k6SeDM0GDOqHb8fM",
+    "deployed_target_function": "fu-QNmCQAocBpghFWF9KgMhqN",
+    "prior_generic_label": "unknown_no_returned_handle",
+    "reason": "The traceback identifies local source line379, resolving modal.Function.from_id. Argument dispatch function.spawn(admission) occurs only on next line380. AttributeError prevents reaching that next statement.",
+    "reconciled": "pre_spawn_attribute_lookup_failure_in_this_launcher_path",
+    "setup_effects": "Caller app/object/mount creation is visible in log; no zero setup-cost or physical-stop claim follows. Source reasoning does not replace fresh provider UI confirmation of target inactivity.",
+    "unknown_spawn_distinction": "If spawn is entered and throws before returning a handle, provider acceptance remains ambiguous and must never be retried. That is not the operation reached in this exact trace."
+  },
+  "installed_host_sdk": {
+    "files": [
+      {
+        "bytes": 89036,
+        "path": "/Users/samuelekpe/Convert/.venv/lib/python3.11/site-packages/modal/_functions.py",
+        "sha256": "aa18b6dcfa00f09807d1719fc592f96fa69d51c492eecf059aecec865702a2bf"
+      },
+      {
+        "bytes": 14351,
+        "path": "/Users/samuelekpe/Convert/.venv/lib/python3.11/site-packages/modal/_object.py",
+        "sha256": "b49b4c10fdf18e32dc09effa598e65f523f37c0424f48844297534faf72511c9"
+      },
+      {
+        "bytes": 2333,
+        "path": "/Users/samuelekpe/Convert/.venv/lib/python3.11/site-packages/modal-1.4.3.dist-info/METADATA",
+        "sha256": "13f5e923916cd001c1fb33578f6a69c5b3cfb005085f3503978ca36c88287b1c"
+      }
+    ],
+    "findings": [
+      "Installed _Function defines public from_name, not from_id; installed _FunctionCall defines from_id.",
+      "_Function.from_name is lazy; explicit hydrate performs FunctionGet with deployed app name, object tag and environment; object_id then contains returned function ID.",
+      "_Object.hydrate synchronizes identity and is distinct from spawn. _Function.spawn reaches _call_function_nowait then returns a FunctionCall handle.",
+      "A safe host correction can from_name exact app/benchmark/environment, hydrate, require observed function ID equal frozen deployment ID, then invoke spawn once. No private _from_id API is needed."
+    ],
+    "version": "1.4.3"
+  },
+  "kind": "additive exact pre-spawn failure reconciliation; original failure/started markers unchanged",
+  "model_calls": 0,
+  "provider_calls": 0,
+  "remote_state_mutations": 0,
+  "review_gap": "Earlier remote source review used current public Function documentation without joining installed host SDK API. This host compatibility defect was not caught by CPU remote imports, which never exercise local benchmark handle resolution. Preserve prior review as history.",
+  "reviewer": "weight_space_paper_review",
+  "schema": 1
+}

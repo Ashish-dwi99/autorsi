@@ -1,0 +1,45 @@
+{
+  "checks": [
+    "Editor identity is independently configured from pinned target identity; config labels do not imply provider availability or architecture support.",
+    "Immutable typed contracts reject ambiguous/unknown fields, duplicate JSON keys, nonfinite/boolean numeric inputs, invalid digests, contradictory metric directions and unbounded nesting; copied immutable recipe maps avoid caller mutation.",
+    "Independent editor/target cost fields remain separate; combined property is reporting sum, not transfer authority. Usage/disposition enforcement belongs to engine/adapters and is outside this review.",
+    "Every configured metric target and regression guard must pass. Incomplete results, missing/extra metrics, missing/incomplete/mismatched references, invalid ratio denominators and computed overflows fail.",
+    "Relative speed target is candidate/reference ratio; no numeric goal text becomes measured10x result. Zero reference is defined only for regression allowance without division.",
+    "Optional endpoints exclude embedded username/password/query/fragment and whitespace; only environment variable names represent credentials. No request or credential access during validation.",
+    "Schema documents runtime-only checks and adapter responsibility; syntax alone is not operational admission."
+  ],
+  "files": [
+    {
+      "bytes": 21439,
+      "path": "framework/contracts.py",
+      "sha256": "19866c54fffc67934277894b130a750104aaa33a58fe52b366a55a653404733e"
+    },
+    {
+      "bytes": 8068,
+      "path": "framework/config.schema.json",
+      "sha256": "8bdbf8db51b2943e5eff288ede012a1e0b64b62efbb044f5c2a8f00428939175"
+    },
+    {
+      "bytes": 13479,
+      "path": "framework/tests/test_contracts.py",
+      "sha256": "c5fdab4d29b124606a19956eb3c87a1c9278ebafc1c99f9b94066cb536958f51"
+    }
+  ],
+  "findings": [],
+  "limits": [
+    "Configuration and EvaluationResult objects do not authenticate measurements; registered evaluator and engine must verify actual provenance, pinned artifact association, measurement units and runtime conditions.",
+    "No editor/model/recipe/provider support or spending/cancellation guarantee follows from generic contracts.",
+    "Schema/runtime serialization represent configuration only; registry/engine source reviewed separately by another agent."
+  ],
+  "result": "no additional concrete defect found in reviewed contract/metric logic",
+  "reviewer": "weight_space_paper_review",
+  "schema": 1,
+  "scope": "independent source review of generic framework contracts/schema and pure tests only",
+  "verification": {
+    "command": "python3 -m unittest framework.tests.test_contracts -v",
+    "passed": 26,
+    "provider_or_model_calls": 0,
+    "skipped": 0,
+    "tests": 26
+  }
+}

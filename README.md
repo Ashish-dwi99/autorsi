@@ -6,6 +6,12 @@ The first real target is **Grupa Adam-1**, with **Adam-1-CU** as the current exp
 
 The current real-model experiment compares an explicit weight edit against the unchanged checkpoint, within a total Modal testing budget of $30. Generic domains are supported through registered adapters; arbitrary architectures and goals are not automatically executable or guaranteed to improve.
 
+**The fixed MiniWoB subset improved from 14/24 to 21/24 successes, with 10 paired gains and 3 regressions.** Both variants completed all 24 cases under the original task timers. Scored requests fell from 66 to 29, while median full request latency increased from 2.28 to 3.61 seconds. The 626-check independent saved-result audit reconciles source, runtime, initial states, weight transitions and all 97 requests including two warmups. The candidate fails a strict zero-regression goal and remains experimental. See [`evidence/private_miniwob_v2_outcome.json`](evidence/private_miniwob_v2_outcome.json).
+
+This is one DOM-assisted 12-family, two-seed subset, not the full MiniWoB benchmark or a desktop evaluation. Scores describe the model, adapter and runtime together. Native timers include inference, and two original-model failures include the adapter's rejection of repeated clearing of nonempty inputs. No Astra comparison, general capability transfer, faster decoding or cost-at-scale result is established.
+
+![Fixed MiniWoB subset results](evidence/figures/adam-1-cu-miniwob-v2.svg)
+
 **A narrow weight-edit improvement is now measured; no Astra comparison or broad superiority is established.** With fine-tune strength reduced to 0.5, success improved from 3/8 to 8/8 development tasks, then from 3/8 to 8/8 on eight separate acceptance variants of the same task families. Acceptance requests fell from 44 to 16 and aggregate task time from 100.99 to 45.87 seconds. Five repetitive-action failures were rescued, with zero observed regressions. The independent saved-result audit reconciles all 48 episodes and 177 model requests. See `evidence/vllm_v4_outcome.json` and its independent review.
 
 This is a small synthetic DOM-assisted suite. It supports a broader benchmark, not a world-best or 10× Astra claim. Reduced repetition explains lower total task time; faster token-generation kernels have not been shown. The adapter-subtracted diagnostic control also passed 8/8 development cases, so the result may reflect undoing a harmful fine-tuning effect rather than adding new capability. It is not verified to reconstruct raw BU.
@@ -32,7 +38,7 @@ This tests fine-tuning strength. It does not copy another model's hidden knowled
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 ```
 
-The local tests use small numerical examples and evaluator doubles; they do not run a model. Sixteen synthetic reference browser paths have separately passed CPU Chromium validation. MiniWoB's first CPU runtime preflight stopped on a native-timer mismatch before any model calls; the frozen v1 failure is preserved. No MiniWoB model score or desktop result is established.
+The local tests use small numerical examples and evaluator doubles; they do not run a model. Sixteen synthetic reference browser paths have separately passed CPU Chromium validation. MiniWoB's corrected CPU preflight passed all 24 paired cases, 48 resets and 48 native no-op steps, with zero model calls. It preserves the original task timers (10 seconds, or 15 seconds for the password task). The subsequent model comparison is reported above. Initial timer and pre-submission SDK failures remain recorded. No desktop result is established.
 
 The generic framework has a separate pure test suite:
 

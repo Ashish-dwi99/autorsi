@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "utc": "2026-11-03T18:56:51.292225+00:00",
+  "run": "private-miniwob-imports-v2",
+  "app_id": "ap-xNKoefIBLy2esEYd9pPJyd",
+  "receipt_sha256": "51d72e183c8cdb8611117d5180fe7a8f9835210844774c7d4f6b35405293afdf",
+  "status": "completed",
+  "child_status": "imports_passed",
+  "elapsed_s": 76.742494192,
+  "child_exitcode": 0,
+  "child_reaped": true,
+  "model_calls": 0,
+  "cuda_initialized": false,
+  "cases": 24,
+  "fresh_resets": 48,
+  "environment_steps": 48,
+  "source_files": 23,
+  "native_timer_ms_by_family": {
+    "click-button": 10000,
+    "click-button-sequence": 10000,
+    "click-checkboxes": 10000,
+    "click-color": 10000,
+    "click-link": 10000,
+    "click-option": 10000,
+    "click-tab": 10000,
+    "enter-text": 10000,
+    "enter-password": 15000,
+    "login-user": 10000,
+    "simple-arithmetic": 10000,
+    "focus-text": 10000
+  },
+  "limit": "CPU interface/reset validation only; no model score or GPU inference."
+}

@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "scope": "Saved-only admission reconstruction and SDK verification after independent cancellation review corrections; no provider calls",
+  "host_source_sha256": "daf580ed9b72858c5637fb5d5b4372d3c8d39ff5fe94989a18af7a12f94c0b81",
+  "test_source_sha256": "b3475f4e68cffac83ae1ab402d3ed44909e74fd3e2c47a4dc9819a408012294b",
+  "prior_local_validation_sha256": "fea44b61bf2574d87aaa57ab0e605a6b2b084fbb9cf698c56c7aeb5fe153f25f",
+  "corrections": [
+    "Cancellation phase is set before arming its20s timer; that alarm cannot grant a second grace",
+    "Cancellation attempted flag is set only after deadline setup returns and immediately before call.cancel expression",
+    "Pin original pilot source receipt and fixture receipt; additionally join prior full-shard receipt SHA to actual CPU receipt"
+  ],
+  "tests_passed": 13,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "remote_run_id": "private-miniwob-benchmark-v2",
+  "local_attempt_id": "private-miniwob-benchmark-host-v3",
+  "runtime_file_count": 23,
+  "runtime_source_manifest": {
+    "proposals/modal_private_miniwob_v2.py": "65833e5013fb0d91e54cb42cc196bf62601e39b7976079a60297000dea42525a",
+    "proposals/miniwob_process_entry_v2.py": "f30f5e1f88c8c6ab9180c629803db3722b6ab773d254f7d85dd67b729d2ffb7e",
+    "proposals/build_miniwob_runtime.py": "44f655fce0f07898908315abf3e0698ca1981bdb1f430fb976e0404ec99c724b",
+    "proposals/miniwob_native_v2.py": "16d91678e187bca178821e4f29788d2ab38261c623b72863a272901500617a02",
+    "proposals/miniwob_benchmark_v2.py": "1655d72404517e0852c18996470f689d308e9c0c854880acb3e5e68e42a6092e",
+    "src/weight_space_lab/__init__.py": "0011bfd335ca645347f878f6d5ab2e7863958d572388233bb13530070a0f9201",
+    "src/weight_space_lab/benchmarks/__init__.py": "48fddf5bdf1d87f13ee19919253c21867a1509383523779b6b4d39e9cc454cea",
+    "src/weight_space_lab/benchmarks/miniwob.py": "c85987b1a84bf9a75c8a000fdb1cbc37f254adf31939e03e4359d132bffaca1a",
+    "src/weight_space_lab/diagnostic.py": "4ff894989dcccf57d2ad17cc86740114dafca8a57f62eb2297bb27d219c3dc33",
+    "src/weight_space_lab/eval/__init__.py": "2fecfeab2b6eacf945accac88c69620bc937d06f3c6efb23f95eb68e8cbcd4b5",
+    "src/weight_space_lab/eval/bu_policy.py": "57f228cdbdfbe72925d0aa311b76001d74a9e03ae9d439c0be63145fd11b02dd",
+    "src/weight_space_lab/eval/bu_protocol.py": "5987375c472918692f3a2c275c04048aa90b80652feae2faeaa01d20b89f3ebd",
+    "src/weight_space_lab/eval/fixtures.py": "2c994fd6d5c465a2a729082b789661494d711c6b7cec4bcc4d299c76e05ec57a",
+    "src/weight_space_lab/eval/runner.py": "1e22b7a8635c15214aeefd3e5956a8c5102934e1ce0cc261d359f2a1624085d5",
+    "src/weight_space_lab/merged_patch.py": "25310009418e646f555f56464e229fc7ac5c94163fffc86f4fdc8216e7e6d1e9",
+    "src/weight_space_lab/patch.py": "b2bf10e9402104d495c08ab7ade727300c2b2481c965552da48ea1ecb58b3aca",
+    "src/weight_space_lab/policy_io.py": "2c2ccdce8e0762f9e35529114337d0adfb01dd9706f95562d43ae51e9106f9a6",
+    "src/weight_space_lab/process_entry.py": "56fcbf8223f83573d0312b63230a2f7b4f487e7e2b395ffb38b948d7298eea88",
+    "src/weight_space_lab/process_entry_v4.py": "fb19d5b1ac02dde7877a40ca969155f77a79aec5c2aec5df5cc403f7ee17bf06",
+    "src/weight_space_lab/vllm018_compat.py": "be28b81d5d1e89f1fd08ade8bb59488738dda0253568e101acd6cac09dcb667c",
+    "src/weight_space_lab/vllm_attention.py": "db942a00fe576a82cdc8a29b218cc6a6f66c7148d91e86a379816c73f1e09924",
+    "src/weight_space_lab/vllm_pilot.py": "f6e777bb396b1b8eb5a56ed079b7aa11e4b32ce58f1229e6d43f69b310548aa6",
+    "src/weight_space_lab/vllm_pilot_v4.py": "9d2bad07d040cf3b6d5150fc89664ee41c72a93cf9863257fb8ac1c56cc148ac"
+  },
+  "candidate_scale": 0.5,
+  "deployment": {
+    "app_name": "adam-1-cu-private-miniwob-v2",
+    "app_id": "ap-ah4kX7k6SeDM0GDOqHb8fM",
+    "function_id": "fu-QNmCQAocBpghFWF9KgMhqN"
+  },
+  "cpu_receipt_sha256": "51d72e183c8cdb8611117d5180fe7a8f9835210844774c7d4f6b35405293afdf",
+  "sdk": {
+    "version": "1.4.3",
+    "sources": {
+      "_functions.py": "aa18b6dcfa00f09807d1719fc592f96fa69d51c492eecf059aecec865702a2bf",
+      "_object.py": "b49b4c10fdf18e32dc09effa598e65f523f37c0424f48844297534faf72511c9",
+      "functions.py": "11945c1c57e7a186ef6b05099c01c5e6722fa28f465f60e3cbb99498e0979977"
+    },
+    "lookup": "Function.from_name(app, benchmark, environment_name=main); hydrate; exact object_id join"
+  },
+  "provider_calls": 0,
+  "model_calls": 0,
+  "cpu_preflight_repeated": false,
+  "live_function_hydration_performed": false,
+  "function_call_submitted": false,
+  "previous_local_validation_sha256": "3c8b7ff2129c7d0dcb3446299b63f80d36af3be9cdb3c45ae0c1fce2e3bffce0",
+  "saved_receipt_pins": {
+    "runs/private-miniwob-benchmark-v2.failure.json": "46c1ac59d6fbaed645322c9dd664fc16c2d70f3147e6f48ab83fa87389c92183",
+    "runs/private-miniwob-benchmark-v2.log": "fead854bd61ee55ce37c6b4dcb0d2d76503703b84bc29924e05057b538b510d3",
+    "runs/private-miniwob-benchmark-v2.started.json": "c654fcc58a0ed5aefaa47a3383da346127ecbe89d65e7296a9fd9e007879e4b4",
+    "runs/private-miniwob-imports-v2.json": "51d72e183c8cdb8611117d5180fe7a8f9835210844774c7d4f6b35405293afdf",
+    "runs/private-miniwob-deployment-v2.json": "f75f81c1c976743fae527cd88723f656087c5533c8fb651488c3b963e006473b",
+    "runs/vllm-pilot-v4.json": "2298d155c13e117ed8837fee509a485c7e8ac4118d5fc57cba0b052b379d90a6",
+    "evidence/private_miniwob_v2_pre_spawn_failure_reconciliation.json": "5de5bb1c2babea56b231e4bc8cb004dc9b19f414b78a8302dbf1f9471e7d34e6",
+    "evidence/private_miniwob_v2_host_failure_ui.json": "ecafd674005326a9080d42a3e34f5c9f603cd1a3f165d56dffd3287634fdb020",
+    "runs/pilot-v1-remote-report.json": "1525f269113797acb31f52ede41ad1792208d243c88a9b92a807a36afba6a9f5",
+    "runs/fixtures-v1.json": "3f979fc23eb0456d2574fedbf12608c4ab7e5198ac36b880726af360e737173d"
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "receipt_sha256": "61845e4744a6235038bd8ea4926f6a1dd5abd2eb6e6656c943d7f28aa58ba173",
+  "cases": [
+    {
+      "case_id": "click-checkboxes:seed=2026110317",
+      "variants": {
+        "1.0": {
+          "success": true,
+          "reward": 1.0,
+          "terminated": true,
+          "truncated": false,
+          "elapsed_s": 7.551617533000012,
+          "model_calls": 3,
+          "stop_reason": "native_success",
+          "native_timer_ms": 10000,
+          "completion_tokens": 101,
+          "returned_generation_seconds": 7.078580842000008,
+          "action_targets": [
+            {
+              "click": {
+                "index": 6
+              }
+            },
+            {
+              "click": {
+                "index": 12
+              }
+            },
+            {
+              "click": {
+                "index": 15
+              }
+            }
+          ]
+        },
+        "0.5": {
+          "success": false,
+          "reward": -1.0,
+          "terminated": true,
+          "truncated": false,
+          "elapsed_s": 12.585396295999999,
+          "model_calls": 3,
+          "stop_reason": "native_failure_or_timeout",
+          "native_timer_ms": 10000,
+          "completion_tokens": 181,
+          "returned_generation_seconds": 12.092175115999993,
+          "action_targets": [
+            {
+              "click": {
+                "index": 6
+              }
+            },
+            {
+              "click": {
+                "index": 12
+              }
+            },
+            {
+              "click": {
+                "index": 15
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "click-checkboxes:seed=2026110353",
+      "variants": {
+        "1.0": {
+          "success": true,
+          "reward": 1.0,
+          "terminated": true,
+          "truncated": false,
+          "elapsed_s": 7.3363178679999805,
+          "model_calls": 3,
+          "stop_reason": "native_success",
+          "native_timer_ms": 10000,
+          "completion_tokens": 99,
+          "returned_generation_seconds": 6.826309702000032,
+          "action_targets": [
+            {
+              "click": {
+                "index": 10
+              }
+            },
+            {
+              "click": {
+                "index": 16
+              }
+            },
+            {
+              "click": {
+                "index": 17
+              }
+            }
+          ]
+        },
+        "0.5": {
+          "success": false,
+          "reward": -1.0,
+          "terminated": true,
+          "truncated": false,
+          "elapsed_s": 3.8509563510000078,
+          "model_calls": 1,
+          "stop_reason": "native_failure_or_timeout",
+          "native_timer_ms": 10000,
+          "completion_tokens": 47,
+          "returned_generation_seconds": 3.361316400000021,
+          "action_targets": [
+            {
+              "click": {
+                "index": 10
+              }
+            },
+            {
+              "click": {
+                "index": 14
+              }
+            },
+            {
+              "click": {
+                "index": 17
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "login-user:seed=2026110353",
+      "variants": {
+        "1.0": {
+          "success": true,
+          "reward": 1.0,
+          "terminated": true,
+          "truncated": false,
+          "elapsed_s": 7.894312377000006,
+          "model_calls": 2,
+          "stop_reason": "native_success",
+          "native_timer_ms": 10000,
+          "completion_tokens": 114,
+          "returned_generation_seconds": 7.394148654000048,
+          "action_targets": [
+            {
+              "input": {
+                "index": 7,
+                "clear": true
+              }
+            },
+            {
+              "input": {
+                "index": 10,
+                "clear": true
+              }
+            },
+            {
+              "click": {
+                "index": 11
+              }
+            }
+          ]
+        },
+        "0.5": {
+          "success": false,
+          "reward": -1.0,
+          "terminated": true,
+          "truncated": false,
+          "elapsed_s": 10.256599653999956,
+          "model_calls": 1,
+          "stop_reason": "native_failure_or_timeout",
+          "native_timer_ms": 10000,
+          "completion_tokens": 155,
+          "returned_generation_seconds": 9.976478990000032,
+          "action_targets": [
+            {
+              "input": {
+                "index": 7,
+                "clear": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "case_id": "click-checkboxes:seed=2026110317",
+      "finding": "Both variants emitted the same three click targets. Edited replies were longer and the failed episode exceeded the native10-second timer. This is consistent with a verbosity/deadline regression; the saved binary outcome does not independently identify every causal contribution."
+    },
+    {
+      "case_id": "click-checkboxes:seed=2026110353",
+      "finding": "Edited sequence clicked10,14,17 versus the successful original10,16,17. It failed within3.85seconds; this supports a target-selection problem rather than a10-second expiry explanation."
+    },
+    {
+      "case_id": "login-user:seed=2026110353",
+      "finding": "Edited first response consumed the native time window before completing the login sequence. Its text describes an unsupported three-actions-per-step restriction. This is a behavior observation, not proof of transferred or missing general capability."
+    }
+  ],
+  "decision": "Keep candidate experimental; three regressions fail a strict zero-regression gate. No automatic promotion or modification based on these benchmark cases.",
+  "paid_actions": 0
+}

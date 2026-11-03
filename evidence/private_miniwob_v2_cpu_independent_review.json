@@ -1,0 +1,732 @@
+{
+  "actual": {
+    "browser_version_commands": {
+      "/opt/cft/chrome-linux64/chrome": "Google Chrome for Testing 156.0.8078.80",
+      "/opt/cft/chromedriver-linux64/chromedriver": "ChromeDriver 156.0.8078.80 (fb096c0011f9d50f0a264a9376420cdea9c421e3-refs/branch-heads/8078@{#1705})"
+    },
+    "case_count": 24,
+    "child_elapsed_s": 74.31644179199999,
+    "child_exitcode": 0,
+    "child_reaped": true,
+    "cuda_initialized": false,
+    "declared_app_name": "adam-1-cu-private-miniwob-v2",
+    "function_call_id": "fc-01M6HC6W1Y3W6NR8C7T472P2AX",
+    "installed_package_files": 380,
+    "model_calls": 0,
+    "model_instantiations": 0,
+    "native_NONE_returns": 48,
+    "native_timer_observation_counts": {
+      "10000": 44,
+      "15000": 4
+    },
+    "package_files_canonical_sha256": "416569c85fbc57b430e0943ff2dd8e3dc49d3015201a705f62de2cc8e2b82a65",
+    "paired_cases": [
+      {
+        "case_id": "click-button:seed=2026110317",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "5fa64f6c707e79997854e1191c982dfd1b173ee1539e3fd04020e1dd4c9c7ad0",
+          "visible_dom_sha256": "1b3fb2a5af787b5bc8fd703d409230e68a1299f66fd3ced398c61d001d83abd3"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "click-button:seed=2026110353",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "0090ee5e46c213028c835e09395296875a54ecf15254f8ae05c1bf035570b4c1",
+          "visible_dom_sha256": "58cce60e56207e5bd94567b7a2d1445023c6682d21a4c275f0be31295950440e"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "click-button-sequence:seed=2026110317",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "5fb4aa63cc4408db8529bc756b06e0615e1150f1395596d03843667554df2ce8",
+          "visible_dom_sha256": "b3bc33d8f5b52e9be9387a6b57c7ffbd4115a62cc3a0b82ee0366d415f0fd0a7"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "click-button-sequence:seed=2026110353",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "5ac7a6b625845f7b50ba1f563876876684a32b8884ed47761cd697871ce150a1",
+          "visible_dom_sha256": "4e845cd4f5a0be2be1216143e3be26d85d9aa883657602f50940e04d292d65a6"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "click-checkboxes:seed=2026110317",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "505727f4ab9692b917f222059f7122db76415ef13e7f314962dcccb6f8473f90",
+          "visible_dom_sha256": "949f2c68a71522a10762a4ff09e2579adc88c04a2d3bb2c5552462fdceb95c58"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "click-checkboxes:seed=2026110353",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "cb4385394c79e36fdec93df8d81a2872d44c9263735bf28e30a30bf668284752",
+          "visible_dom_sha256": "dfb3a77f42dccf70ac7ead8db702cb858765ff87e0667dd371e2b6ca8f40d22b"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "click-color:seed=2026110317",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "07c530878a72eeb54c16fa032ef886bc7067e48c5e8d3510c4ed17ff34b860f8",
+          "visible_dom_sha256": "9897338e97eb5c7d3dab5aaa1b463b8cf7b352093d0e0ae3d8d9569c9eecf32a"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "click-color:seed=2026110353",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "7047ee1d9b3ee3e2db92baf551c4358d3352091ae522db40bf16b15eb9fa572c",
+          "visible_dom_sha256": "55f491efcc7ca28ac9bf92d0a8f37b38c42412184af2a744d0daa59e1f9133f1"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "click-link:seed=2026110317",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "db36d0e5397df23071f9b1cf4fafd875d8fcd053fed576eb27e19199a82737b5",
+          "visible_dom_sha256": "b5724cd35217a0e36c06d785173807a64e0e11081809d1f58fd6d16c03438136"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "click-link:seed=2026110353",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "4287cc24c691cdc3f5a327d988085a1d447fbf362b21257b91a6161e5d68617f",
+          "visible_dom_sha256": "cd7378bb6c4d0e7f62da206bd0a6797ca123852182f904e102c007a469ec7ff9"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "click-option:seed=2026110317",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "ab8cf67366d22872cc38c2ce713909095cc53ecb239638dd027cef8b5273aaa7",
+          "visible_dom_sha256": "511006a855a26a344cb41ae8adcf39033edd77a980fb836c59a1f03b882e8fe2"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "click-option:seed=2026110353",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "6b8c166a5560743226563fa4f469e161931c85fa604b16f4e8b0acd2ac5366f7",
+          "visible_dom_sha256": "e1e791b918f98819eaad9bea82b96477b21149b514967a3a8ac8a5277d06ec7a"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "click-tab:seed=2026110317",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "0dfd944f579434127428964d3e288a071c5f38f77c6112a76c8186eef406f3fe",
+          "visible_dom_sha256": "f3b33c0e649419f815d8df4a45ef167e0c8cc515c0eb510a059dc09a97b810f8"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "click-tab:seed=2026110353",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "fc77d1b487a2a939249e1ff194f678eaef37fa82756212e963812c6bb86b563d",
+          "visible_dom_sha256": "04c11f68261bcf3c5634857cbaa0ace1b9022b8b7131da1e8a3775bd837a99d6"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "enter-text:seed=2026110317",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "f1258cba400d3e6f83879cd71cf95af3d32f2d4429e4d98f39916a718ea8607e",
+          "visible_dom_sha256": "e55f0004f5fc4ca65086fcd31bc52096774d104b5a1f52ade83acad409206e12"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "enter-text:seed=2026110353",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "3efde2ac33095021369fe8c500ef3faf1e6692742c5b41d19bee99054142b9a8",
+          "visible_dom_sha256": "af84b7e539da5a3b01990cb3e36f9e39b57dc6489acd956ae1381225481f5106"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "enter-password:seed=2026110317",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "e62e7f77fe8822bebd8294b9120fefa2596b2447e29554e8666f32129b06b58f",
+          "visible_dom_sha256": "46a5c7be5aa0ccf8f58ca3273932e3e50a64f774f2fcc0516d05c645ac2dd73c"
+        },
+        "native_timer_ms": 15000
+      },
+      {
+        "case_id": "enter-password:seed=2026110353",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "6e6d6366e2ee31e0cda3cf809a4f4bcec69ee4d039177ba1a4ecb727e4ffbcef",
+          "visible_dom_sha256": "80d1161d5fb717f9fafd671944e020ff131b9611d1c591384dbaa0f12b36a131"
+        },
+        "native_timer_ms": 15000
+      },
+      {
+        "case_id": "login-user:seed=2026110317",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "73a89f9097ebb1747d6ad06894dfbaa88dfdaf12fc56dad961338a8ed974c9b3",
+          "visible_dom_sha256": "e651d40aa9119e8891886ffd781f2c9959ece87365d75ddd9716de4f4c5ac1c1"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "login-user:seed=2026110353",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "b524e3188f2daf7ac7717da512ddabf712643bb1ead29bebf9d8a8cc40b6e514",
+          "visible_dom_sha256": "e4485661fec8092b685caa6b12b0c2028caa3dd14ca0f0cc402acbd6865567b8"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "simple-arithmetic:seed=2026110317",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "691cc591e3d70112adfcc5cb751f4bc0f2c8994693fbfacc29fb7191cbf522ae",
+          "visible_dom_sha256": "4ed3fa23cc475d438b5c71db0e1ae9bb7adc1db490fd3bd2bf4ee3c1dffcf8d0"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "simple-arithmetic:seed=2026110353",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "f65c025e76407d2781b42c289aba3a529421bb1350e8780e5b5599c5e60c0d11",
+          "visible_dom_sha256": "8679769c82417846b654df7ebda085607d373f74540f575fa4472d643dc6b910"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "focus-text:seed=2026110317",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "e42b5c92e527f5ffe84ed551eaa23d00c06829f1eb7a814e0036ec064c14dcad",
+          "visible_dom_sha256": "69038037150b373452d958c202006fe3f780c6dceef31301414cbfc87c6509fb"
+        },
+        "native_timer_ms": 10000
+      },
+      {
+        "case_id": "focus-text:seed=2026110353",
+        "initial": {
+          "screen_shape": [
+            210,
+            160,
+            3
+          ],
+          "screenshot_sha256": "c7843d122df62ffc6a79fe492ff2373e665e6ebdb37c26806fb185c5b8315f89",
+          "visible_dom_sha256": "fced084d4a66ba1ba01dce79635a629572e40b1fde2cdf361c15ef71742abc6e"
+        },
+        "native_timer_ms": 10000
+      }
+    ],
+    "paired_reset_returns": 48,
+    "parent_elapsed_s": 76.742494192,
+    "source_files": 23,
+    "tensor_payloads_loaded": 0
+  },
+  "checks": [
+    "parent completed and direct child reaped exit0",
+    "child imports passed/completed",
+    "zero model calls/instantiations/tensor payloads and CUDA false",
+    "source manifest parent-child exact23",
+    "saved/local source hash:proposals/modal_private_miniwob_v2.py",
+    "saved/local source hash:proposals/miniwob_process_entry_v2.py",
+    "saved/local source hash:proposals/build_miniwob_runtime.py",
+    "saved/local source hash:proposals/miniwob_native_v2.py",
+    "saved/local source hash:proposals/miniwob_benchmark_v2.py",
+    "saved/local source hash:src/weight_space_lab/__init__.py",
+    "saved/local source hash:src/weight_space_lab/benchmarks/__init__.py",
+    "saved/local source hash:src/weight_space_lab/benchmarks/miniwob.py",
+    "saved/local source hash:src/weight_space_lab/diagnostic.py",
+    "saved/local source hash:src/weight_space_lab/eval/__init__.py",
+    "saved/local source hash:src/weight_space_lab/eval/bu_policy.py",
+    "saved/local source hash:src/weight_space_lab/eval/bu_protocol.py",
+    "saved/local source hash:src/weight_space_lab/eval/fixtures.py",
+    "saved/local source hash:src/weight_space_lab/eval/runner.py",
+    "saved/local source hash:src/weight_space_lab/merged_patch.py",
+    "saved/local source hash:src/weight_space_lab/patch.py",
+    "saved/local source hash:src/weight_space_lab/policy_io.py",
+    "saved/local source hash:src/weight_space_lab/process_entry.py",
+    "saved/local source hash:src/weight_space_lab/process_entry_v4.py",
+    "saved/local source hash:src/weight_space_lab/vllm018_compat.py",
+    "saved/local source hash:src/weight_space_lab/vllm_attention.py",
+    "saved/local source hash:src/weight_space_lab/vllm_pilot.py",
+    "saved/local source hash:src/weight_space_lab/vllm_pilot_v4.py",
+    "entire installed runtime manifest unchanged from saved v1",
+    "full380 source pin joined",
+    "selected installed source pin:miniwob/environment.py",
+    "selected installed source pin:miniwob/html/common/ui_utils.js",
+    "selected installed source pin:miniwob/html/core/core.js",
+    "selected installed source pin:miniwob/html/miniwob/click-button-sequence.html",
+    "selected installed source pin:miniwob/html/miniwob/click-button.html",
+    "selected installed source pin:miniwob/html/miniwob/click-checkboxes.html",
+    "selected installed source pin:miniwob/html/miniwob/click-color.html",
+    "selected installed source pin:miniwob/html/miniwob/click-link.html",
+    "selected installed source pin:miniwob/html/miniwob/click-option.html",
+    "selected installed source pin:miniwob/html/miniwob/click-tab.html",
+    "selected installed source pin:miniwob/html/miniwob/enter-password.html",
+    "selected installed source pin:miniwob/html/miniwob/enter-text.html",
+    "selected installed source pin:miniwob/html/miniwob/focus-text.html",
+    "selected installed source pin:miniwob/html/miniwob/login-user.html",
+    "selected installed source pin:miniwob/html/miniwob/simple-arithmetic.html",
+    "selected installed source pin:miniwob/selenium_instance.py",
+    "16 selected source pins retained",
+    "CPU schema2 complete zero-model journal",
+    "48 reset attempts, actual reset returns and native NONE returns",
+    "24 planned cases retained",
+    "original per-family native timer map",
+    "click-button:seed=2026110317: frozen identity/order",
+    "click-button:seed=2026110317: complete pair and timer",
+    "click-button:seed=2026110317: complete fingerprint",
+    "click-button:seed=2026110317:reset0: actual completion and close",
+    "click-button:seed=2026110317:reset0: exact paired initial screenshot/visibleDOM",
+    "click-button:seed=2026110317:reset0: native NONE nonterminal reward0",
+    "click-button:seed=2026110317:reset0: matching timer identity",
+    "click-button:seed=2026110317:reset0: original actual integer timer",
+    "click-button:seed=2026110317:reset1: actual completion and close",
+    "click-button:seed=2026110317:reset1: exact paired initial screenshot/visibleDOM",
+    "click-button:seed=2026110317:reset1: native NONE nonterminal reward0",
+    "click-button:seed=2026110317:reset1: matching timer identity",
+    "click-button:seed=2026110317:reset1: original actual integer timer",
+    "click-button:seed=2026110353: frozen identity/order",
+    "click-button:seed=2026110353: complete pair and timer",
+    "click-button:seed=2026110353: complete fingerprint",
+    "click-button:seed=2026110353:reset0: actual completion and close",
+    "click-button:seed=2026110353:reset0: exact paired initial screenshot/visibleDOM",
+    "click-button:seed=2026110353:reset0: native NONE nonterminal reward0",
+    "click-button:seed=2026110353:reset0: matching timer identity",
+    "click-button:seed=2026110353:reset0: original actual integer timer",
+    "click-button:seed=2026110353:reset1: actual completion and close",
+    "click-button:seed=2026110353:reset1: exact paired initial screenshot/visibleDOM",
+    "click-button:seed=2026110353:reset1: native NONE nonterminal reward0",
+    "click-button:seed=2026110353:reset1: matching timer identity",
+    "click-button:seed=2026110353:reset1: original actual integer timer",
+    "click-button-sequence:seed=2026110317: frozen identity/order",
+    "click-button-sequence:seed=2026110317: complete pair and timer",
+    "click-button-sequence:seed=2026110317: complete fingerprint",
+    "click-button-sequence:seed=2026110317:reset0: actual completion and close",
+    "click-button-sequence:seed=2026110317:reset0: exact paired initial screenshot/visibleDOM",
+    "click-button-sequence:seed=2026110317:reset0: native NONE nonterminal reward0",
+    "click-button-sequence:seed=2026110317:reset0: matching timer identity",
+    "click-button-sequence:seed=2026110317:reset0: original actual integer timer",
+    "click-button-sequence:seed=2026110317:reset1: actual completion and close",
+    "click-button-sequence:seed=2026110317:reset1: exact paired initial screenshot/visibleDOM",
+    "click-button-sequence:seed=2026110317:reset1: native NONE nonterminal reward0",
+    "click-button-sequence:seed=2026110317:reset1: matching timer identity",
+    "click-button-sequence:seed=2026110317:reset1: original actual integer timer",
+    "click-button-sequence:seed=2026110353: frozen identity/order",
+    "click-button-sequence:seed=2026110353: complete pair and timer",
+    "click-button-sequence:seed=2026110353: complete fingerprint",
+    "click-button-sequence:seed=2026110353:reset0: actual completion and close",
+    "click-button-sequence:seed=2026110353:reset0: exact paired initial screenshot/visibleDOM",
+    "click-button-sequence:seed=2026110353:reset0: native NONE nonterminal reward0",
+    "click-button-sequence:seed=2026110353:reset0: matching timer identity",
+    "click-button-sequence:seed=2026110353:reset0: original actual integer timer",
+    "click-button-sequence:seed=2026110353:reset1: actual completion and close",
+    "click-button-sequence:seed=2026110353:reset1: exact paired initial screenshot/visibleDOM",
+    "click-button-sequence:seed=2026110353:reset1: native NONE nonterminal reward0",
+    "click-button-sequence:seed=2026110353:reset1: matching timer identity",
+    "click-button-sequence:seed=2026110353:reset1: original actual integer timer",
+    "click-checkboxes:seed=2026110317: frozen identity/order",
+    "click-checkboxes:seed=2026110317: complete pair and timer",
+    "click-checkboxes:seed=2026110317: complete fingerprint",
+    "click-checkboxes:seed=2026110317:reset0: actual completion and close",
+    "click-checkboxes:seed=2026110317:reset0: exact paired initial screenshot/visibleDOM",
+    "click-checkboxes:seed=2026110317:reset0: native NONE nonterminal reward0",
+    "click-checkboxes:seed=2026110317:reset0: matching timer identity",
+    "click-checkboxes:seed=2026110317:reset0: original actual integer timer",
+    "click-checkboxes:seed=2026110317:reset1: actual completion and close",
+    "click-checkboxes:seed=2026110317:reset1: exact paired initial screenshot/visibleDOM",
+    "click-checkboxes:seed=2026110317:reset1: native NONE nonterminal reward0",
+    "click-checkboxes:seed=2026110317:reset1: matching timer identity",
+    "click-checkboxes:seed=2026110317:reset1: original actual integer timer",
+    "click-checkboxes:seed=2026110353: frozen identity/order",
+    "click-checkboxes:seed=2026110353: complete pair and timer",
+    "click-checkboxes:seed=2026110353: complete fingerprint",
+    "click-checkboxes:seed=2026110353:reset0: actual completion and close",
+    "click-checkboxes:seed=2026110353:reset0: exact paired initial screenshot/visibleDOM",
+    "click-checkboxes:seed=2026110353:reset0: native NONE nonterminal reward0",
+    "click-checkboxes:seed=2026110353:reset0: matching timer identity",
+    "click-checkboxes:seed=2026110353:reset0: original actual integer timer",
+    "click-checkboxes:seed=2026110353:reset1: actual completion and close",
+    "click-checkboxes:seed=2026110353:reset1: exact paired initial screenshot/visibleDOM",
+    "click-checkboxes:seed=2026110353:reset1: native NONE nonterminal reward0",
+    "click-checkboxes:seed=2026110353:reset1: matching timer identity",
+    "click-checkboxes:seed=2026110353:reset1: original actual integer timer",
+    "click-color:seed=2026110317: frozen identity/order",
+    "click-color:seed=2026110317: complete pair and timer",
+    "click-color:seed=2026110317: complete fingerprint",
+    "click-color:seed=2026110317:reset0: actual completion and close",
+    "click-color:seed=2026110317:reset0: exact paired initial screenshot/visibleDOM",
+    "click-color:seed=2026110317:reset0: native NONE nonterminal reward0",
+    "click-color:seed=2026110317:reset0: matching timer identity",
+    "click-color:seed=2026110317:reset0: original actual integer timer",
+    "click-color:seed=2026110317:reset1: actual completion and close",
+    "click-color:seed=2026110317:reset1: exact paired initial screenshot/visibleDOM",
+    "click-color:seed=2026110317:reset1: native NONE nonterminal reward0",
+    "click-color:seed=2026110317:reset1: matching timer identity",
+    "click-color:seed=2026110317:reset1: original actual integer timer",
+    "click-color:seed=2026110353: frozen identity/order",
+    "click-color:seed=2026110353: complete pair and timer",
+    "click-color:seed=2026110353: complete fingerprint",
+    "click-color:seed=2026110353:reset0: actual completion and close",
+    "click-color:seed=2026110353:reset0: exact paired initial screenshot/visibleDOM",
+    "click-color:seed=2026110353:reset0: native NONE nonterminal reward0",
+    "click-color:seed=2026110353:reset0: matching timer identity",
+    "click-color:seed=2026110353:reset0: original actual integer timer",
+    "click-color:seed=2026110353:reset1: actual completion and close",
+    "click-color:seed=2026110353:reset1: exact paired initial screenshot/visibleDOM",
+    "click-color:seed=2026110353:reset1: native NONE nonterminal reward0",
+    "click-color:seed=2026110353:reset1: matching timer identity",
+    "click-color:seed=2026110353:reset1: original actual integer timer",
+    "click-link:seed=2026110317: frozen identity/order",
+    "click-link:seed=2026110317: complete pair and timer",
+    "click-link:seed=2026110317: complete fingerprint",
+    "click-link:seed=2026110317:reset0: actual completion and close",
+    "click-link:seed=2026110317:reset0: exact paired initial screenshot/visibleDOM",
+    "click-link:seed=2026110317:reset0: native NONE nonterminal reward0",
+    "click-link:seed=2026110317:reset0: matching timer identity",
+    "click-link:seed=2026110317:reset0: original actual integer timer",
+    "click-link:seed=2026110317:reset1: actual completion and close",
+    "click-link:seed=2026110317:reset1: exact paired initial screenshot/visibleDOM",
+    "click-link:seed=2026110317:reset1: native NONE nonterminal reward0",
+    "click-link:seed=2026110317:reset1: matching timer identity",
+    "click-link:seed=2026110317:reset1: original actual integer timer",
+    "click-link:seed=2026110353: frozen identity/order",
+    "click-link:seed=2026110353: complete pair and timer",
+    "click-link:seed=2026110353: complete fingerprint",
+    "click-link:seed=2026110353:reset0: actual completion and close",
+    "click-link:seed=2026110353:reset0: exact paired initial screenshot/visibleDOM",
+    "click-link:seed=2026110353:reset0: native NONE nonterminal reward0",
+    "click-link:seed=2026110353:reset0: matching timer identity",
+    "click-link:seed=2026110353:reset0: original actual integer timer",
+    "click-link:seed=2026110353:reset1: actual completion and close",
+    "click-link:seed=2026110353:reset1: exact paired initial screenshot/visibleDOM",
+    "click-link:seed=2026110353:reset1: native NONE nonterminal reward0",
+    "click-link:seed=2026110353:reset1: matching timer identity",
+    "click-link:seed=2026110353:reset1: original actual integer timer",
+    "click-option:seed=2026110317: frozen identity/order",
+    "click-option:seed=2026110317: complete pair and timer",
+    "click-option:seed=2026110317: complete fingerprint",
+    "click-option:seed=2026110317:reset0: actual completion and close",
+    "click-option:seed=2026110317:reset0: exact paired initial screenshot/visibleDOM",
+    "click-option:seed=2026110317:reset0: native NONE nonterminal reward0",
+    "click-option:seed=2026110317:reset0: matching timer identity",
+    "click-option:seed=2026110317:reset0: original actual integer timer",
+    "click-option:seed=2026110317:reset1: actual completion and close",
+    "click-option:seed=2026110317:reset1: exact paired initial screenshot/visibleDOM",
+    "click-option:seed=2026110317:reset1: native NONE nonterminal reward0",
+    "click-option:seed=2026110317:reset1: matching timer identity",
+    "click-option:seed=2026110317:reset1: original actual integer timer",
+    "click-option:seed=2026110353: frozen identity/order",
+    "click-option:seed=2026110353: complete pair and timer",
+    "click-option:seed=2026110353: complete fingerprint",
+    "click-option:seed=2026110353:reset0: actual completion and close",
+    "click-option:seed=2026110353:reset0: exact paired initial screenshot/visibleDOM",
+    "click-option:seed=2026110353:reset0: native NONE nonterminal reward0",
+    "click-option:seed=2026110353:reset0: matching timer identity",
+    "click-option:seed=2026110353:reset0: original actual integer timer",
+    "click-option:seed=2026110353:reset1: actual completion and close",
+    "click-option:seed=2026110353:reset1: exact paired initial screenshot/visibleDOM",
+    "click-option:seed=2026110353:reset1: native NONE nonterminal reward0",
+    "click-option:seed=2026110353:reset1: matching timer identity",
+    "click-option:seed=2026110353:reset1: original actual integer timer",
+    "click-tab:seed=2026110317: frozen identity/order",
+    "click-tab:seed=2026110317: complete pair and timer",
+    "click-tab:seed=2026110317: complete fingerprint",
+    "click-tab:seed=2026110317:reset0: actual completion and close",
+    "click-tab:seed=2026110317:reset0: exact paired initial screenshot/visibleDOM",
+    "click-tab:seed=2026110317:reset0: native NONE nonterminal reward0",
+    "click-tab:seed=2026110317:reset0: matching timer identity",
+    "click-tab:seed=2026110317:reset0: original actual integer timer",
+    "click-tab:seed=2026110317:reset1: actual completion and close",
+    "click-tab:seed=2026110317:reset1: exact paired initial screenshot/visibleDOM",
+    "click-tab:seed=2026110317:reset1: native NONE nonterminal reward0",
+    "click-tab:seed=2026110317:reset1: matching timer identity",
+    "click-tab:seed=2026110317:reset1: original actual integer timer",
+    "click-tab:seed=2026110353: frozen identity/order",
+    "click-tab:seed=2026110353: complete pair and timer",
+    "click-tab:seed=2026110353: complete fingerprint",
+    "click-tab:seed=2026110353:reset0: actual completion and close",
+    "click-tab:seed=2026110353:reset0: exact paired initial screenshot/visibleDOM",
+    "click-tab:seed=2026110353:reset0: native NONE nonterminal reward0",
+    "click-tab:seed=2026110353:reset0: matching timer identity",
+    "click-tab:seed=2026110353:reset0: original actual integer timer",
+    "click-tab:seed=2026110353:reset1: actual completion and close",
+    "click-tab:seed=2026110353:reset1: exact paired initial screenshot/visibleDOM",
+    "click-tab:seed=2026110353:reset1: native NONE nonterminal reward0",
+    "click-tab:seed=2026110353:reset1: matching timer identity",
+    "click-tab:seed=2026110353:reset1: original actual integer timer",
+    "enter-text:seed=2026110317: frozen identity/order",
+    "enter-text:seed=2026110317: complete pair and timer",
+    "enter-text:seed=2026110317: complete fingerprint",
+    "enter-text:seed=2026110317:reset0: actual completion and close",
+    "enter-text:seed=2026110317:reset0: exact paired initial screenshot/visibleDOM",
+    "enter-text:seed=2026110317:reset0: native NONE nonterminal reward0",
+    "enter-text:seed=2026110317:reset0: matching timer identity",
+    "enter-text:seed=2026110317:reset0: original actual integer timer",
+    "enter-text:seed=2026110317:reset1: actual completion and close",
+    "enter-text:seed=2026110317:reset1: exact paired initial screenshot/visibleDOM",
+    "enter-text:seed=2026110317:reset1: native NONE nonterminal reward0",
+    "enter-text:seed=2026110317:reset1: matching timer identity",
+    "enter-text:seed=2026110317:reset1: original actual integer timer",
+    "enter-text:seed=2026110353: frozen identity/order",
+    "enter-text:seed=2026110353: complete pair and timer",
+    "enter-text:seed=2026110353: complete fingerprint",
+    "enter-text:seed=2026110353:reset0: actual completion and close",
+    "enter-text:seed=2026110353:reset0: exact paired initial screenshot/visibleDOM",
+    "enter-text:seed=2026110353:reset0: native NONE nonterminal reward0",
+    "enter-text:seed=2026110353:reset0: matching timer identity",
+    "enter-text:seed=2026110353:reset0: original actual integer timer",
+    "enter-text:seed=2026110353:reset1: actual completion and close",
+    "enter-text:seed=2026110353:reset1: exact paired initial screenshot/visibleDOM",
+    "enter-text:seed=2026110353:reset1: native NONE nonterminal reward0",
+    "enter-text:seed=2026110353:reset1: matching timer identity",
+    "enter-text:seed=2026110353:reset1: original actual integer timer",
+    "enter-password:seed=2026110317: frozen identity/order",
+    "enter-password:seed=2026110317: complete pair and timer",
+    "enter-password:seed=2026110317: complete fingerprint",
+    "enter-password:seed=2026110317:reset0: actual completion and close",
+    "enter-password:seed=2026110317:reset0: exact paired initial screenshot/visibleDOM",
+    "enter-password:seed=2026110317:reset0: native NONE nonterminal reward0",
+    "enter-password:seed=2026110317:reset0: matching timer identity",
+    "enter-password:seed=2026110317:reset0: original actual integer timer",
+    "enter-password:seed=2026110317:reset1: actual completion and close",
+    "enter-password:seed=2026110317:reset1: exact paired initial screenshot/visibleDOM",
+    "enter-password:seed=2026110317:reset1: native NONE nonterminal reward0",
+    "enter-password:seed=2026110317:reset1: matching timer identity",
+    "enter-password:seed=2026110317:reset1: original actual integer timer",
+    "enter-password:seed=2026110353: frozen identity/order",
+    "enter-password:seed=2026110353: complete pair and timer",
+    "enter-password:seed=2026110353: complete fingerprint",
+    "enter-password:seed=2026110353:reset0: actual completion and close",
+    "enter-password:seed=2026110353:reset0: exact paired initial screenshot/visibleDOM",
+    "enter-password:seed=2026110353:reset0: native NONE nonterminal reward0",
+    "enter-password:seed=2026110353:reset0: matching timer identity",
+    "enter-password:seed=2026110353:reset0: original actual integer timer",
+    "enter-password:seed=2026110353:reset1: actual completion and close",
+    "enter-password:seed=2026110353:reset1: exact paired initial screenshot/visibleDOM",
+    "enter-password:seed=2026110353:reset1: native NONE nonterminal reward0",
+    "enter-password:seed=2026110353:reset1: matching timer identity",
+    "enter-password:seed=2026110353:reset1: original actual integer timer",
+    "login-user:seed=2026110317: frozen identity/order",
+    "login-user:seed=2026110317: complete pair and timer",
+    "login-user:seed=2026110317: complete fingerprint",
+    "login-user:seed=2026110317:reset0: actual completion and close",
+    "login-user:seed=2026110317:reset0: exact paired initial screenshot/visibleDOM",
+    "login-user:seed=2026110317:reset0: native NONE nonterminal reward0",
+    "login-user:seed=2026110317:reset0: matching timer identity",
+    "login-user:seed=2026110317:reset0: original actual integer timer",
+    "login-user:seed=2026110317:reset1: actual completion and close",
+    "login-user:seed=2026110317:reset1: exact paired initial screenshot/visibleDOM",
+    "login-user:seed=2026110317:reset1: native NONE nonterminal reward0",
+    "login-user:seed=2026110317:reset1: matching timer identity",
+    "login-user:seed=2026110317:reset1: original actual integer timer",
+    "login-user:seed=2026110353: frozen identity/order",
+    "login-user:seed=2026110353: complete pair and timer",
+    "login-user:seed=2026110353: complete fingerprint",
+    "login-user:seed=2026110353:reset0: actual completion and close",
+    "login-user:seed=2026110353:reset0: exact paired initial screenshot/visibleDOM",
+    "login-user:seed=2026110353:reset0: native NONE nonterminal reward0",
+    "login-user:seed=2026110353:reset0: matching timer identity",
+    "login-user:seed=2026110353:reset0: original actual integer timer",
+    "login-user:seed=2026110353:reset1: actual completion and close",
+    "login-user:seed=2026110353:reset1: exact paired initial screenshot/visibleDOM",
+    "login-user:seed=2026110353:reset1: native NONE nonterminal reward0",
+    "login-user:seed=2026110353:reset1: matching timer identity",
+    "login-user:seed=2026110353:reset1: original actual integer timer",
+    "simple-arithmetic:seed=2026110317: frozen identity/order",
+    "simple-arithmetic:seed=2026110317: complete pair and timer",
+    "simple-arithmetic:seed=2026110317: complete fingerprint",
+    "simple-arithmetic:seed=2026110317:reset0: actual completion and close",
+    "simple-arithmetic:seed=2026110317:reset0: exact paired initial screenshot/visibleDOM",
+    "simple-arithmetic:seed=2026110317:reset0: native NONE nonterminal reward0",
+    "simple-arithmetic:seed=2026110317:reset0: matching timer identity",
+    "simple-arithmetic:seed=2026110317:reset0: original actual integer timer",
+    "simple-arithmetic:seed=2026110317:reset1: actual completion and close",
+    "simple-arithmetic:seed=2026110317:reset1: exact paired initial screenshot/visibleDOM",
+    "simple-arithmetic:seed=2026110317:reset1: native NONE nonterminal reward0",
+    "simple-arithmetic:seed=2026110317:reset1: matching timer identity",
+    "simple-arithmetic:seed=2026110317:reset1: original actual integer timer",
+    "simple-arithmetic:seed=2026110353: frozen identity/order",
+    "simple-arithmetic:seed=2026110353: complete pair and timer",
+    "simple-arithmetic:seed=2026110353: complete fingerprint",
+    "simple-arithmetic:seed=2026110353:reset0: actual completion and close",
+    "simple-arithmetic:seed=2026110353:reset0: exact paired initial screenshot/visibleDOM",
+    "simple-arithmetic:seed=2026110353:reset0: native NONE nonterminal reward0",
+    "simple-arithmetic:seed=2026110353:reset0: matching timer identity",
+    "simple-arithmetic:seed=2026110353:reset0: original actual integer timer",
+    "simple-arithmetic:seed=2026110353:reset1: actual completion and close",
+    "simple-arithmetic:seed=2026110353:reset1: exact paired initial screenshot/visibleDOM",
+    "simple-arithmetic:seed=2026110353:reset1: native NONE nonterminal reward0",
+    "simple-arithmetic:seed=2026110353:reset1: matching timer identity",
+    "simple-arithmetic:seed=2026110353:reset1: original actual integer timer",
+    "focus-text:seed=2026110317: frozen identity/order",
+    "focus-text:seed=2026110317: complete pair and timer",
+    "focus-text:seed=2026110317: complete fingerprint",
+    "focus-text:seed=2026110317:reset0: actual completion and close",
+    "focus-text:seed=2026110317:reset0: exact paired initial screenshot/visibleDOM",
+    "focus-text:seed=2026110317:reset0: native NONE nonterminal reward0",
+    "focus-text:seed=2026110317:reset0: matching timer identity",
+    "focus-text:seed=2026110317:reset0: original actual integer timer",
+    "focus-text:seed=2026110317:reset1: actual completion and close",
+    "focus-text:seed=2026110317:reset1: exact paired initial screenshot/visibleDOM",
+    "focus-text:seed=2026110317:reset1: native NONE nonterminal reward0",
+    "focus-text:seed=2026110317:reset1: matching timer identity",
+    "focus-text:seed=2026110317:reset1: original actual integer timer",
+    "focus-text:seed=2026110353: frozen identity/order",
+    "focus-text:seed=2026110353: complete pair and timer",
+    "focus-text:seed=2026110353: complete fingerprint",
+    "focus-text:seed=2026110353:reset0: actual completion and close",
+    "focus-text:seed=2026110353:reset0: exact paired initial screenshot/visibleDOM",
+    "focus-text:seed=2026110353:reset0: native NONE nonterminal reward0",
+    "focus-text:seed=2026110353:reset0: matching timer identity",
+    "focus-text:seed=2026110353:reset0: original actual integer timer",
+    "focus-text:seed=2026110353:reset1: actual completion and close",
+    "focus-text:seed=2026110353:reset1: exact paired initial screenshot/visibleDOM",
+    "focus-text:seed=2026110353:reset1: native NONE nonterminal reward0",
+    "focus-text:seed=2026110353:reset1: matching timer identity",
+    "focus-text:seed=2026110353:reset1: original actual integer timer",
+    "44 native10000 and4 native15000 observations",
+    "runtime pin versions unchanged",
+    "metadata-only headers unchanged from v1",
+    "all13 merged headers and882 tensors",
+    "192 adapter pairs and candidate.5",
+    "no repeated full shard hashing",
+    "original mountsRO no endpoint/weight publication",
+    "bounded reported child and parent durations"
+  ],
+  "checks_passed": 370,
+  "findings": [],
+  "limits": [
+    "This is import/header/browser reset compatibility and pairing evidence, not performance, task-solving, model quality or weight-edit improvement.",
+    "Initial screenshot/filtered DOM pairs match within this CPU runtime. GPU must still match exact runtime/source and each scored initial fingerprint; no regeneration on mismatch.",
+    "Direct child reap is not independent descendant inventory, provider release or billing-stop proof. Parent separately obtains provider terminal evidence.",
+    "No full shard hashing repeated; existing pinned full-shard receipt remains separate.",
+    "V1 failed receipt is unchanged and its actual failing case/value remains unrecorded; v2 does not rewrite it."
+  ],
+  "receipt": {
+    "bytes": 209166,
+    "path": "runs/private-miniwob-imports-v2.json",
+    "sha256": "51d72e183c8cdb8611117d5180fe7a8f9835210844774c7d4f6b35405293afdf"
+  },
+  "result": "CPU preflight evidence passes the frozen v2 contract; not model benchmark success or a GPU authorization issuer",
+  "reviewer": "weight_space_paper_review",
+  "schema": 1,
+  "scope": "independent saved-result/source-byte join only; no provider/browser/model rerun"
+}

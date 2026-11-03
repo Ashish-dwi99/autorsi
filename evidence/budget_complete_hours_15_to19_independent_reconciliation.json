@@ -1,0 +1,139 @@
+{
+  "actual_posted_gross_usage": {
+    "earlier_four_apps_usd": "0.32378026",
+    "earlier_four_rows_unchanged_between_reports": true,
+    "report_rows": 10,
+    "rounded30_minus_report": "29.03",
+    "rounded_display_limit": "Arithmetic corroboration only, not settled credit balance or additional spending authority.",
+    "total_usd": "0.96944222",
+    "v3_apps_usd": "0.18410759",
+    "v4_including_private_CPU_apps_usd": "0.46155437"
+  },
+  "current_accounting": {
+    "earlier_four_reservations_usd": "15.6",
+    "newer_v3_v4_reservations_usd": "14",
+    "proposal_adopted_by_this_review": false,
+    "retained_total_usd": "29.6",
+    "unreserved_usd": "0.40"
+  },
+  "evidence": [
+    {
+      "bytes": 2033,
+      "path": "runs/billing-complete-hours-15-to-19-20261103.json",
+      "sha256": "c25d7d70b696f04e1bdebad98104a084d538085c71a78eedfcc1c3d35c702e3f"
+    },
+    {
+      "bytes": 805,
+      "path": "runs/billing-after-v4.json",
+      "sha256": "f04e42db5a626da88913d8eaac4e3f5a1c23a20b8326e3590942c66d719a76a5"
+    },
+    {
+      "bytes": 10413,
+      "path": "proposals/BUDGET_RECONCILIATION_PROPOSAL_20261103.json",
+      "sha256": "66343b310f4fb04acdd84fec15c05df3b4d4258f7f877316fd6a7461d032dddc"
+    },
+    {
+      "bytes": 4481,
+      "path": "evidence/budget_ledger.json",
+      "sha256": "a2bc1bf71fcbea8b444cbee6c8cb950ea0c52dd6735a615b810fd5b5a006a8e5"
+    }
+  ],
+  "independent_assessment": {
+    "adoption": "Keep original ledger/history and raw rows. Root must record adoption additively rather than silently treating provisional costs as settled; this review performs no adoption or reservation release. No new human spending approval or purchases are implied within the unchanged30USD scope.",
+    "arithmetic": "The proposed replacement4.00 contains the unchanged posted early cost0.32378026 plus3.67621974 contingency. With all newer14.00 retained, committed planning total is18.00 and unallocated12.00. Freeing11.60 from old15.60 is arithmetically correct.",
+    "future_limit": "At most10.00 of proposed12.00 headroom for new separately reviewed bounded work initially, leaving2.00 unallocated, if root adopts the proposal. Current MiniWoB remains within the existing2.80 suballocation.",
+    "no_double_count": "Include old posted costs inside4.00, and newer posted costs inside retained14.00; do not add them again or subtract them twice.",
+    "planning_judgment": "A root-adopted provisional4.00 old-group envelope is reasonable as a consciously conservative planning choice using repeated unchanged posted costs and saved terminal evidence, provided the stated late/unassigned allowances and stop-on-overrun rule remain. It is not a provider-certified upper bound or settled invoice.",
+    "scope": "Only the first four older app reservations are candidates for replacement. New v3/v4 posted rows do not release their14.00 reserves, and the active deployed MiniWoB GPU work and failed host/deployment costs after19:00 are outside this report window."
+  },
+  "ledger_edits": 0,
+  "limitations": [
+    "No completeness SLA for late billing; no price or physical deallocation guarantee.",
+    "Zero/missing billing row is not zero cost. The deployment and failed/active host paths in the19:00 hour remain unreported in this window.",
+    "No per-resource breakdown in saved report; storage/egress/build attribution uncertainty remains covered only by the chosen contingency, not independently bounded."
+  ],
+  "provider_calls": 0,
+  "query_window": {
+    "granularity": "hour",
+    "raw_file_limit": "Raw JSON contains result rows, not echoed request parameters; window provenance also relies on root tool observation and filename. Complete hour does not guarantee complete delayed usage collection.",
+    "root_reported_cli_exitcode": 0,
+    "root_reported_end_exclusive_utc": "2026-11-03T19:00:00Z",
+    "root_reported_start_inclusive_utc": "2026-11-03T15:00:00Z"
+  },
+  "reservation_releases": 0,
+  "reviewer": "weight_space_paper_review",
+  "row_mapping": [
+    {
+      "app_id": "ap-j8vVsgRCTfwQ0B5vcQqw2q",
+      "cost_usd": "0.00003072",
+      "group": "earlier_four",
+      "interval_start": "2026-11-03T15:00:00",
+      "saved_identity_join": "proposals/BUDGET_RECONCILIATION_PROPOSAL_20261103.json mapping"
+    },
+    {
+      "app_id": "ap-GhxEdV3pt8KJdrOjjOzQFM",
+      "cost_usd": "0.00444647",
+      "group": "earlier_four",
+      "interval_start": "2026-11-03T16:00:00",
+      "saved_identity_join": "proposals/BUDGET_RECONCILIATION_PROPOSAL_20261103.json mapping"
+    },
+    {
+      "app_id": "ap-RUEOXLBz6SG7aAScYP3MAh",
+      "cost_usd": "0.31341068",
+      "group": "earlier_four",
+      "interval_start": "2026-11-03T16:00:00",
+      "saved_identity_join": "proposals/BUDGET_RECONCILIATION_PROPOSAL_20261103.json mapping"
+    },
+    {
+      "app_id": "ap-q7TkFvMkJ1P26YPL28qzjp",
+      "cost_usd": "0.00589239",
+      "group": "earlier_four",
+      "interval_start": "2026-11-03T16:00:00",
+      "saved_identity_join": "proposals/BUDGET_RECONCILIATION_PROPOSAL_20261103.json mapping"
+    },
+    {
+      "app_id": "ap-1WwaRCjC43Mci4kYinU58P",
+      "cost_usd": "0.01192078",
+      "group": "v3",
+      "interval_start": "2026-11-03T17:00:00",
+      "saved_identity_join": "runs/vllm-imports-v3.call.json"
+    },
+    {
+      "app_id": "ap-GsoQUVnXok7ECttMemEvnA",
+      "cost_usd": "0.44744153",
+      "group": "v4",
+      "interval_start": "2026-11-03T17:00:00",
+      "saved_identity_join": "runs/vllm-pilot-v4.call.json"
+    },
+    {
+      "app_id": "ap-S55kHwpUaj1eMdHsz8YSZA",
+      "cost_usd": "0.00632977",
+      "group": "v4",
+      "interval_start": "2026-11-03T17:00:00",
+      "saved_identity_join": "runs/private-miniwob-imports-v1.call.json"
+    },
+    {
+      "app_id": "ap-fvBDR5v3y0ox7LuMo346nR",
+      "cost_usd": "0.17218681",
+      "group": "v3",
+      "interval_start": "2026-11-03T17:00:00",
+      "saved_identity_join": "runs/vllm-pilot-v3.call.json"
+    },
+    {
+      "app_id": "ap-n2sj83vRMwP1C3GvKJbNrj",
+      "cost_usd": "0.00258065",
+      "group": "v4",
+      "interval_start": "2026-11-03T17:00:00",
+      "saved_identity_join": "runs/vllm-imports-v4.call.json"
+    },
+    {
+      "app_id": "ap-xNKoefIBLy2esEYd9pPJyd",
+      "cost_usd": "0.00520242",
+      "group": "v4",
+      "interval_start": "2026-11-03T18:00:00",
+      "saved_identity_join": "runs/private-miniwob-imports-v2.call.json"
+    }
+  ],
+  "schema": 1,
+  "scope": "saved-only arithmetic and app-ID budget mapping; no billing query or ledger edit"
+}

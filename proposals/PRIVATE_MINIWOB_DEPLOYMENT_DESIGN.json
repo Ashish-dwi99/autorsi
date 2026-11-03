@@ -1,0 +1,109 @@
+{
+  "schema": 1,
+  "status": "source_only_not_deployed",
+  "date": "2026-11-03",
+  "route": "Private deployed Modal Function, using existing workspace SDK credentials; no HTTP endpoint/new token/secret/access expansion.",
+  "combined_run": "One loaded worker reconstructs exact merged baseline and one fixed experimental edit, then runs the frozen native MiniWoB paired benchmark. No extra inference-only verification.",
+  "selection": "Frozen prospective rule e0edf8b2c5d0778ab241c4a1bc8e128cb3d8471e1631f651e5fb3b17102a99d9: .5/.75 success descending, action errors ascending, .75 tie. Negative smoke result remains unpromoted.",
+  "budget": {
+    "retained_prior_usd": 23.6,
+    "v4_pilot_suballocation_usd": 3.2,
+    "combined_hosting_benchmark_suballocation_usd": 2.8,
+    "existing_shared_envelope_usd": 6,
+    "new_reservation_usd": 0,
+    "total_retained_usd": 29.6,
+    "user_ceiling_usd": 30
+  },
+  "limits": {
+    "gpu": "A100-80GB",
+    "cpu_hard_limit": 4,
+    "memory_max_GiB": 96,
+    "min_containers": 0,
+    "max_containers": 1,
+    "buffer_containers": 0,
+    "single_use_containers": true,
+    "remote_seconds": 1560,
+    "startup_seconds": 240,
+    "child_seconds": 1500,
+    "native_generation_or_warmup_seconds": 45,
+    "host_get_seconds": 2000,
+    "one_persistent_cpu_entry": true,
+    "one_persistent_gpu_entry": true,
+    "fixed_expiry_utc": "2026-11-04T12:00:00Z"
+  },
+  "nominal_peak_compute_estimate": {
+    "rate_source": "https://modal.com/pricing",
+    "A100_80_usd_second": 0.000694,
+    "cpu_core_usd_second": 1.31e-05,
+    "GiB_usd_second": 2.22e-06,
+    "GPU_plus_4CPU_plus_96GiB_1800seconds_usd": 1.727136,
+    "qualification": "Excludes image build/CPU admission and provider retries; $2.80 shared allocation retained. Source limits and cancel ACK do not prove hard billing cap or physical release."
+  },
+  "dependency_pins": {
+    "miniwob": "1.1.0",
+    "miniwob_wheel_sha256": "297006e84219d56ad037e843527ed773a4a82509dc43b6031ec4a3ad3e3e61d9",
+    "gymnasium": "1.2.3",
+    "selenium": "4.40.0",
+    "numpy": "2.2.6",
+    "Pillow": "12.2.0",
+    "Chrome_for_Testing": "156.0.8078.80",
+    "ChromeDriver": "156.0.8078.80",
+    "vllm": "0.18.0",
+    "torch": "2.10.0",
+    "transformers": "4.57.6"
+  },
+  "dependency_evidence": [
+    {
+      "url": "https://pypi.org/pypi/miniwob/1.1.0/json",
+      "finding": "Published wheel hash above; requires gymnasium>=1.2.3, selenium>=4.5.0, numpy>=1.18.0, pillow>=9.0.0; exact browser and driver env variables supported."
+    },
+    {
+      "url": "https://pypi.org/pypi/gymnasium/1.2.3/json",
+      "finding": "Exact pinned release available for Python3.11."
+    },
+    {
+      "url": "https://pypi.org/pypi/selenium/4.40.0/json",
+      "finding": "Exact pinned release available; explicit browser/driver paths avoid Selenium Manager downloads."
+    },
+    {
+      "url": "https://pypi.org/pypi/numpy/2.2.6/json",
+      "finding": "Exact pinned release available."
+    },
+    {
+      "url": "https://pypi.org/pypi/vllm/0.18.0/json",
+      "finding": "Requires torch2.10.0, torchvision0.25.0, torchaudio2.10.0, transformers<5>=4.56.0, numba0.61.2, numpy without separate upper pin."
+    },
+    {
+      "url": "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json",
+      "finding": "Official Nov3 stable156.0.8078.80 provides matching linux64 browser and driver URLs. Build records actual archive and unpacked-file hashes; CPU and GPU join identical runtime manifest. No claim of a preexisting published SHA256 for these browser archives."
+    }
+  ],
+  "modal_api_evidence": [
+    "https://modal.com/docs/guide/functions",
+    "https://modal.com/docs/guide/cold-start",
+    "https://modal.com/docs/guide/timeouts",
+    "https://modal.com/docs/sdk/py/latest/Dict",
+    "https://modal.com/docs/guide/dicts",
+    "https://modal.com/docs/sdk/py/latest/Function"
+  ],
+  "once_semantics": "Dict.put(skip_if_exists=True) returns bool; entry consumed before child. Fixed experiment expiry precedes 7-day Dict inactivity expiry. Provider startup/input replacement can still cost resources before the source gate.",
+  "execution_sequence": [
+    "Review/freeze exact five proposal Python files and whole src closure.",
+    "Once CPU imports/runtime hashes and 24 paired native resets/interface checks; no model payload/inference.",
+    "Deploy the separate private app, min0; preserve observed app/function IDs and exact source manifest in runs/private-miniwob-deployment-v1.json.",
+    "Once benchmark phase invokes that observed function ID through existing workspace credentials, source-joins CPU receipt, and supervises the child.",
+    "Read actual terminal/report and provider billing/container evidence; no broader calls, promotions, or new budget inferred."
+  ],
+  "tradeoffs": [
+    "No idle warm pool; cold load time remains part of first-use latency and cost.",
+    "One private benchmark call verifies the hosted reconstruction; it is not an ongoing interactive endpoint.",
+    "Existing merged checkpoint is the baseline; subtracting LoRA at scale0 is not proven equal to raw BU.",
+    "Original volumes remain read-only; no 61GB rehash, checkpoint copy, dataset publication, or old-app change."
+  ],
+  "source_hashes": {
+    "proposals/modal_private_miniwob_v1.py": "1fa6e21adbbc4813c70fab58cd24c10247e45541711f329877638e0027fc732b",
+    "proposals/miniwob_process_entry_v1.py": "5ca28b21752146cb64065728735d930c809edc0069750809265e958f1a586a65",
+    "proposals/build_miniwob_runtime.py": "44f655fce0f07898908315abf3e0698ca1981bdb1f430fb976e0404ec99c724b"
+  },
+  "pending": "Child/native proposals, exact joint independent review, CPU runtime admission, and deployment/benchmark remain unexecuted."
+}

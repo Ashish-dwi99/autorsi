@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "reviewer": "weight_space_paper_review",
+  "scope": "Independent source and pure accounting review only; no actual MiniWoB result was reviewed in this record.",
+  "source": {
+    "path": "plot_miniwob.py",
+    "sha256": "74cfc546ea634a21e3181227db05a9c4c9b25e6ee1c488755238cb85c077dd97"
+  },
+  "conclusion": "No additional concrete accounting defect found in the frozen source after the bounded-inventory, outcome, counter, duration and returned-call joins were added. Actual receipt validation and rendered-chart inspection remain separate.",
+  "checked": [
+    "The frozen denominator is 24 cases per variant, including missing cases labelled unknown rather than recorded failures.",
+    "Only scale 1.0 versus frozen 0.5 is accepted, with exact task/seed inventory and no duplicate completed cases.",
+    "Native terminal binary reward joins the success boolean; numeric counters and times reject bools, nonfinite or negative values.",
+    "Completed episode model-call counts join unique returned generation records; entered but unreturned calls are not invented as latency observations.",
+    "Returned scored requests from a partial final episode remain in the request metric and are explicitly labelled. Neutral warmups are excluded.",
+    "Gains and regressions use only common completed cases; missing cases are not called paired regressions.",
+    "The chart calls full request latency a returned model request metric, not isolated decoding throughput. It includes child status, partial-return scope, and no Astra/population/billing claim."
+  ],
+  "pure_checks": {
+    "mechanism": "AST-extracted unchanged summarize function and constants with standard-library imports; in-memory synthetic accounting fixture only. No model, provider, browser, chart or invented result file.",
+    "positive_case": "Two complete pairs with one gain and one regression; two high-latency warmups excluded; one edited partial-episode return included; one entered/unreturned call preserved only in entered count; fixed 24 denominator and 22 missing per variant.",
+    "negative_mutations_rejected": 10,
+    "negative_cases": [
+      "candidate differs",
+      "case outside inventory",
+      "boolean seed",
+      "boolean call counter",
+      "negative episode duration",
+      "success/reward mismatch",
+      "completed row call count mismatch",
+      "NaN request duration",
+      "duplicate returned-call index",
+      "returned index exceeds entered calls"
+    ],
+    "result": "passed"
+  },
+  "limits": [
+    "This source review does not prove the runtime receipt is authentic or complete.",
+    "No chart was rendered during this review; actual rendered layout still requires inspection.",
+    "The original fine-tune versus scaled edit comparison is on a fixed 12-family/two-seed subset. No Astra head-to-head or broad computer-use superiority follows.",
+    "Shared runtime warnings must be disclosed in the saved-result audit without asserting unproved causality."
+  ]
+}

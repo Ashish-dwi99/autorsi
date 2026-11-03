@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "observation_saved_utc": "2026-11-03T19:12:17.988218+00:00",
+  "query": {
+    "start_inclusive": "2026-11-03T15:00:00Z",
+    "end_exclusive": "2026-11-03T19:00:00Z",
+    "resolution": "hourly"
+  },
+  "command_exit_code": 0,
+  "receipt_path": "runs/billing-complete-hours-15-to-19-20261103.json",
+  "receipt_sha256": "c25d7d70b696f04e1bdebad98104a084d538085c71a78eedfcc1c3d35c702e3f",
+  "rows": 10,
+  "reported_gross_usd": "0.96944222",
+  "limitations": [
+    "Completed hourly buckets do not guarantee all charges have arrived.",
+    "No reservation release or extra credit assumption."
+  ],
+  "provider_model_actions": 0
+}

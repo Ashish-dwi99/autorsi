@@ -1,0 +1,148 @@
+{
+  "authors": {
+    "native_and_benchmark_v2": "/root/weight_space_paper_review",
+    "parent_and_process_entry_v2": "/root/browser_model_local_provenance"
+  },
+  "conclusion": "No additional concrete source defect found in the intended fixed synchronous scope; actual CPU receipt and later distinct GPU admission remain required",
+  "limits": [
+    "Saved v1 did not identify the failure case or returned timer value, so this review does not invent that fact.",
+    "Source pins bind bytes; they do not replace fresh CPU observations. An unexpected family clock, mismatch, missing return or source change fails closed.",
+    "Close return is not independent browser descendant termination or billing-stop proof.",
+    "No benchmark performance or model superiority follows from this source review."
+  ],
+  "reviewed_utc": "2026-11-03T18:53:32.556492+00:00",
+  "reviewer": "/root/bu_eval_harness",
+  "runtime_gates": [
+    "Complete fresh CPU package/import/native paired reset journal for these exact sources.",
+    "Review that actual CPU result before a separately admitted single GPU benchmark invocation.",
+    "Retain all subsequent timing failures and original planned denominators; no retry or task removal based on outcomes."
+  ],
+  "schema": 1,
+  "scope": "Distinct source-only review of complete v2 timer/progress correction and parent integration; not runtime admission or a permission issuer",
+  "source_bytes": 266358,
+  "source_file_count": 23,
+  "source_manifest": {
+    "proposals/build_miniwob_runtime.py": {
+      "bytes": 3950,
+      "sha256": "44f655fce0f07898908315abf3e0698ca1981bdb1f430fb976e0404ec99c724b"
+    },
+    "proposals/miniwob_benchmark_v2.py": {
+      "bytes": 20710,
+      "sha256": "1655d72404517e0852c18996470f689d308e9c0c854880acb3e5e68e42a6092e"
+    },
+    "proposals/miniwob_native_v2.py": {
+      "bytes": 22567,
+      "sha256": "16d91678e187bca178821e4f29788d2ab38261c623b72863a272901500617a02"
+    },
+    "proposals/miniwob_process_entry_v2.py": {
+      "bytes": 15466,
+      "sha256": "f30f5e1f88c8c6ab9180c629803db3722b6ab773d254f7d85dd67b729d2ffb7e"
+    },
+    "proposals/modal_private_miniwob_v2.py": {
+      "bytes": 25899,
+      "sha256": "65833e5013fb0d91e54cb42cc196bf62601e39b7976079a60297000dea42525a"
+    },
+    "src/weight_space_lab/__init__.py": {
+      "bytes": 84,
+      "sha256": "0011bfd335ca645347f878f6d5ab2e7863958d572388233bb13530070a0f9201"
+    },
+    "src/weight_space_lab/benchmarks/__init__.py": {
+      "bytes": 80,
+      "sha256": "48fddf5bdf1d87f13ee19919253c21867a1509383523779b6b4d39e9cc454cea"
+    },
+    "src/weight_space_lab/benchmarks/miniwob.py": {
+      "bytes": 19728,
+      "sha256": "c85987b1a84bf9a75c8a000fdb1cbc37f254adf31939e03e4359d132bffaca1a"
+    },
+    "src/weight_space_lab/diagnostic.py": {
+      "bytes": 17721,
+      "sha256": "4ff894989dcccf57d2ad17cc86740114dafca8a57f62eb2297bb27d219c3dc33"
+    },
+    "src/weight_space_lab/eval/__init__.py": {
+      "bytes": 549,
+      "sha256": "2fecfeab2b6eacf945accac88c69620bc937d06f3c6efb23f95eb68e8cbcd4b5"
+    },
+    "src/weight_space_lab/eval/bu_policy.py": {
+      "bytes": 12500,
+      "sha256": "57f228cdbdfbe72925d0aa311b76001d74a9e03ae9d439c0be63145fd11b02dd"
+    },
+    "src/weight_space_lab/eval/bu_protocol.py": {
+      "bytes": 14526,
+      "sha256": "5987375c472918692f3a2c275c04048aa90b80652feae2faeaa01d20b89f3ebd"
+    },
+    "src/weight_space_lab/eval/fixtures.py": {
+      "bytes": 13335,
+      "sha256": "2c994fd6d5c465a2a729082b789661494d711c6b7cec4bcc4d299c76e05ec57a"
+    },
+    "src/weight_space_lab/eval/runner.py": {
+      "bytes": 13558,
+      "sha256": "1e22b7a8635c15214aeefd3e5956a8c5102934e1ce0cc261d359f2a1624085d5"
+    },
+    "src/weight_space_lab/merged_patch.py": {
+      "bytes": 10278,
+      "sha256": "25310009418e646f555f56464e229fc7ac5c94163fffc86f4fdc8216e7e6d1e9"
+    },
+    "src/weight_space_lab/patch.py": {
+      "bytes": 13404,
+      "sha256": "b2bf10e9402104d495c08ab7ade727300c2b2481c965552da48ea1ecb58b3aca"
+    },
+    "src/weight_space_lab/policy_io.py": {
+      "bytes": 2494,
+      "sha256": "2c2ccdce8e0762f9e35529114337d0adfb01dd9706f95562d43ae51e9106f9a6"
+    },
+    "src/weight_space_lab/process_entry.py": {
+      "bytes": 9654,
+      "sha256": "56fcbf8223f83573d0312b63230a2f7b4f487e7e2b395ffb38b948d7298eea88"
+    },
+    "src/weight_space_lab/process_entry_v4.py": {
+      "bytes": 10491,
+      "sha256": "fb19d5b1ac02dde7877a40ca969155f77a79aec5c2aec5df5cc403f7ee17bf06"
+    },
+    "src/weight_space_lab/vllm018_compat.py": {
+      "bytes": 8810,
+      "sha256": "be28b81d5d1e89f1fd08ade8bb59488738dda0253568e101acd6cac09dcb667c"
+    },
+    "src/weight_space_lab/vllm_attention.py": {
+      "bytes": 2613,
+      "sha256": "db942a00fe576a82cdc8a29b218cc6a6f66c7148d91e86a379816c73f1e09924"
+    },
+    "src/weight_space_lab/vllm_pilot.py": {
+      "bytes": 13387,
+      "sha256": "f6e777bb396b1b8eb5a56ed079b7aa11e4b32ce58f1229e6d43f69b310548aa6"
+    },
+    "src/weight_space_lab/vllm_pilot_v4.py": {
+      "bytes": 14554,
+      "sha256": "9d2bad07d040cf3b6d5150fc89664ee41c72a93cf9863257fb8ac1c56cc148ac"
+    }
+  },
+  "test_evidence": {
+    "author_reported_pure_tests_passed": 22,
+    "reviewer_actions": "Read full deltas and relevant test source; AST parse and exact file hash/metadata join only. No test rerun, app import, model/browser/provider call or download."
+  },
+  "v1_evidence_join": {
+    "canonical_installed_source_manifest_sha256": "416569c85fbc57b430e0943ff2dd8e3dc49d3015201a705f62de2cc8e2b82a65",
+    "child_status": "failed",
+    "installed_source_files": 380,
+    "model_calls": 0,
+    "password_source_pin": {
+      "bytes": 1434,
+      "sha256": "fb9dc861a5bacbeaf60da75736b83ba98f4681f06d1bb6fc09b05f4bd7092f6e"
+    },
+    "status": "failed",
+    "v1_failure_did_not_record_actual_case_or_timer_value": true,
+    "v1_is_not_rerun_or_rewritten": true
+  },
+  "verified_properties": [
+    "Expected native timer is15000ms for enter-password and10000ms for the other eleven frozen families. The code only queries core.EPISODE_MAX_TIME; it never sets, pauses, extends or clears a native timer.",
+    "The expected values are checked against future actual reset observations, and the complete380-file installed MiniWoB source metadata is pinned to the consumed v1 receipt. Version naming alone is not treated as a source identity.",
+    "Seven existing native helper function ASTs remain unchanged: _string, _action, parse_batch, revalidate, native_action, make_environment, messages. Action validation, reward mapping, input append/clear checks, seeds, cases and native actions are unchanged.",
+    "Reset now records case/seed, reset entered/returned, timer-query entered/returned, exact actual scalar type/value (or bounded representation), then acceptance/failure. Actual value publication precedes checking it; failed reset does not invent a timer observation.",
+    "CPU journal retains current case/pair member, actual reset returns, initial fingerprint, entered/returned NONE step and close-return markers. It is saved incrementally by the existing local atomic JSON writer. Failure retains partial coverage rather than fabricating48 resets.",
+    "CPU and GPU use the same validate_preflight function requiring24 ordered cases, two matching initial fingerprints percase, actual accepted per-family timer receipts,48 returned resets/NONE steps and all close-return markers.",
+    "GPU episode reset and initial comparison are inside the existing finally so setup/native failure retains the partial episode. Timed native work includes added journal publication overhead; no clock exception or extra allowance is introduced.",
+    "BU source, adapter recipe, selected candidate rule, native action budget8, tokens192, two neutral warmups, paired48episode denominator, generation40s await/45s supervisor hard bound, child1500s/newwork1440s and provider resource configuration remain unchanged.",
+    "Parent uses fresh v2 once-only IDs and paths for the reviewed correction, complete23-file source closure, explicit packaged import paths and actual CPU source equality before any GPU call. Generic framework and pyproject changes are outside this runtime closure.",
+    "Original volumes stay read-only; watchdog loop has no provider RPC; unknown inference prevents another model request. Parent retains child/group cancellation and honest descendant/billing limitations.",
+    "The tiny prompt wording correction says task-specific clock rather than falsely claiming every task has a ten-second clock. This is a changed protocol version, not retrospective reinterpretation of v1."
+  ]
+}
