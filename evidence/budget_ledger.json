@@ -84,12 +84,27 @@
     {
       "id": "adam-schema-miniwob-20261104-v2",
       "usd": 2.5,
-      "status": "Allocated one new CPU grammar admission and one development GPU comparison, contingent on actual CPU pass; not yet deployed/invoked.",
+      "status": "CPU/GPU completed once; distinct saved result audit complete; development candidate0.5 selected. Full2.5USD reserve retained.",
       "source_manifest_sha256": "b44dbbf430face18a694a4a8a3f4f6d8e10f1abf841806a2b9fba5ef401fde85",
-      "allocation_file": "evidence/adam_schema_v2_allocation_20261103.json"
+      "allocation_file": "evidence/adam_schema_v2_allocation_20261103.json",
+      "outcome": "evidence/adam_schema_v2_root_quality_20261103.json"
+    },
+    {
+      "id": "adam-screen-visual-dev-20261104-v2",
+      "usd": 3.5,
+      "status": "Allocated one new CPU admission and one24episode screen development GPU with bounded actual media recovery; not yet deployed or invoked.",
+      "source_manifest_sha256": "b7e28dca20e38eb05679a409cad9c1021fb4c14b6218c6f50beea2e7430f5153",
+      "allocation_file": "evidence/adam_screen_v2_allocation_20261103.json"
+    },
+    {
+      "id": "adam-verify-miniwob-20261104-v1",
+      "usd": 2.5,
+      "status": "Allocated onceCPU and oncefixed24episode verification, no phase invoked yet.",
+      "source_manifest_sha256": "f508bab4a6093a104f6bc58be8bb1de86ba1e246a1de04dafcec4d6e4378c881",
+      "allocation_file": "evidence/adam_verify_v1_allocation_20261103.json"
     }
   ],
-  "unreserved_usd": 12,
+  "unreserved_usd": 6,
   "billing_observation": {
     "date_utc": "2026-11-03",
     "completed_hour_cli": [
@@ -126,9 +141,9 @@
     "live_ui": "Nov3 after private deployment and failed pre-spawn host launch: credits29.03. Rounded asynchronous display, not a settled project total.",
     "new_completed_hours_receipt": "evidence/billing_completed_hours_15_to_19_20261103.json",
     "new_reported_gross_usd": "0.96944222",
-    "latest_completed_hour_record": "evidence/billing_completed_hours_15_to_21_20261103.json",
-    "latest_combined_reported_gross_usd": "1.35392553",
-    "latest_limit": "Complete hourly intervals before21:00UTC only;21-hour Adam GPU cost not included; no reservation release or settled invoice inference."
+    "latest_completed_hour_record": "evidence/billing_completed_hours_15_to_23_20261103.json",
+    "latest_combined_reported_gross_usd": "1.82994636",
+    "latest_limit": "Completed intervals before23:00UTC; reporting may lag, reserves retained."
   },
   "rules": [
     "No new reservation if total reservations plus settled charges exceed USD30; do not double-count settled charges and their released reservations.",
@@ -158,7 +173,7 @@
     "displayed_credits_usd": 29.04,
     "source": "Root Chrome Modal app DOM observation on Nov3 after completion; rounded credits are not settled billing."
   },
-  "previous_ledger_sha256": "63b96f7ab959208e9ed5669a9907aec26753fc5f123f08350aa0581979c15632",
+  "previous_ledger_sha256": "43ac6810d8a0549c1796c3b15a00b9a84ade202414ba4bcb162e30a8085f4fff",
   "superseded_reservations": [
     {
       "id": "metadata-preflight-v1",

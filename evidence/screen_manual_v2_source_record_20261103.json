@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "created_utc": "2026-11-03T21:57:26.867699+00:00",
+  "status": "SOURCE_ONLY_NO_ACTOR_OR_BROWSER_INVOKED",
+  "files": {
+    "tools/screen_manual_v2.py": {
+      "sha256": "2208ba0afb89e9be7014aabc2993a067595932935cf698532b40b1c071b65f17",
+      "bytes": 11654
+    },
+    "tools/test_screen_manual_v2.py": {
+      "sha256": "68a847f76d4642407d0cfbc87e51aae95cca584636c0ac87152685652568ce1c",
+      "bytes": 4241
+    }
+  },
+  "frozen_screen_manifest_sha256": "b7e28dca20e38eb05679a409cad9c1021fb4c14b6218c6f50beea2e7430f5153",
+  "limits": {
+    "cases": 1,
+    "eligible_case_ids": [
+      "screen-development-01",
+      "screen-development-04"
+    ],
+    "policy_seconds": 30,
+    "case_seconds": 90,
+    "actions": 12,
+    "batch": 4,
+    "output_tokens_bound": 128,
+    "manual_reply_model_tokens": "unknown; not estimated from JSON chars",
+    "browser_launch_seconds": 30,
+    "context_finalization_seconds": 10,
+    "browser_close_seconds": 10
+  },
+  "candidate_freeze_schema": {
+    "schema": 1,
+    "development_report_sha256": "actual complete selected SCREEN-v2 GPU report bytes SHA256",
+    "selected_attention_scale": "actual fixed attention scale from that report",
+    "selected_visual_gain": "actual selected visual gain from that report",
+    "source_manifest_sha256": "b7e28dca20e38eb05679a409cad9c1021fb4c14b6218c6f50beea2e7430f5153",
+    "decision": "frozen_for_demonstration_only",
+    "verification_claim": false
+  },
+  "runtime_identity_schema": {
+    "schema": 1,
+    "model_agent": "Astra",
+    "attribution": "external_workspace_runtime",
+    "runtime_identity": "Nonempty object saved by root from actual workspace runtime evidence; CLI does not authenticate it"
+  },
+  "required_before_run": [
+    "Exact pinned screenCases/protocol/harness/manual bridge files",
+    "Actual completed24-case screen report with no partial/unknown, exact selected candidate",
+    "Actual matching selected contact/dialog result.json and its existing hash-matched realWebM",
+    "Root candidate-freeze record and external workspace-Astra attribution record",
+    "Fresh400MiB local floor and new run directory; no verification fixture"
+  ],
+  "command_template": {
+    "run": "SDK_PYTHON tools/screen_manual_v2.py run --run-dir NEW_ABSOLUTE_DIR --session-id UNIQUE_ID --candidate-freeze ROOT_FREEZE.json --adam-report ACTUAL_SCREEN_GPU.remote-report.json --adam-case-receipt ACTUAL_CASE/result.json --runtime-identity ROOT_ASTRA_IDENTITY.json",
+    "next": "SDK_PYTHON tools/screen_manual_v2.py next --run-dir NEW_ABSOLUTE_DIR",
+    "submit": "SDK_PYTHON tools/screen_manual_v2.py submit --run-dir NEW_ABSOLUTE_DIR --response NORMALIZED_ACTION_JSON"
+  },
+  "actor_interface": "Exact v2 system prompt plus unchanged screenshot/goal/currentviewport/actionbudget/ownissued-actionfeedback. No DOM, fixtureHTML, oracle or source exploration while acting. normalized0..999 maps floor(n*dimension/1000), converted once by frozen harness.",
+  "composition_order": {
+    "left": "Astra externally attributed workspace actor",
+    "right": "Actual selected Adam recording"
+  },
+  "tests": {
+    "passed": 4,
+    "scope": "Pure source hashes/normalized parser/receipt contract; no browser, actor, model or video generated. One additive version/path-recording change AST-checked afterward."
+  },
+  "limits_of_claim": [
+    "Real recorded demonstration only; no verification score or general superiority",
+    "Manual tool/coordination time charged and recorded; not API-only latency",
+    "Actual actor model calls/tokens/cost unknown unless independently evidenced",
+    "Async timeouts and close acknowledgements are not independent descendant termination evidence"
+  ],
+  "frozen_packages_modified": false,
+  "provider_calls": 0,
+  "actor_calls": 0,
+  "browser_calls": 0
+}

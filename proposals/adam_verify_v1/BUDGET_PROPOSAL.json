@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "status": "PROPOSAL_ONLY_NO_RESERVATION_OR_LAUNCH",
+  "app_name": "adam-1-verify-miniwob-20261104-v1",
+  "prospective_max_USD": 2.5,
+  "allocated_here_USD": 0,
+  "total_user_authorized_USD": 30,
+  "source_manifest_sha256": "f508bab4a6093a104f6bc58be8bb1de86ba1e246a1de04dafcec4d6e4378c881",
+  "source_record_sha256": "ecb98c60350dedc7143a6af9c394f92bd9f2e157fa963278caace7eba13de82b",
+  "scope_sha256": "12746612286125d2af1c96c7e429020cab95fa88d3ed69a5dad0d9c682c412dd",
+  "ledger_observation": {
+    "path": "evidence/budget_ledger.json",
+    "sha256": "43ac6810d8a0549c1796c3b15a00b9a84ade202414ba4bcb162e30a8085f4fff",
+    "reserved_USD": 21.5,
+    "unreserved_USD": 8.5,
+    "not_modified": true
+  },
+  "if_root_adopted_without_other_changes": {
+    "total_reserved_USD": 24.0,
+    "remaining_unreserved_USD": 6.0
+  },
+  "accounting": {
+    "GPU_max_seconds_including_startup": 1500,
+    "GPU_CPU_memory_rate_USD_per_s": 0.00095952,
+    "GPU_nominal_ceiling_USD": 1.43928,
+    "CPU_max_seconds_including_startup": 840,
+    "CPU4_16GiB_rate_USD_per_s": 8.792e-05,
+    "CPU_nominal_ceiling_USD": 0.0738528,
+    "build_storage_recovery_restart_contingency_USD": 0.9868672,
+    "total_USD": 2.5,
+    "rates_basis": "Same root-reviewed rate basis as schema-v2 BUDGET_PROPOSAL; not newly measured settled cost or provider-enforced cap"
+  },
+  "scope": "One once-only CPU metadata/backend plus24reserved paired resets/NONE steps after candidate freeze, then one once-only GPU24episode comparison. No extra candidate selection, retry, export or publicendpoint.",
+  "requirements": [
+    "Root adopts current exact source-bound allocation under30total",
+    "Keep prior uncertainty reserves",
+    "Observe prior app terminal and no overlap freshly before each phase",
+    "Hold full reservation until actual terminal/cost evidence; no refund inferred from cancellation ACK"
+  ],
+  "source_only": true
+}

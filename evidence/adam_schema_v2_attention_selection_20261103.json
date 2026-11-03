@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "selected_attention_scale": 0.5,
+  "development_report_sha256": "fc2504a82d0d8ed279917746ea33577144baeb49d1364561aa332be0b73a159f",
+  "source_manifest_sha256": "b44dbbf430face18a694a4a8a3f4f6d8e10f1abf841806a2b9fba5ef401fde85",
+  "scope": "development-only attention choice for separate visual calibration",
+  "development_selection": {
+    "rule": "complete36episodes; successes descending; invalid actions ascending; output tokens ascending; scale descending",
+    "scores": [
+      {
+        "scale": 1.0,
+        "successes": 11,
+        "invalid_actions": 0,
+        "completion_tokens": 347
+      },
+      {
+        "scale": 0.5,
+        "successes": 12,
+        "invalid_actions": 0,
+        "completion_tokens": 254
+      },
+      {
+        "scale": 0.25,
+        "successes": 12,
+        "invalid_actions": 0,
+        "completion_tokens": 254
+      }
+    ],
+    "selected_scale": 0.5,
+    "paired_gains": [
+      "click-button-sequence:seed=2026110413"
+    ],
+    "paired_regressions": [],
+    "verification_required": true,
+    "verification_performed": false,
+    "promotion": "NONE; development selection only",
+    "official_prior_score_unchanged": "21/24"
+  },
+  "verification_performed": false,
+  "protocol_quality_reviewed": true,
+  "quality_review_sha256": "13271b04e841afe0900e3e0ef03ca288072e66d90152702cf2c074c7e22dc8aa",
+  "quality_review_path": "evidence/adam_schema_v2_root_quality_20261103.json",
+  "created_unix": 1793747912.469101
+}

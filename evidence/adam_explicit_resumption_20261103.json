@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "created_unix": 1793747912.500586,
+  "human_request": "can you continue so we can see the comparison and i can publish on X?",
+  "earlier_interruption": "Three existing agents errored workspace out of credits before final actual schema review. No blind retries or purchases.",
+  "resumption": "Existing unfinished agents resumed after explicit human request and returned substantive work; final schema audit now saved.",
+  "eden": "Remains deferred; heartbeat active; no Eden action.",
+  "modal_total_authority_usd": 30,
+  "current_reserved_usd": 21.5,
+  "unallocated_usd": 8.5,
+  "publication": "Prepare assets and draft for human posting; no X posting authorized."
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "observed_unix": 1793747912.4967391,
+  "source": "https://modal.com/pricing",
+  "usd_per_second": {
+    "A10080": 0.000694,
+    "physical_CPU_core": 1.31e-05,
+    "GiB_memory": 2.22e-06
+  },
+  "GPU1500seconds4cores96GiB_usd": "1.43928",
+  "CPU840seconds4cores16GiB_usd": "0.0738528",
+  "remaining_within3_50_reserve_usd": "1.9868672",
+  "not_provider_hard_cap": true
+}

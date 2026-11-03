@@ -1,0 +1,121 @@
+[
+  {
+    "Object ID": "ap-j8vVsgRCTfwQ0B5vcQqw2q",
+    "Description": "bu-weight-space-preflight",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T15:00:00",
+    "Cost": "0.00003072"
+  },
+  {
+    "Object ID": "ap-GhxEdV3pt8KJdrOjjOzQFM",
+    "Description": "bu-weight-space-diagnostic-v2",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T16:00:00",
+    "Cost": "0.00444647"
+  },
+  {
+    "Object ID": "ap-RUEOXLBz6SG7aAScYP3MAh",
+    "Description": "bu-weight-space-pilot-v1",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T16:00:00",
+    "Cost": "0.31341068"
+  },
+  {
+    "Object ID": "ap-q7TkFvMkJ1P26YPL28qzjp",
+    "Description": "bu-weight-space-pilot-v1",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T16:00:00",
+    "Cost": "0.00589239"
+  },
+  {
+    "Object ID": "ap-1WwaRCjC43Mci4kYinU58P",
+    "Description": "bu-weight-space-vllm-pilot-v3",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T17:00:00",
+    "Cost": "0.01192078"
+  },
+  {
+    "Object ID": "ap-GsoQUVnXok7ECttMemEvnA",
+    "Description": "bu-weight-space-vllm-pilot-v4",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T17:00:00",
+    "Cost": "0.44744153"
+  },
+  {
+    "Object ID": "ap-S55kHwpUaj1eMdHsz8YSZA",
+    "Description": "bu-weight-space-private-miniwob-v1",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T17:00:00",
+    "Cost": "0.00632977"
+  },
+  {
+    "Object ID": "ap-fvBDR5v3y0ox7LuMo346nR",
+    "Description": "bu-weight-space-vllm-pilot-v3",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T17:00:00",
+    "Cost": "0.17218681"
+  },
+  {
+    "Object ID": "ap-n2sj83vRMwP1C3GvKJbNrj",
+    "Description": "bu-weight-space-vllm-pilot-v4",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T17:00:00",
+    "Cost": "0.00258065"
+  },
+  {
+    "Object ID": "ap-xNKoefIBLy2esEYd9pPJyd",
+    "Description": "adam-1-cu-private-miniwob-v2",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T18:00:00",
+    "Cost": "0.00520242"
+  },
+  {
+    "Object ID": "ap-1qgHoLFsIavzrIdLnD905u",
+    "Description": "adam-1-cu-neal-private-v2",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T19:00:00",
+    "Cost": "0.00103411"
+  },
+  {
+    "Object ID": "ap-ah4kX7k6SeDM0GDOqHb8fM",
+    "Description": "adam-1-cu-private-miniwob-v2",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T19:00:00",
+    "Cost": "0.37434205"
+  },
+  {
+    "Object ID": "ap-dudOpVTEB7Yq9vYuBos4EE",
+    "Description": "adam-1-cu-neal-private-v1",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T19:00:00",
+    "Cost": "0.00818217"
+  },
+  {
+    "Object ID": "ap-f4k63JSQcDim0xyJzUU3rv",
+    "Description": "adam-1-dev-miniwob-20261103-v1",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T20:00:00",
+    "Cost": "0.00013681"
+  },
+  {
+    "Object ID": "ap-x4CZ2F40Nzk5OFvcypDCHP",
+    "Description": "adam-1-cu-neal-navigation-diagnostic-v1",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T20:00:00",
+    "Cost": "0.00078817"
+  },
+  {
+    "Object ID": "ap-RriQR979YBb5Z8pvxpzNKz",
+    "Description": "adam-1-schema-miniwob-20261104-v2",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T21:00:00",
+    "Cost": "0.23988939"
+  },
+  {
+    "Object ID": "ap-f4k63JSQcDim0xyJzUU3rv",
+    "Description": "adam-1-dev-miniwob-20261103-v1",
+    "Environment": "main",
+    "Interval Start": "2026-11-03T21:00:00",
+    "Cost": "0.23613144"
+  }
+]

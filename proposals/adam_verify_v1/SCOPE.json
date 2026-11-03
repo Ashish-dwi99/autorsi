@@ -1,0 +1,111 @@
+{
+  "schema": 1,
+  "status": "SOURCE_ONLY_FIXED_VERIFICATION_PROPOSAL_NO_ALLOCATION_OR_LAUNCH",
+  "goal": "One independent reserved-seed comparison of the original fine-tuned model and one candidate frozen solely from completed corrected development",
+  "upstream_source_manifest_sha256": "b44dbbf430face18a694a4a8a3f4f6d8e10f1abf841806a2b9fba5ef401fde85",
+  "candidate": {
+    "original_scale": 1.0,
+    "allowed_edited_candidates": [
+      0.5
+    ],
+    "selection": "Predeclared .5 from completed corrected development tie rule; still require exact recomputed development result and separately hashed root quality/verification-purpose selection",
+    "if_original_selected": "Refuse; no distinct edited candidate is invented or selected from verification",
+    "quality": "Complete36; zero malformed/missing-envelope/unknown operations; explicit root semantic-invalid review; promotion NONE",
+    "freeze_timing": "Before any reserved-seed CPU reset or model call",
+    "fixed_candidate_scale": 0.5
+  },
+  "verification": {
+    "seed": 2026110397,
+    "families": 12,
+    "recipes": 2,
+    "episodes": 24,
+    "order": "Even family index original then candidate; odd candidate then original;6cases each ordinal",
+    "native_timers_ms": {
+      "enter-password": 15000,
+      "other_eleven": 10000
+    },
+    "actions_per_episode": 8,
+    "reply_action_batch": 8,
+    "max_scored_output_tokens": 96,
+    "inference_soft_seconds": 40,
+    "inference_hard_seconds": 45,
+    "protocol": "Byte-identical schema-v2 concise prompt, action parser, screenshot+filtered visible DOM, structural JSON schema and engine settings",
+    "schema": "vLLM0.18.0 + xgrammar0.2.8; same29 actual CPU string/token conformance cases",
+    "warmups": {
+      "count": 2,
+      "tokens_each": 64,
+      "purpose": "Same unscored blank image schema warmup once for each recipe; no preview/retry"
+    },
+    "maximum_explicit_requests_including_warmups": 194,
+    "maximum_pre_action_pngs": 192,
+    "png_bytes_each": 131072,
+    "artifact_bytes_aggregate": 25165824,
+    "no_adaptation": "No per-family recipe, winner reselection, omitted failure, changed denominator, reset retry, model rerun or source repair after verification",
+    "cache_fairness": "Idle required before and after every warmup/episode cache reset; prefix/MM/encoder reset even when balanced order repeats the same scale across cases. No new weight-copy receipt is claimed for a skipped same-scale edit.",
+    "variant_admissions_including_warmups": 26
+  },
+  "CPU_admission": {
+    "model_calls": 0,
+    "tensor_payloads_loaded": 0,
+    "paired_resets": 24,
+    "official_NONE_steps": 24,
+    "purpose": "After candidate freeze, join installed runtime/source/tokenizer grammar and same-seed initial screenshot+visible DOM fingerprints before one GPU run",
+    "no_task_answers_to_model": true,
+    "no_model_verification_before_GPU": true
+  },
+  "comparison": {
+    "reports": "All24 rows; planned denominator12 each; successes/errors/requests/token counts/elapsed data and paired gains/regressions",
+    "no_score_selection": true,
+    "no_automatic_promotion": true,
+    "perfect_flag_scope": "Only all12 fixed reserved cases, not all computer use",
+    "prior_score": "Earlier21/24 unchanged; this is a distinct small reserved-seed subset",
+    "Astra_or_desktop_mobile_comparison": "None"
+  },
+  "limits": {
+    "GPU_child_seconds": 1200,
+    "new_work_before_seconds": 1140,
+    "GPU_function_seconds": 1260,
+    "startup_seconds": 240,
+    "CPU_child_seconds": 450,
+    "CPU_function_seconds": 600,
+    "GPU": "A10080GB",
+    "CPU_max": 4,
+    "GPU_memory_max_MiB": 98304,
+    "CPU_memory_max_MiB": 16384,
+    "host_deadline_seconds": 1800,
+    "known_call_cancel_grace_seconds": 20,
+    "max_containers": 1,
+    "source_retries": 0,
+    "expiry_unix": 1793880000,
+    "unknown_native_request": "Fatal; retain generation stage for original watchdog, no following model call",
+    "bounds_limit": "Source admission/watchdog and nominal reservation, not proof of physical shutdown/deallocation/billing or provider restart exclusion"
+  },
+  "new_identity": {
+    "app_name": "adam-1-verify-miniwob-20261104-v1",
+    "CPU_run": "adam-verify-imports-20261104-v1",
+    "GPU_run": "adam-verify-miniwob-20261104-v1",
+    "private_only": true
+  },
+  "budget": {
+    "allocated_here_usd": 0,
+    "prospective_max_usd": 2.5,
+    "total_user_ceiling_usd": 30,
+    "root_actual_source_bound_allocation_required": true
+  },
+  "forbidden": [
+    "new provider calls by this source preparation",
+    "reusing consumed lifecycle authority",
+    "public endpoint/model export",
+    "Eden/heldout original sealed data",
+    "verification-driven candidate reselection"
+  ],
+  "next": [
+    "distinct exact review",
+    "separate actual development/quality/verification-purpose candidate freeze",
+    "root budget and private deployment admission",
+    "one fresh CPU source+backend+reserved pair check",
+    "one GPU after exact fresh CPU pass",
+    "saved-only complete outcome/terminal/billing audit"
+  ],
+  "source_amendment": "Parent explicitly fixed .5 before any verification/provider call; former source-only .5/.25 parameterization narrowed before first verification source freeze."
+}

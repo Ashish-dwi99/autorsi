@@ -1,0 +1,149 @@
+{
+  "author": "bu_eval_harness",
+  "budget_proposal": {
+    "CPU_nominal_USD": 0.0738528,
+    "GPU_nominal_USD": 1.43928,
+    "allocated_by_reviewer_USD": 0,
+    "build_storage_recovery_restart_contingency_USD": 0.9868672,
+    "if_root_adopts_without_other_changes": {
+      "remaining_unreserved_USD": 6.0,
+      "total_reserved_USD": 24.0
+    },
+    "ledger_observation_at_proposal": {
+      "not_modified": true,
+      "path": "evidence/budget_ledger.json",
+      "reserved_USD": 21.5,
+      "sha256": "43ac6810d8a0549c1796c3b15a00b9a84ade202414ba4bcb162e30a8085f4fff",
+      "unreserved_USD": 8.5
+    },
+    "limit": "Arithmetic against prior reviewed rates, not a new quote, settled billing or provider-enforced spend ceiling. Preserve all prior uncertainty reserves. Root actual source-bound allocation remains required.",
+    "nominal_bounds": {
+      "CPU_max": 4,
+      "CPU_memory_GiB": 16,
+      "CPU_seconds_including_startup": 840,
+      "GPU": "one A10080",
+      "GPU_memory_GiB": 96,
+      "GPU_seconds_including_startup": 1500
+    },
+    "path": "proposals/adam_verify_v1/BUDGET_PROPOSAL.json",
+    "prospective_USD": 2.5,
+    "sha256": "5d87ca6df51d81532f94444669435a336fcfa652cb7135430cb4eca045b1b865",
+    "source_binding_verified": true,
+    "sum_USD": 2.5
+  },
+  "corrected_finding": {
+    "fixed_source_sha256": "204856e800c75d5d8f5b941406951842edf5b207a12d1c0c42ac3e27a6cae147",
+    "problem": "Alternating original/candidate pair order repeats a scale between cases. The initial copied apply early return skipped prefix/MM/encoder resets for those episodes.",
+    "resolution": "prepare_variant checks fixed pair and actual idle, edits only when scale differs, always resets all three caches and checks idle again. Each of26 warmup/episode admissions has its own event; same-scale events explicitly reference a retained prior actual patch audit.",
+    "tests": [
+      "test_repeated_pair_scale_still_gets_fresh_caches",
+      "test_equal_cache_reset_and_failed_prefix_refuses_later_calls"
+    ]
+  },
+  "created_utc": "2026-11-03T23:21:10.379847+00:00",
+  "independence": {
+    "new_verification_sources_authored_by_reviewer": false,
+    "new_verification_sources_modified_by_reviewer": false,
+    "prior_distinct_review": {
+      "path": "evidence/adam_schema_v2_independent_source_budget_review.json",
+      "sha256": "e6cbde1f10399f33d964a2ce25543f3620b217ccb3aef546e7c97a1e3bd2f703"
+    },
+    "shared_basis_limit": "Reviewer authored parts of the earlier schema-v2/patch basis. Their byte-identical bodies retain the prior separate nonauthor review; this is a distinct review of the new verification composition and delta."
+  },
+  "independent_checks": {
+    "actual_SDK_shallow_remount_import": true,
+    "actual_backend_grammar_or_browser_tests": false,
+    "failed": 0,
+    "fake_tensor_only": true,
+    "known_test_EOF_record": {
+      "author": "root; not this verification author",
+      "current_test_sha256": "3466c0644f5788b96872b0c16e35bcacc893a64dc788007444304027f252cd44",
+      "historical_test_path": "evidence/history/schema_v2_test_eof_d44449e4.py",
+      "historical_test_sha256": "d44449e4b43ec4042810ce72ff770faa5e826551391a648ef0a8255e11c00e56",
+      "record": "evidence/adam_schema_v2_test_eof_record.json",
+      "sha256": "d4218bd2c9ca1671092f4943bdf442db2dd69f2ca74374473c35db012ab2c9e2"
+    },
+    "passed": 41,
+    "reported_elapsed_seconds": 0.583,
+    "skipped": 0,
+    "test_source_hashes": {
+      "test_schema.py": "e0372e7c06e289d3737902586807a713ab081649b290ac1f3b7e1ad4ae09b6ca",
+      "test_verify.py": "bbf5cab9e51010b0a36c872ef06cf9dcc0bfb4eea9cb86cb4bcdd2fd5e74515c",
+      "test_verify_native.py": "8ba11e5438c6517722a7f388c4f32a35becac8a1a6faefe43e5f70e84de0c301"
+    },
+    "tests_command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:proposals/adam_verify_v1 /Users/samuelekpe/Convert/.venv/bin/python -m unittest discover -s proposals/adam_verify_v1 -p 'test_*.py' -v",
+    "tests_run": 41,
+    "unchanged_native_function_ASTs": 11,
+    "upstream_runtime_files_hash_verified_unchanged": 28,
+    "whole_source_AST_and_hashes_verified": true
+  },
+  "limits": [
+    "This review launches no provider, browser, model, game, training or verification; no ledger, frozen source or original evidence was changed.",
+    "A source review and fake tests do not establish actual xgrammar conformance, CPU/browser readiness, completed verification outcomes or model improvement.",
+    "MiniWoB close return/direct owner reap does not independently prove all descendants stopped. Provider startup replacement, physical GPU release, final costs and billing require actual observations; no cancellation ACK inference.",
+    "Any perfect flag is limited to12 fixed reserved seeded DOM-assisted MiniWoB cases. It is not an Astra, screenshot-only, desktop/mobile, universal99percent or full-suite result.",
+    "The previously saved21/24 score remains unchanged. Root must preserve every outcome and complete a saved-only audit without selecting a different recipe from verification."
+  ],
+  "manifest_digest_convention": "sha256(json.dumps(manifest, sort_keys=True).encode()); default separators",
+  "next_required": [
+    "Root exact verification-purpose candidate/quality freeze",
+    "Root actual source-bound budget and private deployment identity",
+    "Fresh no-overlap observation and once CPU admission",
+    "Only after actual CPU pass, once fixed GPU verification",
+    "Saved-only complete results, terminal and cost reconciliation"
+  ],
+  "provider_model_browser_actions_by_reviewer": 0,
+  "reviewed_invariants": [
+    "Fixed original1.0 versus predeclared edited0.5 only; .25 and original-as-candidate refuse. Candidate recomputes solely from exact complete b44d development36 outcomes, never verification.",
+    "Separate hashed verification-purpose root selection and quality record are required before any reserved-seed CPU reset. The existing visual-calibration selection does not satisfy this interface.",
+    "Reserved seed2026110397;12 unchanged families;24 actual scored episodes;6 cases per ordinal; two identical neutral schema warmups;194 admitted request ceiling;96 scored output tokens/8 actions.",
+    "Same native timers10000ms except enter-password15000ms, source pins, strict parser, screenshot+filtered visible DOM and reward semantics. No repair, rescoring, verification reselection, fallback candidate or retry.",
+    "Four copied files are byte-identical to reviewed schema-v2: action_schema, patch, build helper, development contract. Eleven native functions have identical ASTs; changed native imports/preflight phase and seed metadata only.",
+    "Fresh current-source CPU backend/string+token grammar, exact runtime/header and paired reset/NONE receipts required before GPU. Old receipts supply artifact provenance only; complete model shards are not rehashed.",
+    "Private SDK from_name/hydrate/exact function ID before one spawn; local and remote once markers, expiry, read-only model volumes and no public endpoint/export.",
+    "Shallow SDK parent remount uses explicit packaged paths and executing-file hash joins. One spawned owner; pending generation preserves original45s watchdog;1200s child and1260s function plus240s startup remain.",
+    "Fresh400MiB before lookup and216MiB before report get; returned handle stays inside cancellation coverage even if receipt write/download admission fails; unknown spawn is not retried.",
+    "192 bounded pre-action PNGs/24MiB aggregate, bounded8MiB progress/16MiB host report; no continuous-video claim. Complete24 outcomes required for comparison; promotionNONE and retryFalse."
+  ],
+  "reviewer": "browser_model_local_provenance",
+  "schema": 1,
+  "source_bytes_verified": 328940,
+  "source_files_verified": 29,
+  "source_manifest": {
+    "proposals/adam_verify_v1/SCOPE.json": "12746612286125d2af1c96c7e429020cab95fa88d3ed69a5dad0d9c682c412dd",
+    "proposals/adam_verify_v1/action_schema.py": "868301423ea64d96c0136304d5cc39988a5cb410bfd552009650a93d7ec34e1a",
+    "proposals/adam_verify_v1/build_miniwob_runtime.py": "44f655fce0f07898908315abf3e0698ca1981bdb1f430fb976e0404ec99c724b",
+    "proposals/adam_verify_v1/development_contract.py": "d3614e2eda8387a19ed3ef876f9fb8311457a7dd1728ecfdbd0e491985536b66",
+    "proposals/adam_verify_v1/modal_verify.py": "9bdfda4ec9ecc5e01a22828f93000bb27af139b35674dfcbf0d97e2f509c5834",
+    "proposals/adam_verify_v1/verify_benchmark.py": "204856e800c75d5d8f5b941406951842edf5b207a12d1c0c42ac3e27a6cae147",
+    "proposals/adam_verify_v1/verify_contract.py": "23d3759d58d67fc1195d91836775139e2a3e6538e788e8cb9bdfdd716c4796b7",
+    "proposals/adam_verify_v1/verify_entry.py": "2853d873ed53820a7a529aea9ece37ec1ee662f02729f648a48c752f46694a96",
+    "proposals/adam_verify_v1/verify_host.py": "9a8969e8a417fa741619f16bc153bf70afac4cc997fa990cec85f69cd7bce65c",
+    "proposals/adam_verify_v1/verify_native.py": "07007292e62ab226ab47f8216f0ca4b168d9249dd6e0efca1bc302a8da1e5078",
+    "proposals/adam_verify_v1/verify_patch.py": "0441734f5e89c2903bf4c73955ef49b513fc0815f3c313bd5a28bd7d8cd62e9c",
+    "src/weight_space_lab/__init__.py": "0011bfd335ca645347f878f6d5ab2e7863958d572388233bb13530070a0f9201",
+    "src/weight_space_lab/benchmarks/__init__.py": "48fddf5bdf1d87f13ee19919253c21867a1509383523779b6b4d39e9cc454cea",
+    "src/weight_space_lab/benchmarks/miniwob.py": "c85987b1a84bf9a75c8a000fdb1cbc37f254adf31939e03e4359d132bffaca1a",
+    "src/weight_space_lab/diagnostic.py": "4ff894989dcccf57d2ad17cc86740114dafca8a57f62eb2297bb27d219c3dc33",
+    "src/weight_space_lab/eval/__init__.py": "2fecfeab2b6eacf945accac88c69620bc937d06f3c6efb23f95eb68e8cbcd4b5",
+    "src/weight_space_lab/eval/bu_policy.py": "57f228cdbdfbe72925d0aa311b76001d74a9e03ae9d439c0be63145fd11b02dd",
+    "src/weight_space_lab/eval/bu_protocol.py": "5987375c472918692f3a2c275c04048aa90b80652feae2faeaa01d20b89f3ebd",
+    "src/weight_space_lab/eval/fixtures.py": "2c994fd6d5c465a2a729082b789661494d711c6b7cec4bcc4d299c76e05ec57a",
+    "src/weight_space_lab/eval/runner.py": "1e22b7a8635c15214aeefd3e5956a8c5102934e1ce0cc261d359f2a1624085d5",
+    "src/weight_space_lab/merged_patch.py": "25310009418e646f555f56464e229fc7ac5c94163fffc86f4fdc8216e7e6d1e9",
+    "src/weight_space_lab/patch.py": "b2bf10e9402104d495c08ab7ade727300c2b2481c965552da48ea1ecb58b3aca",
+    "src/weight_space_lab/policy_io.py": "2c2ccdce8e0762f9e35529114337d0adfb01dd9706f95562d43ae51e9106f9a6",
+    "src/weight_space_lab/process_entry.py": "56fcbf8223f83573d0312b63230a2f7b4f487e7e2b395ffb38b948d7298eea88",
+    "src/weight_space_lab/process_entry_v4.py": "fb19d5b1ac02dde7877a40ca969155f77a79aec5c2aec5df5cc403f7ee17bf06",
+    "src/weight_space_lab/vllm018_compat.py": "be28b81d5d1e89f1fd08ade8bb59488738dda0253568e101acd6cac09dcb667c",
+    "src/weight_space_lab/vllm_attention.py": "db942a00fe576a82cdc8a29b218cc6a6f66c7148d91e86a379816c73f1e09924",
+    "src/weight_space_lab/vllm_pilot.py": "f6e777bb396b1b8eb5a56ed079b7aa11e4b32ce58f1229e6d43f69b310548aa6",
+    "src/weight_space_lab/vllm_pilot_v4.py": "9d2bad07d040cf3b6d5150fc89664ee41c72a93cf9863257fb8ac1c56cc148ac"
+  },
+  "source_manifest_sha256": "f508bab4a6093a104f6bc58be8bb1de86ba1e246a1de04dafcec4d6e4378c881",
+  "source_record": {
+    "path": "proposals/adam_verify_v1/SOURCE_RECORD.json",
+    "sha256": "ecb98c60350dedc7143a6af9c394f92bd9f2e157fa963278caace7eba13de82b"
+  },
+  "status": "DISTINCT_NEW_VERIFICATION_SOURCE_REVIEW_COMPLETE_NO_ADDITIONAL_CONCRETE_DEFECT"
+}

@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "created_utc": "2026-11-03T21:52:58.237192+00:00",
+  "status": "NEW_SOURCE_ONLY_UNREVIEWED_COPY",
+  "fresh_free_bytes": 1246982144,
+  "required_floor_bytes": 419430400,
+  "upstream_source_manifest_sha256": "b44dbbf430face18a694a4a8a3f4f6d8e10f1abf841806a2b9fba5ef401fde85",
+  "source_files": {
+    "proposals/adam_schema_v2/dev_contract.py": "d3614e2eda8387a19ed3ef876f9fb8311457a7dd1728ecfdbd0e491985536b66",
+    "proposals/adam_schema_v2/dev_patch.py": "0441734f5e89c2903bf4c73955ef49b513fc0815f3c313bd5a28bd7d8cd62e9c",
+    "proposals/adam_schema_v2/dev_native.py": "de2e53818cfb37eabd3ec442549e771fa828f07d8dc814f312face0ae22b09a5",
+    "proposals/adam_schema_v2/dev_benchmark.py": "ea1c7751feabb233a1f730b7b1b32c4b9ad7d65cfba40275a9865654313ae4d1",
+    "proposals/adam_schema_v2/dev_entry.py": "41809f8db6594cc1a56581a9d173e38609d09211d7bf467b769cc5cd2f753ecc",
+    "proposals/adam_schema_v2/modal_dev.py": "5e626bdc8daacea01b0805a9b3a6c2314c17469fb68028a21a8fb9954de6a732",
+    "proposals/adam_schema_v2/dev_host.py": "3d60257f892da3d84844b9cdb73f7ac8180e5cb767969d8638c24dcc5f217113",
+    "proposals/adam_schema_v2/build_miniwob_runtime.py": "44f655fce0f07898908315abf3e0698ca1981bdb1f430fb976e0404ec99c724b",
+    "proposals/adam_schema_v2/action_schema.py": "868301423ea64d96c0136304d5cc39988a5cb410bfd552009650a93d7ec34e1a",
+    "proposals/adam_schema_v2/SCOPE.json": "ebf563114648a81a6c246c743dcd350d8e38e07a2623a2e08aa2768b716da6ed",
+    "proposals/adam_schema_v2/test_dev.py": "a3b5a8559414bc8776cb30994f40ba141d84d4a723f8e2ba88b7a61736048c05",
+    "proposals/adam_schema_v2/test_dev_native.py": "d44449e4b43ec4042810ce72ff770faa5e826551391a648ef0a8255e11c00e56",
+    "proposals/adam_schema_v2/test_schema.py": "0a54d09431ef48142095956077bf480eb4d5e37fcdc80b2572543122388ca473"
+  },
+  "copied_development_contract_exact_bytes": "d3614e2eda8387a19ed3ef876f9fb8311457a7dd1728ecfdbd0e491985536b66",
+  "mapping": {
+    "dev_contract.py": "verify_contract.py",
+    "dev_patch.py": "verify_patch.py",
+    "dev_native.py": "verify_native.py",
+    "dev_benchmark.py": "verify_benchmark.py",
+    "dev_entry.py": "verify_entry.py",
+    "modal_dev.py": "modal_verify.py",
+    "dev_host.py": "verify_host.py",
+    "build_miniwob_runtime.py": "build_miniwob_runtime.py",
+    "action_schema.py": "action_schema.py",
+    "SCOPE.json": "SCOPE.json",
+    "test_dev.py": "test_verify.py",
+    "test_dev_native.py": "test_verify_native.py",
+    "test_schema.py": "test_schema.py"
+  },
+  "provider_model_calls": 0
+}

@@ -1,0 +1,218 @@
+{
+  "schema": 2,
+  "total_authorized_usd": 30,
+  "scope": "BU weight-editing and testing only, Modal account ekpe6000/main",
+  "reservations": [
+    {
+      "id": "early-four-apps-provisional-envelope",
+      "usd": 4,
+      "status": "Provisional planning replacement, not settled invoice; includes reported charges and retained late-cost contingency",
+      "covers_reservation_ids": [
+        "metadata-preflight-v1",
+        "image-build-and-fixtures-v1",
+        "pilot-v1",
+        "diagnostic-v2"
+      ],
+      "posted_gross_usd": "0.32378026",
+      "remaining_contingency_usd": "3.67621974",
+      "components": {
+        "late_compute_startup_usd": 3,
+        "unassigned_build_storage_egress_usd": 0.5,
+        "residual_usd": "0.17621974"
+      }
+    },
+    {
+      "id": "adam-1-cu-neal-demo-v1",
+      "usd": 3,
+      "status": "Original shared3USD envelope retained for v1 startup failure, v2 CPU frame failure, and separately reviewed CPU-only navigation diagnostic; no new reservation or GPU admission",
+      "components_usd": {
+        "image_cpu": 0.55,
+        "gpu_startup_and_demo": 1.45,
+        "storage_recovery_control": 0.25,
+        "pending_contingency": 0.75
+      },
+      "source_manifest_history": [
+        "99d3ac791b37c298722f6df87b6aff262a765c415fbb55ec6e4b69cf03078464",
+        "84a361c420a7f739834f750c0dd702057bd367ed26749973fe4745e2a23bfa0e",
+        "8fbfae7c35670e7c3dbf3b8b1dcbd0ee573960048eff32da9bf09c135c458f5a",
+        "62e820ce2fdf1f0be8d2b6c4b27181d838929f4a49e0e8d66033a0f99b054809",
+        "8a43fd20d7010d85b7c1c6e547686863dc4452df8b5c574748ab8c427c58ad38"
+      ],
+      "v1_failure_record": "evidence/neal_v1_startup_failure_reconciliation.json",
+      "v1_terminal_record": "evidence/neal_v1_terminal_observation.json",
+      "navigation_diagnostic_scope": "One original level1 navigation per two fresh frames, <=30s observation; no model/input mounts, no GPU function, no game action, no bypass/reload. Existing results volume only.",
+      "navigation_redirect_scope": "Two deliberate initial URLs; normal anonymous browser redirects observed after possible network contact. Stop on observed unlisted origin/document/loop/refusal. No all-hop preventive egress guarantee, custom transport, fallback, reload or security changes."
+    },
+    {
+      "id": "adam-dev-miniwob-20261103-v1",
+      "usd": 3.5,
+      "status": "CPU and36-episodeGPU development completed once; child reaped0 and actual provider0live/0running; output protocol failed31episodes; full3.50 reservation retained pending billing reconciliation.",
+      "source_manifest_sha256": "048c1884833769e523a3c4daf44c803ced445f263496cabad342c56dc227dcdf",
+      "allocation_file": "evidence/adam_dev_v1_allocation_20261103.json",
+      "outcome": "evidence/adam_dev_v1_outcome_20261103.json"
+    },
+    {
+      "id": "v3-completed-provisional-envelope",
+      "usd": 2.0,
+      "status": "Root-adopted provisional planning replacement; posted costs included, substantial late/build/storage/egress contingency retained; not settled invoice.",
+      "covers_reservation_ids": [
+        "vllm-imports-and-pilot-v3"
+      ],
+      "posted_gross_usd": "0.18410759",
+      "remaining_contingency_usd": "1.81589241",
+      "components_usd": {
+        "late_compute_startup": "1.50",
+        "rounding_and_other_residual": "0.06589241",
+        "unassigned_build_storage_egress": ".25"
+      }
+    },
+    {
+      "id": "v4-and-MiniWoB-completed-provisional-envelope",
+      "usd": 3.0,
+      "status": "Root-adopted provisional planning replacement; posted costs included, substantial late/build/storage/egress contingency retained; not settled invoice.",
+      "covers_reservation_ids": [
+        "vllm-imports-and-pilot-v4"
+      ],
+      "posted_gross_usd": "0.83589642",
+      "remaining_contingency_usd": "2.16410358",
+      "components_usd": {
+        "late_compute_startup": "1.50",
+        "rounding_and_other_residual": "0.16410358",
+        "unassigned_build_storage_egress": ".50"
+      }
+    },
+    {
+      "id": "adam-schema-miniwob-20261104-v2",
+      "usd": 2.5,
+      "status": "CPU/GPU completed once; distinct saved result audit complete; development candidate0.5 selected. Full2.5USD reserve retained.",
+      "source_manifest_sha256": "b44dbbf430face18a694a4a8a3f4f6d8e10f1abf841806a2b9fba5ef401fde85",
+      "allocation_file": "evidence/adam_schema_v2_allocation_20261103.json",
+      "outcome": "evidence/adam_schema_v2_root_quality_20261103.json"
+    },
+    {
+      "id": "adam-screen-visual-dev-20261104-v2",
+      "usd": 3.5,
+      "status": "Allocated one new CPU admission and one24episode screen development GPU with bounded actual media recovery; not yet deployed or invoked.",
+      "source_manifest_sha256": "b7e28dca20e38eb05679a409cad9c1021fb4c14b6218c6f50beea2e7430f5153",
+      "allocation_file": "evidence/adam_screen_v2_allocation_20261103.json"
+    }
+  ],
+  "unreserved_usd": 8.5,
+  "billing_observation": {
+    "date_utc": "2026-11-03",
+    "completed_hour_cli": [
+      {
+        "Object ID": "ap-j8vVsgRCTfwQ0B5vcQqw2q",
+        "Description": "bu-weight-space-preflight",
+        "Environment": "main",
+        "Interval Start": "2026-11-03T15:00:00",
+        "Cost": "0.00003072"
+      },
+      {
+        "Object ID": "ap-GhxEdV3pt8KJdrOjjOzQFM",
+        "Description": "bu-weight-space-diagnostic-v2",
+        "Environment": "main",
+        "Interval Start": "2026-11-03T16:00:00",
+        "Cost": "0.00444647"
+      },
+      {
+        "Object ID": "ap-RUEOXLBz6SG7aAScYP3MAh",
+        "Description": "bu-weight-space-pilot-v1",
+        "Environment": "main",
+        "Interval Start": "2026-11-03T16:00:00",
+        "Cost": "0.31341068"
+      },
+      {
+        "Object ID": "ap-q7TkFvMkJ1P26YPL28qzjp",
+        "Description": "bu-weight-space-pilot-v1",
+        "Environment": "main",
+        "Interval Start": "2026-11-03T16:00:00",
+        "Cost": "0.00589239"
+      }
+    ],
+    "interpretation": "Saved provider report includes0.32378026USD gross usage for early app hours, with reporting lag possible. No reservation released; no settled project bill inferred.",
+    "live_ui": "Nov3 after private deployment and failed pre-spawn host launch: credits29.03. Rounded asynchronous display, not a settled project total.",
+    "new_completed_hours_receipt": "evidence/billing_completed_hours_15_to_19_20261103.json",
+    "new_reported_gross_usd": "0.96944222",
+    "latest_completed_hour_record": "evidence/billing_completed_hours_15_to_23_20261103.json",
+    "latest_combined_reported_gross_usd": "1.82994636",
+    "latest_limit": "Completed intervals before23:00UTC; reporting may lag, reserves retained."
+  },
+  "rules": [
+    "No new reservation if total reservations plus settled charges exceed USD30; do not double-count settled charges and their released reservations.",
+    "One single-use GPU container per experiment, bounded local and remote deadlines, no automatic user-level retries.",
+    "Preserve aborted run receipts and verify provider terminal status; cancellation acknowledgement alone does not establish stopped billing.",
+    "Reservations are conservative local accounting, not provider-enforced spending caps. Include startup, image build, CPU, memory, storage and egress where applicable.",
+    "No purchases, paid teacher API calls or additional credit assumption.",
+    "Root explicitly adopted a provisional planning replacement for the four early apps after actual billing and saved terminal evidence review. This revises their retain-until-settled accounting rule; it does not call the invoice settled.",
+    "Root adopted the reviewed v3/v4 replacement from14 to5USD including1.02000401 posted+3.97999599 retained contingency; later charges consume those envelopes and never supply new spending authority.",
+    "Keep at least2USD unallocated. Initially allocate at most12.5 of this14.5 planning headroom; every new experiment remains exact-source reviewed and bounded.",
+    "Suspend new allocations and increase exposure reserves if late charges, renewed tasks, or unexplained costs threaten the retained envelopes. No indefinite hosting or settled-cost assumption."
+  ],
+  "v4_terminal_observation": {
+    "app_id": "ap-GsoQUVnXok7ECttMemEvnA",
+    "state": "Finished",
+    "live_containers": 0,
+    "running_calls": 0,
+    "utc": "2026-11-03T17:45:00.255989+00:00"
+  },
+  "miniwob_v1_terminal_observation": {
+    "state": "Finished",
+    "live_containers": 0,
+    "live_sandboxes": 0,
+    "running_calls": 0,
+    "benchmark_activity": "No activity",
+    "cpu_function_calls": 1,
+    "displayed_credits_usd": 29.04,
+    "source": "Root Chrome Modal app DOM observation on Nov3 after completion; rounded credits are not settled billing."
+  },
+  "previous_ledger_sha256": "18a11cd20c777d0851a1e24821046b56249803394a388f2175b3886e893acecc",
+  "superseded_reservations": [
+    {
+      "id": "metadata-preflight-v1",
+      "usd": 0.1,
+      "status": "completed; final billing pending"
+    },
+    {
+      "id": "image-build-and-fixtures-v1",
+      "usd": 0.5,
+      "status": "completed; final billing pending"
+    },
+    {
+      "id": "pilot-v1",
+      "usd": 12,
+      "status": "aborted; provider UI stopped/0 containers/0 calls observed; retain full reservation until settled"
+    },
+    {
+      "id": "diagnostic-v2",
+      "usd": 3,
+      "status": "startup failed; cancelled;0 running calls/containers observed; final billing pending"
+    },
+    {
+      "id": "vllm-imports-and-pilot-v3",
+      "usd": 8,
+      "status": "completed; GPU child reaped0/browserclosed; baseline batch protocol rejected; no candidate edits; final billing pending"
+    },
+    {
+      "id": "vllm-imports-and-pilot-v4",
+      "usd": 6,
+      "status": "v4 and fixed MiniWoB comparison completed; private target observed0live/0running; full6.00 retained, final billing pending",
+      "scope": "Shared envelope for v4 CPU/GPU and any separately reviewed bounded experimental hosting verification; no additional reservation implied",
+      "suballocations": [
+        {
+          "scope": "v4 CPU imports + GPU pilot",
+          "usd": 3.2,
+          "status": "completed; keep reserve"
+        },
+        {
+          "scope": "combined private hosting + MiniWoB benchmark",
+          "usd": 2.8,
+          "status": "v2 benchmark completed once via corrected hostv3:48episodes/97calls, direct child reaped0; actual provider0live/0running observed. Entire2.80 retained."
+        }
+      ]
+    }
+  ],
+  "reconciliation_record": "evidence/budget_provisional_reconciliation_adoption_20261103.json",
+  "miniwob_v2_terminal_record": "evidence/private_miniwob_v2_terminal_ui_record.json",
+  "latest_reconciliation_record": "evidence/budget_v3_v4_provisional_replacement_adoption_20261103.json"
+}

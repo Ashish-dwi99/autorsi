@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "observed_unix": 1793748182.4183822,
+  "source": "https://help.x.com/en/using-x/x-videos",
+  "ordinary_account_limits": {
+    "seconds": 140,
+    "bytes": 536870912
+  },
+  "planned_output": {
+    "container": "mp4",
+    "codec": "H264",
+    "pixel_format": "yuv420p",
+    "width": 1920,
+    "height": 1080,
+    "fps": 25,
+    "max_bytes": 134217728,
+    "max_seconds": 120,
+    "speed_factor": 1
+  },
+  "publication": "Human posts after reviewing asset; no automated post authorized.",
+  "media_validation_required": "Actual matched distinct videos, receipts, full decode and sampled visual inspection."
+}
