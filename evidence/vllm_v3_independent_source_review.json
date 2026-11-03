@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "source_commit": "dc41e55",
+  "files": {
+    "modal_vllm_pilot.py": "9f4804ce91761a89ce0e8a173f715ee15946d19548438567ce4ab07e2ff9eac3",
+    "src/weight_space_lab/process_entry.py": "56fcbf8223f83573d0312b63230a2f7b4f487e7e2b395ffb38b948d7298eea88",
+    "src/weight_space_lab/vllm_pilot.py": "f6e777bb396b1b8eb5a56ed079b7aa11e4b32ce58f1229e6d43f69b310548aa6",
+    "src/weight_space_lab/vllm_attention.py": "db942a00fe576a82cdc8a29b218cc6a6f66c7148d91e86a379816c73f1e09924"
+  },
+  "independent_reviewer": "/root/bu_eval_harness",
+  "review": "No further blocking source defect found; actual CPU receipt is required before GPU and cannot prove GPU loader/kernel/memory compatibility.",
+  "known_gap": "spawn and call-receipt write are outside the local cancellation try; receipt-write failure after submission requires known-call or app recovery.",
+  "root_mitigation": "Monitor CLI app URL and run files during submission. On missing receipt/local failure stop the exact known app, as demonstrated for diagnostic-v2. Preserve budget reservation until billing settles.",
+  "acceptance": "Frozen development selection and once paired acceptance; no Astra or world-best claim."
+}
