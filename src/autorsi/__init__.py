@@ -6,7 +6,7 @@ from .engine import AutoRSI, RollbackJournalError
 from .proposers import JSONProposer, SequenceProposer, parse_recipe
 from .torch_backend import TorchBackend
 
-__version__ = "0.1.0"
+__version__ = "0.1.0a1"
 __all__ = ["AutoRSI", "Backend", "EditRecipe", "Evaluator", "Goal", "Guard", "InMemoryBackend",
            "JSONProposer", "ModelState", "ProposalContext", "Proposer", "RunLimits", "RunResult",
            "ScalarBackend", "SequenceProposer", "StaleRevisionError", "TensorEdit", "TorchBackend", "parse_recipe",

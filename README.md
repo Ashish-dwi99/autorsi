@@ -2,7 +2,7 @@
 
 **Bounded, evaluation-gated weight editing for Python applications.** Give AutoRSI a model you control, a measurable objective, protected metrics and a proposer. It builds isolated weight candidates, evaluates them, and promotes accepted weights at an inference safe point. Keep it as a one-shot developer tool or explicitly call it between agent tasks.
 
-AutoRSI is a Python framework for controlled, iterative model improvement. Install it from this repository; it has not been published to a package index.
+AutoRSI is a Python framework for controlled, iterative model improvement. **Version 0.1.0a1 is a prepared alpha:** APIs may change. It is MIT-licensed and prepared for public distribution, but has not yet been published to PyPI. Install from this repository with an account that has repository access while it remains private.
 
 ```mermaid
 flowchart LR
@@ -140,6 +140,8 @@ A separate `validation_evaluator` can gate candidates with the same metric contr
 - **Failures:** rejected candidates and pre-promotion failures leave serving weights unchanged. A journal failure after promotion returns `journal_error` with the actual accepted count, checkpoint and revision. An output-directory creation failure raises before any promotion. Rollback reporting errors expose the committed revision via `RollbackJournalError.revision`. Journals are local evidence, not crash-atomic distributed transactions.
 
 See [the integration contract](docs/integration.md) for adapter requirements, revision semantics and evaluator design.
+
+See [the changelog](CHANGELOG.md), [MIT license](LICENSE), and [release procedure](docs/releasing.md). Publishing remains a separate, manual maintainer action.
 
 ## Development
 

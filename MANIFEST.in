@@ -1,5 +1,12 @@
 include README.md
+include PACKAGE_README.md
+include LICENSE
+include CHANGELOG.md
 include CONTRIBUTING.md
 include docs/integration.md
+include docs/releasing.md
+include scripts/render_package_readme.py
+include scripts/verify_release.py
 recursive-include examples/autorsi *.py
 recursive-include tests/autorsi *.py
+recursive-include tests/release *.py

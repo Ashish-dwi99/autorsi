@@ -1,18 +1,28 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "autorsi"
-version = "0.1.0"
+version = "0.1.0a1"
 description = "Bounded, evaluation-gated model weight editing for Python applications"
-readme = "README.md"
+readme = {file = "PACKAGE_README.md", content-type = "text/markdown"}
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.11"
 dependencies = []
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
 
 [project.urls]
 Source = "https://github.com/geniusgeek/autorsi"
 Issues = "https://github.com/geniusgeek/autorsi/issues"
+Changelog = "https://github.com/geniusgeek/autorsi/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 torch = ["torch>=2.2"]

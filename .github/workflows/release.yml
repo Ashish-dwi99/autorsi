@@ -1,0 +1,107 @@
+name: Manual alpha release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing release tag matching the selected main commit (for example v0.1.0a1)'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: autorsi-pypi-release
+  cancel-in-progress: false
+
+jobs:
+  build-and-test:
+    if: github.repository == 'geniusgeek/autorsi' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      artifact-id: ${{ steps.upload.outputs.artifact-id }}
+    env:
+      RELEASE_TAG: ${{ inputs.tag }}
+      HF_HUB_OFFLINE: '1'
+      TRANSFORMERS_OFFLINE: '1'
+    steps:
+      - name: Check out the immutable dispatched main commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.11'
+      - name: Validate exact version, tag, main and dispatched SHA
+        run: |
+          python scripts/render_package_readme.py --check
+          python scripts/verify_release.py --tag "$RELEASE_TAG" --expected-sha "$GITHUB_SHA"
+      - name: Install build and model-test dependencies
+        run: |
+          python -m pip install 'build>=1.2' 'twine>=6'
+          python -m pip install torch==2.9.1 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install transformers==4.57.5
+      - name: Build source distribution and wheel from that source distribution
+        run: python -m build
+      - name: Validate distribution metadata and narrow contents
+        run: |
+          python -m twine check --strict dist/*
+          python scripts/verify_release.py --tag "$RELEASE_TAG" --expected-sha "$GITHUB_SHA" --dist dist
+      - name: Test the built wheel, including real Torch and tiny causal-LM integration
+        run: |
+          python -m pip install --no-deps dist/*.whl
+          python - <<'PY'
+          import unittest
+          suite = unittest.defaultTestLoader.discover('tests/autorsi')
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          if result.testsRun == 0 or not result.wasSuccessful() or result.skipped:
+              raise SystemExit('All model and core tests must pass without skips for release')
+          PY
+          python -m unittest discover -s tests/release -v
+      - name: Install into a clean environment and smoke test outside the checkout
+        shell: bash
+        run: |
+          python -m venv "$RUNNER_TEMP/autorsi-wheel"
+          "$RUNNER_TEMP/autorsi-wheel/bin/python" -m pip install --no-index --no-deps dist/*.whl
+          cd "$RUNNER_TEMP"
+          "$RUNNER_TEMP/autorsi-wheel/bin/python" -c "import autorsi, os, sys; assert autorsi.__version__ == os.environ['RELEASE_TAG'][1:]; assert 'torch' not in sys.modules"
+          "$RUNNER_TEMP/autorsi-wheel/bin/autorsi-demo" --output "$RUNNER_TEMP/autorsi-demo-output"
+      - name: Preserve exactly the validated distributions
+        id: upload
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: autorsi-distributions-${{ github.sha }}
+          path: |
+            dist/*.whl
+            dist/*.tar.gz
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    if: github.repository == 'geniusgeek/autorsi' && github.ref == 'refs/heads/main'
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: pypi
+      url: https://pypi.org/p/autorsi
+    permissions:
+      id-token: write
+    steps:
+      - name: Download only the validated artifact from this workflow run
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          artifact-ids: ${{ needs.build-and-test.outputs.artifact-id }}
+          path: dist
+          merge-multiple: true
+          digest-mismatch: error
+      - name: Publish with the configured PyPI trusted publisher
+        uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # v1.14.3
+        with:
+          packages-dir: dist/
+          skip-existing: false
+          attestations: true

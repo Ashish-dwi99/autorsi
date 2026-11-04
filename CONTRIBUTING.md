@@ -17,3 +17,5 @@ Changes to editing, promotion, rollback or persistence should include a failing-
 Document the exact model types a backend supports. Do not infer compatibility with quantized, sharded or hosted models from a dense PyTorch test. Do not add benchmark claims without a reproducible evaluation and its limitations.
 
 The manual GitHub Actions workflow provides package and optional model-backend checks. Local tests do not establish a passing remote workflow.
+
+AutoRSI is licensed under MIT; see [LICENSE](LICENSE). Release preparation and the separate manual publication step are documented in [docs/releasing.md](docs/releasing.md). Regenerate the package-index README with `python scripts/render_package_readme.py` after changing `README.md`.
