@@ -3,21 +3,25 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "weight-space-lab"
+name = "autorsi"
 version = "0.1.0"
-description = "Reversible model-weight experiments with selectable editors, adapters and measured goals"
+description = "Bounded, evaluation-gated model weight editing for Python applications"
+readme = "README.md"
 requires-python = ">=3.11"
 dependencies = []
 
+[project.urls]
+Source = "https://github.com/geniusgeek/autorsi"
+Issues = "https://github.com/geniusgeek/autorsi/issues"
+
+[project.optional-dependencies]
+torch = ["torch>=2.2"]
+hf-demo = ["torch>=2.2", "transformers>=4.40,<5"]
+
+[project.scripts]
+autorsi-demo = "autorsi.demo:main"
+
 [tool.setuptools.packages.find]
-where = ["src", "."]
-include = ["weight_space_lab", "weight_space_lab.*", "framework"]
-exclude = ["framework.tests", "framework.tests.*"]
+where = ["src"]
+include = ["autorsi", "autorsi.*"]
 namespaces = false
-
-[tool.setuptools.package-dir]
-weight_space_lab = "src/weight_space_lab"
-framework = "framework"
-
-[tool.setuptools.package-data]
-framework = ["example_config.json", "config.schema.json", "README.md"]

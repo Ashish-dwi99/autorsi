@@ -1,9 +1,0 @@
-{
-  "schema": 1,
-  "scope": "Repository publication preparation for completed MiniWoB source/results only",
-  "default_diff_check": "Only an extra blank line at EOF in the already reviewed test_miniwob_native_v2.py; preserved exact bytes rather than changing its review pin.",
-  "unchanged_test_sha256": "095e49c916d84671cace887f33e898c19751a17f93def4fb79918ccdb3226e91",
-  "runtime_source_changed": false,
-  "nealdemo_runtime_included": false,
-  "private_checkpoints_or_raw_run_receipts_included": false
-}

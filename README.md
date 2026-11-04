@@ -1,65 +1,150 @@
-# Weight Space Lab
+# AutoRSI
 
-An experimental framework for proposing, applying and measuring reversible model-weight edits. Developers select the **editor model** independently from the **target checkpoint**, then supply an architecture-compatible recipe, evaluator, measurable goal, regression limits and resource budget. See [`framework/`](framework/) for the generic contracts, plugin registry, execution engine and OpenAI/Gemini proposal adapters. Provider integrations are protocol-tested with fake transports; live editor API access is not yet validated.
+**Bounded, evaluation-gated weight editing for Python applications.** Give AutoRSI a model you control, a measurable objective, protected metrics and a proposer. It builds isolated weight candidates, evaluates them, and promotes accepted weights at an inference safe point. Keep it as a one-shot developer tool or explicitly call it between agent tasks.
 
-The first real target is **Grupa Adam-1**, with **Adam-1-CU** as the current experimental computer-use variant. It derives from the owner's fine-tuned Browser Use model. **Eden** remains the separate original-architecture project. These names do not erase upstream provenance or establish broader capabilities. See [`models/adam-1-cu.json`](models/adam-1-cu.json).
+AutoRSI is a Python framework for controlled, iterative model improvement. Install it from this repository; it has not been published to a package index.
 
-The current real-model experiment compares an explicit weight edit against the unchanged checkpoint, within a total Modal testing budget of $30. Generic domains are supported through registered adapters; arbitrary architectures and goals are not automatically executable or guaranteed to improve.
-
-**Latest development result: 11/12 original versus 12/12 at both edited strengths.** All variants used the same constrained action grammar, native timers and fresh development seed. The fixed tie-break selects 0.5. It used 12 scored requests versus 17 and 254 output tokens versus 347; summed episode time fell from 32.81 to 24.20 seconds, while median request time increased from 1.04 to 1.28 seconds. All 44 outputs, including three warmups, were structurally valid. The distinct saved-result audit reconciles the actual actions, rewards, weight edits and lifecycle. This supports a development candidate, not independent verification or Astra superiority. See [the audit](evidence/adam_schema_v2_independent_result_review.json) and [root quality decision](evidence/adam_schema_v2_root_quality_20261103.json).
-
-The preceding unconstrained concise-protocol attempt remains rejected: it scored 0/12 at original fine-tune strength, 2/12 at 0.5, and 3/12 at 0.25. All 31 failures occurred before any UI action: 23 responses omitted the required action envelope and eight were malformed JSON. No responses were repaired or rescored. The new run also changed grammar and seed, so improvement between those runs cannot be attributed only to weights. See [the earlier outcome](evidence/adam_dev_v1_outcome_20261103.json).
-
-The actual values of 192 attention matrices and their recovered LoRA updates were inspected, then reversible edits were applied to 905,969,664 targeted elements. The 0.5 and 0.25 recipes changed 610,967,391 and 692,518,098 BF16 elements respectively. These are numeric measurements, not percentages of capability. A screenshot-only fixture harness and visual-merger calibration are source-reviewed and allocated $3.50 for one new CPU admission and one development run with real recordings. A separate $2.50 allocation covers fixed-candidate MiniWoB verification. Total reservations are $24 with $6 unallocated within the $30 ceiling; reservations include uncertainty and are not settled charges. Screen results, separate verification, an Astra comparison, updated checkpoint publication and a usable side-by-side video remain outstanding.
-
-**The fixed MiniWoB subset improved from 14/24 to 21/24 successes, with 10 paired gains and 3 regressions.** Both variants completed all 24 cases under the original task timers. Scored requests fell from 66 to 29, while median full request latency increased from 2.28 to 3.61 seconds. The 626-check independent saved-result audit reconciles source, runtime, initial states, weight transitions and all 97 requests including two warmups. The candidate fails a strict zero-regression goal and remains experimental. See [`evidence/private_miniwob_v2_outcome.json`](evidence/private_miniwob_v2_outcome.json).
-
-This is one DOM-assisted 12-family, two-seed subset, not the full MiniWoB benchmark or a desktop evaluation. Scores describe the model, adapter and runtime together. Native timers include inference, and two original-model failures include the adapter's rejection of repeated clearing of nonempty inputs. No Astra comparison, general capability transfer, faster decoding or cost-at-scale result is established.
-
-![Fixed MiniWoB subset results](evidence/figures/adam-1-cu-miniwob-v2.svg)
-
-**A narrow weight-edit improvement is now measured; no Astra comparison or broad superiority is established.** With fine-tune strength reduced to 0.5, success improved from 3/8 to 8/8 development tasks, then from 3/8 to 8/8 on eight separate acceptance variants of the same task families. Acceptance requests fell from 44 to 16 and aggregate task time from 100.99 to 45.87 seconds. Five repetitive-action failures were rescued, with zero observed regressions. The independent saved-result audit reconciles all 48 episodes and 177 model requests. See `evidence/vllm_v4_outcome.json` and its independent review.
-
-This is a small synthetic DOM-assisted suite. It supports a broader benchmark, not a world-best or 10× Astra claim. Reduced repetition explains lower total task time; faster token-generation kernels have not been shown. The adapter-subtracted diagnostic control also passed 8/8 development cases, so the result may reflect undoing a harmful fine-tuning effect rather than adding new capability. It is not verified to reconstruct raw BU.
-
-Earlier failures remain preserved: v1 loaded the checkpoint but returned four incomplete/malformed replies and timed out on call five; v2 failed its remote import path; v3 returned complete action batches that the single-action harness rejected. V4 evaluates baseline and all edits under the same corrected batch interface. All 75 local tests passed, actual CPU admission passed, and the GPU child exited normally. No historical failure was rescored as a pass.
-
-![Synthetic acceptance results](evidence/figures/vllm-v4-acceptance.svg)
-
-## Model provenance
-
-The recovered Modal artifacts are a merged `Qwen3VLMoeForConditionalGeneration` checkpoint and an ordinary rank-16 attention LoRA whose configuration names `browser-use/bu-30b-a3b-preview`. BU itself derives from Qwen3-VL-30B-A3B-Instruct. This is separate from the owner's Qwen2.5-7B experiment.
-
-Original volumes are read-only. Private checkpoints, training data, screenshots and raw run receipts are excluded from Git. Source and artifact fingerprints live in `evidence/`; detailed local receipts remain in ignored directories.
-
-## Initial intervention
-
-For each original target matrix `W*`, test `BF16(FP32(W*) + (lambda - 1) * 2 * (FP32(B) @ FP32(A)))` using the recovered LoRA matrices. Every variant starts from retained originals. Lambda 1 restores the original bytes; lambda 0 is an adapter-subtracted control and is **not** verified to reconstruct raw BU. Candidate strengths are 0.5 and 0.75.
-
-This tests fine-tuning strength. It does not copy another model's hidden knowledge, shrink BU's architecture or establish general capability transfer.
-
-## Validation
-
-```sh
-PYTHONPATH=src python3 -m unittest discover -s tests -v
+```mermaid
+flowchart LR
+    G[Objective + protected metrics] --> P[Propose bounded recipe]
+    P --> W[Build isolated candidate weights]
+    W --> E[Evaluate objective + regression tests]
+    E -->|Pass| A[Promote at inference safe point]
+    E -->|Fail| R[Reject; keep serving weights]
+    A --> B{Steps and budget remain?}
+    R --> B
+    B -->|Yes| P
+    B -->|No| O[Return accepted checkpoint + journal]
 ```
 
-The local tests use small numerical examples and evaluator doubles; they do not run a model. Sixteen synthetic reference browser paths have separately passed CPU Chromium validation. MiniWoB's corrected CPU preflight passed all 24 paired cases, 48 resets and 48 native no-op steps, with zero model calls. It preserves the original task timers (10 seconds, or 15 seconds for the password task). The subsequent model comparison is reported above. Initial timer and pre-submission SDK failures remain recorded. No desktop result is established.
+## Try it locally
 
-The generic framework has a separate pure test suite:
+Python 3.11 or newer. The core and scalar demo have no third-party dependencies, provider keys or model downloads:
 
 ```sh
-python3 -m unittest discover -s framework/tests -v
+git clone https://github.com/geniusgeek/autorsi.git
+cd autorsi
+python -m pip install -e .
+python -m autorsi --output autorsi-runs/demo
 ```
 
-See `evidence/benchmark_protocol_v1.json` for the planned success, latency, cost, regression and demonstration measurements. Neal's game is a demonstration; established benchmarks provide broader coverage. A comparison with this interactive assistant must identify its tools and access differences, and cannot be labelled a verified Astra model benchmark.
+The demo edits a tiny two-output linear model expressed as scalar weights. It rejects an improvement that damages the protected task, then accepts two bounded improvements. Its target mean squared error goes from `2.5` to `0.625` to `0.0`, while the protected error stays `0.0`. These are deterministic arithmetic examples, not LLM capability results.
 
-The planned Neal.fun recording is currently blocked. A CPU-only navigation diagnostic observed HTTP 403 responses served through Cloudflare for both initial game frames, with `X-Frame-Options: SAMEORIGIN`; Chromium explicitly refused framing. The recovered video contains blank panes. The diagnostic made zero model calls and zero game actions, so it supplies no comparison score. No challenge interaction or browser-security change was attempted. The earlier startup and frame-loading failures remain preserved; this new trace does not retroactively establish their missing details. See [`evidence/neal_navigation_diagnostic_v1_outcome.json`](evidence/neal_navigation_diagnostic_v1_outcome.json).
+Run a real PyTorch model edit and reload its exported checkpoint:
 
-The diagnostic also corrected a source-review mistake: Playwright routing does not intercept every automatic redirect. The final diagnostic observes natural redirects and stops on an observed unexpected request or refusal, without claiming that callbacks prevent network contact already made. Ten local tests and distinct source reviews cover that correction; actual HTTP and browser evidence comes from the separate completed CPU run.
+```sh
+python -m pip install -e '.[torch]'
+python examples/autorsi/torch_quickstart.py
+```
 
-## Running remote work
+## Integrate your model
 
-Modal entrypoints launch billable resources. Historical `modal_preflight.py` and `modal_pilot.py` invocations are consumed and must not be rerun under their old IDs. Check the current source admission, remaining budget and once-only run markers before any new invocation. Source timeouts and spend reservations do not constitute provider-enforced billing caps.
+Your evaluator returns finite numbers from actual model execution. Choose one objective and as many protected metrics as you need. Select exact editable parameter names and bounds appropriate to your model.
 
-Eden models, datasets, evaluation and previous run approvals are outside this project.
+```python
+from autorsi import (
+    AutoRSI, EditRecipe, Goal, Guard, SequenceProposer,
+    TensorEdit, TorchBackend,
+)
+
+backend = TorchBackend(
+    model,  # Your already loaded torch.nn.Module; the caller's model stays unchanged.
+    editable={"target.weight"},
+    max_abs_delta=0.1,    # Maximum realized element change per candidate.
+    max_total_delta=0.2,  # Maximum total change from construction-time weights.
+)
+
+controller = AutoRSI(
+    backend=backend,
+    evaluator=evaluate,  # Callable: isolated model -> {"task_score": ..., "other_score": ...}
+    goal=Goal("task_score", direction="maximize", target=0.95),
+    guards=[Guard("other_score", max_regression=0.0)],
+    proposer=SequenceProposer([
+        EditRecipe((TensorEdit("target.weight", "scale", 0.95),)),
+    ]),
+    output_dir="autorsi-runs/my-model",
+)
+
+result = controller.step()  # At most one proposed edit.
+print(result.status, result.metrics, result.checkpoint)
+
+with backend.inference() as serving_model:
+    output = serving_model(inputs)
+```
+
+[`torch_quickstart.py`](examples/autorsi/torch_quickstart.py) is a complete runnable version. The scale above is an example hypothesis, not a recommended edit for arbitrary models. A proposal is accepted only when the objective strictly improves by at least `min_improvement` and every protected metric passes. An optional `target` stops search once reached; intermediate improvements may be accepted before reaching it.
+
+## Choose an editing LLM
+
+The editor and edited model are independent. `JSONProposer` accepts any configured synchronous transport with the contract `complete(prompt: str) -> str`. You select its provider, model and credentials in your own application. The core makes no network requests.
+
+```python
+from autorsi import JSONProposer
+
+proposer = JSONProposer(complete=my_editor_completion)
+```
+
+The prompt contains declared goals, metric feedback, allowed parameter names and edit bounds. The response must be one bounded recipe:
+
+```json
+{"edits":[{"parameter":"target.weight","operation":"scale","value":0.95}],"rationale":"A testable hypothesis"}
+```
+
+Or return `{"stop": true}`. Only scalar `scale` and `add` operations on allowlisted parameters are implemented. Unknown fields, duplicate JSON keys, nonfinite numbers and executable code are rejected. [`json_editor.py`](examples/autorsi/json_editor.py) demonstrates the adapter with an offline transport. Provider-specific clients are intentionally application-owned and have not been validated by this project.
+
+## Optional bounded improvement during agent operation
+
+Use the same controller to preserve its original regression reference across calls. Finish a complete inference/generation operation before requesting a step:
+
+```python
+from autorsi import RunLimits
+
+result = controller.run(limits=RunLimits(
+    max_steps=4,
+    max_accepted=2,
+    max_evaluations=10,
+    max_seconds=30,
+))
+
+# At a later explicit agent task boundary:
+result = controller.step(limits=RunLimits(max_evaluations=4, max_seconds=10))
+
+# Restore the predecessor of the most recent accepted edit:
+restored_revision = controller.rollback()
+```
+
+The host application controls when improvement is triggered and limits the number of calls over its lifetime; each `run` or `step` receives a new budget. See [`agent_loop.py`](examples/autorsi/agent_loop.py). This is a bounded feedback loop over an allowed edit space. It does not invent arbitrary architectures, training procedures or executable self-modifications.
+
+## Accepted weights and evidence
+
+Each run creates a local directory containing an append-only `journal.jsonl`. Candidate checkpoints are written before promotion. `result.checkpoint` identifies the latest **accepted** checkpoint from that run; a staged candidate file alone is not proof of acceptance. The journal records recipe, metrics, decisions, state fingerprints and revisions. Rollback has prepared/committed records.
+
+Torch checkpoints contain only `state_dict` tensors. Recreate the matching architecture, configuration and tokenizer yourself, then load:
+
+```python
+state = torch.load(result.checkpoint, map_location="cpu", weights_only=True)
+restored_model.load_state_dict(state)
+restored_model.eval()
+```
+
+A separate `validation_evaluator` can gate candidates with the same metric contract while withholding its numeric feedback from the proposer. Repeated gate decisions still permit adaptive selection; reserve a separate untouched final evaluation if you need a held-out claim.
+
+## Supported scope and limits
+
+- **Implemented:** named scalar reference models and ordinary dense, eager, deepcopy-able PyTorch `nn.Module` models. A tiny random Hugging Face GPT-2 causal LM is tested using real logits and checkpoint reload; run `python -m pip install -e '.[hf-demo]'` and `python examples/autorsi/hf_causal_lm.py`. This verifies integration, not language capability improvement.
+- **Requires a custom backend:** quantized, distributed, compiled, sharded/offloaded and vLLM runtimes. Editable tied/aliased tensors are rejected. Hosted models without weight access cannot be edited by this backend. No universal model support is claimed.
+- **Memory and speed:** correctness-first full model copies, byte fingerprints and CPU edit arithmetic can cost several times the model's memory and substantial time. This backend is suitable for small local models and adapter prototypes, not a production large-model hot-swap system.
+- **Inference safety:** use `backend.inference()` for the entire operation and release all asynchronous work before exiting. Do not retain, train or mutate its yielded model. Candidate evaluation is isolated; promotion waits for the lock and refuses stale revisions or expired deadlines. Bypassing this contract removes the safe-point guarantee.
+- **Measurement:** protected gates cover only supplied tests and tolerances. They cannot guarantee preservation of unmeasured abilities. Use representative regression suites, fixed evaluation conditions and final held-out tests. No capability improvement is guaranteed.
+- **Limits:** evaluation counts include baseline calls. Deadlines are cooperative between synchronous callbacks, and checked again at promotion; they cannot cancel a hung model call or remote provider request. Configure native timeouts and spending limits in your adapters. Bounds also apply to cumulative changes from backend construction weights.
+- **Failures:** rejected candidates and pre-promotion failures leave serving weights unchanged. A journal failure after promotion returns `journal_error` with the actual accepted count, checkpoint and revision. An output-directory creation failure raises before any promotion. Rollback reporting errors expose the committed revision via `RollbackJournalError.revision`. Journals are local evidence, not crash-atomic distributed transactions.
+
+See [the integration contract](docs/integration.md) for adapter requirements, revision semantics and evaluator design.
+
+## Development
+
+```sh
+python -m unittest discover -s tests/autorsi -v
+```
+
+Torch and Hugging Face integration tests skip when their optional dependencies are absent. With them installed, the suite verifies actual edits/reloads, rejection, protected gates, cumulative bounds, safe-point promotion, stale revisions, deadline handling, rollback and injected storage failures. No test calls a provider or downloads model weights.

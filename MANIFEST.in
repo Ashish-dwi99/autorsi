@@ -1,0 +1,5 @@
+include README.md
+include CONTRIBUTING.md
+include docs/integration.md
+recursive-include examples/autorsi *.py
+recursive-include tests/autorsi *.py
