@@ -77,7 +77,10 @@ class ReleaseTests(unittest.TestCase):
         self.assertIn("autorsi[hf-demo]==0.1.0a1", result)
         self.assertIn("require repository access while the repository is private", result)
         self.assertNotIn("not yet been published", result)
-        self.assertIn("not yet been published", source)
+        self.assertIn("available on PyPI", source)
+        self.assertNotIn("not yet been published", source)
+        self.assertEqual(result.count("## Install the alpha"), 1)
+        self.assertLess(source.index("python -m pip install autorsi==0.1.0a1"), source.index("git clone"))
         with self.assertRaises(ValueError):
             readme.render("diagram missing")
         with self.assertRaisesRegex(ValueError, "release notice changed"):

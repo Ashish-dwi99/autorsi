@@ -2,7 +2,7 @@
 
 **Bounded, evaluation-gated weight editing for Python applications.** Give AutoRSI a model you control, a measurable objective, protected metrics and a proposer. It builds isolated weight candidates, evaluates them, and promotes accepted weights at an inference safe point. Keep it as a one-shot developer tool or explicitly call it between agent tasks.
 
-AutoRSI is a Python framework for controlled, iterative model improvement. **Version 0.1.0a1 is a prepared alpha:** APIs may change. It is MIT-licensed and prepared for public distribution, but has not yet been published to PyPI. Install from this repository with an account that has repository access while it remains private.
+AutoRSI is a Python framework for controlled, iterative model improvement. **Version 0.1.0a1 is an MIT-licensed alpha, [available on PyPI](https://pypi.org/project/autorsi/0.1.0a1/):** APIs may change. The source repository and linked source files require repository access while the repository is private.
 
 ```mermaid
 flowchart LR
@@ -17,23 +17,36 @@ flowchart LR
     B -->|No| O[Return accepted checkpoint + journal]
 ```
 
-## Try it locally
+## Install the alpha
 
 Python 3.11 or newer. The core and scalar demo have no third-party dependencies, provider keys or model downloads:
 
 ```sh
-git clone https://github.com/geniusgeek/autorsi.git
-cd autorsi
-python -m pip install -e .
+python -m pip install autorsi==0.1.0a1
 python -m autorsi --output autorsi-runs/demo
 ```
 
 The demo edits a tiny two-output linear model expressed as scalar weights. It rejects an improvement that damages the protected task, then accepts two bounded improvements. Its target mean squared error goes from `2.5` to `0.625` to `0.0`, while the protected error stays `0.0`. These are deterministic arithmetic examples, not LLM capability results.
 
+For the optional PyTorch backend:
+
+```sh
+python -m pip install 'autorsi[torch]==0.1.0a1'
+```
+
+## Run from a source checkout
+
+The source examples and development tests require repository access and a checkout. The installed package and its scalar demo do not.
+
+```sh
+git clone https://github.com/geniusgeek/autorsi.git
+cd autorsi
+python -m pip install -e '.[torch]'
+```
+
 Run a real PyTorch model edit and reload its exported checkpoint:
 
 ```sh
-python -m pip install -e '.[torch]'
 python examples/autorsi/torch_quickstart.py
 ```
 
@@ -131,7 +144,7 @@ A separate `validation_evaluator` can gate candidates with the same metric contr
 
 ## Supported scope and limits
 
-- **Implemented:** named scalar reference models and ordinary dense, eager, deepcopy-able PyTorch `nn.Module` models. A tiny random Hugging Face GPT-2 causal LM is tested using real logits and checkpoint reload; run `python -m pip install -e '.[hf-demo]'` and `python examples/autorsi/hf_causal_lm.py`. This verifies integration, not language capability improvement.
+- **Implemented:** named scalar reference models and ordinary dense, eager, deepcopy-able PyTorch `nn.Module` models. A tiny random Hugging Face GPT-2 causal LM is tested using real logits and checkpoint reload; install `autorsi[hf-demo]==0.1.0a1` and run `python examples/autorsi/hf_causal_lm.py` from a source checkout. This verifies integration, not language capability improvement.
 - **Requires a custom backend:** quantized, distributed, compiled, sharded/offloaded and vLLM runtimes. Editable tied/aliased tensors are rejected. Hosted models without weight access cannot be edited by this backend. No universal model support is claimed.
 - **Memory and speed:** correctness-first full model copies, byte fingerprints and CPU edit arithmetic can cost several times the model's memory and substantial time. This backend is suitable for small local models and adapter prototypes, not a production large-model hot-swap system.
 - **Inference safety:** use `backend.inference()` for the entire operation and release all asynchronous work before exiting. Do not retain, train or mutate its yielded model. Candidate evaluation is isolated; promotion waits for the lock and refuses stale revisions or expired deadlines. Bypassing this contract removes the safe-point guarantee.
