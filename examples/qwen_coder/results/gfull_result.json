@@ -1,0 +1,82 @@
+{
+ "baseline": {
+  "code_nll": 0.8077116012573242,
+  "text_nll": 3.513820890720161
+ },
+ "current": {
+  "code_nll": 0.7366389036178589,
+  "text_nll": 3.5201664979586766
+ },
+ "rows": [
+  {
+   "k": 0,
+   "status": "rejected",
+   "step": "full descent step, scale=2.00e-04",
+   "metrics": {
+    "code_nll": 1.2586790323257446,
+    "text_nll": 3.655413785720254
+   },
+   "reasons": [
+    "objective did not improve by the required amount",
+    "protected metric regressed: text_nll"
+   ]
+  },
+  {
+   "k": 1,
+   "status": "accepted",
+   "step": "full descent step, scale=1.00e-04",
+   "metrics": {
+    "code_nll": 0.7494413256645203,
+    "text_nll": 3.5123527105266823
+   },
+   "reasons": null
+  },
+  {
+   "k": 2,
+   "status": "rejected",
+   "step": "full descent step, scale=1.30e-04",
+   "metrics": {
+    "code_nll": 0.9770392775535583,
+    "text_nll": 3.6095769273618536
+   },
+   "reasons": [
+    "objective did not improve by the required amount",
+    "protected metric regressed: text_nll"
+   ]
+  },
+  {
+   "k": 3,
+   "status": "rejected",
+   "step": "full descent step, scale=6.50e-05",
+   "metrics": {
+    "code_nll": 0.7574936151504517,
+    "text_nll": 3.518609231097742
+   },
+   "reasons": [
+    "objective did not improve by the required amount"
+   ]
+  },
+  {
+   "k": 4,
+   "status": "rejected",
+   "step": "full descent step, scale=3.25e-05",
+   "metrics": {
+    "code_nll": 0.7537461519241333,
+    "text_nll": 3.536521199906928
+   },
+   "reasons": [
+    "objective did not improve by the required amount"
+   ]
+  },
+  {
+   "k": 5,
+   "status": "accepted",
+   "step": "full descent step, scale=1.63e-05",
+   "metrics": {
+    "code_nll": 0.7366389036178589,
+    "text_nll": 3.5201664979586766
+   },
+   "reasons": null
+  }
+ ]
+}

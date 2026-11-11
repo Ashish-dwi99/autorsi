@@ -14,3 +14,7 @@ Eval sets (never used by gates): HumanEval first 80, MBPP-full test first 60. Ga
 ## Push recipe (no remote edits allowed)
 git -c credential.helper='!f(){ echo username=Ashish-dwi99; echo "password=$(cat /home/sandbox/.vault/github-cli-ashish-dwi99-5d49e5/password)"; };f' push -q https://github.com/Ashish-dwi99/autorsi.git gated-gradient-delta-backend
 (vault file recreated with `tools vault write-file --key password --name "GitHub CLI Ashish-dwi99" --return-channel whatsapp` in tools box if missing, then tools workspace put --path <file>)
+
+## Update 19:44
+- Paired baseline (this VM): HE80 base 56/80 (0.70) vs gfull 52/80 (0.65): base-only 8, edit-only 4 (sign test p~0.39, not significant, wrong direction). MBPP60 base 21 vs gfull 22 (3 vs 4). Per-problem results in results/passfail_base_vs_gfull.json.
+- sample_rft.py running: ~8s/problem, ~30% of problems yield any passing sample; 80 problems ~ 32 min.
