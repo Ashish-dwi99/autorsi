@@ -37,3 +37,4 @@ def text_nll(model, ids_list):
         logits = model(ids[None]).logits[0, :-1].float()
         tot += torch.nn.functional.cross_entropy(logits, ids[1:], reduction="sum").item(); n += len(ids) - 1
     return tot / n
+

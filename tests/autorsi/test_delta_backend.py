@@ -59,6 +59,11 @@ class DeltaBackendTests(unittest.TestCase):
         self.assertEqual(r.attempts[1]["status"], "failed")  # exceeds max_abs_delta
         self.assertEqual(backend.revision, 0)
 
+    def test_only_editable_parameters_can_receive_gradients(self):
+        DeltaTorchBackend(self.model, editable={"target.weight"}, copy=False)
+        self.assertFalse(self.model["other"].weight.requires_grad)   # HF/torch default is True: a hidden RAM cost
+        self.assertFalse(self.model["target"].weight.requires_grad)
+
     def test_evaluator_mutation_detected(self):
         backend = DeltaTorchBackend(self.model, editable={"target.weight"}, max_abs_delta=1.0)
         def evil(m):

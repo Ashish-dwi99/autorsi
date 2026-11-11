@@ -56,6 +56,8 @@ class DeltaTorchBackend:
             if len(aliases) > 1 and set(aliases) & set(self._editable):
                 raise ValidationError(f"editable tied/aliased tensors are not supported: {aliases}")
         self._model = model.eval()
+        for q in model.parameters():          # only editable tensors may ever receive gradients
+            q.requires_grad_(False)
         self._params = {k: params[k] for k in self._editable}
         for key, p in self._params.items():
             if not p.is_floating_point() or p.numel() == 0:
