@@ -18,3 +18,9 @@ git -c credential.helper='!f(){ echo username=Ashish-dwi99; echo "password=$(cat
 ## Update 19:44
 - Paired baseline (this VM): HE80 base 56/80 (0.70) vs gfull 52/80 (0.65): base-only 8, edit-only 4 (sign test p~0.39, not significant, wrong direction). MBPP60 base 21 vs gfull 22 (3 vs 4). Per-problem results in results/passfail_base_vs_gfull.json.
 - sample_rft.py running: ~8s/problem, ~30% of problems yield any passing sample; 80 problems ~ 32 min.
+
+## Update 21:33 (E3 rft1)
+- First rft1 (8 layers) thrashed memory (RSS 1.7GB, state D, ~40 min on one proposal). Killed. pipeline3.sh: 4 layers (20-23), malloc env vars, 4 steps. Needs a CALL that stays alive (setsid nohup + sleep polling); jobs die when bash returns.
+- Data: 117 self-passing samples over 40/80 problems (rft_data.jsonl). Gate baseline pass 11/24.
+- Attempt 0 (scale 5e-5): pass 10/24, text 3.5328 -> rejected (worse). Attempt 1 (2.5e-5): status 'failed' after 5s, cause not yet read from journal (check reasons/errors in runs/rft1/*/journal.jsonl).
+- Next: diagnose attempt 1 failure, let remaining attempts finish, bench rft1 if any accepted; else report negative.
