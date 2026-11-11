@@ -1,4 +1,4 @@
 self-samples 117 problems 40
 The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-0 rejected full descent step, scale=5.00e-05 {'pass': 0.4166666666666667, 'text_nll': 3.532766032771418} 422s
-1 failed full descent step, scale=2.50e-05 None 427s
+0 rejected full descent step, scale=5.00e-05 {'pass': 0.375, 'text_nll': 3.532681479315211} 442s
+1 rejected full descent step, scale=2.50e-05 {'pass': 0.375, 'text_nll': 3.5184330705086246} 1493s

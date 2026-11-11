@@ -24,7 +24,7 @@ Conclusion: the gates work (they block damaging edits) but NLL on reference solu
 
 ## E3: execution-gated expert iteration (measured, partial)
 Model samples 4 solutions per problem at T=0.8 and keeps those passing tests (117 passing samples over 40 of 80 problems). Gradient step on down_proj of layers 20-23 using those samples. Gate: greedy executed pass rate on 24 problems (baseline 11/24), validation gate, text-NLL guard.
-- Attempt 0 (scale 5e-5): 9/24, rejected. Attempt 1 (scale 2.5e-5): 9/24, rejected. No edit applied, so nothing to bench. Later attempts: see STATE.md.
+- Attempt 0 (scale 5e-5): 9/24, rejected. Attempt 1 (scale 2.5e-5): 9/24, rejected. No edit applied, so nothing to bench. Steps 2-3 stalled from memory pressure and were killed, so E3 is two rejected attempts only (inconclusive beyond that).
 - Naive self-distillation on this little data did not raise pass rate. The gates prevented damage.
 - Bug found along the way: the fingerprint cache keyed by id(tensor) returned stale hashes after a rejected candidate was freed (fixed with a weakref identity check).
 
