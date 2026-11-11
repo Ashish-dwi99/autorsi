@@ -52,13 +52,39 @@ class TensorEdit:
 
 
 @dataclass(frozen=True)
+class DeltaEdit:
+    """Add an explicit tensor delta to an allowlisted tensor (in-process proposers only).
+
+    Unlike TensorEdit this carries a full tensor, so gradient, low-rank or sparse
+    updates can be proposed. It can never come from JSON text. The journal records
+    only a summary (shape, L2 norm, max |delta|, hash), not the tensor itself.
+    """
+    parameter: str
+    delta: Any = field(repr=False, compare=False)
+    operation: str = field(default="add_tensor", init=False)
+
+    def __post_init__(self):
+        name(self.parameter, "parameter")
+        if not hasattr(self.delta, "shape") or not hasattr(self.delta, "numel"):
+            raise ValidationError("delta must be a tensor")
+
+    def summary(self):
+        import hashlib
+        import torch
+        t = self.delta.detach().to("cpu").float().contiguous()
+        return {"parameter": self.parameter, "operation": self.operation, "shape": list(t.shape),
+                "l2": float(t.norm()), "max_abs": float(t.abs().max()),
+                "sha256": hashlib.sha256(t.reshape(-1).view(torch.uint8).numpy()).hexdigest()}
+
+
+@dataclass(frozen=True)
 class EditRecipe:
-    edits: tuple[TensorEdit, ...]
+    edits: tuple[Any, ...]
     rationale: str = ""
 
     def __post_init__(self):
         object.__setattr__(self, "edits", tuple(self.edits))
-        if not 1 <= len(self.edits) <= 128 or any(not isinstance(e, TensorEdit) for e in self.edits):
+        if not 1 <= len(self.edits) <= 128 or any(not isinstance(e, (TensorEdit, DeltaEdit)) for e in self.edits):
             raise ValidationError("recipe requires 1 to 128 TensorEdit objects")
         if len({e.parameter for e in self.edits}) != len(self.edits):
             raise ValidationError("recipe may edit each parameter only once")
@@ -66,7 +92,8 @@ class EditRecipe:
             raise ValidationError("rationale must be text of at most 4000 characters")
 
     def to_dict(self):
-        return {"edits": [{"parameter": e.parameter, "operation": e.operation, "value": e.value}
+        return {"edits": [e.summary() if isinstance(e, DeltaEdit) else
+                          {"parameter": e.parameter, "operation": e.operation, "value": e.value}
                           for e in self.edits], "rationale": self.rationale}
 
 

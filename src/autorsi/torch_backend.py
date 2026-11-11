@@ -72,7 +72,7 @@ class TorchBackend(InMemoryBackend):
             # A contiguous clone owns precisely its bytes, including BF16; no
             # NumPy dependency or pickle metadata enters the fingerprint.
             value = value.detach().to("cpu").contiguous().clone()
-            digest.update(bytes(value.untyped_storage()))
+            digest.update(value.reshape(-1).view(self._torch.uint8).numpy())
         return digest.hexdigest()
 
     def _apply(self, model, recipe):
