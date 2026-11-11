@@ -17,6 +17,7 @@ from __future__ import annotations
 
 from contextlib import ExitStack, contextmanager
 import hashlib
+import weakref
 import json
 from pathlib import Path
 import threading
@@ -85,11 +86,14 @@ class DeltaTorchBackend:
 
     def _hash_tensor(self, t):
         key = id(t)
-        h = self._hashes.get(key)
+        ent = self._hashes.get(key)
+        # id() is reused after a tensor is freed (e.g. a rejected candidate), so the
+        # cache must verify identity through a weakref, not trust the id alone.
+        h = ent[1] if ent is not None and ent[0]() is t else None
         if h is None:
             c = t.detach().cpu().contiguous()
             h = hashlib.sha256(c.reshape(-1).view(self._torch.uint8).numpy()).hexdigest()
-            self._hashes[key] = h
+            self._hashes[key] = (weakref.ref(t), h)
         return h
 
     def _fingerprint(self, tensors):

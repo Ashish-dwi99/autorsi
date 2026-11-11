@@ -24,3 +24,4 @@ git -c credential.helper='!f(){ echo username=Ashish-dwi99; echo "password=$(cat
 - Data: 117 self-passing samples over 40/80 problems (rft_data.jsonl). Gate baseline pass 11/24.
 - Attempt 0 (scale 5e-5): pass 10/24, text 3.5328 -> rejected (worse). Attempt 1 (2.5e-5): status 'failed' after 5s, cause not yet read from journal (check reasons/errors in runs/rft1/*/journal.jsonl).
 - Next: diagnose attempt 1 failure, let remaining attempts finish, bench rft1 if any accepted; else report negative.
+- BUG FOUND (fork, real): DeltaTorchBackend fingerprint cache was keyed by id(tensor); after a rejected candidate was freed, id reuse gave a stale hash -> "snapshot is invalid or was mutated after capture" on the next attempt. Fixed with weakref identity check. rft1 relaunched 21:37 with fix.
