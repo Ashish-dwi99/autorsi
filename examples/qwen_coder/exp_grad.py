@@ -19,12 +19,12 @@ prop = GradientProposer(backend, loss_fn, scale=scale, mode=mode, rank=16)
 c = AutoRSI(backend=backend, evaluator=ev("gate"), validation_evaluator=ev("val"),
             goal=Goal("code_nll", "minimize", min_improvement=1e-3), guards=[Guard("text_nll", "minimize", 0.05)],
             proposer=prop, output_dir=f"{OUT}/runs/{tag}")
-t = time.time(); rows = []; CH = 4
+t = time.time(); rows = []; CH = 2
 for k in range(0, steps, CH):
     r = c.run(limits=RunLimits(max_steps=CH, max_accepted=CH, max_evaluations=40, max_seconds=1800))
     for a in r.attempts:
         rows.append({"k": len(rows), "status": a["status"], "step": a["recipe"]["rationale"], "metrics": a.get("metrics"), "reasons": a.get("reasons")})
-        print(rows[-1]["k"], a["status"], a["recipe"]["rationale"], a.get("metrics"), f"{time.time()-t:.0f}s", flush=True)
+        print(rows[-1]["k"], a["status"], a["recipe"]["rationale"], a.get("metrics"), f"{time.time()-t:.0f}s", "anonMB", int([l for l in open("/proc/self/status") if l.startswith("RssAnon")][0].split()[1])//1024, flush=True)
     json.dump({"baseline": dict(r.baseline), "current": dict(r.metrics), "rows": rows}, open(f"{OUT}/{tag}_result.json", "w"), indent=1)
     if r.status == "proposer_stopped": break
     final = c.backend.capture(); os.makedirs(f"{OUT}/{tag}_ckpt", exist_ok=True)
