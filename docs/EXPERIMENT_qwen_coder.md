@@ -22,8 +22,11 @@ Status: measured results below are real but small. Benchmarks are tiny (HumanEva
 
 Conclusion: the gates work (they block damaging edits) but NLL on reference solutions mostly measures dataset style. Lower NLL did not give higher pass@1. Likelihood is not capability.
 
-## E3: execution-gated expert iteration
-Model samples 4 solutions per problem at T=0.8, keeps those passing tests (117 passing samples over 40 of 80 problems), fine-tunes down_proj of layers 16-23 on them, and the gate is greedy executed pass rate on 24 problems (baseline 11/24) with validation gate and text guard. See STATE.md for the result once finished; it is not claimed here unless listed above.
+## E3: execution-gated expert iteration (measured, partial)
+Model samples 4 solutions per problem at T=0.8 and keeps those passing tests (117 passing samples over 40 of 80 problems). Gradient step on down_proj of layers 20-23 using those samples. Gate: greedy executed pass rate on 24 problems (baseline 11/24), validation gate, text-NLL guard.
+- Attempt 0 (scale 5e-5): 9/24, rejected. Attempt 1 (scale 2.5e-5): 9/24, rejected. No edit applied, so nothing to bench. Later attempts: see STATE.md.
+- Naive self-distillation on this little data did not raise pass rate. The gates prevented damage.
+- Bug found along the way: the fingerprint cache keyed by id(tensor) returned stale hashes after a rejected candidate was freed (fixed with a weakref identity check).
 
 ## Speculation (not measured)
 - Merge-gated learning on a team's own repos: merged PRs as the positive signal, gated by that repo's tests and protected benchmarks.
